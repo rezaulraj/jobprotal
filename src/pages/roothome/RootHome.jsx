@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import heroBgImage from "/images/rootpage/banner_bg.webp";
+import HeroHome from "./HeroHome";
 const RootHome = () => {
   return (
-    <div>RootHome</div>
-  )
-}
+    <div>
+      <HeroHome />
+    </div>
+  );
+};
 
-export default RootHome
+export default RootHome;
