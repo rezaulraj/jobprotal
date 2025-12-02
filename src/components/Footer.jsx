@@ -319,15 +319,6 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="fixed bottom-6 right-6 z-50">
-        <button className="w-14 h-14 bg-linear-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group">
-          <div className="relative">
-            <div className="absolute inset-0 animate-ping bg-emerald-400 rounded-full opacity-20"></div>
-            <span className="relative text-white font-bold text-lg">?</span>
-          </div>
-        </button>
-      </div>
-
       <style jsx="true">{`
         @media (max-width: 768px) {
           .grid-cols-6 {
