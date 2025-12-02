@@ -130,7 +130,7 @@ const HeroHome = () => {
   );
 
   return (
-    <div className="relative flex items-center justify-center min-h-[500px] sm:min-h-[500px] overflow-hidden">
+    <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={heroBgImage}

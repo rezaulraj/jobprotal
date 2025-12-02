@@ -35,6 +35,7 @@ import {
 } from "react-icons/fa";
 import ReactCountryFlag from "react-country-flag";
 import logo from "/logo.png";
+import { Link } from "react-router-dom";
 
 const RootHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,47 +69,118 @@ const RootHeader = () => {
       label: "Browse Job",
       icon: <FaSearch className="text-xs" />,
       subNav: [
-        { name: "Business Development", count: 7206, icon: <FaBusinessTime /> },
-        { name: "Information Technology", count: 474, icon: <FaLaptopCode /> },
-        { name: "Manufacturing", count: 212, icon: <FaIndustry /> },
-        { name: "Services", count: 188, icon: <FaServicestack /> },
-        { name: "Recruitment/Employment Firms", count: 177, icon: <FaUsers /> },
+        {
+          name: "Business Development",
+          path: "/category/business-development",
+          count: 7206,
+          icon: <FaBusinessTime />,
+        },
+        {
+          name: "Information Technology",
+          path: "/category/information-technology",
+          count: 474,
+          icon: <FaLaptopCode />,
+        },
+        {
+          name: "Manufacturing",
+          path: "/category/manufacturing",
+          count: 212,
+          icon: <FaIndustry />,
+        },
+        {
+          name: "Services",
+          path: "/category/services",
+          count: 188,
+          icon: <FaServicestack />,
+        },
+        {
+          name: "Recruitment/Employment Firms",
+          path: "/category/recruitment-firms",
+          count: 177,
+          icon: <FaUsers />,
+        },
         {
           name: "Travel/Tourism/Transportation",
+          path: "/category/travel",
           count: 157,
           icon: <FaPlane />,
         },
-        { name: "Education/Training", count: 125, icon: <FaGraduationCap /> },
-        { name: "IT/Telecommunication", count: 125, icon: <FaCode /> },
-        { name: "Call Center", count: 116, icon: <FaPhone /> },
-        { name: "Consultants", count: 104, icon: <FaBriefcase /> },
-        { name: "Banking/Financial Services", count: 98, icon: <FaBuilding /> },
+        {
+          name: "Education/Training",
+          path: "/category/education",
+          count: 125,
+          icon: <FaGraduationCap />,
+        },
+        {
+          name: "IT/Telecommunication",
+          path: "/category/it",
+          count: 125,
+          icon: <FaCode />,
+        },
+        {
+          name: "Call Center",
+          path: "/category/call-center",
+          count: 116,
+          icon: <FaPhone />,
+        },
+        {
+          name: "Consultants",
+          path: "/category/consultants",
+          count: 104,
+          icon: <FaBriefcase />,
+        },
+        {
+          name: "Banking/Financial Services",
+          path: "/category/banking",
+          count: 98,
+          icon: <FaBuilding />,
+        },
         {
           name: "N.G.O./Social Services",
+          path: "/category/ngo",
           count: 97,
           icon: <FaHandHoldingHeart />,
         },
         {
           name: "E-Commerce / E-Business",
+          path: "/category/e-commerce",
           count: 90,
           icon: <FaShoppingCart />,
         },
-        { name: "Real Estate/Property", count: 90, icon: <FaHome /> },
+        {
+          name: "Real Estate/Property",
+          path: "/category/real-estate",
+          count: 90,
+          icon: <FaHome />,
+        },
         {
           name: "Healthcare/Hospital/Medical",
+          path: "/category/healthcare",
           count: 87,
           icon: <FaHospital />,
         },
-        { name: "BPO", count: 75, icon: <FaHeadset /> },
+        { name: "BPO", path: "/category/bop", count: 75, icon: <FaHeadset /> },
         {
           name: "Construction / Cement / Metals",
+          path: "/category/construcation",
           count: 61,
           icon: <FaHardHat />,
         },
-        { name: "Accounting/Taxation", count: 60, icon: <FaMoneyBill /> },
-        { name: "Engineering", count: 56, icon: <FaTools /> },
+        {
+          name: "Accounting/Taxation",
+          path: "/category/accounting",
+          count: 60,
+          icon: <FaMoneyBill />,
+        },
+        {
+          name: "Engineering",
+          path: "/category/engineering",
+          count: 56,
+          icon: <FaTools />,
+        },
         {
           name: "Importers/ Distributors/Exporters",
+          path: "/category/import-export",
           count: 54,
           icon: <FaShippingFast />,
         },
@@ -193,11 +265,13 @@ const RootHeader = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
-              <img
-                src={logo}
-                alt="Logo"
-                className="h-8 w-auto transition-all duration-300"
-              />
+              <Link to={"/"}>
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="h-8 w-auto transition-all duration-300"
+                />
+              </Link>
             </div>
 
             <div className="hidden lg:flex items-center justify-center space-x-8">
@@ -210,7 +284,7 @@ const RootHeader = () => {
                   {item.subNav ? (
                     <button
                       onClick={() => handleNavItemClick(item.label)}
-                      className={`flex flex-col items-center space-y-1 group ${
+                      className={`flex flex-col items-center space-y-1 group cursor-pointer ${
                         activeNav === item.label ? "text-[#4EB956]" : ""
                       }`}
                     >
@@ -258,7 +332,7 @@ const RootHeader = () => {
                           {item.subNav.map((subItem, subIndex) => (
                             <a
                               key={subIndex}
-                              href="#"
+                              href={subItem.path}
                               className="flex items-center justify-between p-3 hover:bg-gray-50 rounded transition-colors duration-200 group/sub"
                               onClick={() => setActiveNav(null)}
                             >
@@ -281,8 +355,8 @@ const RootHeader = () => {
                         </div>
                         <div className="mt-4 pt-4 border-t border-gray-100">
                           <a
-                            href="#"
-                            className="text-xs text-[#4EB956] font-medium hover:underline flex items-center space-x-1"
+                            href="/all/category"
+                            className="text-xs text-primary hover:text-secondary font-medium hover:underline flex items-center space-x-1 cursor-pointer"
                             onClick={() => setActiveNav(null)}
                           >
                             <span>View all job categories</span>
@@ -298,7 +372,7 @@ const RootHeader = () => {
 
             <div className="flex items-center space-x-4">
               <div className="hidden md:block relative group">
-                <button className="flex items-center space-x-1.5 text-gray-600 hover:text-[#4EB956] transition-colors duration-200">
+                <button className="flex items-center space-x-1.5 text-gray-600 hover:text-[#4EB956] transition-colors duration-200 cursor-pointer">
                   <ReactCountryFlag
                     countryCode={
                       languages.find((lang) => lang.name === selectedLanguage)
@@ -323,7 +397,7 @@ const RootHeader = () => {
                     <button
                       key={index}
                       onClick={() => setSelectedLanguage(lang.name)}
-                      className={`flex items-center space-x-2 w-full p-2 rounded transition-colors duration-200 ${
+                      className={`flex items-center space-x-2 w-full p-2 rounded transition-colors duration-200 cursor-pointer ${
                         selectedLanguage === lang.name
                           ? "bg-gray-50"
                           : "hover:bg-gray-50"
@@ -352,8 +426,8 @@ const RootHeader = () => {
                     className={`flex items-center space-x-1.5 px-3 py-1.5 ${
                       button.outline
                         ? "border border-[#1E2558] text-[#1E2558] hover:bg-[#1E2558] hover:text-white"
-                        : `bg-gradient-to-r ${button.color} text-white`
-                    } rounded text-[10px] font-medium uppercase tracking-wider transition-all duration-200 hover:shadow-md`}
+                        : `bg-linear-to-r ${button.color} text-white`
+                    } rounded text-[10px] font-medium uppercase tracking-wider transition-all duration-200 hover:shadow-md cursor-pointer`}
                   >
                     {button.icon}
                     <span>{button.label}</span>
@@ -363,7 +437,7 @@ const RootHeader = () => {
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden text-gray-600 hover:text-[#4EB956] transition-colors duration-200"
+                className="lg:hidden cursor-pointer text-gray-600 hover:text-[#4EB956] transition-colors duration-200"
               >
                 {isMenuOpen ? (
                   <FaTimes className="text-lg" />
@@ -380,7 +454,7 @@ const RootHeader = () => {
                 <a
                   key={index}
                   href={item.path}
-                  className="flex flex-col items-center space-y-1 group"
+                  className="flex flex-col items-center space-y-1 group cursor-pointer"
                 >
                   <div className="text-gray-500 group-hover:text-[#4EB956] transition-colors duration-200">
                     {item.icon}
@@ -400,11 +474,13 @@ const RootHeader = () => {
           <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl">
             <div className="flex items-center justify-between p-4 border-b border-gray-100">
               <div className="flex items-center space-x-2">
-                <img src={logo} alt="Logo" className="h-6 w-auto" />
+                <Link to={"/"}>
+                  <img src={logo} alt="Logo" className="h-6 w-auto" />
+                </Link>
               </div>
               <button
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-500 hover:text-[#4EB956]"
+                className="text-gray-500 hover:text-[#4EB956] cursor-pointer"
               >
                 <FaTimes />
               </button>
@@ -425,9 +501,9 @@ const RootHeader = () => {
                         setSelectedLanguage(lang.name);
                         setIsMenuOpen(false);
                       }}
-                      className={`flex items-center space-x-3 w-full p-3 rounded transition-colors duration-200 ${
+                      className={`flex items-center cursor-pointer space-x-3 w-full p-3 rounded transition-colors duration-200 ${
                         selectedLanguage === lang.name
-                          ? "bg-gradient-to-r from-[#1E2558]/10 to-[#4EB956]/10"
+                          ? "bg-linear-to-r from-[#1E2558]/10 to-[#4EB956]/10"
                           : "hover:bg-gray-50"
                       }`}
                     >
@@ -465,7 +541,7 @@ const RootHeader = () => {
                                 activeNav === item.label ? null : item.label
                               )
                             }
-                            className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200"
+                            className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200 cursor-pointer"
                           >
                             <div className="flex items-center space-x-3">
                               <div className="text-gray-500">{item.icon}</div>
@@ -506,7 +582,7 @@ const RootHeader = () => {
                               {item.subNav.length > 8 && (
                                 <a
                                   href="#"
-                                  className="block mt-2 text-xs text-[#4EB956] font-medium hover:underline"
+                                  className="block mt-2 text-xs text-primary hover:text-secondary font-medium hover:underline"
                                   onClick={() => setIsMenuOpen(false)}
                                 >
                                   View all categories →
@@ -540,8 +616,8 @@ const RootHeader = () => {
                       className={`w-full flex items-center justify-center space-x-2 py-3 ${
                         button.outline
                           ? "border border-[#1E2558] text-[#1E2558] hover:bg-[#1E2558] hover:text-white"
-                          : `bg-gradient-to-r ${button.color} text-white`
-                      } rounded text-sm font-medium transition-all duration-200`}
+                          : `bg-linear-to-r ${button.color} text-white`
+                      } rounded text-sm font-medium transition-all duration-200 cursor-pointer`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {button.icon}
@@ -555,11 +631,8 @@ const RootHeader = () => {
         </div>
       )}
 
-      <style jsx>{`
+      <style jsx="true">{`
         @media (min-width: 1024px) {
-          nav {
-            position: relative;
-          }
           .fixed {
             animation: slideDown 0.2s ease-out;
           }
