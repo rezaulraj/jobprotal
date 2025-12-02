@@ -137,7 +137,7 @@ const HeroHome = () => {
           alt="Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1E2558]/20 to-[#4EB956]/70"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-[#1E2558]/20 to-[#4EB956]/70"></div>
       </div>
 
       {!isSearchExpanded && (
@@ -161,7 +161,7 @@ const HeroHome = () => {
                     Search by job title, location, or salary
                   </div>
                 </div>
-                <button className="bg-gradient-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-[48px] px-4 sm:px-6">
+                <button className="bg-linear-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-12 px-4 sm:px-6">
                   <FaSearch className="text-sm sm:text-base md:text-lg" />
                   <span className="ml-1 sm:ml-2 hidden xs:inline text-xs sm:text-sm md:text-base">
                     Search
@@ -186,7 +186,7 @@ const HeroHome = () => {
             <div className="w-full h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
               <div
                 ref={expandedSearchRef}
-                className="w-full max-w-6xl bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl border border-gray-700/50"
+                className="w-full max-w-6xl bg-linear-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl border border-gray-700/50"
               >
                 <div className="p-4 sm:p-6 border-b border-gray-700/50">
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
@@ -246,7 +246,7 @@ const HeroHome = () => {
                                   onClick={() => handleLocationSelect(city)}
                                   className="w-full px-3 py-3 text-left text-white hover:bg-white/10 transition-colors duration-200 flex items-center border-b border-gray-700 last:border-0"
                                 >
-                                  <FaMapMarkerAlt className="text-gray-400 mr-2 text-xs sm:text-sm flex-shrink-0" />
+                                  <FaMapMarkerAlt className="text-gray-400 mr-2 text-xs sm:text-sm shrink-0" />
                                   <span className="text-xs sm:text-sm truncate">
                                     {city}
                                   </span>
@@ -309,7 +309,7 @@ const HeroHome = () => {
                     <div className="sm:w-auto">
                       <button
                         type="submit"
-                        className="w-full sm:w-auto bg-gradient-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-[48px]"
+                        className="w-full sm:w-auto bg-linear-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-12"
                       >
                         <FaSearch className="mr-2" />
                         <span className="hidden sm:inline">Search</span>

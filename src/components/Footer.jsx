@@ -160,24 +160,21 @@ const Footer = () => {
     },
     {
       icon: <FaMapMarkerAlt className="w-4 h-4 text-gray-400" />,
-      text: "Road 12, Block C, Uttra, Dhaka 1213, Bangladesh",
+      text: "Road 12, Block C, Uttara, Dhaka 1213, Bangladesh",
     },
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-12 pb-8">
-      {/* Main Footer Content */}
+    <footer className="bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Section with Contact Info */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-10 border-b border-gray-700">
-          {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-600 w-10 h-10 rounded-lg flex items-center justify-center">
+              <div className="bg-linear-to-r from-emerald-500 to-teal-600 w-10 h-10 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">JP</span>
               </div>
               <div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent uppercase">
+                <h2 className="text-2xl font-bold bg-linear-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent uppercase">
                   JobsPlus
                 </h2>
                 <p className="text-sm text-gray-400">
@@ -191,7 +188,6 @@ const Footer = () => {
               Connect with top employers and advance your career today.
             </p>
 
-            {/* Contact Info */}
             <div className="space-y-3 pt-4">
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3 group">
@@ -212,8 +208,6 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
-          {/* Newsletter Subscription */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-white mb-4">
               Stay Updated with Latest Jobs
@@ -227,15 +221,14 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
+                className="grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-teal-800 transition-all duration-200 shadow-lg hover:shadow-emerald-900/30 flex items-center justify-center space-x-2">
+              <button className="px-6 py-3 bg-linear-to-r from-emerald-600 to-teal-700 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-teal-800 transition-all duration-200 shadow-lg hover:shadow-emerald-900/30 flex items-center justify-center space-x-2">
                 <span>Subscribe</span>
                 <FaArrowRight className="w-4 h-4" />
               </button>
             </div>
 
-            {/* Social Links */}
             <div className="mt-8">
               <h4 className="text-sm font-semibold text-gray-300 mb-4">
                 Follow Us
@@ -257,7 +250,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Links Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 py-10">
           {footerSections.map((section, index) => (
             <div key={index} className="space-y-4">
@@ -283,7 +275,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom Section */}
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
@@ -315,7 +306,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Additional Info */}
           <div className="mt-6 text-center">
             <p className="text-xs text-gray-600">
               Popular Searches: Jobs in Dhaka, IT Jobs in Bangladesh, Banking
@@ -329,9 +319,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Floating Chat Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <button className="w-14 h-14 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group">
+        <button className="w-14 h-14 bg-linear-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 group">
           <div className="relative">
             <div className="absolute inset-0 animate-ping bg-emerald-400 rounded-full opacity-20"></div>
             <span className="relative text-white font-bold text-lg">?</span>
@@ -339,7 +328,6 @@ const Footer = () => {
         </button>
       </div>
 
-      {/* Responsive Styles */}
       <style jsx="true">{`
         @media (max-width: 768px) {
           .grid-cols-6 {

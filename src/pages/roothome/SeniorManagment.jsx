@@ -87,15 +87,15 @@ const SeniorManagment = () => {
   };
 
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12">
+    <div className="hidden md:block bg-white py-12 px-4 sm:px-6 lg:px-12">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-10">
-          <div className="flex-grow text-center">
+          <div className="grow text-center">
             <h2 className="text-2xl font-bold font-lato text-gray-700">
               Senior Management Jobs
             </h2>
           </div>
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <a
               href=""
               className="hover:text-blue-700 text-sm font-lato hover:underline text-blue-800 font-semibold transition-colors"
@@ -165,7 +165,7 @@ const SeniorManagment = () => {
             {seniorJobs.map((job, index) => (
               <div
                 key={index}
-                className="w-56 flex-shrink-0 shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300 rounded-lg"
+                className="w-56 shrink-0 shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300 rounded-lg"
               >
                 <div className="w-full bg-gray-200 overflow-hidden">
                   <img

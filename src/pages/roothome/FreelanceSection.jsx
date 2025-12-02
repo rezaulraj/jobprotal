@@ -111,7 +111,7 @@ const FreelanceSection = () => {
                       {job.rate}
                     </p>
 
-                    <div className="mb-4 flex-grow overflow-y-auto">
+                    <div className="mb-4 grow overflow-y-auto">
                       <h4 className="text-[15px] font-medium text-gray-500 mb-2 font-lato">
                         Skills Required:
                       </h4>
