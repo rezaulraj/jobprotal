@@ -143,9 +143,9 @@ const HeroHome = () => {
       {!isSearchExpanded && (
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight uppercase">
               Find Your <span className="text-[#4EB956]">Dream Job</span> With
-              Us
+              Us!
             </h1>
           </div>
 
