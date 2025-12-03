@@ -508,8 +508,15 @@ The ideal candidate will have strong analytical skills, excellent communication 
                     onChange={(e) =>
                       setSalaryRange([parseInt(e.target.value), salaryRange[1]])
                     }
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full"
-                    style={{ "--thumb-color": colors.primary } || {}}
+                    className="
+    w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer
+    [&::-webkit-slider-thumb]:appearance-none
+    [&::-webkit-slider-thumb]:h-4
+    [&::-webkit-slider-thumb]:w-4
+    [&::-webkit-slider-thumb]:rounded-full
+    [&::-webkit-slider-thumb]:bg-[var(--thumb-color)]
+  "
+                    style={{ "--thumb-color": colors.primary }}
                   />
                   <input
                     type="range"
@@ -520,8 +527,15 @@ The ideal candidate will have strong analytical skills, excellent communication 
                     onChange={(e) =>
                       setSalaryRange([salaryRange[0], parseInt(e.target.value)])
                     }
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full"
-                    style={{ "--thumb-color": colors.primary } || {}}
+                    className="
+    w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer
+    [&::-webkit-slider-thumb]:appearance-none
+    [&::-webkit-slider-thumb]:h-4
+    [&::-webkit-slider-thumb]:w-4
+    [&::-webkit-slider-thumb]:rounded-full
+    [&::-webkit-slider-thumb]:bg-[var(--thumb-color)]
+  "
+                    style={{ "--thumb-color": colors.primary }}
                   />
                   <div className="flex justify-between items-center pt-2">
                     <div className="text-center">
@@ -769,7 +783,7 @@ The ideal candidate will have strong analytical skills, excellent communication 
           {/* Main Content */}
           <div className="flex-1">
             <div className="flex flex-col lg:flex-row gap-6">
-              {/* Left - Job Cards (5 grid on desktop) */}
+              {/* Left - Job Cards */}
               <div className="lg:w-2/5">
                 <div
                   className="bg-white rounded-xl shadow-sm border overflow-hidden mb-4"
@@ -929,8 +943,8 @@ The ideal candidate will have strong analytical skills, excellent communication 
                 </div>
               </div>
 
-              {/* Right - Job Description (Sticky) */}
-              <div className="lg:w-3/5">
+              {/* Right - Job Description */}
+              <div className="hidden md:block lg:w-3/5">
                 {selectedJob ? (
                   <div className="sticky top-24">
                     <div
@@ -1294,7 +1308,6 @@ The ideal candidate will have strong analytical skills, excellent communication 
             </div>
 
             <div className="p-4 pb-24">
-              {/* Same job description content as desktop but condensed */}
               <div className="space-y-6">
                 <div>
                   <h2
@@ -1352,14 +1365,108 @@ The ideal candidate will have strong analytical skills, excellent communication 
                   >
                     Description
                   </h3>
-                  <p className="text-gray-700">
-                    {selectedJob.description.substring(0, 300)}...
-                  </p>
+                  <p className="text-gray-700">{selectedJob.description}</p>
+                </div>
+                {/* Benefits */}
+                <div>
+                  <h3
+                    className="text-xl font-semibold mb-4 pb-2 border-b"
+                    style={{
+                      color: colors.primary,
+                      borderColor: colors.border,
+                    }}
+                  >
+                    Benefits & Perks
+                  </h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {selectedJob.benefits.map((benefit, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 p-3 rounded-lg"
+                        style={{
+                          backgroundColor: colors.lightSecondary,
+                        }}
+                      >
+                        <CheckCircle
+                          className="w-4 h-4"
+                          style={{ color: colors.secondary }}
+                        />
+                        <span className="text-gray-700">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4">
+                  <div
+                    className="text-center p-4 rounded-lg"
+                    style={{ backgroundColor: colors.lightPrimary }}
+                  >
+                    <div
+                      className="text-2xl font-bold mb-1"
+                      style={{ color: colors.primary }}
+                    >
+                      {selectedJob.totalViews}
+                    </div>
+                    <div className="text-sm text-gray-600">Total Views</div>
+                  </div>
+                  <div
+                    className="text-center p-4 rounded-lg"
+                    style={{ backgroundColor: colors.lightSecondary }}
+                  >
+                    <div
+                      className="text-2xl font-bold mb-1"
+                      style={{ color: colors.primary }}
+                    >
+                      {selectedJob.totalApplications}
+                    </div>
+                    <div className="text-sm text-gray-600">Applications</div>
+                  </div>
+                  <div
+                    className="text-center p-4 rounded-lg"
+                    style={{ backgroundColor: colors.lightPrimary }}
+                  >
+                    <div
+                      className="text-xl font-bold mb-1"
+                      style={{ color: colors.primary }}
+                    >
+                      {selectedJob.deadline}
+                    </div>
+                    <div className="text-sm text-gray-600">Deadline</div>
+                  </div>
+                </div>
+
+                {/* Skills */}
+                <div>
+                  <h3
+                    className="text-xl font-semibold mb-4 pb-2 border-b"
+                    style={{
+                      color: colors.primary,
+                      borderColor: colors.border,
+                    }}
+                  >
+                    Required Skills
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedJob.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-4 py-2 rounded-lg font-medium"
+                        style={{
+                          backgroundColor: colors.lightPrimary,
+                          color: colors.primary,
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Sticky Apply Button for Mobile */}
+            {/* Apply Button for Mobile */}
             <div
               className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t shadow-lg"
               style={{ borderColor: colors.border }}
