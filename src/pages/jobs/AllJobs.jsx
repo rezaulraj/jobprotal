@@ -392,18 +392,10 @@ The ideal candidate will have strong analytical skills, excellent communication 
         className="sticky top-0 z-40 bg-white shadow-sm border-b"
         style={{ borderColor: colors.border }}
       >
-        <div className="container mx-auto px-4 py-4 max-w-7xl">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
-              <h1
-                className="text-2xl font-bold"
-                style={{ color: colors.primary }}
-              >
-                JobPortalBD
-              </h1>
-              <p className="text-gray-600 text-sm">
-                Find your dream job in Bangladesh
-              </p>
+              <p className="text-gray-600 text-sm">All Jobs</p>
             </div>
             <div className="relative w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -420,7 +412,7 @@ The ideal candidate will have strong analytical skills, excellent communication 
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-6 max-w-7xl">
+      <div className="container mx-auto px-4 py-6">
         {/* Mobile Filter Toggle */}
         <div className="lg:hidden mb-6">
           <button

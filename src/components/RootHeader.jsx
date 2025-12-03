@@ -327,7 +327,7 @@ const RootHeader = () => {
                       className="fixed left-0 right-0 bg-white shadow-xl border-t border-gray-100 z-40"
                       style={{ top: "64px" }}
                     >
-                      <div className="max-w-7xl mx-auto px-4 py-6">
+                      <div className="container mx-auto px-4 py-6">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {item.subNav.map((subItem, subIndex) => (
                             <a
