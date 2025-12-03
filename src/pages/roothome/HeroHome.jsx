@@ -16,13 +16,12 @@ const HeroHome = () => {
     location: "",
     minSalary: "",
   });
-
   const [showLocationSuggestions, setShowLocationSuggestions] = useState(false);
   const [showSalaryDropdown, setShowSalaryDropdown] = useState(false);
 
   const searchInputRef = useRef(null);
-  const expandedSearchRef = useRef(null);
   const locationInputRef = useRef(null);
+  const salaryInputRef = useRef(null);
 
   const bangladeshCities = [
     "Dhaka",
@@ -48,7 +47,7 @@ const HeroHome = () => {
   ];
 
   const salaryRanges = [
-    { value: "", label: "Select Min Salary" },
+    { value: "", label: "Min Salary" },
     { value: "10000", label: "৳10,000+" },
     { value: "20000", label: "৳20,000+" },
     { value: "30000", label: "৳30,000+" },
@@ -61,12 +60,20 @@ const HeroHome = () => {
 
   const handleSearchClick = () => {
     setIsSearchExpanded(true);
+    setTimeout(() => {
+      searchInputRef.current?.focus();
+    }, 300);
   };
 
   const handleCloseSearch = () => {
     setIsSearchExpanded(false);
     setShowLocationSuggestions(false);
     setShowSalaryDropdown(false);
+    setSearchQuery({
+      jobTitleSkillsCompany: "",
+      location: "",
+      minSalary: "",
+    });
   };
 
   const handleSearchSubmit = (e) => {
@@ -115,7 +122,8 @@ const HeroHome = () => {
 
       if (
         showSalaryDropdown &&
-        !event.target.closest(".salary-dropdown-container")
+        salaryInputRef.current &&
+        !salaryInputRef.current.contains(event.target)
       ) {
         setShowSalaryDropdown(false);
       }
@@ -140,71 +148,51 @@ const HeroHome = () => {
         <div className="absolute inset-0 bg-linear-to-r from-[#1E2558]/20 to-[#4EB956]/70"></div>
       </div>
 
-      {!isSearchExpanded && (
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight uppercase">
-              Find Your <span className="text-[#4EB956]">Dream Job</span> With
-              Us!
-            </h1>
-          </div>
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight uppercase">
+            Find Your <span className="text-[#4EB956]">Dream Job</span> With Us!
+          </h1>
+        </div>
 
-          <div className="max-w-2xl lg:max-w-4xl mx-auto">
+        <div className="max-w-4xl lg:max-w-6xl mx-auto">
+          {!isSearchExpanded && (
             <div
-              ref={searchInputRef}
-              className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-4 transform transition-all duration-300 hover:shadow-2xl sm:hover:shadow-3xl cursor-pointer"
+              className="bg-white rounded-xl md:rounded-2xl shadow-xl hover:shadow-2xl transform transition-all duration-300 cursor-pointer"
               onClick={handleSearchClick}
             >
-              <div className="flex items-center h-full">
-                <div className="flex-1 pl-3 sm:pl-4">
-                  <div className="text-sm sm:text-base md:text-lg text-gray-600">
-                    Search by job title, location, or salary
-                  </div>
+              <div className="flex items-center h-14 sm:h-16">
+                <div className="flex-1 pl-4 sm:pl-6 h-full">
+                  <input
+                    className="text-sm sm:text-base text-gray-600 w-full h-full outline-none"
+                    placeholder=" Search by job title, location, or salary"
+                  />
                 </div>
-                <button className="bg-linear-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-12 px-4 sm:px-6">
-                  <FaSearch className="text-sm sm:text-base md:text-lg" />
-                  <span className="ml-1 sm:ml-2 hidden xs:inline text-xs sm:text-sm md:text-base">
+                <button className="bg-linear-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center h-full px-6 sm:px-10 cursor-pointer">
+                  <FaSearch className="text-base sm:text-lg" />
+                  <span className="ml-2 hidden sm:inline text-sm sm:text-base">
                     Search
                   </span>
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          )}
 
-      {isSearchExpanded && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-gray-900/95">
-            <button
-              onClick={handleCloseSearch}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white hover:text-[#4EB956] transition-colors duration-200 z-50"
-            >
-              <FaTimes className="text-xl sm:text-2xl" />
-            </button>
-
-            <div className="w-full h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
-              <div
-                ref={expandedSearchRef}
-                className="w-full max-w-6xl bg-linear-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-2xl border border-gray-700/50"
-              >
-                <div className="p-4 sm:p-6 border-b border-gray-700/50">
-                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
-                    Find Your Dream Job
-                  </h2>
-                  <p className="text-gray-400 text-sm sm:text-base text-center mt-2">
-                    Search from thousands of job opportunities
-                  </p>
-                </div>
-
-                <form onSubmit={handleSearchSubmit} className="p-4 sm:p-6">
-                  <div className="space-y-4 sm:space-y-0 sm:flex sm:gap-3">
-                    <div className="flex-1 min-w-0">
-                      <div className="relative">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                          <FaBriefcase className="text-sm sm:text-base" />
+          {isSearchExpanded && (
+            <div className="animate-fadeIn">
+              <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl">
+                <form onSubmit={handleSearchSubmit} className="w-full">
+                  <div className="flex flex-col sm:flex-row items-stretch gap-2">
+                    <div
+                      className="flex-1 min-w-0 animate-slideInLeft"
+                      style={{ animationDelay: "0.1s" }}
+                    >
+                      <div className="relative h-full">
+                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                          <FaBriefcase className="text-base" />
                         </div>
                         <input
+                          ref={searchInputRef}
                           type="text"
                           placeholder="Job title, skills, or company"
                           value={searchQuery.jobTitleSkillsCompany}
@@ -214,16 +202,20 @@ const HeroHome = () => {
                               e.target.value
                             )
                           }
-                          className="w-full pl-10 pr-3 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#4EB956] focus:ring-1 focus:ring-[#4EB956]/50 transition-all duration-300 text-sm sm:text-base h-full"
+                          className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
                           autoFocus
                         />
                       </div>
                     </div>
 
-                    <div className="min-w-0 relative" ref={locationInputRef}>
-                      <div className="relative">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                          <FaMapMarkerAlt className="text-sm sm:text-base" />
+                    <div
+                      className="sm:w-48 relative animate-slideInRight"
+                      ref={locationInputRef}
+                      style={{ animationDelay: "0.2s" }}
+                    >
+                      <div className="relative h-full">
+                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                          <FaMapMarkerAlt className="text-base" />
                         </div>
                         <input
                           type="text"
@@ -233,23 +225,21 @@ const HeroHome = () => {
                             handleInputChange("location", e.target.value)
                           }
                           onFocus={() => setShowLocationSuggestions(true)}
-                          className="w-full pl-10 pr-3 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#4EB956] focus:ring-1 focus:ring-[#4EB956]/50 transition-all duration-300 text-sm sm:text-base h-full"
+                          className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
                         />
 
                         {showLocationSuggestions &&
                           filteredCities.length > 0 && (
-                            <div className="absolute top-full left-0 right-0 mt-1 bg-gray-800/95 backdrop-blur-sm border border-gray-700 rounded-lg shadow-2xl z-50 max-h-[300px] min-h-[100px] overflow-y-auto">
+                            <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
                               {filteredCities.map((city, index) => (
                                 <button
                                   key={index}
                                   type="button"
                                   onClick={() => handleLocationSelect(city)}
-                                  className="w-full px-3 py-3 text-left text-white hover:bg-white/10 transition-colors duration-200 flex items-center border-b border-gray-700 last:border-0"
+                                  className="w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 flex items-center border-b border-gray-100 last:border-0 cursor-pointer"
                                 >
-                                  <FaMapMarkerAlt className="text-gray-400 mr-2 text-xs sm:text-sm shrink-0" />
-                                  <span className="text-xs sm:text-sm truncate">
-                                    {city}
-                                  </span>
+                                  <FaMapMarkerAlt className="text-gray-400 mr-2 text-sm" />
+                                  <span className="text-sm">{city}</span>
                                 </button>
                               ))}
                             </div>
@@ -257,19 +247,23 @@ const HeroHome = () => {
                       </div>
                     </div>
 
-                    <div className="min-w-[140px] salary-dropdown-container">
+                    <div
+                      className="sm:w-40 relative animate-slideInRight"
+                      ref={salaryInputRef}
+                      style={{ animationDelay: "0.3s" }}
+                    >
                       <div className="relative h-full">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                          <FaDollarSign className="text-sm sm:text-base" />
+                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                          <FaDollarSign className="text-base" />
                         </div>
                         <button
                           type="button"
                           onClick={() =>
                             setShowSalaryDropdown(!showSalaryDropdown)
                           }
-                          className="w-full pl-10 pr-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm border border-gray-600/50 rounded-lg text-left text-white focus:outline-none focus:border-[#4EB956] focus:ring-1 focus:ring-[#4EB956]/50 transition-all duration-300 h-full"
+                          className="w-full h-12 sm:h-14 pl-10 pr-8 bg-white border border-gray-300 rounded-lg text-left focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300"
                         >
-                          <span className="text-sm sm:text-base truncate block">
+                          <span className="text-gray-800 text-sm block truncate">
                             {searchQuery.minSalary
                               ? salaryRanges.find(
                                   (s) => s.value === searchQuery.minSalary
@@ -278,27 +272,25 @@ const HeroHome = () => {
                           </span>
                         </button>
                         <FaChevronDown
-                          className={`absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 transition-transform duration-300 ${
+                          className={`absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 transition-transform duration-300 ${
                             showSalaryDropdown ? "rotate-180" : ""
                           }`}
                         />
 
                         {showSalaryDropdown && (
-                          <div className="absolute top-full left-0 right-0 mt-1 bg-gray-800/95 backdrop-blur-sm border border-gray-700 rounded-lg shadow-2xl z-50 max-h-[300px] min-h-[100px] overflow-y-auto">
+                          <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
                             {salaryRanges.map((range, index) => (
                               <button
                                 key={index}
                                 type="button"
                                 onClick={() => handleSalarySelect(range.value)}
-                                className={`w-full px-3 py-3 text-left transition-colors duration-200 flex items-center border-b border-gray-700 last:border-0 ${
+                                className={`w-full px-3 py-2 text-left transition-colors duration-200 ${
                                   searchQuery.minSalary === range.value
-                                    ? "bg-[#4EB956]/20 text-white"
-                                    : "text-white hover:bg-white/10"
+                                    ? "bg-[#4EB956]/10 text-[#4EB956] font-medium"
+                                    : "text-gray-700 hover:bg-gray-100"
                                 }`}
                               >
-                                <span className="text-xs sm:text-sm">
-                                  {range.label}
-                                </span>
+                                <span className="text-sm">{range.label}</span>
                               </button>
                             ))}
                           </div>
@@ -306,37 +298,102 @@ const HeroHome = () => {
                       </div>
                     </div>
 
-                    <div className="sm:w-auto">
+                    <div
+                      className="animate-slideInRight"
+                      style={{ animationDelay: "0.4s" }}
+                    >
                       <button
                         type="submit"
-                        className="w-full sm:w-auto bg-linear-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center h-full min-h-12"
+                        className="h-12 sm:h-14 bg-linear-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-32 cursor-pointer"
                       >
                         <FaSearch className="mr-2" />
-                        <span className="hidden sm:inline">Search</span>
-                        <span className="sm:hidden">Search Jobs</span>
+                        <span>Search Jobs</span>
                       </button>
                     </div>
-                  </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-700/50">
-                    <p className="text-gray-400 text-xs sm:text-sm text-center">
-                      <span className="text-[#4EB956]">Tip:</span> Try searching
-                      for "Software Engineer in Dhaka" or "Marketing Manager
-                      ৳50,000+"
-                    </p>
+                    <button
+                      type="button"
+                      onClick={handleCloseSearch}
+                      className="absolute -top-2 -right-2 bg-gray-800 text-white rounded-full p-1 hover:bg-gray-900 transition-colors duration-200 sm:hidden animate-slideInRight cursor-pointer"
+                      style={{ animationDelay: "0.5s" }}
+                    >
+                      <FaTimes className="text-sm" />
+                    </button>
                   </div>
                 </form>
               </div>
+
+              <div
+                className="hidden sm:flex justify-end mt-3 animate-fadeIn"
+                style={{ animationDelay: "0.6s" }}
+              >
+                <button
+                  onClick={handleCloseSearch}
+                  className="text-white text-sm hover:text-[#4EB956] transition-colors duration-200 flex items-center cursor-pointer"
+                >
+                  <FaTimes className="mr-1" />
+                  Close search
+                </button>
+              </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
+      </div>
 
       <style jsx="true">{`
-        /* Custom scrollbar for dropdowns */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.4s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-slideInLeft {
+          animation: slideInLeft 0.4s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-slideInRight {
+          animation: slideInRight 0.4s ease-out forwards;
+          opacity: 0;
+        }
+
+        .max-h-48 {
+          max-height: 12rem; /* 192px */
+        }
+
         .overflow-y-auto {
           scrollbar-width: thin;
-          scrollbar-color: #4eb956 #1e2558;
+          scrollbar-color: #4eb956 #f0f0f0;
         }
 
         .overflow-y-auto::-webkit-scrollbar {
@@ -344,7 +401,7 @@ const HeroHome = () => {
         }
 
         .overflow-y-auto::-webkit-scrollbar-track {
-          background: #1e2558;
+          background: #f0f0f0;
           border-radius: 3px;
         }
 

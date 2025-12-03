@@ -70,7 +70,7 @@ const RootHeader = () => {
       icon: <FaSearch className="text-xs" />,
       subNav: [
         {
-          name: "Business Development",
+          name: "Sales / Business Development",
           path: "/category/business-development",
           count: 7206,
           icon: <FaBusinessTime />,
