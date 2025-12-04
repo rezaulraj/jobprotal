@@ -6,8 +6,12 @@ import {
   FaBriefcase,
   FaChevronDown,
   FaTimes,
+  FaArrowRight,
+  FaUsers,
 } from "react-icons/fa";
 import heroBgImage from "/images/rootpage/banner_bg.webp";
+import { BsBuildingsFill } from "react-icons/bs";
+import { MdOutlineWifiProtectedSetup } from "react-icons/md";
 
 const HeroHome = () => {
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
@@ -22,6 +26,39 @@ const HeroHome = () => {
   const searchInputRef = useRef(null);
   const locationInputRef = useRef(null);
   const salaryInputRef = useRef(null);
+  const jobStats = [
+    {
+      label: "Vacancy Open",
+      count: "1064",
+      icon: FaUsers,
+      bgColor: "bg-gradient-to-r from-purple-500 to-indigo-500",
+    },
+    {
+      label: "Companies",
+      count: "500+",
+      icon: BsBuildingsFill,
+      color: "from-green-500 to-emerald-400",
+      bgColor: "bg-gradient-to-r from-green-400 to-teal-500",
+    },
+    {
+      label: "New Jobs",
+      count: "180",
+      icon: MdOutlineWifiProtectedSetup,
+      bgColor: "bg-gradient-to-r from-pink-500 to-red-500",
+    },
+  ];
+  const quickLinks = [
+    { label: "All jobs", count: "1064", path: "/jobs/all" },
+    { label: "Employer List", count: "550", path: "/companys" },
+    { label: "New Jobs", count: "380", path: "/jobs/new" },
+    { label: "Deadline Tomorrow", count: "432", path: "/jobs/deadline" },
+    { label: "Internship Opportunity", count: "69", path: "/jobs/internship" },
+    { label: "Contractual Jobs", count: "174", path: "/jobs/contractual" },
+    { label: "Part time Jobs", count: "43", path: "/jobs/part-time" },
+    { label: "Overseas Jobs", count: "41", path: "/jobs/overseas" },
+    { label: "Work From Home", count: "79", path: "/jobs/remote" },
+    { label: "Fresher Jobs", count: "235", path: "/jobs/fresher" },
+  ];
 
   const bangladeshCities = [
     "Dhaka",
@@ -138,7 +175,7 @@ const HeroHome = () => {
   );
 
   return (
-    <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] overflow-hidden">
+    <div className="relative min-h-[400px] sm:min-h-[400px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={heroBgImage}
@@ -149,194 +186,267 @@ const HeroHome = () => {
       </div>
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight uppercase">
-            Find Your <span className="text-[#4EB956]">Dream Job</span> With Us!
-          </h1>
-        </div>
+        <div className="container mx-auto">
+          <div className="flex flex-col items-center lg:flex-row gap-6 lg:gap-8">
+            <div className="w-full lg:w-9/12  py-8">
+              <div className="lg:text-left mb-8 lg:mb-12">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight uppercase text-center">
+                  Find Your <span className="text-[#4EB956]">Dream Job</span>{" "}
+                  With Us!
+                </h1>
+                <div className="mt-6 flex items-center justify-center gap-2 md:gap-6">
+                  {jobStats.map((stat, indx) => (
+                    <div
+                      key={indx}
+                      className={`${stat.bgColor} px-2 md:px-6 py-4 rounded-xl shadow-lg flex  items-center space-x-1 md:space-x-3 transform hover:scale-105 transition duration-300`}
+                    >
+                      <div className="text-white">
+                        <stat.icon className="text-xl md:text-3xl" />
+                      </div>
 
-        <div className="max-w-4xl lg:max-w-6xl mx-auto">
-          {!isSearchExpanded && (
-            <div
-              className="bg-white rounded-xl md:rounded-2xl shadow-xl hover:shadow-2xl transform transition-all duration-300 cursor-pointer"
-              onClick={handleSearchClick}
-            >
-              <div className="flex items-center h-14 sm:h-16">
-                <div className="flex-1 pl-4 sm:pl-6 h-full">
-                  <input
-                    className="text-sm sm:text-base text-gray-600 w-full h-full outline-none"
-                    placeholder=" Search by job title, location, or salary"
-                  />
+                      <div className="flex flex-col items-center">
+                        <span className="text-sm md:text-xl font-bold text-white">
+                          {stat.count}
+                        </span>
+                        <span className="text-xs md:text-sm text-white/90">
+                          {stat.label}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <button className="bg-linear-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center h-full px-6 sm:px-10 cursor-pointer">
-                  <FaSearch className="text-base sm:text-lg" />
-                  <span className="ml-2 hidden sm:inline text-sm sm:text-base">
-                    Search
-                  </span>
-                </button>
               </div>
-            </div>
-          )}
 
-          {isSearchExpanded && (
-            <div className="animate-fadeIn">
-              <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl">
-                <form onSubmit={handleSearchSubmit} className="w-full">
-                  <div className="flex flex-col sm:flex-row items-stretch gap-2">
-                    <div
-                      className="flex-1 min-w-0 animate-slideInLeft"
-                      style={{ animationDelay: "0.1s" }}
-                    >
-                      <div className="relative h-full">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                          <FaBriefcase className="text-base" />
-                        </div>
+              <div className="max-w-4xl lg:max-w-6xl">
+                {!isSearchExpanded && (
+                  <div
+                    className="bg-white rounded-xl md:rounded-2xl shadow-xl hover:shadow-2xl transform transition-all duration-300 cursor-pointer"
+                    onClick={handleSearchClick}
+                  >
+                    <div className="flex items-center h-14 sm:h-16">
+                      <div className="flex-1 pl-4 sm:pl-6 h-full">
                         <input
-                          ref={searchInputRef}
-                          type="text"
-                          placeholder="Job title, skills, or company"
-                          value={searchQuery.jobTitleSkillsCompany}
-                          onChange={(e) =>
-                            handleInputChange(
-                              "jobTitleSkillsCompany",
-                              e.target.value
-                            )
-                          }
-                          className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
-                          autoFocus
+                          className="text-sm sm:text-base text-gray-600 w-full h-full outline-none"
+                          placeholder="Search by job title, location, or salary"
                         />
                       </div>
-                    </div>
-
-                    <div
-                      className="sm:w-48 relative animate-slideInRight"
-                      ref={locationInputRef}
-                      style={{ animationDelay: "0.2s" }}
-                    >
-                      <div className="relative h-full">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                          <FaMapMarkerAlt className="text-base" />
-                        </div>
-                        <input
-                          type="text"
-                          placeholder="Location"
-                          value={searchQuery.location}
-                          onChange={(e) =>
-                            handleInputChange("location", e.target.value)
-                          }
-                          onFocus={() => setShowLocationSuggestions(true)}
-                          className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
-                        />
-
-                        {showLocationSuggestions &&
-                          filteredCities.length > 0 && (
-                            <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
-                              {filteredCities.map((city, index) => (
-                                <button
-                                  key={index}
-                                  type="button"
-                                  onClick={() => handleLocationSelect(city)}
-                                  className="w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 flex items-center border-b border-gray-100 last:border-0 cursor-pointer"
-                                >
-                                  <FaMapMarkerAlt className="text-gray-400 mr-2 text-sm" />
-                                  <span className="text-sm">{city}</span>
-                                </button>
-                              ))}
-                            </div>
-                          )}
-                      </div>
-                    </div>
-
-                    <div
-                      className="sm:w-40 relative animate-slideInRight"
-                      ref={salaryInputRef}
-                      style={{ animationDelay: "0.3s" }}
-                    >
-                      <div className="relative h-full">
-                        <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                          <FaDollarSign className="text-base" />
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setShowSalaryDropdown(!showSalaryDropdown)
-                          }
-                          className="w-full h-12 sm:h-14 pl-10 pr-8 bg-white border border-gray-300 rounded-lg text-left focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300"
-                        >
-                          <span className="text-gray-800 text-sm block truncate">
-                            {searchQuery.minSalary
-                              ? salaryRanges.find(
-                                  (s) => s.value === searchQuery.minSalary
-                                )?.label
-                              : "Min Salary"}
-                          </span>
-                        </button>
-                        <FaChevronDown
-                          className={`absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 transition-transform duration-300 ${
-                            showSalaryDropdown ? "rotate-180" : ""
-                          }`}
-                        />
-
-                        {showSalaryDropdown && (
-                          <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
-                            {salaryRanges.map((range, index) => (
-                              <button
-                                key={index}
-                                type="button"
-                                onClick={() => handleSalarySelect(range.value)}
-                                className={`w-full px-3 py-2 text-left transition-colors duration-200 ${
-                                  searchQuery.minSalary === range.value
-                                    ? "bg-[#4EB956]/10 text-[#4EB956] font-medium"
-                                    : "text-gray-700 hover:bg-gray-100"
-                                }`}
-                              >
-                                <span className="text-sm">{range.label}</span>
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    <div
-                      className="animate-slideInRight"
-                      style={{ animationDelay: "0.4s" }}
-                    >
-                      <button
-                        type="submit"
-                        className="h-12 sm:h-14 bg-linear-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-32 cursor-pointer"
-                      >
-                        <FaSearch className="mr-2" />
-                        <span>Search Jobs</span>
+                      <button className="bg-linear-to-r from-[#1E2558] to-[#2d377a] text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center h-full px-6 sm:px-10 cursor-pointer">
+                        <FaSearch className="text-base sm:text-lg" />
+                        <span className="ml-2 hidden sm:inline text-sm sm:text-base">
+                          Search
+                        </span>
                       </button>
                     </div>
-
-                    <button
-                      type="button"
-                      onClick={handleCloseSearch}
-                      className="absolute -top-2 -right-2 bg-gray-800 text-white rounded-full p-1 hover:bg-gray-900 transition-colors duration-200 sm:hidden animate-slideInRight cursor-pointer"
-                      style={{ animationDelay: "0.5s" }}
-                    >
-                      <FaTimes className="text-sm" />
-                    </button>
                   </div>
-                </form>
-              </div>
+                )}
 
-              <div
-                className="hidden sm:flex justify-end mt-3 animate-fadeIn"
-                style={{ animationDelay: "0.6s" }}
-              >
-                <button
-                  onClick={handleCloseSearch}
-                  className="text-white text-sm hover:text-[#4EB956] transition-colors duration-200 flex items-center cursor-pointer"
-                >
-                  <FaTimes className="mr-1" />
-                  Close search
-                </button>
+                {isSearchExpanded && (
+                  <div className="animate-fadeIn">
+                    <div className="bg-white rounded-xl md:rounded-2xl shadow-2xl p-2">
+                      <form onSubmit={handleSearchSubmit} className="w-full">
+                        <div className="flex flex-col sm:flex-row items-stretch gap-2">
+                          <div
+                            className="flex-1 min-w-0 animate-slideInLeft"
+                            style={{ animationDelay: "0.1s" }}
+                          >
+                            <div className="relative h-full">
+                              <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                <FaBriefcase className="text-base" />
+                              </div>
+                              <input
+                                ref={searchInputRef}
+                                type="text"
+                                placeholder="Job title, skills, or company"
+                                value={searchQuery.jobTitleSkillsCompany}
+                                onChange={(e) =>
+                                  handleInputChange(
+                                    "jobTitleSkillsCompany",
+                                    e.target.value
+                                  )
+                                }
+                                className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
+                                autoFocus
+                              />
+                            </div>
+                          </div>
+
+                          <div
+                            className="sm:w-48 relative animate-slideInRight"
+                            ref={locationInputRef}
+                            style={{ animationDelay: "0.2s" }}
+                          >
+                            <div className="relative h-full">
+                              <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                <FaMapMarkerAlt className="text-base" />
+                              </div>
+                              <input
+                                type="text"
+                                placeholder="Location"
+                                value={searchQuery.location}
+                                onChange={(e) =>
+                                  handleInputChange("location", e.target.value)
+                                }
+                                onFocus={() => setShowLocationSuggestions(true)}
+                                className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
+                              />
+
+                              {showLocationSuggestions &&
+                                filteredCities.length > 0 && (
+                                  <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
+                                    {filteredCities.map((city, index) => (
+                                      <button
+                                        key={index}
+                                        type="button"
+                                        onClick={() =>
+                                          handleLocationSelect(city)
+                                        }
+                                        className="w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 flex items-center border-b border-gray-100 last:border-0 cursor-pointer"
+                                      >
+                                        <FaMapMarkerAlt className="text-gray-400 mr-2 text-sm" />
+                                        <span className="text-sm">{city}</span>
+                                      </button>
+                                    ))}
+                                  </div>
+                                )}
+                            </div>
+                          </div>
+
+                          <div
+                            className="sm:w-40 relative animate-slideInRight"
+                            ref={salaryInputRef}
+                            style={{ animationDelay: "0.3s" }}
+                          >
+                            <div className="relative h-full">
+                              <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                <FaDollarSign className="text-base" />
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setShowSalaryDropdown(!showSalaryDropdown)
+                                }
+                                className="w-full h-12 sm:h-14 pl-10 pr-8 bg-white border border-gray-300 rounded-lg text-left focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300"
+                              >
+                                <span className="text-gray-800 text-sm block truncate">
+                                  {searchQuery.minSalary
+                                    ? salaryRanges.find(
+                                        (s) => s.value === searchQuery.minSalary
+                                      )?.label
+                                    : "Min Salary"}
+                                </span>
+                              </button>
+                              <FaChevronDown
+                                className={`absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 transition-transform duration-300 ${
+                                  showSalaryDropdown ? "rotate-180" : ""
+                                }`}
+                              />
+
+                              {showSalaryDropdown && (
+                                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-40 overflow-y-auto animate-fadeIn">
+                                  {salaryRanges.map((range, index) => (
+                                    <button
+                                      key={index}
+                                      type="button"
+                                      onClick={() =>
+                                        handleSalarySelect(range.value)
+                                      }
+                                      className={`w-full px-3 py-2 text-left transition-colors duration-200 ${
+                                        searchQuery.minSalary === range.value
+                                          ? "bg-[#4EB956]/10 text-[#4EB956] font-medium"
+                                          : "text-gray-700 hover:bg-gray-100"
+                                      }`}
+                                    >
+                                      <span className="text-sm">
+                                        {range.label}
+                                      </span>
+                                    </button>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <div
+                            className="animate-slideInRight"
+                            style={{ animationDelay: "0.4s" }}
+                          >
+                            <button
+                              type="submit"
+                              className="h-12 sm:h-14 bg-linear-to-r from-[#1E2558] to-[#4EB956] text-white px-4 sm:px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-32 cursor-pointer"
+                            >
+                              <FaSearch className="mr-2" />
+                              <span>Search Jobs</span>
+                            </button>
+                          </div>
+
+                          <button
+                            type="button"
+                            onClick={handleCloseSearch}
+                            className="absolute -top-2 -right-2 bg-gray-800 text-white rounded-full p-1 hover:bg-gray-900 transition-colors duration-200 sm:hidden animate-slideInRight cursor-pointer"
+                            style={{ animationDelay: "0.5s" }}
+                          >
+                            <FaTimes className="text-sm" />
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div
+                      className="hidden sm:flex justify-end mt-3 animate-fadeIn"
+                      style={{ animationDelay: "0.6s" }}
+                    >
+                      <button
+                        onClick={handleCloseSearch}
+                        className="text-white text-sm hover:text-[#4EB956] transition-colors duration-200 flex items-center cursor-pointer"
+                      >
+                        <FaTimes className="mr-1" />
+                        Close search
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
-          )}
+
+            <div className="w-full lg:w-3/12 py-6 md:py-0">
+              <div className="bg-white h-full w-full">
+                <div className="border-b border-gray-200">
+                  <div className="px-4 sm:px-6 py-2">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Quick Links
+                    </h3>
+                  </div>
+                </div>
+
+                <div
+                  className="overflow-y-auto"
+                  style={{ maxHeight: "calc(100% - 73px)" }}
+                >
+                  <div className="px-4 sm:px-6 py-1 flex flex-wrap md:flex-col ">
+                    {quickLinks.map((link, index) => (
+                      <a
+                        key={index}
+                        href={link.path}
+                        className="group flex items-center justify-between py-2 px-2 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-0 cursor-pointer"
+                      >
+                        <div className="flex items-center">
+                          <span className="text-[#4EB956] mr-2 text-xs group-hover:mr-3 transition-all duration-200">
+                            <FaArrowRight />
+                          </span>
+                          <span className="text-sm text-primary group-hover:text-gray-900 transition-colors duration-200">
+                            {link.label}
+                          </span>
+                        </div>
+                        <span className="text-xs font-medium bg-[#4EB956]/10 text-[#4EB956] px-2 py-1 rounded">
+                          {link.count}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -388,26 +498,29 @@ const HeroHome = () => {
         }
 
         .max-h-48 {
-          max-height: 12rem; /* 192px */
+          max-height: 12rem;
         }
 
         .overflow-y-auto {
           scrollbar-width: thin;
-          scrollbar-color: #4eb956 #f0f0f0;
+          scrollbar-color: #e5e7eb transparent;
         }
 
         .overflow-y-auto::-webkit-scrollbar {
-          width: 6px;
+          width: 4px;
         }
 
         .overflow-y-auto::-webkit-scrollbar-track {
-          background: #f0f0f0;
-          border-radius: 3px;
+          background: transparent;
         }
 
         .overflow-y-auto::-webkit-scrollbar-thumb {
-          background: linear-gradient(to bottom, #4eb956, #1e2558);
-          border-radius: 3px;
+          background: #e5e7eb;
+          border-radius: 2px;
+        }
+
+        .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+          background: #d1d5db;
         }
       `}</style>
     </div>

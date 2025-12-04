@@ -6,7 +6,6 @@ import {
   DollarSign,
   Briefcase,
   Building,
-  Users,
   X,
   Search,
   Star,
@@ -14,23 +13,18 @@ import {
   CheckCircle,
   ChevronDown,
   ChevronUp,
-  ExternalLink,
   Heart,
   Share2,
-  Download,
   Award,
-  Globe,
   User,
 } from "lucide-react";
 
 const AllJobs = () => {
-  // State
   const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
   const [showMobileDescription, setShowMobileDescription] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  // Filter states
   const [salaryRange, setSalaryRange] = useState([15000, 200000]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedExperience, setSelectedExperience] = useState([]);
@@ -42,7 +36,6 @@ const AllJobs = () => {
   const [selectedEducation, setSelectedEducation] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Custom colors
   const colors = {
     primary: "#1e2558",
     secondary: "#4eb956",
@@ -52,7 +45,6 @@ const AllJobs = () => {
     bgLight: "#f8fafc",
   };
 
-  // Generate 20 jobs with Bangladeshi context
   useEffect(() => {
     const generateJobs = () => {
       const jobTitles = [
@@ -387,14 +379,17 @@ The ideal candidate will have strong analytical skills, excellent communication 
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: colors.bgLight }}>
-      {/* Header */}
       <div
         className="sticky top-0 z-40 bg-white shadow-sm border-b"
         style={{ borderColor: colors.border }}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div>
+            <div className="flex items-center gap-2">
+              <a href="/" className="text-gray-600 text-sm hover:underline hover:text-secondary">
+                Home
+              </a>
+              <span>/</span>
               <p className="text-gray-600 text-sm">All Jobs</p>
             </div>
             <div className="relative w-96">
@@ -948,12 +943,14 @@ The ideal candidate will have strong analytical skills, excellent communication 
                 {selectedJob ? (
                   <div className="sticky top-24">
                     <div
-                      className="bg-white rounded-xl shadow-lg border overflow-hidden"
-                      style={{ borderColor: colors.border }}
+                      className="bg-white rounded-xl shadow-lg border overflow-hidden flex flex-col"
+                      style={{
+                        borderColor: colors.border,
+                        maxHeight: "calc(100vh - 120px)",
+                      }}
                     >
-                      {/* Job Header */}
                       <div
-                        className="p-6 border-b"
+                        className="sticky top-0 z-10 p-6 border-b-2 bg-white"
                         style={{
                           borderColor: colors.border,
                           backgroundColor: colors.lightPrimary,
@@ -1063,185 +1060,192 @@ The ideal candidate will have strong analytical skills, excellent communication 
                         </div>
                       </div>
 
-                      {/* Job Details */}
-                      <div className="p-6">
-                        <div className="space-y-8">
-                          {/* Requirements */}
-                          <div>
-                            <h3
-                              className="text-xl font-semibold mb-4 pb-2 border-b"
-                              style={{
-                                color: colors.primary,
-                                borderColor: colors.border,
-                              }}
-                            >
-                              Requirements
-                            </h3>
-                            <ul className="space-y-3">
-                              {selectedJob.requirements.map((req, index) => (
-                                <li
-                                  key={index}
-                                  className="flex items-start gap-3"
-                                >
-                                  <CheckCircle
-                                    className="w-5 h-5 mt-0.5 flex-shrink-0"
-                                    style={{ color: colors.secondary }}
-                                  />
-                                  <span className="text-gray-700">{req}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          {/* Job Description */}
-                          <div>
-                            <h3
-                              className="text-xl font-semibold mb-4 pb-2 border-b"
-                              style={{
-                                color: colors.primary,
-                                borderColor: colors.border,
-                              }}
-                            >
-                              Job Description
-                            </h3>
-                            <div className="prose max-w-none text-gray-700 leading-relaxed">
-                              {selectedJob.description}
-                            </div>
-                          </div>
-
-                          {/* Benefits */}
-                          <div>
-                            <h3
-                              className="text-xl font-semibold mb-4 pb-2 border-b"
-                              style={{
-                                color: colors.primary,
-                                borderColor: colors.border,
-                              }}
-                            >
-                              Benefits & Perks
-                            </h3>
-                            <div className="grid grid-cols-2 gap-3">
-                              {selectedJob.benefits.map((benefit, index) => (
-                                <div
-                                  key={index}
-                                  className="flex items-center gap-3 p-3 rounded-lg"
-                                  style={{
-                                    backgroundColor: colors.lightSecondary,
-                                  }}
-                                >
-                                  <CheckCircle
-                                    className="w-4 h-4"
-                                    style={{ color: colors.secondary }}
-                                  />
-                                  <span className="text-gray-700">
-                                    {benefit}
-                                  </span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Stats */}
-                          <div className="grid grid-cols-3 gap-4">
-                            <div
-                              className="text-center p-4 rounded-lg"
-                              style={{ backgroundColor: colors.lightPrimary }}
-                            >
-                              <div
-                                className="text-2xl font-bold mb-1"
-                                style={{ color: colors.primary }}
+                      {/* Job Details - Scrollable Content */}
+                      <div
+                        className="flex-1 overflow-y-auto"
+                        style={{ maxHeight: "calc(100vh - 350px)" }}
+                      >
+                        <div className="p-6">
+                          <div className="space-y-8">
+                            {/* Requirements */}
+                            <div>
+                              <h3
+                                className="text-xl font-semibold mb-4 pb-2 border-b"
+                                style={{
+                                  color: colors.primary,
+                                  borderColor: colors.border,
+                                }}
                               >
-                                {selectedJob.totalViews}
-                              </div>
-                              <div className="text-sm text-gray-600">
-                                Total Views
+                                Requirements
+                              </h3>
+                              <ul className="space-y-3">
+                                {selectedJob.requirements.map((req, index) => (
+                                  <li
+                                    key={index}
+                                    className="flex items-start gap-3"
+                                  >
+                                    <CheckCircle
+                                      className="w-5 h-5 mt-0.5 flex-shrink-0"
+                                      style={{ color: colors.secondary }}
+                                    />
+                                    <span className="text-gray-700">{req}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            {/* Job Description */}
+                            <div>
+                              <h3
+                                className="text-xl font-semibold mb-4 pb-2 border-b"
+                                style={{
+                                  color: colors.primary,
+                                  borderColor: colors.border,
+                                }}
+                              >
+                                Job Description
+                              </h3>
+                              <div className="prose max-w-none text-gray-700 leading-relaxed">
+                                {selectedJob.description}
                               </div>
                             </div>
+
+                            {/* Benefits */}
+                            <div>
+                              <h3
+                                className="text-xl font-semibold mb-4 pb-2 border-b"
+                                style={{
+                                  color: colors.primary,
+                                  borderColor: colors.border,
+                                }}
+                              >
+                                Benefits & Perks
+                              </h3>
+                              <div className="grid grid-cols-2 gap-3">
+                                {selectedJob.benefits.map((benefit, index) => (
+                                  <div
+                                    key={index}
+                                    className="flex items-center gap-3 p-3 rounded-lg"
+                                    style={{
+                                      backgroundColor: colors.lightSecondary,
+                                    }}
+                                  >
+                                    <CheckCircle
+                                      className="w-4 h-4"
+                                      style={{ color: colors.secondary }}
+                                    />
+                                    <span className="text-gray-700">
+                                      {benefit}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Stats */}
+                            <div className="grid grid-cols-3 gap-4">
+                              <div
+                                className="text-center p-4 rounded-lg"
+                                style={{ backgroundColor: colors.lightPrimary }}
+                              >
+                                <div
+                                  className="text-2xl font-bold mb-1"
+                                  style={{ color: colors.primary }}
+                                >
+                                  {selectedJob.totalViews}
+                                </div>
+                                <div className="text-sm text-gray-600">
+                                  Total Views
+                                </div>
+                              </div>
+                              <div
+                                className="text-center p-4 rounded-lg"
+                                style={{
+                                  backgroundColor: colors.lightSecondary,
+                                }}
+                              >
+                                <div
+                                  className="text-2xl font-bold mb-1"
+                                  style={{ color: colors.primary }}
+                                >
+                                  {selectedJob.totalApplications}
+                                </div>
+                                <div className="text-sm text-gray-600">
+                                  Applications
+                                </div>
+                              </div>
+                              <div
+                                className="text-center p-4 rounded-lg"
+                                style={{ backgroundColor: colors.lightPrimary }}
+                              >
+                                <div
+                                  className="text-xl font-bold mb-1"
+                                  style={{ color: colors.primary }}
+                                >
+                                  {selectedJob.deadline}
+                                </div>
+                                <div className="text-sm text-gray-600">
+                                  Deadline
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Skills */}
+                            <div>
+                              <h3
+                                className="text-xl font-semibold mb-4 pb-2 border-b"
+                                style={{
+                                  color: colors.primary,
+                                  borderColor: colors.border,
+                                }}
+                              >
+                                Required Skills
+                              </h3>
+                              <div className="flex flex-wrap gap-2">
+                                {selectedJob.skills.map((skill, index) => (
+                                  <span
+                                    key={index}
+                                    className="px-4 py-2 rounded-lg font-medium"
+                                    style={{
+                                      backgroundColor: colors.lightPrimary,
+                                      color: colors.primary,
+                                    }}
+                                  >
+                                    {skill}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Apply Section */}
                             <div
-                              className="text-center p-4 rounded-lg"
+                              className="p-6 rounded-lg text-center"
                               style={{ backgroundColor: colors.lightSecondary }}
                             >
-                              <div
-                                className="text-2xl font-bold mb-1"
+                              <h4
+                                className="text-xl font-semibold mb-2"
                                 style={{ color: colors.primary }}
                               >
-                                {selectedJob.totalApplications}
-                              </div>
-                              <div className="text-sm text-gray-600">
-                                Applications
-                              </div>
-                            </div>
-                            <div
-                              className="text-center p-4 rounded-lg"
-                              style={{ backgroundColor: colors.lightPrimary }}
-                            >
-                              <div
-                                className="text-xl font-bold mb-1"
-                                style={{ color: colors.primary }}
+                                Ready to Apply?
+                              </h4>
+                              <p className="text-gray-600 mb-4">
+                                Don't miss this opportunity! Apply before{" "}
+                                {selectedJob.applicationDeadline}
+                              </p>
+                              <button
+                                className="px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105"
+                                style={{
+                                  backgroundColor: colors.primary,
+                                  color: "white",
+                                }}
                               >
-                                {selectedJob.deadline}
-                              </div>
-                              <div className="text-sm text-gray-600">
-                                Deadline
-                              </div>
+                                Apply Now
+                              </button>
+                              <p className="text-sm text-gray-500 mt-3">
+                                {selectedJob.totalApplications} people have
+                                already applied
+                              </p>
                             </div>
-                          </div>
-
-                          {/* Skills */}
-                          <div>
-                            <h3
-                              className="text-xl font-semibold mb-4 pb-2 border-b"
-                              style={{
-                                color: colors.primary,
-                                borderColor: colors.border,
-                              }}
-                            >
-                              Required Skills
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                              {selectedJob.skills.map((skill, index) => (
-                                <span
-                                  key={index}
-                                  className="px-4 py-2 rounded-lg font-medium"
-                                  style={{
-                                    backgroundColor: colors.lightPrimary,
-                                    color: colors.primary,
-                                  }}
-                                >
-                                  {skill}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Apply Section */}
-                          <div
-                            className="p-6 rounded-lg text-center"
-                            style={{ backgroundColor: colors.lightSecondary }}
-                          >
-                            <h4
-                              className="text-xl font-semibold mb-2"
-                              style={{ color: colors.primary }}
-                            >
-                              Ready to Apply?
-                            </h4>
-                            <p className="text-gray-600 mb-4">
-                              Don't miss this opportunity! Apply before{" "}
-                              {selectedJob.applicationDeadline}
-                            </p>
-                            <button
-                              className="px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105"
-                              style={{
-                                backgroundColor: colors.primary,
-                                color: "white",
-                              }}
-                            >
-                              Apply Now
-                            </button>
-                            <p className="text-sm text-gray-500 mt-3">
-                              {selectedJob.totalApplications} people have
-                              already applied
-                            </p>
                           </div>
                         </div>
                       </div>

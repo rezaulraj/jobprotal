@@ -10,9 +10,9 @@ const RootHome = () => {
   return (
     <div>
       <HeroHome />
+      <JobCategory />
       <FreelanceSection />
       <SeniorManagment />
-      <JobCategory />
       <TopJobs />
       <Benefit />
       <FreshJob />
