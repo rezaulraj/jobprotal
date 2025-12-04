@@ -214,11 +214,11 @@ const JobCategory = () => {
   ];
 
   return (
-    <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-12">
+    <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-6">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
-            <div className=" mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          <div className="lg:col-span-3 bg-white rounded-xl shadow-lg p-6">
+            <div className="mb-6">
               <h2 className="text-2xl font-bold text-gray-700 mb-3">
                 Browse Jobs in Bangladesh
               </h2>
