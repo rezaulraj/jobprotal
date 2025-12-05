@@ -9,8 +9,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<RootHome />} />
+          <Route path="jobs" element={<AllJobs />} />
+          <Route path="jobs/:cate" element={<AllJobs />} />
           <Route path="*" element={<UnderDevelopment />} />
-          <Route path="/jobs/all" element={<AllJobs />} />
         </Route>
       </Routes>
     </>

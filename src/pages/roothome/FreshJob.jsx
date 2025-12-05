@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import freshImage from "/images/rootpage/fresh-section.webp";
+import freshImage from "/gratuate.png";
+import { RiGraduationCapFill } from "react-icons/ri";
 
 const FreshJob = () => {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
@@ -123,9 +124,33 @@ const FreshJob = () => {
   return (
     <div className="container mx-auto px-4 py-10 font-sans">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-        <a href="#" className="rounded-xl overflow-hidden shadow-md h-full">
-          <img src={freshImage} alt="Fresh Jobs" className="w-full h-full" />
-        </a>
+        <div className="grid grid-cols-2 items-center">
+          <div className="space-y-9">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <RiGraduationCapFill className="text-5xl md:text-6xl text-black" />
+                <h1 className="text-4xl md:text-5xl uppercase font-bold tracking-wider ">
+                  Fresh
+                </h1>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-medium text-gray-950 uppercase">
+                Graduate Jobs
+              </h2>
+              <p className="text-lg">
+                Kickstart your career with these exciellent entry label
+                position. Find the job best suited to your skills and begin your
+                new and exciting career
+              </p>
+            </div>
+
+            <div>
+              <button className="bg-secondary px-6 py-3 text-lg md:text-xl font-bold uppercase text-black cursor-pointer">Graduate Jobs</button>
+            </div>
+          </div>
+          <a href="#" className=" overflow-hidden h-full">
+            <img src={freshImage} alt="Fresh Jobs" className="w-full h-full" />
+          </a>
+        </div>
 
         <div className="bg-white rounded-xl shadow-md p-6 flex flex-col">
           <div className="flex items-center justify-between mb-4">

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import {
   FaSearch,
   FaMapMarkerAlt,
@@ -14,9 +13,7 @@ import heroBgImage from "/images/rootpage/banner_bg.webp";
 import { BsBuildingsFill } from "react-icons/bs";
 import { MdOutlineWifiProtectedSetup } from "react-icons/md";
 import jobData from "../../data/jobData.json";
-
 const HeroHome = () => {
-  const navigate = useNavigate();
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState({
     jobTitleSkillsCompany: "",
@@ -25,182 +22,67 @@ const HeroHome = () => {
   });
   const [showLocationSuggestions, setShowLocationSuggestions] = useState(false);
   const [showSalaryDropdown, setShowSalaryDropdown] = useState(false);
-  const [searchSuggestions, setSearchSuggestions] = useState([]);
-  const [quickLinks, setQuickLinks] = useState([]);
-  const [jobStats, setJobStats] = useState([]);
 
   const searchInputRef = useRef(null);
   const locationInputRef = useRef(null);
   const salaryInputRef = useRef(null);
+  console.log("job data", jobData);
+  const jobStats = [
+    {
+      label: "Vacancy Open",
+      count: "1064",
+      icon: FaUsers,
+      bgColor: "bg-gradient-to-r from-purple-500 to-indigo-500",
+    },
+    {
+      label: "Companies",
+      count: "500+",
+      icon: BsBuildingsFill,
+      color: "from-green-500 to-emerald-400",
+      bgColor: "bg-gradient-to-r from-green-400 to-teal-500",
+    },
+    {
+      label: "New Jobs",
+      count: "180",
+      icon: MdOutlineWifiProtectedSetup,
+      bgColor: "bg-gradient-to-r from-pink-500 to-red-500",
+    },
+  ];
+  const quickLinks = [
+    { label: "All jobs", count: "1064", path: "/jobs" },
+    { label: "Employer List", count: "550", path: "/companys" },
+    { label: "New Jobs", count: "380", path: "/jobs/" },
+    { label: "Deadline Tomorrow", count: "432", path: "/jobs" },
+    { label: "Internship Opportunity", count: "69", path: "/jobs" },
+    { label: "Contractual Jobs", count: "174", path: "/jobs" },
+    { label: "Part time Jobs", count: "43", path: "/jobs" },
+    { label: "Overseas Jobs", count: "41", path: "/jobs" },
+    { label: "Work From Home", count: "79", path: "/jobs" },
+    { label: "Fresher Jobs", count: "235", path: "/jobs" },
+  ];
 
-  // Calculate job statistics and quick links from job data
-  useEffect(() => {
-    // Calculate total vacancies
-    const totalVacancies = jobData.reduce((sum, job) => {
-      const vacancy = parseInt(job.vacancy) || 0;
-      return sum + vacancy;
-    }, 0);
-
-    // Calculate unique companies
-    const uniqueCompanies = [
-      ...new Set(jobData.map((job) => job.company).filter(Boolean)),
-    ].length;
-
-    // Calculate new jobs (jobs with ID <= 50 for demo)
-    const newJobsCount = jobData.filter((job) => job.id <= 50).length;
-
-    // Update job stats
-    setJobStats([
-      {
-        label: "Vacancy Open",
-        count: totalVacancies.toLocaleString(),
-        icon: FaUsers,
-        bgColor: "bg-gradient-to-r from-purple-500 to-indigo-500",
-      },
-      {
-        label: "Companies",
-        count: `${uniqueCompanies}+`,
-        icon: BsBuildingsFill,
-        bgColor: "bg-gradient-to-r from-green-400 to-teal-500",
-      },
-      {
-        label: "New Jobs",
-        count: newJobsCount,
-        icon: MdOutlineWifiProtectedSetup,
-        bgColor: "bg-gradient-to-r from-pink-500 to-red-500",
-      },
-    ]);
-
-    // Calculate quick links with actual counts
-    const calculatedQuickLinks = [
-      {
-        label: "All jobs",
-        count: totalVacancies.toLocaleString(),
-        path: "/jobs",
-      },
-      {
-        label: "Employer List",
-        count: uniqueCompanies,
-        path: "/companys",
-      },
-      {
-        label: "New Jobs",
-        count: newJobsCount,
-        path: "/jobs/",
-      },
-      {
-        label: "Deadline Tomorrow",
-        count: calculateDeadlineTomorrowCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Internship Opportunity",
-        count: calculateInternshipCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Contractual Jobs",
-        count: calculateContractualCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Part time Jobs",
-        count: calculatePartTimeCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Overseas Jobs",
-        count: calculateOverseasCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Work From Home",
-        count: calculateRemoteCount(),
-        path: "/jobs",
-      },
-      {
-        label: "Fresher Jobs",
-        count: calculateFresherCount(),
-        path: "/jobs",
-      },
-    ];
-
-    setQuickLinks(calculatedQuickLinks);
-  }, []);
-
-  // Helper functions to calculate counts
-  const calculateDeadlineTomorrowCount = () => {
-    // For demo, return a count based on job IDs
-    return jobData.filter((job) => job.id % 10 === 0).length;
-  };
-
-  const calculateInternshipCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.title.toLowerCase().includes("intern") ||
-        job.type.toLowerCase().includes("intern")
-    ).length;
-  };
-
-  const calculateContractualCount = () => {
-    return jobData.filter((job) => job.type.toLowerCase().includes("contract"))
-      .length;
-  };
-
-  const calculatePartTimeCount = () => {
-    return jobData.filter((job) => job.type.toLowerCase().includes("part"))
-      .length;
-  };
-
-  const calculateOverseasCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.description.toLowerCase().includes("overseas") ||
-        job.description.toLowerCase().includes("abroad") ||
-        job.title.toLowerCase().includes("overseas")
-    ).length;
-  };
-
-  const calculateRemoteCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.type.toLowerCase().includes("remote") ||
-        job.description.toLowerCase().includes("remote") ||
-        job.description.toLowerCase().includes("work from home") ||
-        job.description.toLowerCase().includes("wfh")
-    ).length;
-  };
-
-  const calculateFresherCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.experience === 0 ||
-        job.experience === "Fresher" ||
-        (typeof job.experience === "string" &&
-          job.experience.toLowerCase().includes("fresher")) ||
-        (job.description && job.description.toLowerCase().includes("fresher"))
-    ).length;
-  };
-
-  // Get unique locations from job data
-  const getUniqueLocations = () => {
-    const locations = new Set();
-    jobData.forEach((job) => {
-      if (job.location) {
-        let cleanLocation = job.location;
-        if (cleanLocation.includes("(")) {
-          cleanLocation = cleanLocation.split("(")[0].trim();
-        }
-        if (cleanLocation.includes("Dhaka")) {
-          cleanLocation = "Dhaka";
-        }
-        locations.add(cleanLocation);
-      }
-    });
-    return Array.from(locations).sort();
-  };
-
-  const bangladeshCities = getUniqueLocations();
+  const bangladeshCities = [
+    "Dhaka",
+    "Chittagong",
+    "Khulna",
+    "Rajshahi",
+    "Sylhet",
+    "Barisal",
+    "Rangpur",
+    "Mymensingh",
+    "Comilla",
+    "Narayanganj",
+    "Gazipur",
+    "Cox's Bazar",
+    "Jessore",
+    "Bogra",
+    "Dinajpur",
+    "Tangail",
+    "Pabna",
+    "Kushtia",
+    "Noakhali",
+    "Feni",
+  ];
 
   const salaryRanges = [
     { value: "", label: "Min Salary" },
@@ -230,32 +112,11 @@ const HeroHome = () => {
       location: "",
       minSalary: "",
     });
-    setSearchSuggestions([]);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-
-    // Build search parameters
-    const params = new URLSearchParams();
-
-    if (searchQuery.jobTitleSkillsCompany) {
-      params.append("search", searchQuery.jobTitleSkillsCompany);
-    }
-
-    if (searchQuery.location) {
-      params.append("location", searchQuery.location);
-    }
-
-    if (searchQuery.minSalary) {
-      params.append("minSalary", searchQuery.minSalary);
-    }
-
-    // Navigate to jobs page with search parameters
-    const queryString = params.toString();
-    navigate(`/jobs${queryString ? `?${queryString}` : ""}`);
-
-    handleCloseSearch();
+    console.log("Search submitted:", searchQuery);
   };
 
   const handleInputChange = (field, value) => {
@@ -269,49 +130,6 @@ const HeroHome = () => {
     } else if (field === "location" && value.length === 0) {
       setShowLocationSuggestions(false);
     }
-
-    if (field === "jobTitleSkillsCompany" && value.length > 0) {
-      // Generate search suggestions from job data
-      const suggestions = generateSearchSuggestions(value);
-      setSearchSuggestions(suggestions);
-    } else if (field === "jobTitleSkillsCompany" && value.length === 0) {
-      setSearchSuggestions([]);
-    }
-  };
-
-  const generateSearchSuggestions = (query) => {
-    const lowerQuery = query.toLowerCase();
-    const suggestions = new Set();
-
-    // Search in job titles
-    jobData.forEach((job) => {
-      if (job.title.toLowerCase().includes(lowerQuery)) {
-        suggestions.add(job.title);
-      }
-      if (job.company && job.company.toLowerCase().includes(lowerQuery)) {
-        suggestions.add(job.company);
-      }
-      if (job.skills) {
-        job.skills.forEach((skill) => {
-          if (skill.toLowerCase().includes(lowerQuery)) {
-            suggestions.add(skill);
-          }
-        });
-      }
-      if (job.category && job.category.toLowerCase().includes(lowerQuery)) {
-        suggestions.add(job.category);
-      }
-    });
-
-    return Array.from(suggestions).slice(0, 8); // Limit to 8 suggestions
-  };
-
-  const handleSuggestionClick = (suggestion) => {
-    setSearchQuery((prev) => ({
-      ...prev,
-      jobTitleSkillsCompany: suggestion,
-    }));
-    setSearchSuggestions([]);
   };
 
   const handleLocationSelect = (city) => {
@@ -329,11 +147,6 @@ const HeroHome = () => {
     }));
     setShowSalaryDropdown(false);
   };
-
-  // Filter cities based on search
-  const filteredCities = bangladeshCities.filter((city) =>
-    city.toLowerCase().includes(searchQuery.location.toLowerCase())
-  );
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -357,6 +170,10 @@ const HeroHome = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [showLocationSuggestions, showSalaryDropdown]);
+
+  const filteredCities = bangladeshCities.filter((city) =>
+    city.toLowerCase().includes(searchQuery.location.toLowerCase())
+  );
 
   return (
     <div className="relative min-h-[400px] sm:min-h-[400px] overflow-hidden">
@@ -430,7 +247,7 @@ const HeroHome = () => {
                       <form onSubmit={handleSearchSubmit} className="w-full">
                         <div className="flex flex-col sm:flex-row items-stretch gap-2">
                           <div
-                            className="flex-1 min-w-0 animate-slideInLeft relative"
+                            className="flex-1 min-w-0 animate-slideInLeft"
                             style={{ animationDelay: "0.1s" }}
                           >
                             <div className="relative h-full">
@@ -451,29 +268,6 @@ const HeroHome = () => {
                                 className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
                                 autoFocus
                               />
-
-                              {/* Search Suggestions */}
-                              {searchSuggestions.length > 0 && (
-                                <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto animate-fadeIn">
-                                  {searchSuggestions.map(
-                                    (suggestion, index) => (
-                                      <button
-                                        key={index}
-                                        type="button"
-                                        onClick={() =>
-                                          handleSuggestionClick(suggestion)
-                                        }
-                                        className="w-full px-3 py-2 text-left text-gray-700 hover:bg-gray-100 transition-colors duration-200 flex items-center border-b border-gray-100 last:border-0 cursor-pointer"
-                                      >
-                                        <FaBriefcase className="text-gray-400 mr-2 text-sm" />
-                                        <span className="text-sm">
-                                          {suggestion}
-                                        </span>
-                                      </button>
-                                    )
-                                  )}
-                                </div>
-                              )}
                             </div>
                           </div>
 
@@ -629,7 +423,7 @@ const HeroHome = () => {
                   className="overflow-y-auto"
                   style={{ maxHeight: "calc(100% - 73px)" }}
                 >
-                  <div className="px-4 sm:px-6 py-1 flex flex-wrap md:flex-col">
+                  <div className="px-4 sm:px-6 py-1 flex flex-wrap md:flex-col ">
                     {quickLinks.map((link, index) => (
                       <a
                         key={index}
@@ -645,7 +439,7 @@ const HeroHome = () => {
                           </span>
                         </div>
                         <span className="text-xs font-medium bg-[#4EB956]/10 text-[#4EB956] px-2 py-1 rounded">
-                          {link.count > 0 ? link.count : "0"}
+                          {link.count}
                         </span>
                       </a>
                     ))}
