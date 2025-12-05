@@ -1387,6 +1387,101 @@ const AllJobs = () => {
                   </h3>
                   <p className="text-gray-700">{selectedJob.description}</p>
                 </div>
+                {/* Benefits */}
+                {selectedJob.benefits && selectedJob.benefits.length > 0 && (
+                  <div>
+                    <h3
+                      className="text-xl font-semibold mb-4 pb-2 border-b"
+                      style={{
+                        color: colors.primary,
+                        borderColor: colors.border,
+                      }}
+                    >
+                      Benefits & Perks
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {selectedJob.benefits.map((benefit, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-3 p-3 rounded-lg"
+                          style={{
+                            backgroundColor: colors.lightSecondary,
+                          }}
+                        >
+                          <CheckCircle
+                            className="w-4 h-4"
+                            style={{ color: colors.secondary }}
+                          />
+                          <span className="text-gray-700">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Skills */}
+                {selectedJob.skills && selectedJob.skills.length > 0 && (
+                  <div>
+                    <h3
+                      className="text-xl font-semibold mb-4 pb-2 border-b"
+                      style={{
+                        color: colors.primary,
+                        borderColor: colors.border,
+                      }}
+                    >
+                      Required Skills
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedJob.skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className="px-4 py-2 rounded-lg font-medium"
+                          style={{
+                            backgroundColor: colors.lightPrimary,
+                            color: colors.primary,
+                          }}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Company Contact Info */}
+                {selectedJob.compnay && (
+                  <div
+                    className="p-4 rounded-lg border"
+                    style={{ borderColor: colors.border }}
+                  >
+                    <h3
+                      className="text-xl font-semibold mb-4"
+                      style={{ color: colors.primary }}
+                    >
+                      Company Information
+                    </h3>
+                    <div className="space-y-3">
+                      {selectedJob.compnay.email && (
+                        <div className="flex items-center gap-3">
+                          <Mail className="w-5 h-5 text-gray-400" />
+                          <span>{selectedJob.compnay.email}</span>
+                        </div>
+                      )}
+                      {selectedJob.compnay.phone && (
+                        <div className="flex items-center gap-3">
+                          <Phone className="w-5 h-5 text-gray-400" />
+                          <span>{selectedJob.compnay.phone}</span>
+                        </div>
+                      )}
+                      {selectedJob.compnay.address && (
+                        <div className="flex items-center gap-3">
+                          <MapPin className="w-5 h-5 text-gray-400" />
+                          <span>{selectedJob.compnay.address}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
