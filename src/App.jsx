@@ -4,9 +4,11 @@ import RootHome from "./pages/roothome/RootHome";
 import UnderDevelopment from "./components/UnderDevelopment";
 import AllJobs from "./pages/jobs/AllJobs";
 import FreelanceJobDescription from "./pages/jobs/FreelanceJobDescription";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<RootHome />} />
