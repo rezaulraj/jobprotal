@@ -135,7 +135,7 @@
     "id": 4,
     "title": "Customer Relationship Manager (CRM)",
     "company": "Mir Telecom",
-    "location": "Dhaka (Gulshan)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -186,7 +186,7 @@
     "id": 5,
     "title": "Safety Officer (Female)",
     "company": "Action Engineering & Construction Ltd.",
-    "location": "Dhaka (Tejgaon Industrial Area)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -330,7 +330,7 @@
     "id": 8,
     "title": "Assistant Manager - Agency",
     "company": "Apex Footwear Limited",
-    "location": "Dhaka (Tejgaon I/A)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -374,7 +374,7 @@
     "id": 9,
     "title": "Assistant Engineer (Electrical)",
     "company": "Action Engineering & Construction Ltd.",
-    "location": "Dhaka (Tejgaon Industrial Area)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -423,7 +423,7 @@
     "id": 10,
     "title": "IT Office",
     "company": "Action Engineering & Construction Ltd.",
-    "location": "Dhaka (Tejgaon Industrial Area)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -469,7 +469,7 @@
     "id": 11,
     "title": "Senior Officer, Finance and Accounts",
     "company": "BRAC Institute of Governance and Development (BIGD)",
-    "location": "Dhaka (Mohakhali)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -524,7 +524,7 @@
     "id": 12,
     "title": "Asst. Manager/Sr. Executive, Accounts & Finance",
     "company": "Primitek Group",
-    "location": "Chattogram (Mirsharai)",
+    "location": "Chattogram",
     "salary": {
       "min": 0,
       "max": 0,
@@ -680,7 +680,7 @@
     "id": 15,
     "title": "Sr. Executive / Executive - Finance",
     "company": "Galaxy Bangladesh Group",
-    "location": "Dhaka (Uttara Sector 7)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -746,7 +746,7 @@
     "id": 16,
     "title": "Accounts Assistant",
     "company": "Elevator Engineers Ltd.",
-    "location": "Dhaka (DOHS Mirpur)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -790,7 +790,7 @@
     "id": 17,
     "title": "Manager - Costing, Budgeting & MIS",
     "company": "M & J Group",
-    "location": "Dhaka (Mohakhali)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -839,7 +839,7 @@
     "id": 18,
     "title": "Admin and Accounts Officer",
     "company": "Nabolok Parishad",
-    "location": "Not specified / Anywhere in Bangladesh",
+    "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
       "max": 0,
@@ -884,7 +884,7 @@
     "id": 19,
     "title": "Accounts & Finance Head",
     "company": "MYRO",
-    "location": "Dhaka (Shyamoli)",
+    "location": "Dhaka",
     "salary": {
       "min": 25000,
       "max": 40000,
@@ -943,7 +943,7 @@
     "id": 20,
     "title": "Accounts Officer",
     "company": "High-Tech Building Materials Industries Ltd.",
-    "location": "Dhaka (South Keraniganj)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1000,7 +1000,7 @@
     "id": 21,
     "title": "Accountant",
     "company": "ASSK AMARI WAY DEVELOPERS LTD.",
-    "location": "Dhaka (Gulshan‑1)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1100,7 +1100,7 @@
     "id": 23,
     "title": "Assistant / Deputy Manager - Financial Performance & Analysis",
     "company": "Aftab Bahumukhi Farms Ltd.",
-    "location": "Dhaka (Motijheel)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1279,7 +1279,7 @@
     "id": 26,
     "title": "Officer Finance and VAT",
     "company": "Nevian Lifescience PLC",
-    "location": "Dhaka / Gazipur (Tongi)",
+    "location": "Dhak",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1417,7 +1417,7 @@
     "id": 29,
     "title": "Accounts & Admin Officer",
     "company": "Ashraf Foundation (AF)",
-    "location": "Jashore (Chaugachha)",
+    "location": "Jashore",
     "salary": {
       "min": 40000,
       "max": 45000,
@@ -1528,7 +1528,7 @@
     "id": 31,
     "title": "Visa Consultant",
     "company": "TRAVEL MIGRA",
-    "location": "Dhaka (Gulshan 2)",
+    "location": "Dhaka",
     "salary": {
       "min": 25000,
       "max": 35000,
@@ -1574,7 +1574,7 @@
     "id": 32,
     "title": "VISA Processing & Travel Consultant Expert",
     "company": "Axzon International Tours and Travels Ltd.",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1680,7 +1680,7 @@
     "id": 34,
     "title": "Visa Counselor",
     "company": "SHADHIN BANGLA Consultancy & Travel Center",
-    "location": "Dhaka (Uttara Sector 10)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1730,7 +1730,7 @@
     "id": 35,
     "title": "Skilled Migration Expert",
     "company": "Foring Fly",
-    "location": "Dhaka (Motijheel)",
+    "location": "Dhaka",
     "salary": {
       "min": 30000,
       "max": 50000,
@@ -1788,7 +1788,7 @@
     "id": 36,
     "title": "Senior Student Consultant",
     "company": "Albatross Education Ltd.",
-    "location": "Dhaka (Uttara branch)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1835,7 +1835,7 @@
     "id": 37,
     "title": "Senior Counselor (Study Abroad)",
     "company": "Futureed Corporation Ltd",
-    "location": "Dhaka (Banani, Dhanmondi)",
+    "location": "Dhaka",
     "salary": {
       "min": 45000,
       "max": 50000,
@@ -1883,7 +1883,7 @@
     "id": 38,
     "title": "Business Development Manager (Study Abroad)",
     "company": "Visabee Consultants Ltd.",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1934,7 +1934,7 @@
     "id": 39,
     "title": "Cafeteria In-Charge",
     "company": "MJL Bangladesh PLC",
-    "location": "Dhaka (Office cafeteria)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -1983,7 +1983,7 @@
     "id": 40,
     "title": "Senior Counselor / Counselor (Tourist Visa)",
     "company": "Visa World Bangladesh",
-    "location": "Dhaka (Gulshan‑1)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2032,7 +2032,7 @@
     "id": 41,
     "title": "Education Counselor",
     "company": "LEC Abroad Ltd.",
-    "location": "Dhaka (Demra Staff Quarter)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2076,7 +2076,7 @@
     "id": 42,
     "title": "Senior Education Counselor (UK, Australia, New Zealand & Malaysia)",
     "company": "EDUX GLOBAL CONSULTANCY",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 30000,
       "max": 50000,
@@ -2123,7 +2123,7 @@
     "id": 43,
     "title": "Education Counsellor / Education Counsellor",
     "company": "Study Vision Advisory Ltd",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2170,7 +2170,7 @@
     "id": 44,
     "title": "Executive / Executive – Sales & Reservation",
     "company": "Ayat Air Travels",
-    "location": "Dhaka (Uttara Sector 7)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2219,7 +2219,7 @@
     "id": 45,
     "title": "Visa, Work Permit Processing & Protocol Officer",
     "company": "Sharmin Group",
-    "location": "Dhaka (Ashulia)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2313,7 +2313,7 @@
     "id": 47,
     "title": "Admission Officer",
     "company": "Education@",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 20000,
       "max": 40000,
@@ -2411,7 +2411,7 @@
     "id": 49,
     "title": "Junior Executive Officer",
     "company": "Shakib Agrotech Pvt Ltd.",
-    "location": "Dhaka (Nikunja-2, Khilkhet)",
+    "location": "Dhaka",
     "salary": {
       "min": 14000,
       "max": 17000,
@@ -2457,7 +2457,7 @@
     "id": 50,
     "title": "Call Centre Agent",
     "company": "Talent Pro",
-    "location": "Dhaka (DOHS Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2517,7 +2517,7 @@
     "id": 51,
     "title": "Customer Care Executive (Female)",
     "company": "Global.",
-    "location": "Dhaka (Mirpur-12, near Pallabi Metro station)",
+    "location": "Dhaka",
     "salary": {
       "min": 13000,
       "max": 18000,
@@ -2614,7 +2614,7 @@
     "id": 53,
     "title": "Telesales Executive (Female)",
     "company": "Bdjobs.com Limited",
-    "location": "Dhaka (Kawran Bazar)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2663,7 +2663,7 @@
     "id": 54,
     "title": "Executive/Sr. Executive – Communication & Business Development",
     "company": "Zubion Development Solutions Limited (ZDSL)",
-    "location": "Dhaka (Uttara Sector 15)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2721,7 +2721,7 @@
     "id": 55,
     "title": "Full Stack Developer (React / Next.js / Node.js)",
     "company": "R & H Business Solution",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -2767,7 +2767,7 @@
     "id": 56,
     "title": "Front End Engineer (React / Next.js)",
     "company": "Project 2morrow Software Ltd.",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 20000,
       "max": 25000
@@ -2869,7 +2869,7 @@
     "id": 58,
     "title": "Tech Support Specialist",
     "company": "Planet Education Networks Limited",
-    "location": "Chattogram (Agrabad)",
+    "location": "Chattogram",
     "salary": {
       "min": 60000,
       "max": 70000,
@@ -2918,7 +2918,7 @@
     "id": 59,
     "title": "Software Developer (male/female)",
     "company": "Hana System Limited",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 30000,
       "max": 45000
@@ -2970,7 +2970,7 @@
     "id": 60,
     "title": "Senior SEO Analyst / Executive (Night Shift)",
     "company": "ChefOnline",
-    "location": "Dhaka (Gulshan‑1)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3015,7 +3015,7 @@
     "id": 61,
     "title": "SEO Manager / Strategist (Senior – Data & Analytics Focus)",
     "company": "ChefOnline",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3059,7 +3059,7 @@
     "id": 62,
     "title": "Senior Flutter / UI‑UX Developer",
     "company": "ChefOnline",
-    "location": "Dhaka (Gulshan‑1)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3107,7 +3107,7 @@
     "id": 63,
     "title": "Junior Software Engineer",
     "company": "Arena Phone BD Ltd.",
-    "location": "Dhaka (Mohakhali)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3144,7 +3144,7 @@
     "id": 64,
     "title": "WordPress Elementor and Shopify Experts",
     "company": "Tech Maximus",
-    "location": "Dhaka (Lalmatia), Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 18000,
       "max": 20000,
@@ -3191,7 +3191,7 @@
     "id": 65,
     "title": "Sr. Software Developer (PHP, SQL – MySQL, PostgreSQL, MS SQL)",
     "company": "BDTASK",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3240,7 +3240,7 @@
     "id": 66,
     "title": "Full‑Stack Developer (ERPNext, Frappe, Python)",
     "company": "Starkology Solution Limited",
-    "location": "Dhaka (Gulshan 1)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3292,7 +3292,7 @@
     "id": 67,
     "title": "Software Developer",
     "company": "JOYcalls Bangladesh Limited",
-    "location": "Dhaka (Banani)",
+    "location": "Dhaka",
     "salary": {
       "min": 60000,
       "max": 70000,
@@ -3347,7 +3347,7 @@
     "id": 68,
     "title": "WordPress Web Developer",
     "company": "Corporate Care IT",
-    "location": "Dhaka (Old Dhaka)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3428,7 +3428,7 @@
     "id": 70,
     "title": "Senior Full Stack App & Web Developer",
     "company": "The Second Source",
-    "location": "Bogra Sadar Upazila, Rajshahi, Bangladesh",
+    "location": "Rajshahi",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3481,7 +3481,7 @@
     "id": 71,
     "title": "Data Entry Computer Operator (DECO)",
     "company": "Reazaur Rahman & Associates",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 12500,
       "max": 12500,
@@ -3524,7 +3524,7 @@
     "id": 72,
     "title": "Computer Operator",
     "company": "BANGLADESH LINK TOURS & TRAVELS",
-    "location": "Kishoreganj, Bangladesh",
+    "location": "Kishoreganj",
     "salary": {
       "min": 10000,
       "max": 12000,
@@ -3565,7 +3565,7 @@
     "id": 73,
     "title": "Computer Operator",
     "company": "Croydon Kowloon Design Ltd.",
-    "location": "Dhaka (Savar EPZ)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3616,7 +3616,7 @@
     "id": 74,
     "title": "Medical Officer (IMO, EMO, NICU, ICU)",
     "company": "Better Life Hospital Ltd",
-    "location": "Dhaka (Rampura)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3663,7 +3663,7 @@
     "id": 75,
     "title": "Tutor (Microbiology - MBBS 2nd Year Student)",
     "company": "The Royal Scientific Publications",
-    "location": "Dhaka (Purana Paltan)",
+    "location": "Dhaka",
     "salary": {
       "min": 20000,
       "max": 40000,
@@ -3784,7 +3784,7 @@
     "id": 78,
     "title": "Project Engineer / Site-Contract Specialist",
     "company": "National Development Engineers Ltd. (NDE)",
-    "location": "Anywhere in Bangladesh (as per project requirement)",
+    "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3824,7 +3824,7 @@
     "id": 79,
     "title": "Senior Architect (Real-Estate & Interior Design)",
     "company": "G A Foundation",
-    "location": "Dhaka (Mirpur)",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3871,7 +3871,7 @@
     "id": 80,
     "title": "Manager (Civil Engineering)",
     "company": "Akij Insaf Group",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -3921,7 +3921,7 @@
     "id": 81,
     "title": "Engineer - Technical Coordinator",
     "company": "Alphatek Engineering Limited",
-    "location": "Dhaka (Demra)",
+    "location": "Dhaka",
     "salary": {
       "min": 20000,
       "max": 30000,
@@ -3971,7 +3971,7 @@
     "id": 82,
     "title": "Visual Design & Concept Artist – Architecture Support",
     "company": "SANGATH",
-    "location": "Dhaka, Bangladesh",
+    "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
@@ -4068,7 +4068,7 @@
     "id": 84,
     "title": "Civil Engineer",
     "company": "Eastern University",
-    "location": "Dhaka (Ashulia)",
+    "location": "Dhaka",
     "salary": {
       "min": 20000,
       "max": 25000,

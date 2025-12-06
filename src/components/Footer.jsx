@@ -260,7 +260,7 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href="/jobs"
                       className="text-xs text-gray-400 hover:text-emerald-300 transition-colors duration-200 flex items-start group"
                     >
                       <span className="text-emerald-500 opacity-0 group-hover:opacity-100 mr-2 mt-0.5 transition-opacity duration-200">

@@ -3,6 +3,7 @@ import Layout from "./components/Layout";
 import RootHome from "./pages/roothome/RootHome";
 import UnderDevelopment from "./components/UnderDevelopment";
 import AllJobs from "./pages/jobs/AllJobs";
+import FreelanceJobDescription from "./pages/jobs/FreelanceJobDescription";
 function App() {
   return (
     <>
@@ -11,6 +12,10 @@ function App() {
           <Route path="" element={<RootHome />} />
           <Route path="jobs" element={<AllJobs />} />
           <Route path="jobs/:cate" element={<AllJobs />} />
+          <Route
+            path="/freelance/:jobId"
+            element={<FreelanceJobDescription />}
+          />
           <Route path="*" element={<UnderDevelopment />} />
         </Route>
       </Routes>

@@ -3,44 +3,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import freelanceJobs from "../../data/freelanceJob.json";
+import { Link, useNavigate } from "react-router-dom";
 
 const FreelanceSection = () => {
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const navigate = useNavigate();
 
-  const freelanceJobs = [
-    {
-      title: "Web Developer",
-      company: "ababil Group",
-      rate: "500$ per month",
-      skills: ["JavaScript", "Node.Js", "Mongodb", "Typescript"],
-    },
-    {
-      title: "LinkedIn Outreach Specialist - B2B Surgical Instruments",
-      company: "CraftCare Instruments",
-      rate: "450$ per month",
-      skills: ["cold outreach", "automation"],
-    },
-    {
-      title: "Backend Python Developer",
-      company: "Jobtech IT",
-      rate: "350$ par month",
-      skills: ["django", "py-touch", "reinforcement learning"],
-    },
-    {
-      title: "Frontend Developer",
-      company: "Jobtech IT",
-      rate: "400$ per month",
-      skills: ["Javascript", "React Js", "Redux", "HTML", "CSS"],
-    },
-    {
-      title: "Construction Worker",
-      company: "Rosabel Construction",
-      rate: "1000$ per month",
-      skills: ["Manual labor", "Teamwork", "Construction safety"],
-    },
-  ];
+  // Function to create SEO-friendly URL from job title
+  const createJobUrl = (job) => {
+    if (!job || !job.title) return "/freelance";
+
+    // Create slug from title
+    const slug = job.title
+      .toLowerCase()
+      .replace(/[^\w\s]/gi, "") // Remove special characters
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .substring(0, 100); // Limit length
+
+    // Add ID for uniqueness
+    return `/freelance/${slug}-${job.id}`;
+  };
+
+  // Function to handle job click
+  const handleJobClick = (job) => {
+    const url = createJobUrl(job);
+    navigate(url);
+  };
+
+  // Function to handle "View all Projects" click
+  const handleViewAll = () => {
+    navigate("/freelance-jobs");
+  };
+
+  // Function to handle "Hire a Freelancer" click
+  const handleHireFreelancer = () => {
+    navigate("/hire-freelancer");
+  };
 
   return (
     <section className="py-8 bg-gray-100 hidden md:block">
@@ -50,22 +51,22 @@ const FreelanceSection = () => {
             Freelance Side Hustles - Make Extra Income
           </h2>
           <div className="block md:flex items-center justify-center gap-4">
-            <a
-              href="#"
-              className="underline hover:text-blue-700 text-blue-800 text-[18px] font-lato font-medium transition-colors tracking-wide duration-200"
+            <button
+              onClick={handleHireFreelancer}
+              className="underline hover:text-blue-700 text-blue-800 text-[18px] font-lato font-medium transition-colors tracking-wide duration-200 bg-transparent border-none cursor-pointer"
             >
               Hire a Freelancer
-            </a>
-            <a
-              href="#"
-              className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-medium transition-colors tracking-wide duration-200"
+            </button>
+            <button
+              onClick={handleViewAll}
+              className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-medium transition-colors tracking-wide duration-200 bg-transparent border-none cursor-pointer"
             >
               View all Projects
-            </a>
+            </button>
           </div>
         </div>
 
-        <div className="relative ">
+        <div className="relative">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={20}
@@ -94,52 +95,68 @@ const FreelanceSection = () => {
             }}
             className="pb-12"
           >
-            {freelanceJobs.map((job, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden h-72 transition-transform duration-300 hover:scale-105 flex flex-col">
-                  <div className="p-4 flex flex-col h-full">
-                    <a
-                      href="/category/freelance"
-                      className="text-sm font-semibold font-lato text-gray-950 mb-2 line-clamp-1 hover:underline"
-                    >
-                      {job.title}
-                    </a>
-                    <p className="text-gray-600 mb-3 font-lato">
-                      {job.company}
-                    </p>
-                    <p className="text-[#46B749] font-medium mb-4 font-lato">
-                      {job.rate}
-                    </p>
+            {freelanceJobs.map((job, index) => {
+              const jobUrl = createJobUrl(job);
 
-                    <div className="mb-4 grow overflow-y-auto">
-                      <h4 className="text-[15px] font-medium text-gray-500 mb-2 font-lato">
-                        Skills Required:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {job.skills.map(
-                          (skill, skillIndex) =>
-                            skill && (
-                              <span
-                                key={skillIndex}
-                                className="px-3 py-1 font-lato bg-blue-100 text-blue-800 text-xs rounded-full"
-                              >
-                                {skill}
-                              </span>
-                            )
-                        )}
+              return (
+                <SwiperSlide key={job.id || index}>
+                  <div
+                    className="bg-white rounded-lg shadow-lg overflow-hidden h-72 transition-transform duration-300 hover:scale-105 flex flex-col cursor-pointer"
+                    onClick={() => handleJobClick(job)}
+                  >
+                    <div className="p-4 flex flex-col h-full">
+                      {/* Job Title with Link */}
+                      <Link
+                        to={jobUrl}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-sm font-semibold font-lato text-gray-950 mb-2 line-clamp-1 hover:underline hover:text-blue-600 transition-colors block"
+                      >
+                        {job.title}
+                      </Link>
+
+                      <p className="text-gray-600 mb-3 font-lato">
+                        {job.company}
+                      </p>
+
+                      <p className="text-[#46B749] font-medium mb-4 font-lato">
+                        {job.rate}
+                      </p>
+
+                      <div className="mb-4 grow overflow-y-auto">
+                        <h4 className="text-[15px] font-medium text-gray-500 mb-2 font-lato">
+                          Skills Required:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {job.skills?.slice(0, 3).map(
+                            (skill, skillIndex) =>
+                              skill && (
+                                <span
+                                  key={skillIndex}
+                                  className="px-3 py-1 font-lato bg-blue-100 text-blue-800 text-xs rounded-full transition-colors"
+                                >
+                                  {skill}
+                                </span>
+                              )
+                          )}
+                        </div>
                       </div>
+
+                      {/* Project Details Link */}
+                      <Link
+                        to={jobUrl}
+                        onClick={(e) => e.stopPropagation()}
+                        className="w-full flex items-center justify-center cursor-pointer py-2 font-lato bg-[#4EB956] text-white font-medium rounded-lg hover:bg-[#3da745] transition-colors duration-300 mt-auto group-hover:bg-gray-800"
+                      >
+                        Project Details
+                      </Link>
                     </div>
 
-                    <a
-                      href="/category/freelance"
-                      className="w-full flex items-center justify-center cursor-pointer py-2 font-lato bg-[#4EB956] text-white font-medium rounded-lg hover:bg-gray-800 transition-colors duration-300 mt-auto"
-                    >
-                      Project Details
-                    </a>
+                    {/* Hover Overlay Effect */}
+                    <div className="absolute inset-0 bg-blue-500 bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none" />
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
 
           <div

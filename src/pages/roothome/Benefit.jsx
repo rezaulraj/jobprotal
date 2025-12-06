@@ -16,6 +16,7 @@ const benefits = [
     subtitle:
       "Does your CV pass the 10-second test? Get free professional feedback from Jobs Plus experts.",
     bgColor: "bg-gradient-to-r from-green-400 to-teal-500",
+    path: "/free-cv-review",
   },
   {
     icon: <FaPenFancy className="text-white w-8 h-8" />,
@@ -23,6 +24,7 @@ const benefits = [
     subtitle:
       "Jobs Plus CV Experts optimize your CV with the most searched keywords recruiters look for.",
     bgColor: "bg-gradient-to-r from-pink-500 to-red-500",
+    path: "/cv-writeing-service",
   },
 ];
 
@@ -34,6 +36,7 @@ const Benefit = () => {
           {benefits.map((benefit, index) => (
             <Link
               key={index}
+              to={benefit.path}
               className={`flex flex-col items-start p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform ${benefit.bgColor}`}
             >
               <div className="mb-4 p-3 bg-gray-400 rounded-full">
