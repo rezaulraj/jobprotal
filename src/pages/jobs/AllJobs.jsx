@@ -249,6 +249,43 @@ const AllJobs = () => {
     return true;
   });
 
+  // Update selected job when filters change
+  useEffect(() => {
+    if (filteredJobs.length > 0) {
+      // Check if current selectedJob is in filteredJobs
+      const isSelectedJobInFiltered =
+        selectedJob && filteredJobs.some((job) => job.id === selectedJob.id);
+
+      // If selectedJob is not in filtered results OR no job is selected, select the first one
+      if (!isSelectedJobInFiltered || !selectedJob) {
+        setSelectedJob(filteredJobs[0]);
+      }
+    } else {
+      // No jobs found, clear selected job
+      setSelectedJob(null);
+    }
+  }, [filteredJobs]);
+
+  // Handle search input
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    // When user types in search, clear selected job if it doesn't match
+    if (value.trim() !== "" && selectedJob) {
+      const term = value.toLowerCase();
+      const selectedMatches =
+        selectedJob.title.toLowerCase().includes(term) ||
+        selectedJob.company.toLowerCase().includes(term) ||
+        selectedJob.description.toLowerCase().includes(term) ||
+        selectedJob.category.toLowerCase().includes(term);
+
+      if (!selectedMatches) {
+        setSelectedJob(null);
+      }
+    }
+  };
+
   // Clear all filters
   const clearFilters = () => {
     setSalaryRange([0, 200000]);
@@ -261,6 +298,7 @@ const AllJobs = () => {
     setSelectedEducation([]);
     setSelectedDeadline([]);
     setSearchTerm("");
+    setSelectedJob(jobData[0]); // Reset to first job
     navigate("/jobs"); // Navigate back to all jobs
   };
 
@@ -428,7 +466,7 @@ const AllJobs = () => {
                 type="text"
                 placeholder="Search jobs, companies, keywords..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={handleSearch}
                 className="w-full pl-10 pr-4 py-2.5 rounded-lg border focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 style={{ borderColor: colors.border }}
               />
@@ -973,7 +1011,7 @@ const AllJobs = () => {
                             >
                               {selectedJob.title}
                             </h2>
-                            <div className="flex items-center gap-4 mb-3">
+                            <div className="flex items-center flex-wrap gap-4 mb-3">
                               <span className="font-semibold text-gray-800">
                                 {selectedJob.company}
                               </span>

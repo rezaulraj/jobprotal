@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "title": "Senior Executive/Executive (Internal Audit)",
+    "company": "Haque Brothers Ltd",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "experience": 2,
+    "category": "Accounting/Finance",
+    "type": "Full Time",
+    "gender": "Only Male",
+    "education": "Masters in Finance/Accounting. CA/ACCA/CMA preferred.",
+    "description": "Responsible for conducting internal audits, ensuring compliance with company policies, improving internal controls, and identifying financial risks. This role supports the organization by reviewing financial records, detecting control gaps, and preparing detailed audit reports.",
+    "requirements": [
+      "Execute audit plans and assess internal controls.",
+      "Review financial statements and records for accuracy.",
+      "Ensure compliance with internal policies and regulatory guidelines.",
+      "Identify risks and report control weaknesses.",
+      "Prepare audit reports with actionable recommendations.",
+      "Conduct special investigations when required."
+    ],
+    "benefits": ["Company standard benefits", "Policy-based incentives"],
+    "skills": [
+      "Internal Audit",
+      "Risk Management",
+      "Financial Review",
+      "Compliance",
+      "Reporting",
+      "Analytical thinking",
+      "Professional communication",
+      "Ethical decision-making"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "Not specified",
+      "phone": "",
+      "address": "Dhaka"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/123769_1.png"
+  },
+  {
+    "id": 2,
+    "title": "Associate Director, Finance & Administration",
+    "company": "Jhpiego",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Not specified"
+    },
+    "vacancy": 5,
+    "experience": 8,
+    "category": "Accounting/Finance",
+    "type": "Contractual",
+    "gender": "All eligible",
+    "education": "Master's in Finance/Accounting. CA/ACCA preferred",
+    "description": "Lead finance and administration functions for health programs. Responsibilities include financial management, compliance, procurement, team leadership, reporting, and supporting program implementation.",
+    "requirements": [
+      "Oversee financial management and budgeting",
+      "Ensure compliance with donor and organizational policies",
+      "Manage procurement and administrative operations",
+      "Lead and mentor finance and admin teams",
+      "Prepare financial reports and ensure audit readiness",
+      "Support program implementation with financial oversight"
+    ],
+    "benefits": ["As per organization policy"],
+    "skills": [
+      "Financial Management",
+      "Donor Compliance",
+      "Budgeting",
+      "Team Leadership",
+      "NGO Operations",
+      "Strong leadership skills",
+      "Detail-oriented and analytical",
+      "Excellent communication"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "bd-recruitment@jhpiego.org",
+      "phone": "",
+      "address": "Dhaka"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/52990_1.png"
+  },
+  {
+    "id": 3,
+    "title": "Senior Engineer (I&C)",
+    "company": "Doreen Power Generations and Systems Limited",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Not specified"
+    },
+    "vacancy": 1,
+    "experience": 7,
+    "category": "Engineering",
+    "type": "Full Time",
+    "gender": "All eligible",
+    "education": "B.Sc. in Electrical & Electronic Engineering",
+    "description": "Manage instrumentation and control systems for power plant operations. Oversee maintenance, ensure operational functionality of DCS, PLC, and SCADA systems, and supervise technicians.",
+    "requirements": [
+      "Plan and implement I&C maintenance activities.",
+      "Troubleshoot and repair control systems.",
+      "Ensure DCS, PLC, and SCADA systems are functional.",
+      "Supervise I&C technicians and contractors.",
+      "Maintain calibration records and compliance.",
+      "Support plant operations and safety systems."
+    ],
+    "benefits": [
+      "Mobile bill",
+      "Medical allowance",
+      "Performance bonus",
+      "Insurance",
+      "Gratuity",
+      "Festival Bonus: 2"
+    ],
+    "skills": [
+      "Instrumentation & Control",
+      "DCS/PLC/SCADA",
+      "Power Plant Systems",
+      "Maintenance Management",
+      "Team Supervision",
+      "Strong technical skills",
+      "Problem-solving ability",
+      "Leadership and teamwork"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "hr@doreenpower.com",
+      "phone": "",
+      "address": "Dhaka"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/47268_1.png"
+  },
+  {
+    "id": 4,
+    "title": "Senior Officer, Finance and Accounts",
+    "company": "BRAC Institute of Governance and Development (BIGD)",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Not specified"
+    },
+    "vacancy": 2,
+    "experience": 4,
+    "category": "Accounting/Finance",
+    "type": "Full Time",
+    "gender": "All eligible",
+    "education": "MBA (Accounting/Finance) or MBS in Accounting or equivalent; CA knowledge under supervision of a reputed CA firm is an advantage",
+    "description": "Manage day-to-day finance and accounts operations for BIGD, including project accounting, donor-funded project financial reporting, bank operations, and reconciliation.",
+    "requirements": [
+      "Prepare financial proposals for various donors and donor-reports",
+      "Prepare project budgets and monitor fund utilization",
+      "Update project expenses and ensure accurate booking under correct project head",
+      "Post regular transactions into accounting software and perform monthly bank and cash reconciliation",
+      "Maintain proper vouchers, documents and records",
+      "Manage banking operations including cheque/EFT preparation and disbursement",
+      "Coordinate with internal and external audit teams",
+      "Provide monthly, quarterly and annual closing entries/journal vouchers",
+      "Prepare monthly, quarterly and annual financial statements",
+      "Coordinate with program teams to reconcile donor reports with project accounts",
+      "Liaise with banks/NBFIs for day-to-day operations",
+      "Other finance/accounting related tasks as assigned"
+    ],
+    "benefits": [],
+    "skills": [
+      "Accounting / Book-keeping",
+      "Project Financial Management",
+      "Budgeting & Fund Utilization Monitoring",
+      "Accounting Software Usage",
+      "Bank Reconciliation",
+      "Donor Reporting",
+      "Audit Coordination",
+      "Financial Statement Preparation",
+      "Good interpersonal and communication skills",
+      "Time management",
+      "Integrity",
+      "Attention to detail",
+      "Ability to work under deadlines"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": "Mohakhali, Dhaka"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/33061_6.png"
+  },
+  {
+    "id": 5,
+    "title": "Senior Analyst - Internal Audit & Compliance",
+    "company": "Expo Holdings (BD) Limited",
+    "location": "Anywhere in Bangladesh",
+    "salary": {
+      "min": 30000,
+      "max": 30000,
+      "default": "Not specified"
+    },
+    "vacancy": 1,
+    "experience": 3,
+    "category": "Accounting/Finance",
+    "type": "Full Time",
+    "gender": "All eligible",
+    "education": "Graduate in finance/accounting/business or related field",
+    "description": "Support internal audit, compliance review and process improvement across assigned business units, ensuring regulatory and policy compliance and operational controls.",
+    "requirements": [
+      "Audit financial transactions of SBUs — validate vouchers and supporting documents",
+      "Verify compliance with internal controls, SOPs, and company policies",
+      "Perform accounting validation of transactions (including VAT, company law compliance)",
+      "Review procurement, payments, inventory movements and related controls",
+      "Perform sales audit: check sales transactions for compliance, verify receivables and overdue balances",
+      "Examine customer agreements, security instruments, and documentation",
+      "Audit operations: walk-throughs of freight, warehousing, CFS, shipment, distribution and related operational processes",
+      "Review shipment files, credit notes, proofs of delivery, bank NOCs, and operational documents",
+      "Identify process gaps or non-compliance issues and recommend improvements",
+      "Help strengthen governance across the group by supporting compliance & control enforcement"
+    ],
+    "benefits": [],
+    "skills": [
+      "Accounting & bookkeeping",
+      "Internal audit processes",
+      "Compliance & regulatory knowledge (VAT, Tax, Company Act)",
+      "ERP & accounting software use",
+      "Advanced MS Office (especially Excel)",
+      "Analytical skills",
+      "Attention to detail",
+      "Integrity",
+      "Strong sense of responsibility",
+      "Ability to work under supervision",
+      "Good communication"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": "206/A (Level 2), Tejgaon Industrial Area, Dhaka-1208"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/103391_1.png"
+  },
+  {
+    "id": 6,
+    "title": "Sr. Executive / Executive - Finance",
+    "company": "Galaxy Bangladesh Group",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "experience": 5,
+    "category": "Banking/Financial Services",
+    "type": "Full Time",
+    "gender": "Male only",
+    "education": "BBA in Finance / Accounting & Information System or MBA in Finance / Accounting & Information System",
+    "description": "Handle finance operations including cash & bank management, revenue & invoice collections, reconciliations, corporate billing and supplier/vendor payments for Galaxy Bangladesh Group.",
+    "requirements": [
+      "Lead and supervise departmental finance activities.",
+      "Maintain communication with bank and other departments.",
+      "Collect invoices and cash from all outlets.",
+      "Encash foreign currency from money-exchange and deposit revenue into company bank account per policy.",
+      "Maintain and update cash vault records and perform withdrawals per policy.",
+      "Post credit-card revenue collections in Excel and reconcile; prepare bank-receipt vouchers.",
+      "Prepare daily fund-position reports for management review.",
+      "Handle IOU payments and adjustments (including at Uttara office).",
+      "Post petty-cash payment vouchers in the system.",
+      "Pay utility bills and properly file paid bill records.",
+      "Disburse monthly cash salary and service charges to employees.",
+      "Reconcile cash and invoices collected from all outlets; prepare daily revenue reconciliation report.",
+      "Coordinate VAT revenue input in EFD machines; prepare VAT challans for corporate customer billing.",
+      "Issue invoices and bills to corporate customers; collect cash/cheques from them and deposit to company bank account.",
+      "Prepare A/R ageing reports; follow up with corporate customers for overdue collections.",
+      "Perform supplier ageing analysis; prepare cheques for TDS/VDS and supplier payments; collect authorized signatures and disburse payments.",
+      "Deposit monthly TDS and VDS to government treasury.",
+      "Adjust employee mobile bills against salaries.",
+      "Conduct advance reconciliations, monthly bank reconciliation, post journal vouchers for bank charges/interest.",
+      "Perform inventory reconciliation and physical verification where applicable.",
+      "Post journal vouchers for monthly expenses and maintain monthly accounting checklist.",
+      "Prepare and circulate monthly MIS reports to management."
+    ],
+    "benefits": [],
+    "skills": [
+      "Cash & Bank Management",
+      "Revenue / Invoice Collection",
+      "Credit Card & Voucher Posting",
+      "Bank & Cash Reconciliation",
+      "VAT/TDS / Tax / Compliance",
+      "Accounts Receivable & Payable Management",
+      "Supplier Payments & Cheque Handling",
+      "MIS Reporting",
+      "Excel / Accounting Software",
+      "Detail oriented",
+      "Integrity",
+      "Good communication skills",
+      "Organized",
+      "Ability to coordinate with multiple departments"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": "Taj Marriott 5th floor, 25 Gulshan Avenue, Gulshan-1, Dhaka-1212, Bangladesh"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/25467_1.png"
+  },
+  {
+    "id": 7,
+    "title": "Manager - Costing, Budgeting & MIS",
+    "company": "M & J Group",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Negotiable"
+    },
+    "vacancy": "Not Specified",
+    "experience": 7,
+    "category": "Business Development",
+    "type": "Full Time",
+    "gender": "All eligible",
+    "education": "M.Com or equivalent; professional qualification (e.g. Cost & Management Accountant) preferred",
+    "description": "Lead the costing, budgeting and MIS functions — including cost analysis, budget planning and financial reporting for the group’s factories and operations.",
+    "requirements": [
+      "Lead costing, budgeting and MIS activities to ensure accurate cost analysis and budget planning.",
+      "Monitor factory performance data and drive cost-optimization initiatives.",
+      "Support strategic decision-making through financial reporting and analysis.",
+      "Coordinate with cross-functional teams to ensure compliance with company SOPs.",
+      "Supervise team members involved in costing, budgeting and MIS.",
+      "Improve process efficiency across costing, budgeting and MIS operations."
+    ],
+    "benefits": [
+      "Mobile bill, weekly 2 holidays, medical allowance, transport/pick-drop, full subsidized lunch, performance bonus, festival bonus (2), yearly salary review, earned-leave encashment"
+    ],
+    "skills": [
+      "Costing & Budgeting Analysis",
+      "MIS & Financial Reporting",
+      "Cost Optimization",
+      "Analytical Skills",
+      "Team Supervision",
+      "Cross-functional Coordination",
+      "Strong analytical mindset",
+      "Detail oriented",
+      "Leadership & supervision ability",
+      "Integrity",
+      "Ability to work under pressure"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": "Red Crescent Concord Tower, 17 Mohakhali C/A, Dhaka-1212"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/24849_2.png"
+  }
+]

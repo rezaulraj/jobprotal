@@ -1,43 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
-import companyLogo from "/images/rootpage/seniorcom.jpg";
-
+import seniorJobs from "../../data/senior.json";
+import { Link } from "react-router-dom";
 const SeniorManagment = () => {
   const containerRef = useRef(null);
   const [showArrows, setShowArrows] = useState(false);
-
-  const seniorJobs = [
-    {
-      image: companyLogo,
-      title: "Software Development Manager",
-      companyname: "Contour Software",
-    },
-    {
-      image: companyLogo,
-      title: "Senior Project Manager",
-      companyname: "Systems Limited",
-    },
-    {
-      image: companyLogo,
-      title: "IT Director",
-      companyname: "Techlogix",
-    },
-    {
-      image: companyLogo,
-      title: "Chief Technology Officer",
-      companyname: "Avanza Solutions",
-    },
-    {
-      image: companyLogo,
-      title: "Operations Director",
-      companyname: "Netsol Technologies",
-    },
-    {
-      image: companyLogo,
-      title: "Finance Director",
-      companyname: "TPL Corp",
-    },
-  ];
-
   const checkArrows = () => {
     if (containerRef.current) {
       const { scrollWidth, clientWidth } = containerRef.current;
@@ -154,7 +120,7 @@ const SeniorManagment = () => {
 
           <div
             ref={containerRef}
-            className="flex overflow-x-hidden scroll-smooth gap-2 py-2"
+            className="flex overflow-x-hidden scroll-smooth py-2"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             <style>{`
@@ -163,26 +129,25 @@ const SeniorManagment = () => {
               }
             `}</style>
             {seniorJobs.map((job, index) => (
-              <div
-                key={index}
-                className="w-56 shrink-0 shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300 rounded-lg"
-              >
-                <div className="w-full bg-gray-200 overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover"
-                    src={job.image}
-                    alt={job.companyname}
-                  />
-                </div>
+              <div key={index} className="w-56 shrink-0 overflow-hidden">
+                <Link to={`/job/${job.id}`} className="block">
+                  <div className="w-36 overflow-hidden">
+                    <img
+                      className="w-full h-full object-cover"
+                      src={job.clogo}
+                      alt={job.companyname}
+                    />
+                  </div>
 
-                <div className="p-4">
-                  <h3 className="text-[15px] font-semibold font-lato text-gray-700 mb-1 line-clamp-1">
-                    {job.title}
-                  </h3>
-                  <p className="text-gray-600 font-lato text-sm">
-                    {job.companyname}
-                  </p>
-                </div>
+                  <div className="p-4">
+                    <h3 className="text-[15px] font-semibold font-lato text-gray-700 mb-1 line-clamp-1">
+                      {job.title}
+                    </h3>
+                    <p className="text-gray-600 font-lato text-sm">
+                      {job.companyname}
+                    </p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

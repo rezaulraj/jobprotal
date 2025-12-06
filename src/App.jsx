@@ -5,6 +5,7 @@ import UnderDevelopment from "./components/UnderDevelopment";
 import AllJobs from "./pages/jobs/AllJobs";
 import FreelanceJobDescription from "./pages/jobs/FreelanceJobDescription";
 import ScrollToTop from "./components/ScrollToTop";
+import SingleJobDescription from "./pages/jobs/SingleJobDescription";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
           <Route path="" element={<RootHome />} />
           <Route path="jobs" element={<AllJobs />} />
           <Route path="jobs/:cate" element={<AllJobs />} />
+          <Route path="job/:id" element={<SingleJobDescription />} />
           <Route
             path="/freelance/:jobId"
             element={<FreelanceJobDescription />}
