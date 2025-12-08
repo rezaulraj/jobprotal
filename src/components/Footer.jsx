@@ -297,7 +297,7 @@ const Footer = () => {
               ].map((item, index) => (
                 <a
                   key={index}
-                  href="#"
+                  href="/policy"
                   className="text-xs text-gray-400 hover:text-emerald-300 transition-colors duration-200"
                 >
                   {item}

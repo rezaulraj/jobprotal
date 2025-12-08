@@ -33,7 +33,6 @@ const HeroHome = () => {
   const locationInputRef = useRef(null);
   const salaryInputRef = useRef(null);
 
-  // Calculate job statistics and quick links from job data
   useEffect(() => {
     // Calculate total vacancies
     const totalVacancies = jobData.reduce((sum, job) => {

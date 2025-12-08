@@ -35,7 +35,6 @@ const JobCategory = () => {
   const [actualCompanies, setActualCompanies] = useState([]);
   const [actualLocations, setActualLocations] = useState([]);
 
-  // Calculate actual vacancy counts from jobData
   const calculateVacancyCount = (categoryName) => {
     const categoryMapping = {
       "Accounting/Finance": "Accounting/Finance",
@@ -74,14 +73,14 @@ const JobCategory = () => {
   };
 
   // Calculate company job counts
-  const calculateCompanyJobCount = (companyName) => {
-    return jobData.filter((job) => job.company === companyName).length;
-  };
+  // const calculateCompanyJobCount = (companyName) => {
+  //   return jobData.filter((job) => job.company === companyName).length;
+  // };
 
   // Calculate location job counts
-  const calculateLocationJobCount = (location) => {
-    return jobData.filter((job) => job.location === location).length;
-  };
+  // const calculateLocationJobCount = (location) => {
+  //   return jobData.filter((job) => job.location === location).length;
+  // };
 
   // Get unique companies from jobData
   const getUniqueCompanies = () => {
