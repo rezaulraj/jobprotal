@@ -43,7 +43,7 @@ const TopJobs = () => {
                 className="bg-white rounded-xl shadow-sm animate-pulse"
               >
                 <div className="p-4 flex items-start gap-3">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="size-14 bg-gray-300 rounded-lg"></div>
                   </div>
                   <div className="flex-1 space-y-2">
@@ -86,7 +86,7 @@ const TopJobs = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 border border-primary/20 rounded-2xl shadow p-2">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 border border-primary/20 rounded-2xl shadow p-2">
           {randomJobs.map((job) => (
             <Link
               key={job.id}
@@ -94,7 +94,7 @@ const TopJobs = () => {
               className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group"
             >
               <div className="p-4 flex items-start gap-3">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <img
                     src={getCompanyLogo(job)}
                     alt={`${job.company} logo`}

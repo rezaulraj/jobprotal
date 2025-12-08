@@ -72,116 +72,116 @@ const RootHeader = () => {
         {
           name: "Sales / Business Development",
           path: "/jobs",
-          count: 7206,
+          count: 15,
           icon: <FaBusinessTime />,
         },
         {
           name: "Information Technology",
           path: "/jobs",
-          count: 474,
+          count: 32,
           icon: <FaLaptopCode />,
         },
         {
           name: "Manufacturing",
           path: "/jobs",
-          count: 212,
+          count: 0,
           icon: <FaIndustry />,
         },
         {
           name: "Services",
           path: "/jobs",
-          count: 188,
+          count: 10,
           icon: <FaServicestack />,
         },
         {
           name: "Recruitment/Employment Firms",
           path: "/jobs",
-          count: 177,
+          count: 10,
           icon: <FaUsers />,
         },
         {
           name: "Travel/Tourism/Transportation",
           path: "/jobs",
-          count: 157,
+          count: 5,
           icon: <FaPlane />,
         },
         {
           name: "Education/Training",
           path: "/jobs",
-          count: 125,
+          count: 4,
           icon: <FaGraduationCap />,
         },
         {
           name: "IT/Telecommunication",
           path: "/jobs",
-          count: 125,
+          count: 30,
           icon: <FaCode />,
         },
         {
           name: "Call Center",
           path: "/jobs",
-          count: 116,
+          count: 2,
           icon: <FaPhone />,
         },
         {
           name: "Consultants",
           path: "/jobs",
-          count: 104,
+          count: 7,
           icon: <FaBriefcase />,
         },
         {
           name: "Banking/Financial Services",
           path: "/jobs",
-          count: 98,
+          count: 0,
           icon: <FaBuilding />,
         },
         {
           name: "N.G.O./Social Services",
           path: "/jobs",
-          count: 97,
+          count: 0,
           icon: <FaHandHoldingHeart />,
         },
         {
           name: "E-Commerce / E-Business",
           path: "/jobs",
-          count: 90,
+          count: 0,
           icon: <FaShoppingCart />,
         },
         {
           name: "Real Estate/Property",
           path: "/jobs",
-          count: 90,
+          count: 0,
           icon: <FaHome />,
         },
         {
           name: "Healthcare/Hospital/Medical",
           path: "/jobs",
-          count: 87,
+          count: 7,
           icon: <FaHospital />,
         },
-        { name: "BPO", path: "/jobs", count: 75, icon: <FaHeadset /> },
+        { name: "BPO", path: "/jobs", count: 2, icon: <FaHeadset /> },
         {
           name: "Construction / Cement / Metals",
           path: "/jobs",
-          count: 61,
+          count: 0,
           icon: <FaHardHat />,
         },
         {
           name: "Accounting/Taxation",
           path: "/jobs",
-          count: 60,
+          count: 8,
           icon: <FaMoneyBill />,
         },
         {
           name: "Engineering",
           path: "/jobs",
-          count: 56,
+          count: 12,
           icon: <FaTools />,
         },
         {
           name: "Importers/ Distributors/Exporters",
           path: "/jobs",
-          count: 54,
+          count: 10,
           icon: <FaShippingFast />,
         },
       ],
@@ -561,7 +561,7 @@ const RootHeader = () => {
                                 {item.subNav.map((subItem, subIndex) => (
                                   <a
                                     key={subIndex}
-                                    href="#"
+                                    href={item.path}
                                     className="flex items-center justify-between py-2 text-gray-600 hover:text-[#4EB956] transition-colors duration-200 group"
                                     onClick={() => setIsMenuOpen(false)}
                                   >

@@ -9,6 +9,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaArrowRight,
+  FaPinterest,
 } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 
@@ -112,37 +113,50 @@ const Footer = () => {
     {
       icon: <FaFacebookF className="w-4 h-4" />,
       label: "Facebook",
+      link: "",
       color: "hover:bg-blue-600",
       bg: "bg-gray-700",
     },
     {
       icon: <FaTwitter className="w-4 h-4" />,
       label: "Twitter",
+      link: "https://x.com/Jobsplus01",
       color: "hover:bg-sky-500",
       bg: "bg-gray-700",
     },
     {
       icon: <FaInstagram className="w-4 h-4" />,
       label: "Instagram",
+      link: "https://www.instagram.com/jobsplus01/",
       color: "hover:bg-pink-600",
       bg: "bg-gray-700",
     },
     {
       icon: <FaLinkedinIn className="w-4 h-4" />,
       label: "LinkedIn",
+      link: "",
       color: "hover:bg-blue-700",
       bg: "bg-gray-700",
     },
     {
       icon: <FaYoutube className="w-4 h-4" />,
       label: "YouTube",
+      link: "https://www.youtube.com/@JobsPlus01",
       color: "hover:bg-red-600",
       bg: "bg-gray-700",
     },
     {
       icon: <SiTiktok className="w-4 h-4" />,
       label: "TikTok",
+      link: "https://www.tiktok.com/@jobsplus01",
       color: "hover:bg-black",
+      bg: "bg-gray-700",
+    },
+    {
+      icon: <FaPinterest className="w-4 h-4" />,
+      label: "Pinterest",
+      link: "https://www.pinterest.com/?utm_campaign=emailconfirmwlc",
+      color: "hover:bg-red-500",
       bg: "bg-gray-700",
     },
   ];
@@ -237,7 +251,8 @@ const Footer = () => {
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href={social.link}
+                    target="_blank"
                     className={`${social.bg} ${social.color} w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg`}
                     aria-label={social.label}
                     title={social.label}

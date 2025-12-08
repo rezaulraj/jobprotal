@@ -12,33 +12,27 @@ const FreelanceSection = () => {
   const nextRef = useRef(null);
   const navigate = useNavigate();
 
-  // Function to create SEO-friendly URL from job title
   const createJobUrl = (job) => {
     if (!job || !job.title) return "/freelance";
 
-    // Create slug from title
     const slug = job.title
       .toLowerCase()
-      .replace(/[^\w\s]/gi, "") // Remove special characters
-      .replace(/\s+/g, "-") // Replace spaces with hyphens
-      .substring(0, 100); // Limit length
+      .replace(/[^\w\s]/gi, "")
+      .replace(/\s+/g, "-")
+      .substring(0, 100);
 
-    // Add ID for uniqueness
     return `/freelance/${slug}-${job.id}`;
   };
 
-  // Function to handle job click
   const handleJobClick = (job) => {
     const url = createJobUrl(job);
     navigate(url);
   };
 
-  // Function to handle "View all Projects" click
   const handleViewAll = () => {
     navigate("/freelance-jobs");
   };
 
-  // Function to handle "Hire a Freelancer" click
   const handleHireFreelancer = () => {
     navigate("/hire-freelancer");
   };

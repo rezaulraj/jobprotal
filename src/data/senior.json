@@ -358,5 +358,107 @@
       "address": "Red Crescent Concord Tower, 17 Mohakhali C/A, Dhaka-1212"
     },
     "clogo": "https://corporate.bdjobs.com/logos/24849_2.png"
+  },
+  {
+    "id": 40,
+    "title": "Senior Counselor / Counselor (Tourist Visa)",
+    "company": "Visa World Bangladesh",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "experience": 3,
+    "category": "Hospitality/Travel/Tourism",
+    "type": "Full Time",
+    "gender": "All eligible",
+    "education": "Minimum bachelor’s degree in any discipline",
+    "description": "Provide visa consultation and travel-related services to clients; assist clients to plan travel itineraries, manage bookings, and handle visa/tour services end-to-end.",
+    "requirements": [
+      "Handle client inquiries professionally via phone, email and in-person.",
+      "Provide updated information on destinations, visa requirements and travel services.",
+      "Assist clients in planning domestic and international travel itineraries.",
+      "Process bookings for flights, hotels and tour packages.",
+      "Maintain client relationships through follow-ups and ongoing support.",
+      "Resolve travel and visa-related issues quickly and efficiently.",
+      "Work with team to achieve sales and service targets."
+    ],
+    "benefits": [
+      "Negotiable salary + incentives + 2 festival bonuses + annual leave & gov’t holidays"
+    ],
+    "skills": [
+      "Customer service",
+      "Communication (English & Bangla)",
+      "Travel booking platforms familiarity",
+      "Multitasking",
+      "Problem solving",
+      "Team work",
+      "Positive attitude",
+      "Helping mindset",
+      "Service-oriented",
+      "Ability to handle clients under pressure"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "info.hrvwb@gmail.com",
+      "phone": "",
+      "address": "Florida Castle, Level-3, House-7, Road 23/A, Gulshan-1, Dhaka-1212, Bangladesh"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/39765_0.png"
+  },
+  {
+    "id": 70,
+    "title": "Senior Full Stack App & Web Developer",
+    "company": "The Second Source",
+    "location": "Rajshahi",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "experience": 3,
+    "category": "IT/Telecommunication",
+    "type": "Full Time / On‑site",
+    "gender": "All eligible",
+    "education": "Bachelor in Computer Science / Software Engineering or equivalent",
+    "description": "Develop and maintain high-quality web and mobile applications, handle both backend and frontend tasks, ensure scalable and maintainable solutions, collaborate with designers and team members to deliver responsive and efficient software.",
+    "requirements": [
+      "Strong experience with PHP/Laravel or Node.js backend development",
+      "Proficiency in frontend technologies: HTML, CSS, JavaScript, React.js, Next.js, or similar",
+      "Experience with mobile app frameworks (React Native / Flutter) is a plus",
+      "Good knowledge of SQL/NoSQL databases",
+      "Version control with Git/GitHub",
+      "Understanding of RESTful APIs and integration",
+      "Strong problem-solving skills and debugging capabilities",
+      "Ability to write clean, maintainable, and well-documented code",
+      "Teamwork and communication skills"
+    ],
+    "benefits": [
+      "Opportunity to work on full-stack web and mobile applications",
+      "Professional development and learning opportunities",
+      "Collaborative and supportive work environment",
+      "Flexible working hours and on-site experience",
+      "Exposure to modern technologies and projects"
+    ],
+    "skills": [
+      "Full Stack Development",
+      "Frontend: React.js, Next.js, HTML, CSS, JavaScript",
+      "Backend: PHP, Laravel, Node.js",
+      "Database Management: MySQL, PostgreSQL, MongoDB",
+      "Version Control: Git/GitHub",
+      "REST API Development",
+      "Responsive Design",
+      "Debugging & Problem Solving"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": ""
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/134642_0.jpg"
   }
 ]
