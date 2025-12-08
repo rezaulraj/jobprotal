@@ -727,8 +727,9 @@ const SingleJobDescription = () => {
                 <div className="p-4">
                   <div className="space-y-4">
                     {seniorJobs.slice(0, 4).map((seniorJob, index) => (
-                      <div
+                      <Link
                         key={index}
+                        to={`/job/${seniorJob.id}`}
                         className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
                       >
                         <div
@@ -749,7 +750,7 @@ const SingleJobDescription = () => {
                             {seniorJob.companyname}
                           </p>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                   <Link
