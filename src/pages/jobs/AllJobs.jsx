@@ -387,7 +387,7 @@ const AllJobs = () => {
 
   // Calculate days ago from posted date (simulated for demo)
   const getPostedDate = (jobId) => {
-    const days = (jobId % 30) + 1;
+    const days = (jobId % 30) + 3;
     return `${days} days ago`;
   };
 
