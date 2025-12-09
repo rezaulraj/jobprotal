@@ -23,6 +23,7 @@ import {
   ArrowLeft,
   Bookmark,
 } from "lucide-react";
+import ApplyPopUps from "./ApplyPopUps";
 
 const FreelanceJobDescription = () => {
   const { jobId } = useParams(); // Get job ID from URL
@@ -30,7 +31,13 @@ const FreelanceJobDescription = () => {
   const [selectedJob, setSelectedJob] = useState(null);
   const [savedJobs, setSavedJobs] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  // apply states
+  const [showApplyPopup, setShowApplyPopup] = useState(false);
+  const [selectedJobForApply, setSelectedJobForApply] = useState(null);
+  const handleApplyClick = (job) => {
+    setSelectedJobForApply(job);
+    setShowApplyPopup(true);
+  };
   // Parse job ID from URL
   useEffect(() => {
     if (jobId) {
@@ -281,7 +288,10 @@ const FreelanceJobDescription = () => {
                         ? "Saved"
                         : "Save Job"}
                     </button>
-                    <button className="px-6 py-3 bg-secondary text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                    <button
+                      onClick={() => handleApplyClick(selectedJob)}
+                      className="px-6 py-3 bg-secondary text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                    >
                       <MessageSquare className="w-5 h-5" />
                       Apply Now
                     </button>
@@ -627,6 +637,17 @@ const FreelanceJobDescription = () => {
           </div>
         </div>
       </div>
+      {showApplyPopup && selectedJobForApply && (
+        <ApplyPopUps
+          isOpen={showApplyPopup}
+          onClose={() => {
+            setShowApplyPopup(false);
+            setSelectedJobForApply(null);
+          }}
+          jobTitle={selectedJobForApply.title}
+          company={selectedJobForApply.company}
+        />
+      )}
     </div>
   );
 };

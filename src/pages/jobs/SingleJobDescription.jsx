@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import jobData from "../../data/jobData.json";
 import seniorJobs from "../../data/senior.json";
+import ApplyPopUps from "./ApplyPopUps";
 
 const SingleJobDescription = () => {
   const { id } = useParams();
@@ -30,6 +31,13 @@ const SingleJobDescription = () => {
   const [job, setJob] = useState(null);
   const [relatedJobs, setRelatedJobs] = useState([]);
   const [isSaved, setIsSaved] = useState(false);
+  // apply states
+  const [showApplyPopup, setShowApplyPopup] = useState(false);
+  const [selectedJobForApply, setSelectedJobForApply] = useState(null);
+  const handleApplyClick = (job) => {
+    setSelectedJobForApply(job);
+    setShowApplyPopup(true);
+  };
 
   const colors = {
     primary: "#1e2558",
@@ -328,8 +336,8 @@ const SingleJobDescription = () => {
                         {isSaved ? "Saved" : "Save Job"}
                       </button>
                       <button
-                        onClick={handleApply}
-                        className="px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg flex items-center justify-center gap-2"
+                        onClick={() => handleApplyClick(job)}
+                        className="px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                         style={{
                           backgroundColor: colors.secondary,
                           color: "white",
@@ -611,8 +619,8 @@ const SingleJobDescription = () => {
                       {isSaved ? "Job Saved" : "Save for Later"}
                     </button>
                     <button
-                      onClick={handleApply}
-                      className="px-10 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 flex items-center justify-center gap-2"
+                      onClick={() => handleApplyClick(job)}
+                      className="px-10 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 flex items-center justify-center gap-2 cursor-pointer"
                       style={{
                         backgroundColor: colors.primary,
                         color: "white",
@@ -836,14 +844,25 @@ const SingleJobDescription = () => {
             {isSaved ? "Saved" : "Save"}
           </button>
           <button
-            onClick={handleApply}
-            className="flex-1 py-3 rounded-lg font-semibold flex items-center justify-center gap-2"
+            onClick={() => handleApplyClick(job)}
+            className="flex-1 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 cursor-pointer"
             style={{ backgroundColor: colors.secondary, color: "white" }}
           >
             Apply Now
           </button>
         </div>
       </div>
+      {showApplyPopup && selectedJobForApply && (
+        <ApplyPopUps
+          isOpen={showApplyPopup}
+          onClose={() => {
+            setShowApplyPopup(false);
+            setSelectedJobForApply(null);
+          }}
+          jobTitle={selectedJobForApply.title}
+          company={selectedJobForApply.company}
+        />
+      )}
     </div>
   );
 };
