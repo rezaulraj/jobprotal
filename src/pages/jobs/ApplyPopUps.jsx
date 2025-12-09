@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-  X,
-  Clock,
-  Code,
-  Wrench,
-  Rocket,
-  Mail,
-  Bell,
-  TrendingUp,
-  Heart,
-} from "lucide-react";
+import { X, Clock, Rocket, Mail, Bell } from "lucide-react";
 
 const ApplyPopUps = ({ isOpen, onClose, jobTitle, company }) => {
   const [email, setEmail] = useState("");
