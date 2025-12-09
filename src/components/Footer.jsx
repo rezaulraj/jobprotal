@@ -50,21 +50,21 @@ const Footer = () => {
   ];
 
   const jobsByCity = [
-    { label: "Jobs in Dhaka", path: "/jobs/dhaka" },
-    { label: "Jobs in Chittagong", path: "/jobs/chittagong" },
-    { label: "Jobs in Sylhet", path: "/jobs/sylhet" },
-    { label: "Jobs in Rajshahi", path: "/jobs/rajshahi" },
-    { label: "Jobs in Khulna", path: "/jobs/khulna" },
-    { label: "Jobs in Barisal", path: "/jobs/barisal" },
-    { label: "Jobs in Rangpur", path: "/jobs/rangpur" },
-    { label: "Jobs in Mymensingh", path: "/jobs/mymensingh" },
-    { label: "Jobs in Comilla", path: "/jobs/comilla" },
-    { label: "Jobs in Narayanganj", path: "/jobs/narayanganj" },
-    { label: "Jobs in Gazipur", path: "/jobs/gazipur" },
-    { label: "Jobs in Bogura", path: "/jobs/bogura" },
-    { label: "Jobs in Jessore", path: "/jobs/jessore" },
-    { label: "Jobs in Cox's Bazar", path: "/jobs/coxs-bazar" },
-    { label: "Jobs in Dinajpur", path: "/jobs/dinajpur" },
+    { label: "Jobs in Dhaka", path: "/jobs?location=dhaka" },
+    { label: "Jobs in Chittagong", path: "/jobs?location=chittagong" },
+    { label: "Jobs in Sylhet", path: "/jobs?location=sylhet" },
+    { label: "Jobs in Rajshahi", path: "/jobs?location=rajshahi" },
+    { label: "Jobs in Khulna", path: "/jobs?location=khulna" },
+    { label: "Jobs in Barisal", path: "/jobs?location=barisal" },
+    { label: "Jobs in Rangpur", path: "/jobs?location=rangpur" },
+    { label: "Jobs in Mymensingh", path: "/jobs?location=mymensingh" },
+    { label: "Jobs in Comilla", path: "/jobs?location=comilla" },
+    { label: "Jobs in Narayanganj", path: "/jobs?location=narayanganj" },
+    { label: "Jobs in Gazipur", path: "/jobs?location=gazipur" },
+    { label: "Jobs in Bogura", path: "/jobs?location=bogura" },
+    { label: "Jobs in Jessore", path: "/jobs?location=jessore" },
+    { label: "Jobs in Cox's Bazar", path: "/jobs?location=coxs-bazar" },
+    { label: "Jobs in Dinajpur", path: "/jobs?location=dinajpur" },
   ];
 
   const jobsByIndustry = [
