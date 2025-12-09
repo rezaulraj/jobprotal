@@ -1020,6 +1020,11 @@ const AllJobs = () => {
                               {selectedJob.title}
                             </h2>
                             <div className="flex items-center flex-wrap gap-4 mb-3">
+                              <img
+                                src={selectedJob.clogo}
+                                alt={selectedJob.company}
+                                className="h-8 w-8"
+                              />
                               <span className="font-semibold text-gray-800">
                                 {selectedJob.company}
                               </span>
@@ -1384,9 +1389,16 @@ const AllJobs = () => {
                   >
                     {selectedJob.title}
                   </h2>
-                  <p className="font-semibold text-gray-800 mb-3">
-                    {selectedJob.company}
-                  </p>
+                  <div className="flex flex-wrap items-start gap-4">
+                    <img
+                      src={selectedJob.clogo}
+                      alt={selectedJob.company}
+                      className="h-8 w-8"
+                    />
+                    <p className="font-semibold text-gray-800 mb-3">
+                      {selectedJob.company}
+                    </p>
+                  </div>
                   <div className="flex items-center gap-3 text-sm text-gray-600 mb-4">
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
