@@ -14,99 +14,126 @@ import {
 import { SiTiktok } from "react-icons/si";
 
 const Footer = () => {
-  const footerSections = [
+  const functionalAreaJobs = [
     {
-      title: "Jobs by Functional Area",
-      links: [
-        "Sales & Business Development Jobs",
-        "Accounts, Finance & Financial Services Jobs",
-        "Client Services & Customer Support Jobs",
-        "Marketing Jobs",
-        "Software & Web Development Jobs",
-        "Creative Design Jobs",
-        "Operations Jobs",
-        "Administration Jobs",
-        "Teachers/Education, Training & Development Jobs",
-        "Human Resources Jobs",
-        "Health & Medicine Jobs",
-        "Telemarketing Jobs",
-        "Secretarial, Clerical & Front Office Jobs",
-        "Engineering Jobs",
-      ],
+      label: "Sales & Business Development Jobs",
+      path: "/jobs/sales-business-development",
     },
     {
-      title: "Jobs By City in Bangladesh",
-      links: [
-        "Jobs in Dhaka",
-        "Jobs in Chittagong",
-        "Jobs in Sylhet",
-        "Jobs in Rajshahi",
-        "Jobs in Khulna",
-        "Jobs in Barisal",
-        "Jobs in Rangpur",
-        "Jobs in Mymensingh",
-        "Jobs in Comilla",
-        "Jobs in Narayanganj",
-        "Jobs in Gazipur",
-        "Jobs in Bogura",
-        "Jobs in Jessore",
-        "Jobs in Cox's Bazar",
-        "Jobs in Dinajpur",
-      ],
+      label: "Accounts, Finance & Financial Services Jobs",
+      path: "/jobs/accounts-finance",
     },
     {
-      title: "Jobs By Industry",
-      links: [
-        "Business Development Jobs",
-        "Information Technology Jobs",
-        "Recruitment / Employment Firms Jobs",
-        "Services Jobs",
-        "Education/Training Jobs",
-        "Banking/Financial Services Jobs",
-        "Travel/Tourism/Transportation Jobs",
-        "Manufacturing Jobs",
-        "Call Center Jobs",
-        "Consultants Jobs",
-        "Healthcare / Hospital / Medical Jobs",
-        "BPO Jobs",
-        "Importers / Distributors/Exporters Jobs",
-        "N.G.O./Social Services Jobs",
-        "Other Jobs",
-      ],
+      label: "Client Services & Customer Support Jobs",
+      path: "/jobs/customer-support",
+    },
+    { label: "Marketing Jobs", path: "/jobs/marketing" },
+    {
+      label: "Software & Web Development Jobs",
+      path: "/jobs/software-development",
+    },
+    { label: "Creative Design Jobs", path: "/jobs/creative-design" },
+    { label: "Operations Jobs", path: "/jobs/operations" },
+    { label: "Administration Jobs", path: "/jobs/administration" },
+    {
+      label: "Teachers/Education, Training & Development Jobs",
+      path: "/jobs/education-training",
+    },
+    { label: "Human Resources Jobs", path: "/jobs/human-resources" },
+    { label: "Health & Medicine Jobs", path: "/jobs/health-medicine" },
+    { label: "Telemarketing Jobs", path: "/jobs/telemarketing" },
+    {
+      label: "Secretarial, Clerical & Front Office Jobs",
+      path: "/jobs/secretarial",
+    },
+    { label: "Engineering Jobs", path: "/jobs/engineering" },
+  ];
+
+  const jobsByCity = [
+    { label: "Jobs in Dhaka", path: "/jobs/location/dhaka" },
+    { label: "Jobs in Chittagong", path: "/jobs/location/chittagong" },
+    { label: "Jobs in Sylhet", path: "/jobs/location/sylhet" },
+    { label: "Jobs in Rajshahi", path: "/jobs/location/rajshahi" },
+    { label: "Jobs in Khulna", path: "/jobs/location/khulna" },
+    { label: "Jobs in Barisal", path: "/jobs/location/barisal" },
+    { label: "Jobs in Rangpur", path: "/jobs/location/rangpur" },
+    { label: "Jobs in Mymensingh", path: "/jobs/location/mymensingh" },
+    { label: "Jobs in Comilla", path: "/jobs/location/comilla" },
+    { label: "Jobs in Narayanganj", path: "/jobs/location/narayanganj" },
+    { label: "Jobs in Gazipur", path: "/jobs/location/gazipur" },
+    { label: "Jobs in Bogura", path: "/jobs/location/bogura" },
+    { label: "Jobs in Jessore", path: "/jobs/location/jessore" },
+    { label: "Jobs in Cox's Bazar", path: "/jobs/location/coxs-bazar" },
+    { label: "Jobs in Dinajpur", path: "/jobs/location/dinajpur" },
+  ];
+
+  const jobsByIndustry = [
+    {
+      label: "Business Development Jobs",
+      path: "/jobs/industry/business-development",
     },
     {
-      title: "Job Seekers",
-      links: [
-        "British Council Online Placement Test",
-        "Top Professionals",
-        "CV Writing",
-        "Free CV Review",
-        "Success Stories",
-        "Contact Us",
-      ],
+      label: "Information Technology Jobs",
+      path: "/jobs/industry/information-technology",
     },
     {
-      title: "Employers",
-      links: [
-        "Create Account",
-        "Post a Job",
-        "Employer Products",
-        "Contact Sales",
-      ],
+      label: "Recruitment / Employment Firms Jobs",
+      path: "/jobs/industry/recruitment",
+    },
+    { label: "Services Jobs", path: "/jobs/industry/services" },
+    { label: "Education/Training Jobs", path: "/jobs/industry/education" },
+    {
+      label: "Banking/Financial Services Jobs",
+      path: "/jobs/industry/banking",
     },
     {
-      title: "International Jobs",
-      links: [
-        "Jobs in Saudi Arabia",
-        "Jobs in Bahrain",
-        "Jobs in Qatar",
-        "Jobs in UAE",
-        "Jobs in Malaysia",
-        "Jobs in Singapore",
-        "Jobs in Kuwait",
-        "Jobs in Oman",
-      ],
+      label: "Travel/Tourism/Transportation Jobs",
+      path: "/jobs/industry/travel",
     },
+    { label: "Manufacturing Jobs", path: "/jobs/industry/manufacturing" },
+    { label: "Call Center Jobs", path: "/jobs/industry/call-center" },
+    { label: "Consultants Jobs", path: "/jobs/industry/consultants" },
+    {
+      label: "Healthcare / Hospital / Medical Jobs",
+      path: "/jobs/industry/healthcare",
+    },
+    { label: "BPO Jobs", path: "/jobs/industry/bpo" },
+    {
+      label: "Importers / Distributors/Exporters Jobs",
+      path: "/jobs/industry/import-export",
+    },
+    { label: "N.G.O./Social Services Jobs", path: "/jobs/industry/ngo" },
+    { label: "Other Jobs", path: "/jobs/industry/other" },
+  ];
+
+  const jobSeekersLinks = [
+    {
+      label: "British Council Online Placement Test",
+      path: "/resources/placement-test",
+    },
+    { label: "Top Professionals", path: "/professionals" },
+    { label: "CV Writing", path: "/services/cv-writing" },
+    { label: "Free CV Review", path: "/services/cv-review" },
+    { label: "Success Stories", path: "/success-stories" },
+    { label: "Contact Us", path: "/contact" },
+  ];
+
+  const employersLinks = [
+    { label: "Create Account", path: "/employers/register" },
+    { label: "Post a Job", path: "/employers/post-job" },
+    { label: "Employer Products", path: "/employers/products" },
+    { label: "Contact Sales", path: "/employers/contact-sales" },
+  ];
+
+  const internationalJobs = [
+    { label: "Jobs in Saudi Arabia", path: "/jobs/international/saudi-arabia" },
+    { label: "Jobs in Bahrain", path: "/jobs/international/bahrain" },
+    { label: "Jobs in Qatar", path: "/jobs/international/qatar" },
+    { label: "Jobs in UAE", path: "/jobs/international/uae" },
+    { label: "Jobs in Malaysia", path: "/jobs/international/malaysia" },
+    { label: "Jobs in Singapore", path: "/jobs/international/singapore" },
+    { label: "Jobs in Kuwait", path: "/jobs/international/kuwait" },
+    { label: "Jobs in Oman", path: "/jobs/international/oman" },
   ];
 
   const socialLinks = [
@@ -178,9 +205,37 @@ const Footer = () => {
     },
   ];
 
+  // Footer sections configuration using the individual arrays
+  const footerSections = [
+    {
+      title: "Jobs by Functional Area",
+      data: functionalAreaJobs,
+    },
+    {
+      title: "Jobs By City in Bangladesh",
+      data: jobsByCity,
+    },
+    {
+      title: "Jobs By Industry",
+      data: jobsByIndustry,
+    },
+    {
+      title: "Job Seekers",
+      data: jobSeekersLinks,
+    },
+    {
+      title: "Employers",
+      data: employersLinks,
+    },
+    {
+      title: "International Jobs",
+      data: internationalJobs,
+    },
+  ];
+
   return (
     <footer className="bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-12 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-10 border-b border-gray-700">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -272,16 +327,16 @@ const Footer = () => {
                 {section.title}
               </h3>
               <ul className="space-y-2.5">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
+                {section.data.map((item, itemIndex) => (
+                  <li key={itemIndex}>
                     <a
-                      href="/jobs"
+                      href={item.path}
                       className="text-xs text-gray-400 hover:text-emerald-300 transition-colors duration-200 flex items-start group"
                     >
                       <span className="text-emerald-500 opacity-0 group-hover:opacity-100 mr-2 mt-0.5 transition-opacity duration-200">
                         •
                       </span>
-                      <span className="leading-relaxed">{link}</span>
+                      <span className="leading-relaxed">{item.label}</span>
                     </a>
                   </li>
                 ))}
