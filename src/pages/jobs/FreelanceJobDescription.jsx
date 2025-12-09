@@ -323,7 +323,7 @@ const FreelanceJobDescription = () => {
                             key={index}
                             className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg"
                           >
-                            <CheckCircle className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
+                            <CheckCircle className="w-5 h-5 text-emerald-600 mt-1 shrink-0" />
                             <span>{detail}</span>
                           </div>
                         ))}
