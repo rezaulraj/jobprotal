@@ -49,7 +49,10 @@ const AllJobs = () => {
   const [selectedDeadline, setSelectedDeadline] = useState([]);
   const [selectedCompanies, setSelectedCompanies] = useState([]);
   const [selectedEducation, setSelectedEducation] = useState([]);
+  const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("relevance");
+
   // apply states
   const [showApplyPopup, setShowApplyPopup] = useState(false);
   const [selectedJobForApply, setSelectedJobForApply] = useState(null);
@@ -67,11 +70,56 @@ const AllJobs = () => {
     bgLight: "#f8fafc",
   };
 
+  // Format experience for display
+  const formatExperience = (experience) => {
+    if (Array.isArray(experience)) {
+      if (experience[0] === 0 && experience[1] <= 1) {
+        return "Fresher";
+      }
+      return `${experience[0]}-${experience[1]} Years`;
+    }
+    return experience === 0 || experience === "0"
+      ? "Fresher"
+      : `${experience} Years`;
+  };
+
+  // Check if experience matches filter
+  const experienceMatches = (jobExperience, filterExperience) => {
+    const jobExp = jobExperience;
+
+    if (filterExperience === "Fresher") {
+      if (Array.isArray(jobExp)) {
+        return jobExp[0] === 0 && jobExp[1] <= 1;
+      }
+      return jobExp === 0 || jobExp === "0";
+    }
+
+    if (Array.isArray(jobExp)) {
+      const minExp = jobExp[0];
+
+      if (filterExperience === "1-2 Years") {
+        return minExp >= 1 && minExp <= 2;
+      }
+      if (filterExperience === "3-5 Years") {
+        return minExp >= 3 && minExp <= 5;
+      }
+      if (filterExperience === "5-10 Years") {
+        return minExp >= 5 && minExp <= 10;
+      }
+      if (filterExperience === "10+ Years") {
+        return minExp >= 10;
+      }
+    }
+    return false;
+  };
+
   // Map URL parameters to actual filter values
   useEffect(() => {
     // Set jobs from actual jobData
     setJobs(jobData);
-    setSelectedJob(jobData[0]);
+    if (jobData.length > 0) {
+      setSelectedJob(jobData[0]);
+    }
 
     // Set initial filters based on URL params
     if (cate) {
@@ -137,7 +185,8 @@ const AllJobs = () => {
     }
 
     if (functionParam) {
-      // Handle function filtering if needed
+      const cleanFunction = functionParam.replace(/-/g, " ");
+      setSelectedSubcategories([cleanFunction]);
     }
   }, [cate, locationParam, companyParam, functionParam]);
 
@@ -148,6 +197,7 @@ const AllJobs = () => {
     const searchQuery = searchParams.get("search");
     const locationParam = searchParams.get("location");
     const minSalary = searchParams.get("minSalary");
+    const subcategoryParam = searchParams.get("subcategory");
 
     // Update search states based on URL parameters
     if (searchQuery) {
@@ -162,6 +212,11 @@ const AllJobs = () => {
       const minSalaryNum = parseInt(minSalary);
       setSalaryRange([minSalaryNum, salaryRange[1]]);
     }
+
+    if (subcategoryParam) {
+      const subcategory = subcategoryParam.replace(/-/g, " ");
+      setSelectedSubcategories([subcategory]);
+    }
   }, [location.search]);
 
   // Get actual salary range from job data
@@ -175,87 +230,173 @@ const AllJobs = () => {
     }
   }, []);
 
-  // Filter jobs based on all criteria
-  const filteredJobs = jobs.filter((job) => {
-    // Search filter
-    if (searchTerm) {
-      const term = searchTerm.toLowerCase();
-      const jobMatches =
-        job.title.toLowerCase().includes(term) ||
-        job.company.toLowerCase().includes(term) ||
-        job.description.toLowerCase().includes(term) ||
-        job.skills?.some((skill) => skill.toLowerCase().includes(term)) ||
-        job.category.toLowerCase().includes(term);
-      if (!jobMatches) return false;
-    }
+  // Calculate days left until deadline
+  const getDaysLeft = (job) => {
+    if (!job.jobEndDate) return Infinity; // No deadline, show last
 
-    // Salary filter
-    const jobMinSalary = job.salary.min || 0;
-    const jobMaxSalary = job.salary.max || 0;
-    if (jobMaxSalary < salaryRange[0] || jobMinSalary > salaryRange[1]) {
-      return false;
-    }
+    const endDate = new Date(job.jobEndDate);
+    const today = new Date("2025-12-10"); // Current date from your data
+    const diffTime = endDate - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-    // Category filter
-    if (
-      selectedCategories.length > 0 &&
-      !selectedCategories.includes(job.category)
-    ) {
-      return false;
-    }
+    return diffDays;
+  };
 
-    // Experience filter - convert job experience to match filter format
-    if (selectedExperience.length > 0) {
-      const jobExp = job.experience;
-      const matchesExperience = selectedExperience.some((exp) => {
-        if (exp === "Fresher") return jobExp === 0;
-        if (exp === "1-2 Years") return jobExp >= 1 && jobExp <= 2;
-        if (exp === "3-5 Years") return jobExp >= 3 && jobExp <= 5;
-        if (exp === "5-10 Years") return jobExp >= 5 && jobExp <= 10;
-        if (exp === "10+ Years") return jobExp >= 10;
+  // Check deadline filter
+  const deadlineMatches = (job, deadlineFilter) => {
+    const daysLeft = getDaysLeft(job);
+
+    if (daysLeft === Infinity) return false; // Jobs without deadline don't match any filter
+
+    switch (deadlineFilter) {
+      case "Within 24 Hours":
+        return daysLeft <= 1 && daysLeft >= 0;
+      case "Within 3 Days":
+        return daysLeft <= 3 && daysLeft >= 0;
+      case "Within 7 Days":
+        return daysLeft <= 7 && daysLeft >= 0;
+      case "Within 30 Days":
+        return daysLeft <= 30 && daysLeft >= 0;
+      default:
         return false;
-      });
-      if (!matchesExperience) return false;
     }
+  };
 
-    // Job type filter
-    if (selectedJobTypes.length > 0 && !selectedJobTypes.includes(job.type)) {
-      return false;
-    }
+  // Filter jobs based on all criteria
+  const filterAndSortJobs = () => {
+    let filtered = jobs.filter((job) => {
+      // Search filter
+      if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        const jobMatches =
+          job.title.toLowerCase().includes(term) ||
+          (job.company && job.company.toLowerCase().includes(term)) ||
+          (job.description && job.description.toLowerCase().includes(term)) ||
+          (job.skills &&
+            job.skills.some((skill) => skill.toLowerCase().includes(term))) ||
+          (job.category && job.category.toLowerCase().includes(term));
+        if (!jobMatches) return false;
+      }
 
-    // Location filter
-    if (selectedLocations.length > 0) {
-      const jobLocation = job.location.toLowerCase();
-      const matchesLocation = selectedLocations.some((loc) =>
-        jobLocation.includes(loc.toLowerCase())
-      );
-      if (!matchesLocation) return false;
-    }
+      // Salary filter
+      const jobMinSalary = job.salary?.min || 0;
+      const jobMaxSalary = job.salary?.max || 0;
+      if (jobMaxSalary < salaryRange[0] || jobMinSalary > salaryRange[1]) {
+        return false;
+      }
 
-    // Gender filter
-    if (selectedGenders.length > 0 && !selectedGenders.includes(job.gender)) {
-      return false;
-    }
+      // Category filter
+      if (
+        selectedCategories.length > 0 &&
+        (!job.category || !selectedCategories.includes(job.category))
+      ) {
+        return false;
+      }
 
-    // Company filter
-    if (
-      selectedCompanies.length > 0 &&
-      !selectedCompanies.includes(job.company)
-    ) {
-      return false;
-    }
+      // Experience filter
+      if (selectedExperience.length > 0) {
+        const matchesExperience = selectedExperience.some((exp) =>
+          experienceMatches(job.experience, exp)
+        );
+        if (!matchesExperience) return false;
+      }
 
-    // Education filter
-    if (selectedEducation.length > 0) {
-      const jobEducation = job.education || "";
-      const matchesEducation = selectedEducation.some((edu) =>
-        jobEducation.toLowerCase().includes(edu.toLowerCase())
-      );
-      if (!matchesEducation) return false;
-    }
+      // Job type filter
+      if (
+        selectedJobTypes.length > 0 &&
+        !selectedJobTypes.includes(job.jobType)
+      ) {
+        return false;
+      }
 
-    return true;
-  });
+      // Location filter
+      if (selectedLocations.length > 0) {
+        const jobLocation = job.location ? job.location.toLowerCase() : "";
+        const matchesLocation = selectedLocations.some((loc) =>
+          jobLocation.includes(loc.toLowerCase())
+        );
+        if (!matchesLocation) return false;
+      }
+
+      // Gender filter
+      if (selectedGenders.length > 0 && !selectedGenders.includes(job.gender)) {
+        return false;
+      }
+
+      // Company filter
+      if (
+        selectedCompanies.length > 0 &&
+        (!job.company || !selectedCompanies.includes(job.company))
+      ) {
+        return false;
+      }
+
+      // Education filter
+      if (selectedEducation.length > 0) {
+        const jobEducation = job.education || "";
+        const matchesEducation = selectedEducation.some((edu) =>
+          jobEducation.toLowerCase().includes(edu.toLowerCase())
+        );
+        if (!matchesEducation) return false;
+      }
+
+      // Subcategory filter
+      if (selectedSubcategories.length > 0) {
+        const jobSubcategory = job.subCategory || "";
+        const matchesSubcategory = selectedSubcategories.some((subcat) =>
+          jobSubcategory.toLowerCase().includes(subcat.toLowerCase())
+        );
+        if (!matchesSubcategory) return false;
+      }
+
+      // Deadline filter
+      if (selectedDeadline.length > 0) {
+        const matchesDeadline = selectedDeadline.some((deadline) =>
+          deadlineMatches(job, deadline)
+        );
+        if (!matchesDeadline) return false;
+      }
+
+      return true;
+    });
+
+    // Apply sorting
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case "newest":
+          // Sort by posted date (newest first)
+          const dateA = new Date(a.jobPostedDate || 0);
+          const dateB = new Date(b.jobPostedDate || 0);
+          return dateB - dateA;
+
+        case "salary-high":
+          // Sort by max salary (highest first)
+          const salaryA = a.salary?.max || 0;
+          const salaryB = b.salary?.max || 0;
+          return salaryB - salaryA;
+
+        case "deadline":
+          // Sort by deadline (closest first)
+          const deadlineA = getDaysLeft(a);
+          const deadlineB = getDaysLeft(b);
+          // Jobs without deadline go last
+          if (deadlineA === Infinity && deadlineB === Infinity) return 0;
+          if (deadlineA === Infinity) return 1;
+          if (deadlineB === Infinity) return -1;
+          return deadlineA - deadlineB;
+
+        case "relevance":
+        default:
+          // Default: Sort by ID or keep original order
+          // You can add more sophisticated relevance algorithm here
+          return a.id - b.id;
+      }
+    });
+
+    return filtered;
+  };
+
+  const filteredJobs = filterAndSortJobs();
 
   // Update selected job when filters change
   useEffect(() => {
@@ -283,10 +424,13 @@ const AllJobs = () => {
     if (value.trim() !== "" && selectedJob) {
       const term = value.toLowerCase();
       const selectedMatches =
-        selectedJob.title.toLowerCase().includes(term) ||
-        selectedJob.company.toLowerCase().includes(term) ||
-        selectedJob.description.toLowerCase().includes(term) ||
-        selectedJob.category.toLowerCase().includes(term);
+        (selectedJob.title && selectedJob.title.toLowerCase().includes(term)) ||
+        (selectedJob.company &&
+          selectedJob.company.toLowerCase().includes(term)) ||
+        (selectedJob.description &&
+          selectedJob.description.toLowerCase().includes(term)) ||
+        (selectedJob.category &&
+          selectedJob.category.toLowerCase().includes(term));
 
       if (!selectedMatches) {
         setSelectedJob(null);
@@ -305,8 +449,12 @@ const AllJobs = () => {
     setSelectedCompanies([]);
     setSelectedEducation([]);
     setSelectedDeadline([]);
+    setSelectedSubcategories([]);
     setSearchTerm("");
-    setSelectedJob(jobData[0]); // Reset to first job
+    setSortBy("relevance");
+    if (jobData.length > 0) {
+      setSelectedJob(jobData[0]); // Reset to first job
+    }
     navigate("/jobs"); // Navigate back to all jobs
   };
 
@@ -327,20 +475,27 @@ const AllJobs = () => {
         })
         .filter((loc) => loc)
     ),
-  ];
+  ].sort();
 
   const uniqueCompanies = [
     ...new Set(jobs.map((job) => job.company).filter((company) => company)),
-  ];
+  ].sort();
+
   const uniqueCategories = [
     ...new Set(jobs.map((job) => job.category).filter((category) => category)),
-  ];
+  ].sort();
+
   const uniqueJobTypes = [
-    ...new Set(jobs.map((job) => job.type).filter((type) => type)),
-  ];
+    ...new Set(jobs.map((job) => job.jobType).filter((type) => type)),
+  ].sort();
+
   const uniqueGenders = [
     ...new Set(jobs.map((job) => job.gender).filter((gender) => gender)),
-  ];
+  ].sort();
+
+  const uniqueSubcategories = [
+    ...new Set(jobs.map((job) => job.subCategory).filter((subcat) => subcat)),
+  ].sort();
 
   // Handle job selection
   const handleJobSelect = (job) => {
@@ -380,10 +535,13 @@ const AllJobs = () => {
       "B.Sc.",
       "MBA",
     ],
+    subcategories: uniqueSubcategories,
   };
 
   // Format salary display
   const formatSalary = (salary) => {
+    if (!salary) return "Not specified";
+
     if (salary.min === 0 && salary.max === 0 && salary.default) {
       return salary.default;
     }
@@ -393,16 +551,30 @@ const AllJobs = () => {
     return "Negotiable";
   };
 
-  // Calculate days ago from posted date (simulated for demo)
-  const getPostedDate = (jobId) => {
-    const days = (jobId % 30) + 3;
-    return `${days} days ago`;
+  // Calculate days ago from posted date
+  const getPostedDate = (job) => {
+    if (!job.jobPostedDate) return "Recently posted";
+
+    const postedDate = new Date(job.jobPostedDate);
+    const today = new Date("2025-12-10"); // Current date from your data
+    const diffTime = Math.abs(today - postedDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return "Today";
+    if (diffDays === 1) return "Yesterday";
+    return `${diffDays} days ago`;
   };
 
-  // Calculate deadline (simulated for demo)
-  const getDeadline = (jobId) => {
-    const days = (jobId % 30) + 1;
-    return `${days} days left`;
+  // Calculate deadline display
+  const getDeadline = (job) => {
+    if (!job.jobEndDate) return "No deadline";
+
+    const daysLeft = getDaysLeft(job);
+
+    if (daysLeft < 0) return "Deadline passed";
+    if (daysLeft === 0) return "Today";
+    if (daysLeft === 1) return "Tomorrow";
+    return `${daysLeft} days left`;
   };
 
   // Filter checkbox component
@@ -432,9 +604,21 @@ const AllJobs = () => {
     </label>
   );
 
-  // Check if job is urgent/featured (simulated for demo)
-  const isUrgent = (jobId) => jobId % 5 === 0;
-  const isFeatured = (jobId) => jobId % 7 === 0;
+  // Check if job is urgent/featured based on dates
+  const isUrgent = (job) => {
+    const daysLeft = getDaysLeft(job);
+    return daysLeft <= 3 && daysLeft >= 0; // Urgent if deadline within 3 days
+  };
+
+  const isFeatured = (job) => {
+    // Featured if posted recently (within 7 days)
+    if (!job.jobPostedDate) return false;
+    const postedDate = new Date(job.jobPostedDate);
+    const today = new Date("2025-12-10");
+    const diffTime = Math.abs(today - postedDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays <= 7;
+  };
 
   // Get active filters count
   const getActiveFiltersCount = () => {
@@ -447,6 +631,7 @@ const AllJobs = () => {
       companies: selectedCompanies,
       education: selectedEducation,
       deadlines: selectedDeadline,
+      subcategories: selectedSubcategories,
     }).flat().length;
   };
 
@@ -662,6 +847,38 @@ const AllJobs = () => {
                 </div>
               </div>
 
+              {/* Subcategory */}
+              {selectedCategories.length > 0 &&
+                filterOptions.subcategories.length > 0 && (
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Briefcase
+                        className="w-5 h-5"
+                        style={{ color: colors.secondary }}
+                      />
+                      <h3 className="font-semibold text-gray-900">
+                        Subcategory
+                      </h3>
+                    </div>
+                    <div className="space-y-1 max-h-60 overflow-y-auto pr-2">
+                      {filterOptions.subcategories.map((subcategory) => (
+                        <FilterCheckbox
+                          key={subcategory}
+                          label={subcategory}
+                          checked={selectedSubcategories.includes(subcategory)}
+                          onChange={() => {
+                            setSelectedSubcategories((prev) =>
+                              prev.includes(subcategory)
+                                ? prev.filter((c) => c !== subcategory)
+                                : [...prev, subcategory]
+                            );
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
               {/* Location */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4">
@@ -848,10 +1065,8 @@ const AllJobs = () => {
                       <select
                         className="border rounded-lg px-3 py-1.5 text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                         style={{ borderColor: colors.border }}
-                        onChange={(e) => {
-                          const value = e.target.value;
-                          // Implement sorting logic here
-                        }}
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value)}
                       >
                         <option value="relevance">Sort by: Relevance</option>
                         <option value="newest">Sort by: Newest</option>
@@ -902,12 +1117,12 @@ const AllJobs = () => {
                                 </p>
                               </div>
                               <div className="flex flex-col items-end gap-1">
-                                {isFeatured(job.id) && (
+                                {isFeatured(job) && (
                                   <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
                                     Featured
                                   </span>
                                 )}
-                                {isUrgent(job.id) && (
+                                {isUrgent(job) && (
                                   <span className="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-100 text-red-800">
                                     Urgent
                                   </span>
@@ -919,15 +1134,15 @@ const AllJobs = () => {
                               <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
                                 <span className="flex items-center gap-1">
                                   <MapPin className="w-4 h-4" />
-                                  {job.location}
+                                  {job.location || "Not specified"}
                                 </span>
                                 <span className="flex items-center gap-1">
                                   <Briefcase className="w-4 h-4" />
-                                  {job.type}
+                                  {job.jobType || "Not specified"}
                                 </span>
                                 <span className="flex items-center gap-1">
                                   <Award className="w-4 h-4" />
-                                  {job.experience} years
+                                  {formatExperience(job.experience)}
                                 </span>
                               </div>
                               <div
@@ -939,29 +1154,29 @@ const AllJobs = () => {
                             </div>
 
                             <div className="flex items-center justify-between">
-                              <div className="flex gap-2">
-                                <span
+                              <div className="">
+                                {/* <span
                                   className="px-2 py-1 text-xs rounded font-medium"
                                   style={{
                                     backgroundColor: colors.lightPrimary,
                                     color: colors.primary,
                                   }}
                                 >
-                                  {job.category}
-                                </span>
-                                <span className="px-2 py-1 text-xs rounded bg-gray-100 text-gray-700">
-                                  Vacancy: {job.vacancy}
+                                  {job.category || "N/A"}
+                                </span> */}
+                                <span className="font-bold text-base text-green-700 uppercase">
+                                  Vacancy: {job.vacancy || "N/A"}
                                 </span>
                               </div>
                               <div className="text-right">
                                 <div className="text-xs text-gray-500">
-                                  {getPostedDate(job.id)}
+                                  {getPostedDate(job)}
                                 </div>
                                 <div
                                   className="text-xs font-medium"
                                   style={{ color: colors.secondary }}
                                 >
-                                  {getDeadline(job.id)}
+                                  {getDeadline(job)}
                                 </div>
                               </div>
                             </div>
@@ -1020,11 +1235,13 @@ const AllJobs = () => {
                               {selectedJob.title}
                             </h2>
                             <div className="flex items-center flex-wrap gap-4 mb-3">
-                              <img
-                                src={selectedJob.clogo}
-                                alt={selectedJob.company}
-                                className="h-8 w-8"
-                              />
+                              {selectedJob.clogo && (
+                                <img
+                                  src={selectedJob.clogo}
+                                  alt={selectedJob.company}
+                                  className="h-8 w-8 object-contain"
+                                />
+                              )}
                               <span className="font-semibold text-gray-800">
                                 {selectedJob.company}
                               </span>
@@ -1036,25 +1253,25 @@ const AllJobs = () => {
                                     color: "white",
                                   }}
                                 >
-                                  {selectedJob.type}
+                                  {selectedJob.jobType || "Full Time"}
                                 </span>
                                 <span className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700">
-                                  {selectedJob.gender}
+                                  {selectedJob.gender || "Any"}
                                 </span>
                               </div>
                             </div>
                             <div className="flex items-center gap-6 text-sm text-gray-600">
                               <span className="flex items-center gap-1">
                                 <MapPin className="w-4 h-4" />
-                                {selectedJob.location}
+                                {selectedJob.location || "Not specified"}
                               </span>
                               <span className="flex items-center gap-1">
                                 <Award className="w-4 h-4" />
-                                {selectedJob.experience} years
+                                {formatExperience(selectedJob.experience)}
                               </span>
                               <span className="flex items-center gap-1">
                                 <Calendar className="w-4 h-4" />
-                                {getPostedDate(selectedJob.id)}
+                                {getPostedDate(selectedJob)}
                               </span>
                             </div>
                           </div>
@@ -1128,7 +1345,7 @@ const AllJobs = () => {
                                   Vacancy
                                 </div>
                                 <div className="font-bold text-lg">
-                                  {selectedJob.vacancy}
+                                  {selectedJob.vacancy || "N/A"}
                                 </div>
                               </div>
                               <div className="p-3 rounded-lg bg-gray-50">
@@ -1136,7 +1353,7 @@ const AllJobs = () => {
                                   Education
                                 </div>
                                 <div className="font-bold text-lg">
-                                  {selectedJob.education}
+                                  {selectedJob.education || "Not specified"}
                                 </div>
                               </div>
                             </div>
@@ -1348,8 +1565,8 @@ const AllJobs = () => {
                         style={{ color: colors.secondary }}
                       />
                       <span style={{ color: colors.primary }}>
-                        {jobs.filter((j) => isFeatured(j.id)).length} Featured
-                        Jobs Available
+                        {jobs.filter((j) => isFeatured(j)).length} Featured Jobs
+                        Available
                       </span>
                     </div>
                   </div>
@@ -1390,11 +1607,13 @@ const AllJobs = () => {
                     {selectedJob.title}
                   </h2>
                   <div className="flex flex-wrap items-start gap-4">
-                    <img
-                      src={selectedJob.clogo}
-                      alt={selectedJob.company}
-                      className="h-8 w-8"
-                    />
+                    {selectedJob.clogo && (
+                      <img
+                        src={selectedJob.clogo}
+                        alt={selectedJob.company}
+                        className="h-8 w-8"
+                      />
+                    )}
                     <p className="font-semibold text-gray-800 mb-3">
                       {selectedJob.company}
                     </p>
@@ -1402,11 +1621,11 @@ const AllJobs = () => {
                   <div className="flex items-center gap-3 text-sm text-gray-600 mb-4">
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      {selectedJob.location}
+                      {selectedJob.location || "Not specified"}
                     </span>
                     <span className="flex items-center gap-1">
                       <Briefcase className="w-4 h-4" />
-                      {selectedJob.type}
+                      {selectedJob.jobType || "Full Time"}
                     </span>
                   </div>
                   <div

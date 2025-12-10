@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaSearch,
   FaMapMarkerAlt,
@@ -33,6 +33,111 @@ const HeroHome = () => {
   const locationInputRef = useRef(null);
   const salaryInputRef = useRef(null);
 
+  // Helper functions to calculate counts based on actual job data
+  const calculateDeadlineTomorrowCount = () => {
+    const today = new Date("2025-12-10");
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    return jobData.filter((job) => {
+      const jobEndDate = new Date(job.jobEndDate);
+      // Check if deadline is tomorrow or within 24 hours
+      const diffTime = jobEndDate - tomorrow;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays <= 1 && diffDays >= 0;
+    }).length;
+  };
+
+  const calculateInternshipCount = () => {
+    return jobData.filter(
+      (job) =>
+        job.title.toLowerCase().includes("intern") ||
+        (job.employeeStatus &&
+          job.employeeStatus.toLowerCase().includes("intern")) ||
+        (job.description && job.description.toLowerCase().includes("intern")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("intern"))
+    ).length;
+  };
+
+  const calculateContractualCount = () => {
+    return jobData.filter(
+      (job) =>
+        (job.employeeStatus &&
+          job.employeeStatus.toLowerCase().includes("contractual")) ||
+        (job.employeeStatus &&
+          job.employeeStatus.toLowerCase().includes("contract")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("contractual")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("contract"))
+    ).length;
+  };
+
+  const calculatePartTimeCount = () => {
+    return jobData.filter(
+      (job) =>
+        (job.employeeStatus &&
+          job.employeeStatus.toLowerCase().includes("part time")) ||
+        (job.employeeStatus &&
+          job.employeeStatus.toLowerCase().includes("part-time")) ||
+        (job.description &&
+          job.description.toLowerCase().includes("part time")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("part time"))
+    ).length;
+  };
+
+  const calculateOverseasCount = () => {
+    return jobData.filter(
+      (job) =>
+        (job.description &&
+          job.description.toLowerCase().includes("overseas")) ||
+        (job.description && job.description.toLowerCase().includes("abroad")) ||
+        (job.title && job.title.toLowerCase().includes("overseas")) ||
+        (job.location && job.location.toLowerCase().includes("overseas")) ||
+        (job.title && job.title.toLowerCase().includes("migration")) ||
+        (job.description && job.description.toLowerCase().includes("migration"))
+    ).length;
+  };
+
+  const calculateRemoteCount = () => {
+    return jobData.filter(
+      (job) =>
+        (job.jobType && job.jobType.toLowerCase().includes("remote")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("hybrid")) ||
+        (job.description && job.description.toLowerCase().includes("remote")) ||
+        (job.description &&
+          job.description.toLowerCase().includes("work from home")) ||
+        (job.description && job.description.toLowerCase().includes("wfh"))
+    ).length;
+  };
+
+  const calculateFresherCount = () => {
+    return jobData.filter((job) => {
+      // Check if experience is [0, x] where x <= 1
+      if (Array.isArray(job.experience)) {
+        return job.experience[0] === 0 && job.experience[1] <= 1;
+      }
+      // Check if experience is 0 or "Fresher"
+      return (
+        job.experience === 0 ||
+        job.experience === "0" ||
+        (typeof job.experience === "string" &&
+          job.experience.toLowerCase().includes("fresher")) ||
+        (job.title && job.title.toLowerCase().includes("fresher")) ||
+        (job.description && job.description.toLowerCase().includes("fresher"))
+      );
+    }).length;
+  };
+
+  const calculateNewJobsCount = () => {
+    const today = new Date("2025-12-10");
+    const sevenDaysAgo = new Date(today);
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+    return jobData.filter((job) => {
+      const jobDate = new Date(job.jobPostedDate);
+      return jobDate >= sevenDaysAgo;
+    }).length;
+  };
+
   useEffect(() => {
     // Calculate total vacancies
     const totalVacancies = jobData.reduce((sum, job) => {
@@ -44,9 +149,6 @@ const HeroHome = () => {
     const uniqueCompanies = [
       ...new Set(jobData.map((job) => job.company).filter(Boolean)),
     ].length;
-
-    // Calculate new jobs (jobs with ID <= 50 for demo)
-    const newJobsCount = jobData.filter((job) => job.id <= 50).length;
 
     // Update job stats
     setJobStats([
@@ -64,7 +166,7 @@ const HeroHome = () => {
       },
       {
         label: "New Jobs",
-        count: newJobsCount,
+        count: calculateNewJobsCount(),
         icon: MdOutlineWifiProtectedSetup,
         bgColor: "bg-gradient-to-r from-pink-500 to-red-500",
       },
@@ -78,108 +180,54 @@ const HeroHome = () => {
         path: "/jobs",
       },
       {
-        label: "Employer List",
+        label: "Company List",
         count: uniqueCompanies,
         path: "/companys",
       },
       {
         label: "New Jobs",
-        count: newJobsCount,
-        path: "/jobs/",
+        count: calculateNewJobsCount(),
+        path: "/jobs?filter=recent",
       },
       {
         label: "Deadline Tomorrow",
         count: calculateDeadlineTomorrowCount(),
-        path: "/jobs",
+        path: "/jobs?filter=deadline_tomorrow",
       },
       {
         label: "Internship Opportunity",
         count: calculateInternshipCount(),
-        path: "/jobs",
+        path: "/jobs?filter=internship",
       },
       {
         label: "Contractual Jobs",
         count: calculateContractualCount(),
-        path: "/jobs",
+        path: "/jobs?filter=contractual",
       },
       {
         label: "Part time Jobs",
         count: calculatePartTimeCount(),
-        path: "/jobs",
+        path: "/jobs?filter=part_time",
       },
       {
         label: "Overseas Jobs",
         count: calculateOverseasCount(),
-        path: "/jobs",
+        path: "/jobs?filter=overseas",
       },
       {
         label: "Work From Home",
         count: calculateRemoteCount(),
-        path: "/jobs",
+        path: "/jobs?filter=remote",
       },
       {
         label: "Fresher Jobs",
         count: calculateFresherCount(),
-        path: "/jobs",
+        path: "/jobs?filter=fresher",
       },
     ];
 
     setQuickLinks(calculatedQuickLinks);
   }, []);
-
-  // Helper functions to calculate counts
-  const calculateDeadlineTomorrowCount = () => {
-    // For demo, return a count based on job IDs
-    return jobData.filter((job) => job.id % 10 === 0).length;
-  };
-
-  const calculateInternshipCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.title.toLowerCase().includes("intern") ||
-        job.type.toLowerCase().includes("intern")
-    ).length;
-  };
-
-  const calculateContractualCount = () => {
-    return jobData.filter((job) => job.type.toLowerCase().includes("contract"))
-      .length;
-  };
-
-  const calculatePartTimeCount = () => {
-    return jobData.filter((job) => job.type.toLowerCase().includes("part"))
-      .length;
-  };
-
-  const calculateOverseasCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.description.toLowerCase().includes("overseas") ||
-        job.description.toLowerCase().includes("abroad") ||
-        job.title.toLowerCase().includes("overseas")
-    ).length;
-  };
-
-  const calculateRemoteCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.type.toLowerCase().includes("remote") ||
-        job.description.toLowerCase().includes("remote") ||
-        job.description.toLowerCase().includes("work from home") ||
-        job.description.toLowerCase().includes("wfh")
-    ).length;
-  };
-
-  const calculateFresherCount = () => {
-    return jobData.filter(
-      (job) =>
-        job.experience === 0 ||
-        job.experience === "Fresher" ||
-        (typeof job.experience === "string" &&
-          job.experience.toLowerCase().includes("fresher")) ||
-        (job.description && job.description.toLowerCase().includes("fresher"))
-    ).length;
-  };
 
   // Get unique locations from job data
   const getUniqueLocations = () => {
@@ -630,9 +678,11 @@ const HeroHome = () => {
                 >
                   <div className="px-4 sm:px-6 py-1 flex flex-wrap md:flex-col">
                     {quickLinks.map((link, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href={link.path}
+                        to={`${link.path}${
+                          link.path.includes("?") ? "&" : "?"
+                        }source=quicklink`}
                         className="group flex items-center justify-between py-2 px-2 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-0 cursor-pointer"
                       >
                         <div className="flex items-center">
@@ -646,7 +696,7 @@ const HeroHome = () => {
                         <span className="text-xs font-medium bg-[#4EB956]/10 text-[#4EB956] px-2 py-1 rounded">
                           {link.count > 0 ? link.count : "0"}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

@@ -23,6 +23,18 @@ import {
   FaPlusCircle,
   FaChevronRight,
   FaCode,
+  FaUserTie,
+  FaSearch,
+  FaCalculator,
+  FaChartBar,
+  FaFileContract,
+  FaPencilAlt,
+  FaRobot,
+  FaNetworkWired,
+  FaDatabase,
+  FaMobileAlt,
+  FaShieldAlt,
+  FaProjectDiagram,
 } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { GrDatabase } from "react-icons/gr";
@@ -34,7 +46,9 @@ const JobCategory = () => {
   const [activeTab, setActiveTab] = useState("industry");
   const [actualCompanies, setActualCompanies] = useState([]);
   const [actualLocations, setActualLocations] = useState([]);
+  const [functions, setFunctions] = useState([]);
 
+  // Calculate total vacancies for a category
   const calculateVacancyCount = (categoryName) => {
     const categoryMapping = {
       "Accounting/Finance": "Accounting/Finance",
@@ -72,15 +86,100 @@ const JobCategory = () => {
     return totalVacancies;
   };
 
-  // Calculate company job counts
-  // const calculateCompanyJobCount = (companyName) => {
-  //   return jobData.filter((job) => job.company === companyName).length;
-  // };
+  // Calculate total jobs for a category
+  const calculateJobCount = (categoryName) => {
+    const categoryMapping = {
+      "Accounting/Finance": "Accounting/Finance",
+      "Business Development": "Business Development",
+      "Sales/Marketing": "Sales/Marketing",
+      "IT/Telecommunication": "IT/Telecommunication",
+      "Information Technology": "Information Technology",
+      Engineering: "Engineering",
+      Manufacturing: "Manufacturing",
+      Services: "Services",
+      "Recruitment/Employment Firms": "Recruitment/Employment Firms",
+      "Data Entry/Office Support": "Data Entry/Office Support",
+      "Hospitality/Travel/Tourism": "Hospitality/Travel/Tourism",
+      "Education/Training": "Education/Training",
+      "Customer/Service/Call Centre": "Customer/Service/Call Centre",
+      Consultants: "Consultants",
+      "Banking/Financial Services": "Banking/Financial Services",
+      "N.G.O./Social Services": "N.G.O./Social Services",
+      "E-Commerce/E-Business": "E-Commerce/E-Business",
+      "Real Estate/Property": "Real Estate/Property",
+      "Healthcare/Hospital/Medical": "Healthcare/Hospital/Medical",
+      BPO: "BPO",
+      "Construction/Cement/Metals": "Construction/Cement/Metals",
+      "Architect/Interior Design": "Architect/Interior Design",
+      "Importers/ Distributors/Exporters": "Importers/ Distributors/Exporters",
+    };
 
-  // Calculate location job counts
-  // const calculateLocationJobCount = (location) => {
-  //   return jobData.filter((job) => job.location === location).length;
-  // };
+    const mappedCategory = categoryMapping[categoryName];
+    if (!mappedCategory) return 0;
+
+    return jobData.filter((job) => job.category === mappedCategory).length;
+  };
+
+  // Calculate function counts from subcategories
+  const calculateFunctionCount = () => {
+    const functionMap = {};
+    
+    jobData.forEach((job) => {
+      if (job.subCategory) {
+        functionMap[job.subCategory] = (functionMap[job.subCategory] || 0) + 1;
+      }
+    });
+
+    // Get function icon
+    const getFunctionIcon = (funcName) => {
+      const iconMap = {
+        "Accounting": <FaCalculator />,
+        "Finance": <FaChartBar />,
+        "Sales": <FaUserTie />,
+        "Marketing": <AiFillNotification />,
+        "Software Developer": <FaCode />,
+        "Web Developer": <FaLaptopCode />,
+        "App Developer": <FaMobileAlt />,
+        "Networking": <FaNetworkWired />,
+        "Database": <FaDatabase />,
+        "Security": <FaShieldAlt />,
+        "Information Technology": <FaLaptopCode />,
+        "Project Management": <FaProjectDiagram />,
+        "Business": <FaBusinessTime />,
+        "Business Development": <FaChartBar />,
+        "Customer Service": <FaHeadset />,
+        "Service": <FaServicestack />,
+        "HR": <FaUsers />,
+        "Administration": <FaUsers />,
+        "Design": <MdOutlineDesignServices />,
+        "Architect": <MdOutlineDesignServices />,
+        "Law": <FaFileContract />,
+        "Education": <FaGraduationCap />,
+        "Training": <FaGraduationCap />,
+        "Medical": <FaHospital />,
+        "Healthcare": <FaHospital />,
+        "Engineering": <FaTools />,
+        "Electrical": <FaTools />,
+        "Mechanical": <FaTools />,
+        "Civil": <FaHardHat />,
+        "Audit": <FaSearch />,
+        "Tax": <FaMoneyBill />,
+        "Banking": <FaBuilding />,
+      };
+
+      return iconMap[funcName] || <FaBriefcase />;
+    };
+
+    return Object.entries(functionMap)
+      .map(([name, count]) => ({
+        name,
+        count,
+        icon: getFunctionIcon(name),
+        path: name.toLowerCase().replace(/[^\w\s]/gi, "").replace(/\s+/g, "-"),
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 8); // Top 8 functions
+  };
 
   // Get unique companies from jobData
   const getUniqueCompanies = () => {
@@ -137,158 +236,171 @@ const JobCategory = () => {
   useEffect(() => {
     setActualCompanies(getUniqueCompanies());
     setActualLocations(getUniqueLocations());
+    setFunctions(calculateFunctionCount());
   }, []);
 
   const jobCategories = [
     {
       name: "Accounting/Finance",
-      count: calculateVacancyCount("Accounting/Finance"),
+      vacancyCount: calculateVacancyCount("Accounting/Finance"),
+      jobCount: calculateJobCount("Accounting/Finance"),
       icon: <FaMoneyBill />,
       path: "accounting-finance",
     },
     {
       name: "Business Development",
-      count: calculateVacancyCount("Business Development"),
+      vacancyCount: calculateVacancyCount("Business Development"),
+      jobCount: calculateJobCount("Business Development"),
       icon: <FaBusinessTime />,
       path: "business-development",
     },
     {
       name: "Sales/Marketing",
-      count: calculateVacancyCount("Sales/Marketing"),
+      vacancyCount: calculateVacancyCount("Sales/Marketing"),
+      jobCount: calculateJobCount("Sales/Marketing"),
       icon: <AiFillNotification />,
       path: "sales-marketing",
     },
     {
       name: "IT/Telecommunication",
-      count: calculateVacancyCount("IT/Telecommunication"),
+      vacancyCount: calculateVacancyCount("IT/Telecommunication"),
+      jobCount: calculateJobCount("IT/Telecommunication"),
       icon: <FaCode />,
       path: "it-telecommunication",
     },
     {
       name: "Information Technology",
-      count: calculateVacancyCount("Information Technology"),
+      vacancyCount: calculateVacancyCount("Information Technology"),
+      jobCount: calculateJobCount("Information Technology"),
       icon: <FaLaptopCode />,
       path: "information-technology",
     },
     {
       name: "Engineering",
-      count: calculateVacancyCount("Engineering"),
+      vacancyCount: calculateVacancyCount("Engineering"),
+      jobCount: calculateJobCount("Engineering"),
       icon: <FaTools />,
       path: "engineering",
     },
     {
       name: "Manufacturing",
-      count: calculateVacancyCount("Manufacturing"),
+      vacancyCount: calculateVacancyCount("Manufacturing"),
+      jobCount: calculateJobCount("Manufacturing"),
       icon: <FaIndustry />,
       path: "manufacturing",
     },
     {
       name: "Services",
-      count: calculateVacancyCount("Services"),
+      vacancyCount: calculateVacancyCount("Services"),
+      jobCount: calculateJobCount("Services"),
       icon: <FaServicestack />,
       path: "services",
     },
     {
       name: "Recruitment/Employment Firms",
-      count: calculateVacancyCount("Recruitment/Employment Firms"),
+      vacancyCount: calculateVacancyCount("Recruitment/Employment Firms"),
+      jobCount: calculateJobCount("Recruitment/Employment Firms"),
       icon: <FaUsers />,
       path: "recruitment-employment",
     },
     {
       name: "Data Entry/Office Support",
-      count: calculateVacancyCount("Data Entry/Office Support"),
+      vacancyCount: calculateVacancyCount("Data Entry/Office Support"),
+      jobCount: calculateJobCount("Data Entry/Office Support"),
       icon: <GrDatabase />,
       path: "data-entry-office-support",
     },
     {
       name: "Hospitality/Travel/Tourism",
-      count: calculateVacancyCount("Hospitality/Travel/Tourism"),
+      vacancyCount: calculateVacancyCount("Hospitality/Travel/Tourism"),
+      jobCount: calculateJobCount("Hospitality/Travel/Tourism"),
       icon: <FaPlane />,
       path: "hospitality-travel-tourism",
     },
     {
       name: "Education/Training",
-      count: calculateVacancyCount("Education/Training"),
+      vacancyCount: calculateVacancyCount("Education/Training"),
+      jobCount: calculateJobCount("Education/Training"),
       icon: <FaGraduationCap />,
       path: "education-training",
     },
     {
       name: "Customer/Service/Call Centre",
-      count: calculateVacancyCount("Customer/Service/Call Centre"),
+      vacancyCount: calculateVacancyCount("Customer/Service/Call Centre"),
+      jobCount: calculateJobCount("Customer/Service/Call Centre"),
       icon: <FaPhone />,
       path: "customer-service-call-centre",
     },
     {
       name: "Consultants",
-      count: calculateVacancyCount("Consultants"),
+      vacancyCount: calculateVacancyCount("Consultants"),
+      jobCount: calculateJobCount("Consultants"),
       icon: <FaBriefcase />,
       path: "consultants",
     },
     {
       name: "Banking/Financial Services",
-      count: calculateVacancyCount("Banking/Financial Services"),
+      vacancyCount: calculateVacancyCount("Banking/Financial Services"),
+      jobCount: calculateJobCount("Banking/Financial Services"),
       icon: <FaBuilding />,
       path: "banking-financial-services",
     },
     {
       name: "N.G.O./Social Services",
-      count: calculateVacancyCount("N.G.O./Social Services"),
+      vacancyCount: calculateVacancyCount("N.G.O./Social Services"),
+      jobCount: calculateJobCount("N.G.O./Social Services"),
       icon: <FaHandHoldingHeart />,
       path: "ngo-social-services",
     },
     {
       name: "E-Commerce/E-Business",
-      count: calculateVacancyCount("E-Commerce/E-Business"),
+      vacancyCount: calculateVacancyCount("E-Commerce/E-Business"),
+      jobCount: calculateJobCount("E-Commerce/E-Business"),
       icon: <FaShoppingCart />,
       path: "ecommerce-ebusiness",
     },
     {
       name: "Real Estate/Property",
-      count: calculateVacancyCount("Real Estate/Property"),
+      vacancyCount: calculateVacancyCount("Real Estate/Property"),
+      jobCount: calculateJobCount("Real Estate/Property"),
       icon: <FaHome />,
       path: "real-estate-property",
     },
     {
       name: "Healthcare/Hospital/Medical",
-      count: calculateVacancyCount("Healthcare/Hospital/Medical"),
+      vacancyCount: calculateVacancyCount("Healthcare/Hospital/Medical"),
+      jobCount: calculateJobCount("Healthcare/Hospital/Medical"),
       icon: <FaHospital />,
       path: "healthcare-hospital-medical",
     },
     {
       name: "BPO",
-      count: calculateVacancyCount("BPO"),
+      vacancyCount: calculateVacancyCount("BPO"),
+      jobCount: calculateJobCount("BPO"),
       icon: <FaHeadset />,
       path: "bpo",
     },
     {
       name: "Construction/Cement/Metals",
-      count: calculateVacancyCount("Construction/Cement/Metals"),
+      vacancyCount: calculateVacancyCount("Construction/Cement/Metals"),
+      jobCount: calculateJobCount("Construction/Cement/Metals"),
       icon: <FaHardHat />,
       path: "construction-cement-metals",
     },
     {
       name: "Architect/Interior Design",
-      count: calculateVacancyCount("Architect/Interior Design"),
+      vacancyCount: calculateVacancyCount("Architect/Interior Design"),
+      jobCount: calculateJobCount("Architect/Interior Design"),
       icon: <MdOutlineDesignServices />,
       path: "architect-interior-design",
     },
     {
       name: "Importers/ Distributors/Exporters",
-      count: calculateVacancyCount("Importers/ Distributors/Exporters"),
+      vacancyCount: calculateVacancyCount("Importers/ Distributors/Exporters"),
+      jobCount: calculateJobCount("Importers/ Distributors/Exporters"),
       icon: <FaShippingFast />,
       path: "importers-distributors-exporters",
     },
-  ];
-
-  const functions = [
-    { name: "Sales", count: 0, path: "sales" },
-    { name: "Marketing", count: 0, path: "marketing" },
-    { name: "Software Development", count: 0, path: "software-development" },
-    { name: "Human Resources", count: 0, path: "human-resources" },
-    { name: "Finance", count: 0, path: "finance" },
-    { name: "Operations", count: 0, path: "operations" },
-    { name: "Customer Support", count: 0, path: "customer-support" },
-    { name: "Administration", count: 0, path: "administration" },
   ];
 
   const renderContent = () => {
@@ -310,9 +422,14 @@ const JobCategory = () => {
                   className="text-gray-700 group-hover:text-primary flex items-center font-lato w-full min-w-0"
                 >
                   <span className="truncate flex-1">{category.name}</span>
-                  <span className="text-gray-500 ml-1 shrink-0">
-                    ({category.count})
-                  </span>
+                  <div className="flex flex-col items-end ml-2 shrink-0">
+                    <span className="text-xs text-gray-500">
+                      {category.jobCount} jobs
+                    </span>
+                    <span className="text-xs font-medium text-secondary">
+                      {category.vacancyCount} vacancies
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -342,7 +459,7 @@ const JobCategory = () => {
                   <FaBuilding />
                 </span>
                 <Link
-                  to={`/jobs/${location.path}`}
+                  to={`/jobs?location=${location.path}`}
                   className="text-gray-700 group-hover:text-primary flex items-center w-full min-w-0"
                 >
                   <span className="truncate flex-1">{location.name}</span>
@@ -378,7 +495,7 @@ const JobCategory = () => {
                   <FaBriefcase />
                 </span>
                 <Link
-                  to={`/jobs/${company.path}`}
+                  to={`/jobs/company/${company.path}`}
                   className="text-gray-700 group-hover:text-primary flex items-center w-full min-w-0"
                 >
                   <span className="truncate flex-1">{company.name}</span>
@@ -411,10 +528,10 @@ const JobCategory = () => {
                 className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200 group"
               >
                 <span className="text-gray-400 mr-3 text-lg group-hover:text-secondary">
-                  <FaUsers />
+                  {func.icon}
                 </span>
                 <Link
-                  to={`/jobs/${func.path}`}
+                  to={`/jobs?search=${encodeURIComponent(func.name)}`}
                   className="text-gray-700 group-hover:text-primary flex items-center w-full min-w-0"
                 >
                   <span className="truncate flex-1">{func.name}</span>
@@ -424,6 +541,17 @@ const JobCategory = () => {
                 </Link>
               </motion.div>
             ))}
+            <motion.div
+              whileHover={{ y: -2 }}
+              className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200"
+            >
+              <span className="text-gray-400 mr-3 text-lg">
+                <FaPlusCircle />
+              </span>
+              <Link to="/jobs" className="text-primary font-lato font-semibold">
+                All Functions
+              </Link>
+            </motion.div>
           </div>
         );
       default:
@@ -438,6 +566,10 @@ const JobCategory = () => {
     { id: "function", label: "By Function" },
   ];
 
+  // Calculate total job count
+  const totalJobs = jobData.length;
+  const totalVacancies = jobData.reduce((sum, job) => sum + (Number(job.vacancy) || 0), 0);
+
   return (
     <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-6">
       <div className="container mx-auto">
@@ -448,7 +580,7 @@ const JobCategory = () => {
                 Browse Jobs in Bangladesh
               </h2>
               <p className="text-gray-600 text-sm">
-                Showing real vacancy counts from {jobData.length} job listings
+                Showing {totalJobs} jobs with {totalVacancies} vacancies from {actualCompanies.length} companies
               </p>
             </div>
             <div className="flex flex-wrap border-b border-gray-200 mb-6 -mx-2">
