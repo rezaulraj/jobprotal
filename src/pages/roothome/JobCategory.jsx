@@ -123,7 +123,7 @@ const JobCategory = () => {
   // Calculate function counts from subcategories
   const calculateFunctionCount = () => {
     const functionMap = {};
-    
+
     jobData.forEach((job) => {
       if (job.subCategory) {
         functionMap[job.subCategory] = (functionMap[job.subCategory] || 0) + 1;
@@ -133,38 +133,38 @@ const JobCategory = () => {
     // Get function icon
     const getFunctionIcon = (funcName) => {
       const iconMap = {
-        "Accounting": <FaCalculator />,
-        "Finance": <FaChartBar />,
-        "Sales": <FaUserTie />,
-        "Marketing": <AiFillNotification />,
+        Accounting: <FaCalculator />,
+        Finance: <FaChartBar />,
+        Sales: <FaUserTie />,
+        Marketing: <AiFillNotification />,
         "Software Developer": <FaCode />,
         "Web Developer": <FaLaptopCode />,
         "App Developer": <FaMobileAlt />,
-        "Networking": <FaNetworkWired />,
-        "Database": <FaDatabase />,
-        "Security": <FaShieldAlt />,
+        Networking: <FaNetworkWired />,
+        Database: <FaDatabase />,
+        Security: <FaShieldAlt />,
         "Information Technology": <FaLaptopCode />,
         "Project Management": <FaProjectDiagram />,
-        "Business": <FaBusinessTime />,
+        Business: <FaBusinessTime />,
         "Business Development": <FaChartBar />,
         "Customer Service": <FaHeadset />,
-        "Service": <FaServicestack />,
-        "HR": <FaUsers />,
-        "Administration": <FaUsers />,
-        "Design": <MdOutlineDesignServices />,
-        "Architect": <MdOutlineDesignServices />,
-        "Law": <FaFileContract />,
-        "Education": <FaGraduationCap />,
-        "Training": <FaGraduationCap />,
-        "Medical": <FaHospital />,
-        "Healthcare": <FaHospital />,
-        "Engineering": <FaTools />,
-        "Electrical": <FaTools />,
-        "Mechanical": <FaTools />,
-        "Civil": <FaHardHat />,
-        "Audit": <FaSearch />,
-        "Tax": <FaMoneyBill />,
-        "Banking": <FaBuilding />,
+        Service: <FaServicestack />,
+        HR: <FaUsers />,
+        Administration: <FaUsers />,
+        Design: <MdOutlineDesignServices />,
+        Architect: <MdOutlineDesignServices />,
+        Law: <FaFileContract />,
+        Education: <FaGraduationCap />,
+        Training: <FaGraduationCap />,
+        Medical: <FaHospital />,
+        Healthcare: <FaHospital />,
+        Engineering: <FaTools />,
+        Electrical: <FaTools />,
+        Mechanical: <FaTools />,
+        Civil: <FaHardHat />,
+        Audit: <FaSearch />,
+        Tax: <FaMoneyBill />,
+        Banking: <FaBuilding />,
       };
 
       return iconMap[funcName] || <FaBriefcase />;
@@ -175,7 +175,10 @@ const JobCategory = () => {
         name,
         count,
         icon: getFunctionIcon(name),
-        path: name.toLowerCase().replace(/[^\w\s]/gi, "").replace(/\s+/g, "-"),
+        path: name
+          .toLowerCase()
+          .replace(/[^\w\s]/gi, "")
+          .replace(/\s+/g, "-"),
       }))
       .sort((a, b) => b.count - a.count)
       .slice(0, 8); // Top 8 functions
@@ -495,7 +498,7 @@ const JobCategory = () => {
                   <FaBriefcase />
                 </span>
                 <Link
-                  to={`/jobs/company/${company.path}`}
+                  to={`/jobs?search=${encodeURIComponent(company.name)}`}
                   className="text-gray-700 group-hover:text-primary flex items-center w-full min-w-0"
                 >
                   <span className="truncate flex-1">{company.name}</span>
@@ -568,7 +571,10 @@ const JobCategory = () => {
 
   // Calculate total job count
   const totalJobs = jobData.length;
-  const totalVacancies = jobData.reduce((sum, job) => sum + (Number(job.vacancy) || 0), 0);
+  const totalVacancies = jobData.reduce(
+    (sum, job) => sum + (Number(job.vacancy) || 0),
+    0
+  );
 
   return (
     <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-6">
@@ -580,7 +586,8 @@ const JobCategory = () => {
                 Browse Jobs in Bangladesh
               </h2>
               <p className="text-gray-600 text-sm">
-                Showing {totalJobs} jobs with {totalVacancies} vacancies from {actualCompanies.length} companies
+                Showing {totalJobs} jobs with {totalVacancies} vacancies from{" "}
+                {actualCompanies.length} companies
               </p>
             </div>
             <div className="flex flex-wrap border-b border-gray-200 mb-6 -mx-2">
@@ -633,7 +640,7 @@ const JobCategory = () => {
                     <FaBuilding className="text-gray-400 text-sm group-hover:text-secondary" />
                   </div>
                   <Link
-                    to={`/jobs/company/${company.path}`}
+                    to={`/jobs?search=${encodeURIComponent(company.name)}`}
                     className="text-gray-700 hover:text-blue-600 flex items-center w-full min-w-0"
                   >
                     <span className="truncate flex-1">{company.name}</span>
