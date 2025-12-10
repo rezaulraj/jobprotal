@@ -246,7 +246,7 @@ const AllJobs = () => {
   const deadlineMatches = (job, deadlineFilter) => {
     const daysLeft = getDaysLeft(job);
 
-    if (daysLeft === Infinity) return false; // Jobs without deadline don't match any filter
+    if (daysLeft === Infinity) return false;
 
     switch (deadlineFilter) {
       case "Within 24 Hours":
@@ -1339,7 +1339,7 @@ const AllJobs = () => {
                         <div className="p-6">
                           <div className="space-y-8">
                             {/* Job Summary */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="flex items-start gap-4">
                               <div className="p-3 rounded-lg bg-gray-50">
                                 <div className="text-sm text-gray-600">
                                   Vacancy
@@ -1348,7 +1348,7 @@ const AllJobs = () => {
                                   {selectedJob.vacancy || "N/A"}
                                 </div>
                               </div>
-                              <div className="p-3 rounded-lg bg-gray-50">
+                              <div className="p-3 rounded-lg bg-gray-50 flex-1">
                                 <div className="text-sm text-gray-600">
                                   Education
                                 </div>
