@@ -32,10 +32,15 @@ import {
   FaSignInAlt,
   FaUserPlus,
   FaChevronRight,
+  FaPlusCircle,
 } from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { GrDatabase } from "react-icons/gr";
+import { AiFillNotification } from "react-icons/ai";
 import ReactCountryFlag from "react-country-flag";
 import logo from "/logo.png";
 import { Link } from "react-router-dom";
+import jobData from "../data/jobData.json";
 
 const RootHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,6 +48,79 @@ const RootHeader = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
+  const [jobCategories, setJobCategories] = useState([]);
+
+  // Calculate total vacancies for a category
+  const calculateVacancyCount = (categoryName) => {
+    const categoryMapping = {
+      "Accounting/Finance": "Accounting/Finance",
+      "Business Development": "Business Development",
+      "Sales/Marketing": "Sales/Marketing",
+      "IT/Telecommunication": "IT/Telecommunication",
+      "Information Technology": "Information Technology",
+      Engineering: "Engineering",
+      Manufacturing: "Manufacturing",
+      Services: "Services",
+      "Recruitment/Employment Firms": "Recruitment/Employment Firms",
+      "Data Entry/Office Support": "Data Entry/Office Support",
+      "Hospitality/Travel/Tourism": "Hospitality/Travel/Tourism",
+      "Education/Training": "Education/Training",
+      "Customer/Service/Call Centre": "Customer/Service/Call Centre",
+      Consultants: "Consultants",
+      "Banking/Financial Services": "Banking/Financial Services",
+      "N.G.O./Social Services": "N.G.O./Social Services",
+      "E-Commerce/E-Business": "E-Commerce/E-Business",
+      "Real Estate/Property": "Real Estate/Property",
+      "Healthcare/Hospital/Medical": "Healthcare/Hospital/Medical",
+      BPO: "BPO",
+      "Construction/Cement/Metals": "Construction/Cement/Metals",
+      "Architect/Interior Design": "Architect/Interior Design",
+      "Importers/ Distributors/Exporters": "Importers/ Distributors/Exporters",
+    };
+
+    const mappedCategory = categoryMapping[categoryName];
+    if (!mappedCategory) return 0;
+
+    const totalVacancies = jobData
+      .filter((job) => job.category === mappedCategory)
+      .reduce((sum, job) => sum + (Number(job.vacancy) || 0), 0);
+
+    return totalVacancies;
+  };
+
+  // Calculate total jobs for a category
+  const calculateJobCount = (categoryName) => {
+    const categoryMapping = {
+      "Accounting/Finance": "Accounting/Finance",
+      "Business Development": "Business Development",
+      "Sales/Marketing": "Sales/Marketing",
+      "IT/Telecommunication": "IT/Telecommunication",
+      "Information Technology": "Information Technology",
+      Engineering: "Engineering",
+      Manufacturing: "Manufacturing",
+      Services: "Services",
+      "Recruitment/Employment Firms": "Recruitment/Employment Firms",
+      "Data Entry/Office Support": "Data Entry/Office Support",
+      "Hospitality/Travel/Tourism": "Hospitality/Travel/Tourism",
+      "Education/Training": "Education/Training",
+      "Customer/Service/Call Centre": "Customer/Service/Call Centre",
+      Consultants: "Consultants",
+      "Banking/Financial Services": "Banking/Financial Services",
+      "N.G.O./Social Services": "N.G.O./Social Services",
+      "E-Commerce/E-Business": "E-Commerce/E-Business",
+      "Real Estate/Property": "Real Estate/Property",
+      "Healthcare/Hospital/Medical": "Healthcare/Hospital/Medical",
+      BPO: "BPO",
+      "Construction/Cement/Metals": "Construction/Cement/Metals",
+      "Architect/Interior Design": "Architect/Interior Design",
+      "Importers/ Distributors/Exporters": "Importers/ Distributors/Exporters",
+    };
+
+    const mappedCategory = categoryMapping[categoryName];
+    if (!mappedCategory) return 0;
+
+    return jobData.filter((job) => job.category === mappedCategory).length;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,132 +136,200 @@ const RootHeader = () => {
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("mousedown", handleClickOutside);
 
+    // Initialize job categories
+    const categories = [
+      {
+        name: "Accounting/Finance",
+        vacancyCount: calculateVacancyCount("Accounting/Finance"),
+        jobCount: calculateJobCount("Accounting/Finance"),
+        icon: <FaMoneyBill />,
+        path: "accounting-finance",
+      },
+      {
+        name: "Business Development",
+        vacancyCount: calculateVacancyCount("Business Development"),
+        jobCount: calculateJobCount("Business Development"),
+        icon: <FaBusinessTime />,
+        path: "business-development",
+      },
+      {
+        name: "Sales/Marketing",
+        vacancyCount: calculateVacancyCount("Sales/Marketing"),
+        jobCount: calculateJobCount("Sales/Marketing"),
+        icon: <AiFillNotification />,
+        path: "sales-marketing",
+      },
+      {
+        name: "IT/Telecommunication",
+        vacancyCount: calculateVacancyCount("IT/Telecommunication"),
+        jobCount: calculateJobCount("IT/Telecommunication"),
+        icon: <FaCode />,
+        path: "it-telecommunication",
+      },
+      {
+        name: "Information Technology",
+        vacancyCount: calculateVacancyCount("Information Technology"),
+        jobCount: calculateJobCount("Information Technology"),
+        icon: <FaLaptopCode />,
+        path: "information-technology",
+      },
+      {
+        name: "Engineering",
+        vacancyCount: calculateVacancyCount("Engineering"),
+        jobCount: calculateJobCount("Engineering"),
+        icon: <FaTools />,
+        path: "engineering",
+      },
+      {
+        name: "Manufacturing",
+        vacancyCount: calculateVacancyCount("Manufacturing"),
+        jobCount: calculateJobCount("Manufacturing"),
+        icon: <FaIndustry />,
+        path: "manufacturing",
+      },
+      {
+        name: "Services",
+        vacancyCount: calculateVacancyCount("Services"),
+        jobCount: calculateJobCount("Services"),
+        icon: <FaServicestack />,
+        path: "services",
+      },
+      {
+        name: "Recruitment/Employment Firms",
+        vacancyCount: calculateVacancyCount("Recruitment/Employment Firms"),
+        jobCount: calculateJobCount("Recruitment/Employment Firms"),
+        icon: <FaUsers />,
+        path: "recruitment-employment",
+      },
+      {
+        name: "Data Entry/Office Support",
+        vacancyCount: calculateVacancyCount("Data Entry/Office Support"),
+        jobCount: calculateJobCount("Data Entry/Office Support"),
+        icon: <GrDatabase />,
+        path: "data-entry-office-support",
+      },
+      {
+        name: "Hospitality/Travel/Tourism",
+        vacancyCount: calculateVacancyCount("Hospitality/Travel/Tourism"),
+        jobCount: calculateJobCount("Hospitality/Travel/Tourism"),
+        icon: <FaPlane />,
+        path: "hospitality-travel-tourism",
+      },
+      {
+        name: "Education/Training",
+        vacancyCount: calculateVacancyCount("Education/Training"),
+        jobCount: calculateJobCount("Education/Training"),
+        icon: <FaGraduationCap />,
+        path: "education-training",
+      },
+      {
+        name: "Customer/Service/Call Centre",
+        vacancyCount: calculateVacancyCount("Customer/Service/Call Centre"),
+        jobCount: calculateJobCount("Customer/Service/Call Centre"),
+        icon: <FaPhone />,
+        path: "customer-service-call-centre",
+      },
+      {
+        name: "Consultants",
+        vacancyCount: calculateVacancyCount("Consultants"),
+        jobCount: calculateJobCount("Consultants"),
+        icon: <FaBriefcase />,
+        path: "consultants",
+      },
+      {
+        name: "Banking/Financial Services",
+        vacancyCount: calculateVacancyCount("Banking/Financial Services"),
+        jobCount: calculateJobCount("Banking/Financial Services"),
+        icon: <FaBuilding />,
+        path: "banking-financial-services",
+      },
+      {
+        name: "N.G.O./Social Services",
+        vacancyCount: calculateVacancyCount("N.G.O./Social Services"),
+        jobCount: calculateJobCount("N.G.O./Social Services"),
+        icon: <FaHandHoldingHeart />,
+        path: "ngo-social-services",
+      },
+      {
+        name: "E-Commerce/E-Business",
+        vacancyCount: calculateVacancyCount("E-Commerce/E-Business"),
+        jobCount: calculateJobCount("E-Commerce/E-Business"),
+        icon: <FaShoppingCart />,
+        path: "ecommerce-ebusiness",
+      },
+      {
+        name: "Real Estate/Property",
+        vacancyCount: calculateVacancyCount("Real Estate/Property"),
+        jobCount: calculateJobCount("Real Estate/Property"),
+        icon: <FaHome />,
+        path: "real-estate-property",
+      },
+      {
+        name: "Healthcare/Hospital/Medical",
+        vacancyCount: calculateVacancyCount("Healthcare/Hospital/Medical"),
+        jobCount: calculateJobCount("Healthcare/Hospital/Medical"),
+        icon: <FaHospital />,
+        path: "healthcare-hospital-medical",
+      },
+      {
+        name: "BPO",
+        vacancyCount: calculateVacancyCount("BPO"),
+        jobCount: calculateJobCount("BPO"),
+        icon: <FaHeadset />,
+        path: "bpo",
+      },
+      {
+        name: "Construction/Cement/Metals",
+        vacancyCount: calculateVacancyCount("Construction/Cement/Metals"),
+        jobCount: calculateJobCount("Construction/Cement/Metals"),
+        icon: <FaHardHat />,
+        path: "construction-cement-metals",
+      },
+      {
+        name: "Architect/Interior Design",
+        vacancyCount: calculateVacancyCount("Architect/Interior Design"),
+        jobCount: calculateJobCount("Architect/Interior Design"),
+        icon: <MdOutlineDesignServices />,
+        path: "architect-interior-design",
+      },
+      {
+        name: "Importers/ Distributors/Exporters",
+        vacancyCount: calculateVacancyCount(
+          "Importers/ Distributors/Exporters"
+        ),
+        jobCount: calculateJobCount("Importers/ Distributors/Exporters"),
+        icon: <FaShippingFast />,
+        path: "importers-distributors-exporters",
+      },
+    ];
+
+    setJobCategories(categories);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
+  console.log("category", jobCategories);
   const navItems = [
     {
       label: "Browse Job",
       icon: <FaSearch className="text-xs" />,
       subNav: [
         {
-          name: "Sales / Business Development",
+          name: "All Industry",
           path: "/jobs",
-          count: 15,
-          icon: <FaBusinessTime />,
-        },
-        {
-          name: "Information Technology",
-          path: "/jobs",
-          count: 32,
-          icon: <FaLaptopCode />,
-        },
-        {
-          name: "Manufacturing",
-          path: "/jobs",
-          count: 0,
+          count: "View All",
           icon: <FaIndustry />,
+          isAllIndustry: true,
         },
-        {
-          name: "Services",
-          path: "/jobs",
-          count: 10,
-          icon: <FaServicestack />,
-        },
-        {
-          name: "Recruitment/Employment Firms",
-          path: "/jobs",
-          count: 10,
-          icon: <FaUsers />,
-        },
-        {
-          name: "Travel/Tourism/Transportation",
-          path: "/jobs",
-          count: 5,
-          icon: <FaPlane />,
-        },
-        {
-          name: "Education/Training",
-          path: "/jobs",
-          count: 4,
-          icon: <FaGraduationCap />,
-        },
-        {
-          name: "IT/Telecommunication",
-          path: "/jobs",
-          count: 30,
-          icon: <FaCode />,
-        },
-        {
-          name: "Call Center",
-          path: "/jobs",
-          count: 2,
-          icon: <FaPhone />,
-        },
-        {
-          name: "Consultants",
-          path: "/jobs",
-          count: 7,
-          icon: <FaBriefcase />,
-        },
-        {
-          name: "Banking/Financial Services",
-          path: "/jobs",
-          count: 0,
-          icon: <FaBuilding />,
-        },
-        {
-          name: "N.G.O./Social Services",
-          path: "/jobs",
-          count: 0,
-          icon: <FaHandHoldingHeart />,
-        },
-        {
-          name: "E-Commerce / E-Business",
-          path: "/jobs",
-          count: 0,
-          icon: <FaShoppingCart />,
-        },
-        {
-          name: "Real Estate/Property",
-          path: "/jobs",
-          count: 0,
-          icon: <FaHome />,
-        },
-        {
-          name: "Healthcare/Hospital/Medical",
-          path: "/jobs",
-          count: 7,
-          icon: <FaHospital />,
-        },
-        { name: "BPO", path: "/jobs", count: 2, icon: <FaHeadset /> },
-        {
-          name: "Construction / Cement / Metals",
-          path: "/jobs",
-          count: 0,
-          icon: <FaHardHat />,
-        },
-        {
-          name: "Accounting/Taxation",
-          path: "/jobs",
-          count: 8,
-          icon: <FaMoneyBill />,
-        },
-        {
-          name: "Engineering",
-          path: "/jobs",
-          count: 12,
-          icon: <FaTools />,
-        },
-        {
-          name: "Importers/ Distributors/Exporters",
-          path: "/jobs",
-          count: 10,
-          icon: <FaShippingFast />,
-        },
+        ...jobCategories.map((category) => ({
+          name: category.name,
+          path: `/jobs/${category.path}`,
+          count: category?.jobCount,
+          icon: category.icon,
+          vacancyCount: category?.vacancyCount,
+        })),
       ],
     },
     {
@@ -214,11 +360,6 @@ const RootHeader = () => {
       code: "US",
       countryCode: "US",
     },
-    // {
-    //   name: "Bangla",
-    //   code: "BD",
-    //   countryCode: "BD",
-    // },
   ];
 
   const actionButtons = [
@@ -333,29 +474,58 @@ const RootHeader = () => {
                             <a
                               key={subIndex}
                               href={subItem.path}
-                              className="flex items-center justify-between p-3 hover:bg-gray-50 rounded transition-colors duration-200 group/sub"
+                              className={`flex items-center justify-between p-3 hover:bg-gray-50 rounded transition-colors duration-200 group/sub ${
+                                subItem.isAllIndustry
+                                  ? "border-2 border-[#4EB956] bg-[#4EB956]/5"
+                                  : ""
+                              }`}
                               onClick={() => setActiveNav(null)}
                             >
                               <div className="flex items-center space-x-3">
-                                <div className="text-gray-400 group-hover/sub:text-[#4EB956] transition-colors duration-200">
+                                <div
+                                  className={`transition-colors duration-200 ${
+                                    subItem.isAllIndustry
+                                      ? "text-[#4EB956]"
+                                      : "text-gray-400 group-hover/sub:text-[#4EB956]"
+                                  }`}
+                                >
                                   {subItem.icon}
                                 </div>
                                 <div>
-                                  <p className="text-xs font-medium text-gray-700 group-hover/sub:text-[#1E2558]">
+                                  <p
+                                    className={`text-xs font-medium ${
+                                      subItem.isAllIndustry
+                                        ? "text-[#1E2558] font-bold"
+                                        : "text-gray-700 group-hover/sub:text-[#1E2558]"
+                                    }`}
+                                  >
                                     {subItem.name}
                                   </p>
-                                  <p className="text-[10px] text-gray-400 mt-0.5">
-                                    {subItem.count} jobs available
-                                  </p>
+                                  {subItem.isAllIndustry ? (
+                                    <p className="text-[10px] text-[#4EB956] mt-0.5 font-medium">
+                                      Browse all categories
+                                    </p>
+                                  ) : (
+                                    <p className="text-[10px] text-gray-400 mt-0.5">
+                                      {subItem.jobCount} jobs •{" "}
+                                      {subItem.vacancyCount} vacancies
+                                    </p>
+                                  )}
                                 </div>
                               </div>
-                              <FaChevronRight className="text-[8px] text-gray-300 group-hover/sub:text-[#4EB956]" />
+                              <FaChevronRight
+                                className={`text-[8px] ${
+                                  subItem.isAllIndustry
+                                    ? "text-[#4EB956]"
+                                    : "text-gray-300 group-hover/sub:text-[#4EB956]"
+                                }`}
+                              />
                             </a>
                           ))}
                         </div>
                         <div className="mt-4 pt-4 border-t border-gray-100">
                           <a
-                            href="/all/category"
+                            href="/jobs"
                             className="text-xs text-primary hover:text-secondary font-medium hover:underline flex items-center space-x-1 cursor-pointer"
                             onClick={() => setActiveNav(null)}
                           >
@@ -561,33 +731,60 @@ const RootHeader = () => {
                                 {item.subNav.map((subItem, subIndex) => (
                                   <a
                                     key={subIndex}
-                                    href={item.path}
-                                    className="flex items-center justify-between py-2 text-gray-600 hover:text-[#4EB956] transition-colors duration-200 group"
+                                    href={subItem.path}
+                                    className={`flex items-center justify-between py-2 text-gray-600 hover:text-[#4EB956] transition-colors duration-200 group ${
+                                      subItem.isAllIndustry
+                                        ? "border-l-2 border-[#4EB956] pl-2 bg-[#4EB956]/5"
+                                        : ""
+                                    }`}
                                     onClick={() => setIsMenuOpen(false)}
                                   >
                                     <div className="flex items-center space-x-2">
-                                      <div className="text-gray-400 group-hover:text-[#4EB956]">
+                                      <div
+                                        className={`${
+                                          subItem.isAllIndustry
+                                            ? "text-[#4EB956]"
+                                            : "text-gray-400 group-hover:text-[#4EB956]"
+                                        }`}
+                                      >
                                         {subItem.icon}
                                       </div>
-                                      <span className="text-xs">
-                                        {subItem.name}
-                                      </span>
+                                      <div>
+                                        <span
+                                          className={`text-xs ${
+                                            subItem.isAllIndustry
+                                              ? "font-bold text-[#1E2558]"
+                                              : ""
+                                          }`}
+                                        >
+                                          {subItem.name}
+                                        </span>
+                                        {!subItem.isAllIndustry && (
+                                          <p className="text-[10px] text-gray-400">
+                                            {subItem.jobCount} jobs
+                                          </p>
+                                        )}
+                                      </div>
                                     </div>
-                                    <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 rounded">
-                                      {subItem.count}
-                                    </span>
+                                    {subItem.isAllIndustry ? (
+                                      <span className="text-[10px] px-1.5 py-0.5 bg-[#4EB956] text-white rounded">
+                                        View All
+                                      </span>
+                                    ) : (
+                                      <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 rounded">
+                                        {subItem.jobCount}
+                                      </span>
+                                    )}
                                   </a>
                                 ))}
                               </div>
-                              {item.subNav.length > 8 && (
-                                <a
-                                  href="#"
-                                  className="block mt-2 text-xs text-primary hover:text-secondary font-medium hover:underline"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  View all categories →
-                                </a>
-                              )}
+                              <a
+                                href="/jobs"
+                                className="block mt-2 text-xs text-primary hover:text-secondary font-medium hover:underline"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                View all categories →
+                              </a>
                             </div>
                           )}
                         </div>
