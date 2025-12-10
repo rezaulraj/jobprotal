@@ -214,11 +214,11 @@ const RootHeader = () => {
       code: "US",
       countryCode: "US",
     },
-    {
-      name: "Bangla",
-      code: "BD",
-      countryCode: "BD",
-    },
+    // {
+    //   name: "Bangla",
+    //   code: "BD",
+    //   countryCode: "BD",
+    // },
   ];
 
   const actionButtons = [
