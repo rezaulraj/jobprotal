@@ -6,6 +6,10 @@ import AllJobs from "./pages/jobs/AllJobs";
 import FreelanceJobDescription from "./pages/jobs/FreelanceJobDescription";
 import ScrollToTop from "./components/ScrollToTop";
 import SingleJobDescription from "./pages/jobs/SingleJobDescription";
+import JobSeekerAuth from "./components/JobSeekerAuth";
+import SeekerSignin from "./components/SeekerSignin";
+import EmployerAuth from "./components/EmployerAuth";
+import EmployerLogin from "./components/EmployerLogin";
 function App() {
   return (
     <>
@@ -20,6 +24,10 @@ function App() {
             path="/freelance/:jobId"
             element={<FreelanceJobDescription />}
           />
+          <Route path="jobseeker/signup" element={<JobSeekerAuth />} />
+          <Route path="jobseeker/login" element={<SeekerSignin />} />
+          <Route path="employer/signup" element={<EmployerAuth />} />
+          <Route path="employer/login" element={<EmployerLogin />} />
           <Route path="*" element={<UnderDevelopment />} />
         </Route>
       </Routes>

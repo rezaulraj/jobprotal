@@ -499,7 +499,7 @@ const RootHeader = () => {
             >
               <div className="flex items-center space-x-3 mb-4">
                 <div
-                  className={`bg-gradient-to-r ${accountType.color} p-2.5 rounded-lg`}
+                  className={`bg-linear-to-r ${accountType.color} p-2.5 rounded-lg`}
                 >
                   <div className="text-white text-lg">{accountType.icon}</div>
                 </div>
@@ -526,7 +526,7 @@ const RootHeader = () => {
                     }}
                   >
                     <div
-                      className={`bg-gradient-to-r ${accountType.color} p-3 rounded-full mb-3 group-hover:scale-110 transition-transform duration-300`}
+                      className={`bg-linear-to-r ${accountType.color} p-3 rounded-full mb-3 group-hover:scale-110 transition-transform duration-300`}
                     >
                       <div className="text-white text-sm">{option.icon}</div>
                     </div>
