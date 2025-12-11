@@ -11,6 +11,7 @@ import SeekerSignin from "./components/SeekerSignin";
 import EmployerAuth from "./components/EmployerAuth";
 import EmployerLogin from "./components/EmployerLogin";
 import Jobpost from "./pages/post/Jobpost";
+import FreelancerJobPost from "./pages/post/FreelancerJobPost";
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
           <Route path="employer/signup" element={<EmployerAuth />} />
           <Route path="employer/login" element={<EmployerLogin />} />
           <Route path="employers/post-job" element={<Jobpost />} />
+          <Route path="freelancer/post-job" element={<FreelancerJobPost />} />
           <Route path="*" element={<UnderDevelopment />} />
         </Route>
       </Routes>

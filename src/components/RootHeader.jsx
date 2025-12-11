@@ -429,12 +429,13 @@ const RootHeader = () => {
   const actionButtons = [
     {
       label: "Post a Job",
-      path: "/post-new-job",
+      path: "/employers/post-job",
       icon: <FaJob className="text-xs" />,
       color: "from-[#1E2558] to-[#2d377a]",
     },
     {
       label: "Hire a Freelancer",
+      path: "/freelancer/post-job",
       icon: <FaHandshake className="text-xs" />,
       color: "from-[#4EB956] to-[#3da345]",
     },
