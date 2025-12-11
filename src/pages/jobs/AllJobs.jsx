@@ -23,7 +23,7 @@ import {
   Globe,
 } from "lucide-react";
 import jobData from "../../data/jobData.json";
-import ApplyPopUps from "./ApplyPopUps";
+// import ApplyPopUps from "./ApplyPopUps";
 
 const AllJobs = () => {
   const {
@@ -54,12 +54,12 @@ const AllJobs = () => {
   const [sortBy, setSortBy] = useState("relevance");
 
   // apply states
-  const [showApplyPopup, setShowApplyPopup] = useState(false);
-  const [selectedJobForApply, setSelectedJobForApply] = useState(null);
-  const handleApplyClick = (job) => {
-    setSelectedJobForApply(job);
-    setShowApplyPopup(true);
-  };
+  // const [showApplyPopup, setShowApplyPopup] = useState(false);
+  // const [selectedJobForApply, setSelectedJobForApply] = useState(null);
+  // const handleApplyClick = (job) => {
+  //   setSelectedJobForApply(job);
+  //   setShowApplyPopup(true);
+  // };
 
   const colors = {
     primary: "#1e2558",
@@ -1318,7 +1318,7 @@ const AllJobs = () => {
                               Save Job
                             </button>
                             <button
-                              onClick={() => handleApplyClick(selectedJob)}
+                              // onClick={() => handleApplyClick(selectedJob)}
                               className="px-8 py-3 rounded-lg font-semibold transition-colors hover:shadow-lg cursor-pointer"
                               style={{
                                 backgroundColor: colors.secondary,
@@ -1522,7 +1522,7 @@ const AllJobs = () => {
                                 Don't miss this opportunity!
                               </p>
                               <button
-                                onClick={() => handleApplyClick(selectedJob)}
+                                // onClick={() => handleApplyClick(selectedJob)}
                                 className="px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 cursor-pointer"
                                 style={{
                                   backgroundColor: colors.primary,
@@ -1777,7 +1777,7 @@ const AllJobs = () => {
                   Save
                 </button>
                 <button
-                  onClick={() => handleApplyClick(selectedJob)}
+                  // onClick={() => handleApplyClick(selectedJob)}
                   className="flex-1 py-3 rounded-lg font-semibold cursor-pointer"
                   style={{ backgroundColor: colors.secondary, color: "white" }}
                 >
@@ -1788,7 +1788,7 @@ const AllJobs = () => {
           </div>
         </div>
       )}
-      {showApplyPopup && selectedJobForApply && (
+      {/* {showApplyPopup && selectedJobForApply && (
         <ApplyPopUps
           isOpen={showApplyPopup}
           onClose={() => {
@@ -1798,7 +1798,7 @@ const AllJobs = () => {
           jobTitle={selectedJobForApply.title}
           company={selectedJobForApply.company}
         />
-      )}
+      )} */}
     </div>
   );
 };

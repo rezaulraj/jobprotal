@@ -454,16 +454,18 @@ const Jobpost = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#1e2558] to-[#4eb956] rounded-2xl mb-4 shadow-lg"
-          >
-            <FaBriefcase className="text-2xl text-white" />
-          </motion.div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Post a New Job
-          </h1>
+          <div className="flex items-center justify-center">
+            <motion.div
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="inline-flex items-center justify-center w-16 h-16 "
+            >
+              <FaBriefcase className="text-2xl text-primary" />
+            </motion.div>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              Post a New Job
+            </h1>
+          </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Fill in the job details step by step to find the perfect candidate
           </p>
