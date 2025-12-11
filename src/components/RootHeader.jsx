@@ -33,6 +33,8 @@ import {
   FaUserPlus,
   FaChevronRight,
   FaPlusCircle,
+  FaUser,
+  FaUserTie,
 } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { GrDatabase } from "react-icons/gr";
@@ -48,7 +50,11 @@ const RootHeader = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("English");
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
+  const loginDropdownRef = useRef(null);
+  const signupDropdownRef = useRef(null);
   const [jobCategories, setJobCategories] = useState([]);
+  const [showLoginSubNav, setShowLoginSubNav] = useState(false);
+  const [showSignupSubNav, setShowSignupSubNav] = useState(false);
 
   // Calculate total vacancies for a category
   const calculateVacancyCount = (categoryName) => {
@@ -130,6 +136,18 @@ const RootHeader = () => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setActiveNav(null);
+      }
+      if (
+        loginDropdownRef.current &&
+        !loginDropdownRef.current.contains(event.target)
+      ) {
+        setShowLoginSubNav(false);
+      }
+      if (
+        signupDropdownRef.current &&
+        !signupDropdownRef.current.contains(event.target)
+      ) {
+        setShowSignupSubNav(false);
       }
     };
 
@@ -302,7 +320,6 @@ const RootHeader = () => {
         path: "importers-distributors-exporters",
       },
     ];
-
     setJobCategories(categories);
 
     return () => {
@@ -310,7 +327,7 @@ const RootHeader = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  console.log("category", jobCategories);
+
   const navItems = [
     {
       label: "Browse Job",
@@ -344,13 +361,60 @@ const RootHeader = () => {
     },
     {
       label: "Login",
-      path: "/login",
       icon: <FaSignInAlt className="text-xs" />,
+      isLogin: true,
     },
     {
       label: "Sign Up",
-      path: "/sign-up",
       icon: <FaUserPlus className="text-xs" />,
+      isSignup: true,
+    },
+  ];
+
+  const accountTypes = [
+    {
+      name: "Job Seeker Account",
+      icon: <FaUser />,
+      color: "from-blue-500 to-blue-600",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
+      textColor: "text-blue-800",
+      options: [
+        {
+          label: "Sign In",
+          path: "/jobseeker/login",
+          icon: <FaSignInAlt className="text-xs" />,
+          description: "Access your job seeker dashboard",
+        },
+        {
+          label: "Create Account",
+          path: "/jobseeker/signup",
+          icon: <FaUserPlus className="text-xs" />,
+          description: "Start your job search journey",
+        },
+      ],
+    },
+    {
+      name: "Employer Account",
+      icon: <FaUserTie />,
+      color: "from-green-500 to-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      textColor: "text-green-800",
+      options: [
+        {
+          label: "Sign In",
+          path: "/employer/login",
+          icon: <FaSignInAlt className="text-xs" />,
+          description: "Access your employer dashboard",
+        },
+        {
+          label: "Create Account",
+          path: "/employer/signup",
+          icon: <FaUserPlus className="text-xs" />,
+          description: "Start hiring talented professionals",
+        },
+      ],
     },
   ];
 
@@ -385,6 +449,8 @@ const RootHeader = () => {
       setActiveNav(null);
     } else {
       setActiveNav("Browse Job");
+      setShowLoginSubNav(false);
+      setShowSignupSubNav(false);
     }
   };
 
@@ -395,6 +461,118 @@ const RootHeader = () => {
       setActiveNav(null);
     }
   };
+
+  const handleLoginClick = () => {
+    setShowLoginSubNav(!showLoginSubNav);
+    setShowSignupSubNav(false);
+    setActiveNav(null);
+  };
+
+  const handleSignupClick = () => {
+    setShowSignupSubNav(!showSignupSubNav);
+    setShowLoginSubNav(false);
+    setActiveNav(null);
+  };
+
+  const AuthDropdown = ({ showDropdown, dropdownRef, type }) => (
+    <div
+      ref={dropdownRef}
+      className={`absolute left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-2xl border border-gray-200 z-50 transition-all duration-300 ${
+        showDropdown
+          ? "opacity-100 scale-100 translate-y-0"
+          : "opacity-0 scale-95 -translate-y-4 pointer-events-none"
+      }`}
+      style={{
+        top: "calc(100% + 10px)",
+        width: "800px",
+        minHeight: "260px",
+      }}
+    >
+      <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white"></div>
+
+      <div className="p-6">
+        <div className="grid grid-cols-2 gap-6">
+          {accountTypes.map((accountType, index) => (
+            <div
+              key={index}
+              className={`rounded-xl ${accountType.bgColor} ${accountType.borderColor} border p-5 transition-all duration-300 hover:shadow-lg`}
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <div
+                  className={`bg-gradient-to-r ${accountType.color} p-2.5 rounded-lg`}
+                >
+                  <div className="text-white text-lg">{accountType.icon}</div>
+                </div>
+                <div>
+                  <h3 className={`font-bold text-lg ${accountType.textColor}`}>
+                    {accountType.name}
+                  </h3>
+                  <p className="text-xs text-gray-600 mt-0.5">
+                    {type === "login" ? "Sign in to continue" : "Join us today"}
+                  </p>
+                </div>
+              </div>
+
+              {/* Options Grid - Side by Side */}
+              <div className="grid grid-cols-2 gap-3">
+                {accountType.options.map((option, idx) => (
+                  <a
+                    key={idx}
+                    href={option.path}
+                    className={`flex flex-col items-center justify-center p-4 rounded-lg bg-white border border-gray-100 transition-all duration-300 hover:shadow-md hover:scale-[1.02] group`}
+                    onClick={() => {
+                      setShowLoginSubNav(false);
+                      setShowSignupSubNav(false);
+                    }}
+                  >
+                    <div
+                      className={`bg-gradient-to-r ${accountType.color} p-3 rounded-full mb-3 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <div className="text-white text-sm">{option.icon}</div>
+                    </div>
+                    <span
+                      className={`font-semibold text-sm ${accountType.textColor} mb-1`}
+                    >
+                      {option.label}
+                    </span>
+                    <p className="text-xs text-gray-500 text-center leading-tight">
+                      {option.description}
+                    </p>
+                  </a>
+                ))}
+              </div>
+
+              {/* Quick Link */}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <a
+                  // href={type === "login" ? "/forgot-password" : "/learn-more"}
+                  className={`text-xs font-medium ${accountType.textColor} hover:underline flex items-center justify-center`}
+                >
+                  {type === "login"
+                    ? "Forgot Password?"
+                    : "Learn more about this account"}
+                  <FaChevronRight className="ml-1 text-[10px]" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Footer */}
+        <div className="mt-6 pt-4 border-t border-gray-100 text-center">
+          <p className="text-xs text-gray-500">
+            Need help choosing?{" "}
+            <a
+              href="/help"
+              className="text-blue-600 hover:underline font-medium"
+            >
+              Contact Support
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -420,7 +598,15 @@ const RootHeader = () => {
                 <div
                   key={index}
                   className="relative"
-                  ref={item.label === "Browse Job" ? dropdownRef : null}
+                  ref={
+                    item.label === "Browse Job"
+                      ? dropdownRef
+                      : item.isLogin
+                      ? loginDropdownRef
+                      : item.isSignup
+                      ? signupDropdownRef
+                      : null
+                  }
                 >
                   {item.subNav ? (
                     <button
@@ -448,6 +634,53 @@ const RootHeader = () => {
                         {item.label}
                       </span>
                     </button>
+                  ) : item.isLogin || item.isSignup ? (
+                    <>
+                      <button
+                        onClick={
+                          item.isLogin ? handleLoginClick : handleSignupClick
+                        }
+                        className={`flex flex-col items-center space-y-1 group cursor-pointer ${
+                          (item.isLogin && showLoginSubNav) ||
+                          (item.isSignup && showSignupSubNav)
+                            ? "text-[#4EB956]"
+                            : ""
+                        }`}
+                      >
+                        <div
+                          className={`${
+                            (item.isLogin && showLoginSubNav) ||
+                            (item.isSignup && showSignupSubNav)
+                              ? "text-[#4EB956]"
+                              : "text-gray-500"
+                          } transition-colors duration-200`}
+                        >
+                          {item.icon}
+                        </div>
+                        <span
+                          className={`text-[10px] font-medium uppercase tracking-wider transition-colors duration-200 ${
+                            (item.isLogin && showLoginSubNav) ||
+                            (item.isSignup && showSignupSubNav)
+                              ? "text-[#4EB956]"
+                              : "text-gray-600"
+                          }`}
+                        >
+                          {item.label}
+                        </span>
+                      </button>
+
+                      {/* Auth Dropdown */}
+                      {(item.isLogin && showLoginSubNav) ||
+                      (item.isSignup && showSignupSubNav) ? (
+                        <AuthDropdown
+                          showDropdown={true}
+                          dropdownRef={
+                            item.isLogin ? loginDropdownRef : signupDropdownRef
+                          }
+                          type={item.isLogin ? "login" : "signup"}
+                        />
+                      ) : null}
+                    </>
                   ) : (
                     <a
                       href={item.path}
@@ -639,6 +872,7 @@ const RootHeader = () => {
         </div>
       </nav>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 lg:hidden">
           <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl">
@@ -788,6 +1022,74 @@ const RootHeader = () => {
                             </div>
                           )}
                         </div>
+                      ) : item.isLogin || item.isSignup ? (
+                        <div>
+                          <button
+                            onClick={() =>
+                              setActiveNav(
+                                activeNav === item.label ? null : item.label
+                              )
+                            }
+                            className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200 cursor-pointer"
+                          >
+                            <div className="flex items-center space-x-3">
+                              <div className="text-gray-500">{item.icon}</div>
+                              <span className="text-sm font-medium">
+                                {item.label}
+                              </span>
+                            </div>
+                            <FaChevronDown
+                              className={`text-xs transition-transform duration-200 ${
+                                activeNav === item.label ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                          {activeNav === item.label && (
+                            <div className="pl-8 pb-3">
+                              <div className="space-y-4">
+                                {accountTypes.map((type, index) => (
+                                  <div key={index} className="space-y-2">
+                                    <div className="flex items-center space-x-2 mb-2">
+                                      <div
+                                        className={`bg-gradient-to-r ${type.color} p-2 rounded-lg`}
+                                      >
+                                        <div className="text-white">
+                                          {type.icon}
+                                        </div>
+                                      </div>
+                                      <h4
+                                        className={`font-semibold ${type.textColor}`}
+                                      >
+                                        {type.name}
+                                      </h4>
+                                    </div>
+                                    <div className="grid grid-cols-2 gap-2">
+                                      {type.options.map((option, idx) => (
+                                        <a
+                                          key={idx}
+                                          href={option.path}
+                                          className={`flex flex-col items-center justify-center p-3 rounded-lg ${type.bgColor} border ${type.borderColor} transition-all duration-300`}
+                                          onClick={() => setIsMenuOpen(false)}
+                                        >
+                                          <div
+                                            className={`text-lg ${type.textColor} mb-1`}
+                                          >
+                                            {option.icon}
+                                          </div>
+                                          <span
+                                            className={`text-xs font-medium ${type.textColor}`}
+                                          >
+                                            {option.label}
+                                          </span>
+                                        </a>
+                                      ))}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       ) : (
                         <a
                           href={item.path}
@@ -831,13 +1133,13 @@ const RootHeader = () => {
       <style jsx="true">{`
         @media (min-width: 1024px) {
           .fixed {
-            animation: slideDown 0.2s ease-out;
+            animation: slideDown 0.3s ease-out;
           }
         }
         @keyframes slideDown {
           from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
           }
           to {
             opacity: 1;
