@@ -48,7 +48,7 @@ const EmployerAuth = () => {
   });
 
   // UI state
-  const [currentSection, setCurrentSection] = useState(1); // 1: Company, 2: Recruiter, 3: Account, 4: Review
+  const [currentSection, setCurrentSection] = useState(1); // 1: Company, 2: Employer, 3: Account, 4: Review
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

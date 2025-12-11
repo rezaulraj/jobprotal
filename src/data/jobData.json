@@ -254,7 +254,7 @@
   {
     "id": 6,
     "title": "Associate Director, Finance & Administration",
-    "company": "Stellar Service Management",
+    "company": "Jhpiego",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -4440,5 +4440,1737 @@
       "address": ""
     },
     "clogo": "https://corporate.bdjobs.com/logos/29935_3.png"
+  },
+  {
+    "id": 85,
+    "title": "Warehouse Operations Executive",
+    "company": "Daraz Bangladesh Ltd.",
+    "location": "Dhaka (Tejgaon)",
+    "salary": {
+      "min": 22000,
+      "max": 30000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "E-Commerce/E-Business",
+    "experience": [1, 3],
+    "subCategory": "Operations",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-10",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in any discipline",
+    "description": "Ensure smooth warehouse operations including inventory tracking, order processing, packaging, and coordination with logistics teams to meet daily dispatch targets.",
+    "requirements": [
+      "1–3 years of experience in warehouse or logistics operations",
+      "Knowledge of inventory management and barcode scanning",
+      "Ability to handle fast-paced e-commerce environment",
+      "Strong coordination and reporting ability"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Health insurance",
+      "Yearly performance bonus",
+      "Mobile allowance"
+    ],
+    "skills": [
+      "Inventory management",
+      "Order processing",
+      "Team coordination",
+      "Data entry",
+      "Basic Excel"
+    ],
+    "compnay": {
+      "website": "https://www.daraz.com.bd",
+      "email": "careers@daraz.com.bd",
+      "phone": "+8809610098888",
+      "address": "House 10, Road 11, Block H, Banani, Dhaka"
+    },
+    "clogo": "data:image/png;base64,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"
+  },
+  {
+    "id": 86,
+    "title": "Customer Support Officer",
+    "company": "Bikroy.com",
+    "location": "Dhaka",
+    "salary": {
+      "min": 18000,
+      "max": 25000,
+      "default": "Negotiable"
+    },
+    "vacancy": 5,
+    "category": "E-Commerce/E-Business",
+    "experience": [0, 2],
+    "subCategory": "Customer Service",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-05",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Bachelor in any discipline",
+    "description": "Provide customer support through phone, chat, and email to help users post ads, resolve account issues, and ensure a high-quality user experience on the platform.",
+    "requirements": [
+      "Excellent communication in Bangla and basic English",
+      "Ability to handle customer queries professionally",
+      "Experience in call center or customer support preferred",
+      "Basic computer & typing skills"
+    ],
+    "benefits": [
+      "Performance bonus",
+      "Festival bonuses",
+      "Paid annual leave",
+      "Weekly 2 holidays"
+    ],
+    "skills": [
+      "Customer communication",
+      "Problem solving",
+      "Typing",
+      "CRM software usage",
+      "Phone etiquette"
+    ],
+    "compnay": {
+      "website": "https://bikroy.com",
+      "email": "jobs@bikroy.com",
+      "phone": "+8809638333311",
+      "address": "Bashundhara R/A, Dhaka"
+    },
+    "clogo": "data:image/png;base64,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"
+  },
+  {
+    "id": 87,
+    "title": "Digital Marketing Executive",
+    "company": "AjkerDeal.com",
+    "location": "Dhaka (Uttara)",
+    "salary": {
+      "min": 25000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "E-Commerce/E-Business",
+    "experience": [1, 3],
+    "subCategory": "Marketing",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Marketing, Business, or relevant discipline",
+    "description": "Plan and execute digital marketing campaigns, manage social media, monitor paid ads, and optimize traffic and conversions for AjkerDeal’s online marketplace.",
+    "requirements": [
+      "1–3 years of experience in digital marketing",
+      "Hands-on experience with Facebook Ads Manager & Google Ads",
+      "Knowledge of SEO, SEM, and analytics tools",
+      "Strong creative and analytical skills"
+    ],
+    "benefits": [
+      "Sales & performance bonus",
+      "Yearly increment",
+      "Festival bonuses",
+      "Friendly work environment"
+    ],
+    "skills": [
+      "Digital advertising",
+      "SEO & SEM",
+      "Content creation",
+      "Analytics & reporting",
+      "Social media management"
+    ],
+    "compnay": {
+      "website": "https://ajkerdeal.com",
+      "email": "hr@ajkerdeal.com",
+      "phone": "+8809610001020",
+      "address": "Uttara Sector 7, Dhaka"
+    },
+    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGcQqGVZxCPWZVLjH90Sttd0yUGffEH5w_og&s"
+  },
+  {
+    "id": 88,
+    "title": "Sales Executive (Real Estate)",
+    "company": "Bashundhara Group – Real Estate Division",
+    "location": "Dhaka (Bashundhara R/A)",
+    "salary": {
+      "min": 25000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 4,
+    "category": "Real Estate/Property",
+    "experience": [1, 3],
+    "subCategory": "Sales & Marketing",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Business, Marketing or any discipline",
+    "description": "Promote, sell, and close property deals for Bashundhara Residential and Commercial projects, ensuring excellent client communication and achieving monthly sales targets.",
+    "requirements": [
+      "1–3 years of experience in real estate sales",
+      "Strong communication and negotiation skills",
+      "Ability to meet sales targets and manage client relationships",
+      "Experience in property presentation and lead follow-up"
+    ],
+    "benefits": [
+      "Attractive sales commission",
+      "Festival bonuses",
+      "Yearly increment",
+      "Mobile allowance"
+    ],
+    "skills": [
+      "Negotiation",
+      "Lead generation",
+      "Client management",
+      "Property sales",
+      "Presentation"
+    ],
+    "compnay": {
+      "website": "https://www.bashundharagroup.com",
+      "email": "career@bashundharagroup.com",
+      "phone": "+8809609003000",
+      "address": "Bashundhara Industrial Headquarters 1, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/43/1/bashundhara-group-logo-png_seeklogo-433144.png"
+  },
+  {
+    "id": 89,
+    "title": "Civil Engineer",
+    "company": "Concord Real Estate & Building Products Ltd.",
+    "location": "Dhaka (Gulshan)",
+    "salary": {
+      "min": 30000,
+      "max": 50000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Real Estate/Property",
+    "experience": [2, 5],
+    "subCategory": "Engineering",
+    "employeeStatus": "Full Time",
+    "jobType": "Hybrid",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "BSc in Civil Engineering (Public / Reputed Private University)",
+    "description": "Monitor construction sites, supervise contractors, ensure structural quality, and manage project progress for residential and commercial real estate projects under Concord Group.",
+    "requirements": [
+      "2–5 years of experience in civil engineering",
+      "Knowledge of structural and finishing works",
+      "Strong understanding of project supervision and safety compliance",
+      "Ability to prepare reports, BOQ, and site documentation"
+    ],
+    "benefits": [
+      "Provident fund",
+      "Festival bonuses",
+      "Lunch facility",
+      "Health insurance"
+    ],
+    "skills": [
+      "Project supervision",
+      "Quality control",
+      "AutoCAD",
+      "BOQ preparation",
+      "Construction management"
+    ],
+    "compnay": {
+      "website": "https://concordgroup.net",
+      "email": "hr@concordgroup.net",
+      "phone": "+8802222281321",
+      "address": "Concord Tower, Gulshan Circle 2, Dhaka"
+    },
+    "clogo": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Concord_Logo.png"
+  },
+  {
+    "id": 90,
+    "title": "Property Manager",
+    "company": "Navana Real Estate Ltd.",
+    "location": "Dhaka (Banani)",
+    "salary": {
+      "min": 35000,
+      "max": 60000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Real Estate/Property",
+    "experience": [3, 6],
+    "subCategory": "Property Management",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Business Administration or related field",
+    "description": "Manage residential and commercial buildings, handle tenant relations, ensure property maintenance, coordinate repairs, and oversee day-to-day operations of Navana Real Estate projects.",
+    "requirements": [
+      "3–6 years of experience in property or facility management",
+      "Good knowledge of building maintenance and compliance",
+      "Strong communication and tenant handling skills",
+      "Experience in budgeting, inspection, and vendor management"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Yearly salary increment",
+      "Festival bonuses",
+      "Transportation allowance"
+    ],
+    "skills": [
+      "Facility management",
+      "Tenant relations",
+      "Maintenance coordination",
+      "Budgeting",
+      "Vendor communication"
+    ],
+    "compnay": {
+      "website": "https://navana-realestate.com",
+      "email": "career@navana.com",
+      "phone": "+8802222229000",
+      "address": "House 19, Road 96, Gulshan 2, Dhaka"
+    },
+    "clogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Logo_of_Navana_Group.svg/2560px-Logo_of_Navana_Group.svg.png"
+  },
+  {
+    "id": 91,
+    "title": "Staff Nurse",
+    "company": "Square Hospitals Ltd.",
+    "location": "Dhaka (Panthapath)",
+    "salary": {
+      "min": 25000,
+      "max": 35000,
+      "default": "Negotiable"
+    },
+    "vacancy": 5,
+    "category": "Healthcare/Hospital/Medical",
+    "experience": [1, 3],
+    "subCategory": "Nursing / Patient Care",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-10",
+    "gender": "Anyone Can Apply",
+    "education": "Diploma / Bachelor in Nursing from recognized institute with valid license",
+    "description": "Provide nursing care to patients admitted in Square Hospitals Ltd., assist doctors with patient treatment, monitor patient vitals, administer medication, and maintain patient records.",
+    "requirements": [
+      "Diploma or Bachelor in Nursing from recognized institute",
+      "Valid nursing license / registration",
+      "1–3 years of experience in hospital environment",
+      "Good communication skills and ability to work in shifts",
+      "Compassionate and dedicated to patient care"
+    ],
+    "benefits": [
+      "Shift allowances",
+      "Health insurance coverage",
+      "Provident fund",
+      "Festival bonuses",
+      "Free meals during duty"
+    ],
+    "skills": [
+      "Patient care",
+      "Medication administration",
+      "Vital sign monitoring",
+      "Medical record keeping",
+      "Teamwork"
+    ],
+    "compnay": {
+      "website": "https://www.squarehospital.com",
+      "email": "hr@squarehospital.com",
+      "phone": "+8809618300000",
+      "address": "Panthapath, Dhaka 1205, Bangladesh"
+    },
+    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRmpS2bQm44qRQw_Z2FI2COXTYcAeVr2fflg&s"
+  },
+  {
+    "id": 92,
+    "title": "Lab Technician",
+    "company": "Popular Diagnostic Center",
+    "location": "Chattogram (GEC Circle)",
+    "salary": {
+      "min": 20000,
+      "max": 28000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Healthcare/Hospital/Medical",
+    "experience": [0, 2],
+    "subCategory": "Laboratory",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "HSC or Diploma / BSc in Medical Technology / Lab Technology",
+    "description": "Perform laboratory tests, collect and process patient samples, operate diagnostic machines, maintain lab records, and ensure compliance with medical safety and hygiene standards at Popular Diagnostic Center.",
+    "requirements": [
+      "Diploma / BSc in Medical Technology, Lab Technology or related field",
+      "Fresh graduates or up to 2 years experience",
+      "Knowledge of sample collection, processing and lab hygiene standards",
+      "Ability to operate lab equipment carefully",
+      "Good record-keeping and communication skills"
+    ],
+    "benefits": [
+      "Medical staff discounts",
+      "Provident fund contribution",
+      "Weekly leave schedule",
+      "Training opportunities"
+    ],
+    "skills": [
+      "Sample collection & processing",
+      "Laboratory equipment handling",
+      "Record maintenance",
+      "Hygiene & safety compliance",
+      "Team collaboration"
+    ],
+    "compnay": {
+      "website": "https://www.populardiagnostic.com.bd",
+      "email": "hr@populardiagnostic.com.bd",
+      "phone": "+880312557788",
+      "address": "GEC Circle, Chattogram, Bangladesh"
+    },
+    "clogo": "https://akhil.populardiagnostic.com/Images/Logo/logo.png"
+  },
+  {
+    "id": 93,
+    "title": "Receptionist / Front Desk Officer",
+    "company": "Apollo Hospitals Dhaka",
+    "location": "Dhaka (Bashundhara R/A)",
+    "salary": {
+      "min": 18000,
+      "max": 22000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Healthcare/Hospital/Medical",
+    "experience": [0, 1],
+    "subCategory": "Administration / Front Desk",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-02-01",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Bachelor’s degree in any discipline with good communication skills",
+    "description": "Greet and register patients, manage appointment scheduling, handle phone and in-person inquiries, maintain patient records, and ensure smooth front-desk operations at Apollo Hospitals Dhaka.",
+    "requirements": [
+      "Good communication in Bangla and basic English",
+      "Proficiency with computer and MS Office",
+      "Pleasant personality and customer-service attitude",
+      "Ability to work as part of a team"
+    ],
+    "benefits": [
+      "Fixed salary + shift allowance",
+      "Health benefits for staff",
+      "Paid leave",
+      "Training opportunities"
+    ],
+    "skills": [
+      "Customer service",
+      "Phone handling",
+      "Record keeping",
+      "Appointment scheduling",
+      "Basic computer skills"
+    ],
+    "compnay": {
+      "website": "https://www.apollohospitals.com.bd",
+      "email": "info@apollohospitals.com.bd",
+      "phone": "+8809615011111",
+      "address": "House 20, Road 15, Block C, Bashundhara R/A, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/26/1/apollo-hospitals-logo-png_seeklogo-264932.png"
+  },
+  {
+    "id": 94,
+    "title": "Customer Support Executive",
+    "company": "Genex Infosys Bangladesh Ltd.",
+    "location": "Dhaka (Banani)",
+    "salary": {
+      "min": 18000,
+      "max": 25000,
+      "default": "Negotiable"
+    },
+    "vacancy": 10,
+    "category": "BPO",
+    "experience": [0, 2],
+    "subCategory": "Customer Service",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Bachelor in any discipline",
+    "description": "Handle inbound and outbound customer calls, resolve queries, provide product information, and ensure excellent customer satisfaction for Genex Infosys clients.",
+    "requirements": [
+      "0–2 years experience in customer support or call center",
+      "Excellent communication skills in Bangla and basic English",
+      "Ability to handle multiple customer interactions professionally",
+      "Basic computer skills and MS Office familiarity"
+    ],
+    "benefits": [
+      "Performance-based bonus",
+      "Festival bonuses",
+      "Health insurance",
+      "Weekly 2 holidays"
+    ],
+    "skills": [
+      "Customer communication",
+      "Problem solving",
+      "Typing & data entry",
+      "CRM software usage",
+      "Call handling etiquette"
+    ],
+    "compnay": {
+      "website": "https://genexinfosys.com.bd",
+      "email": "hr@genexinfosys.com.bd",
+      "phone": "+8809611111000",
+      "address": "House 45, Road 11, Banani, Dhaka-1213"
+    },
+    "clogo": "https://genexinfosys.com/images/bu_logo.png"
+  },
+  {
+    "id": 95,
+    "title": "Technical Support Executive",
+    "company": "Magnito Digital",
+    "location": "Dhaka (Uttara)",
+    "salary": {
+      "min": 20000,
+      "max": 30000,
+      "default": "Negotiable"
+    },
+    "vacancy": 5,
+    "category": "BPO",
+    "experience": [1, 3],
+    "subCategory": "Technical",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in any discipline or IT-related field",
+    "description": "Provide technical assistance to clients via phone, chat, and email. Troubleshoot software/hardware issues, provide solutions, and maintain high customer satisfaction.",
+    "requirements": [
+      "1–3 years of experience in technical support or IT helpdesk",
+      "Good problem-solving and analytical skills",
+      "Ability to communicate technical information clearly",
+      "Knowledge of basic networking, software, and hardware troubleshooting"
+    ],
+    "benefits": [
+      "Performance bonus",
+      "Medical allowance",
+      "Festival bonuses",
+      "Paid annual leave"
+    ],
+    "skills": [
+      "Technical troubleshooting",
+      "Customer support",
+      "CRM software",
+      "Communication skills",
+      "Problem solving"
+    ],
+    "compnay": {
+      "website": "https://www.magnitodigital.com.bd",
+      "email": "careers@magnitodigital.com.bd",
+      "phone": "+8801922223344",
+      "address": "Uttara Sector 7, Dhaka-1230"
+    },
+    "clogo": "https://www.moumachi.com.bd//images/listings/45293/business/20249-magnito-logo.jpg"
+  },
+  {
+    "id": 96,
+    "title": "Outbound Sales Executive",
+    "company": "Telebarta Bangladesh Ltd.",
+    "location": "Dhaka",
+    "salary": {
+      "min": 20000,
+      "max": 35000,
+      "default": "Negotiable"
+    },
+    "vacancy": 8,
+    "category": "BPO",
+    "experience": [1, 3],
+    "subCategory": "Sales",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in any discipline",
+    "description": "Conduct outbound calls to prospective clients, generate leads, promote company products/services, and achieve monthly sales targets under Telebarta’s BPO operations.",
+    "requirements": [
+      "1–3 years of experience in outbound sales or telemarketing",
+      "Strong communication and persuasion skills",
+      "Target-oriented and result-driven mindset",
+      "Ability to work in a fast-paced environment"
+    ],
+    "benefits": [
+      "Sales commission",
+      "Festival bonus",
+      "Weekly holidays",
+      "Performance incentives"
+    ],
+    "skills": [
+      "Telemarketing",
+      "Lead generation",
+      "Client handling",
+      "Sales closing",
+      "Communication skills"
+    ],
+    "compnay": {
+      "website": "https://telebarta.com.bd",
+      "email": "hr@telebarta.com.bd",
+      "phone": "+8801788889900",
+      "address": "House 23, Road 15, Banani, Dhaka"
+    },
+    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHZCE1teFnZHzSF-n3SgAAZrWGIa8RyGy_A&s"
+  },
+  {
+    "id": 97,
+    "title": "Site Engineer",
+    "company": "Abul Khair Steel & Engineering Ltd.",
+    "location": "Chittagong, Bangladesh",
+    "salary": {
+      "min": 30000,
+      "max": 45000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Construction/Cement/Metals",
+    "experience": [2, 5],
+    "subCategory": "Engineering / Site Supervision",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "BSc in Civil / Mechanical / Structural Engineering",
+    "description": "Supervise construction sites, monitor quality, manage contractors, and ensure timely completion of steel and concrete structures for industrial and commercial projects.",
+    "requirements": [
+      "2–5 years of site supervision experience",
+      "Experience with steel fabrication and concrete works",
+      "Ability to read and interpret engineering drawings",
+      "Strong project coordination and reporting skills"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Health allowance",
+      "Provident fund",
+      "Transport allowance"
+    ],
+    "skills": [
+      "Site supervision",
+      "Quality control",
+      "Contractor management",
+      "Project scheduling",
+      "Structural knowledge"
+    ],
+    "compnay": {
+      "website": "https://www.abulkhairsteel.com",
+      "email": "hr@abulkhairsteel.com",
+      "phone": "+880311222333",
+      "address": "Fouzdarhat Industrial Area, Chittagong, Bangladesh"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/38/1/abul-khair-group-logo-png_seeklogo-387962.png"
+  },
+  {
+    "id": 98,
+    "title": "Production Engineer",
+    "company": "HeidelbergCement Bangladesh Ltd.",
+    "location": "Chhatak, Sylhet, Bangladesh",
+    "salary": {
+      "min": 40000,
+      "max": 55000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Construction/Cement/Metals",
+    "experience": [3, 6],
+    "subCategory": "Production",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "BSc in Mechanical / Civil / Industrial Engineering",
+    "description": "Manage cement production operations, ensure plant safety and efficiency, optimize material handling, and monitor quality control for HeidelbergCement’s plant operations.",
+    "requirements": [
+      "3–6 years of experience in production or plant management",
+      "Knowledge of cement manufacturing processes",
+      "Experience in process optimization and quality assurance",
+      "Ability to supervise plant operations and maintenance teams"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Festival bonuses",
+      "Provident fund",
+      "Transport facility"
+    ],
+    "skills": [
+      "Plant management",
+      "Process optimization",
+      "Quality control",
+      "Team coordination",
+      "Safety compliance"
+    ],
+    "compnay": {
+      "website": "https://www.heidelbergcement.com.bd",
+      "email": "hr@heidelbergcement.com.bd",
+      "phone": "+880821223344",
+      "address": "Chhatak Cement Plant, Sylhet, Bangladesh"
+    },
+    "clogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Heidelberg-Logo.svg/2560px-Heidelberg-Logo.svg.png"
+  },
+  {
+    "id": 99,
+    "title": "Quality Control Officer",
+    "company": "Meghna Group of Industries – Steel Division",
+    "location": "Dhaka, Bangladesh",
+    "salary": {
+      "min": 28000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Construction/Cement/Metals",
+    "experience": [1, 4],
+    "subCategory": "Metals",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Diploma / BSc in Mechanical / Metallurgical / Civil Engineering",
+    "description": "Monitor quality of steel and metal products, ensure compliance with industrial standards, conduct testing and inspection, and report quality metrics for Meghna Group’s construction and manufacturing projects.",
+    "requirements": [
+      "1–4 years of experience in quality control in metals or construction",
+      "Knowledge of ISO and ASTM standards",
+      "Ability to perform material testing and inspection",
+      "Strong attention to detail and reporting skills"
+    ],
+    "benefits": [
+      "Health and medical allowance",
+      "Festival bonuses",
+      "Provident fund",
+      "Training and development programs"
+    ],
+    "skills": [
+      "Material testing",
+      "Quality inspection",
+      "ISO standard knowledge",
+      "Reporting",
+      "Attention to detail"
+    ],
+    "compnay": {
+      "website": "https://www.meghnagroup.com",
+      "email": "hr@meghnagroup.com",
+      "phone": "+8802-22223344",
+      "address": "Meghna Industrial Area, Dhaka, Bangladesh"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/29/1/meghna-logo-png_seeklogo-290584.png"
+  },
+  {
+    "id": 100,
+    "title": "Interior Designer",
+    "company": "REVE Design & Architecture Ltd.",
+    "location": "Dhaka (Banani)",
+    "salary": {
+      "min": 30000,
+      "max": 50000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Architect/Interior Design",
+    "experience": [2, 5],
+    "subCategory": "Design",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Interior Design, Architecture, or relevant field",
+    "description": "Design creative interior layouts for residential, commercial, and corporate projects, ensuring aesthetic appeal, functional space utilization, and client satisfaction.",
+    "requirements": [
+      "2–5 years of experience in interior design",
+      "Proficiency in AutoCAD, SketchUp, and Adobe Suite",
+      "Strong knowledge of materials, finishes, and furniture",
+      "Ability to create 3D visualizations and presentation drawings"
+    ],
+    "benefits": [
+      "Festival bonus",
+      "Health allowance",
+      "Performance-based increment",
+      "Flexible working hours"
+    ],
+    "skills": [
+      "Space planning",
+      "3D modeling",
+      "Material selection",
+      "Client presentation",
+      "Project coordination"
+    ],
+    "compnay": {
+      "website": "https://www.revedesign.com",
+      "email": "hr@revedesign.com",
+      "phone": "+8801712345678",
+      "address": "House 23, Road 12, Banani, Dhaka-1213"
+    },
+    "clogo": "https://static.wixstatic.com/media/ec8e28_4c6a1596d801471b9ef12728de18789d~mv2.png"
+  },
+  {
+    "id": 101,
+    "title": "Junior Architect",
+    "company": "Kaan Architect Ltd.",
+    "location": "Dhaka (Gulshan)",
+    "salary": {
+      "min": 25000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Architect/Interior Design",
+    "experience": [1, 3],
+    "subCategory": "Architecture",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Architecture",
+    "description": "Assist senior architects in designing residential and commercial buildings, prepare architectural drawings, and participate in site supervision and client meetings.",
+    "requirements": [
+      "1–3 years of experience in architectural design",
+      "Proficiency in AutoCAD, Revit, and 3D modeling",
+      "Knowledge of building codes and regulations",
+      "Good communication and teamwork skills"
+    ],
+    "benefits": [
+      "Festival bonus",
+      "Health insurance",
+      "Yearly increment",
+      "Professional development opportunities"
+    ],
+    "skills": [
+      "Architectural drafting",
+      "3D visualization",
+      "Site supervision",
+      "Material knowledge",
+      "Client coordination"
+    ],
+    "compnay": {
+      "website": "https://www.kaanarchitect.com",
+      "email": "hr@kaanarchitect.com",
+      "phone": "+8801711122233",
+      "address": "House 15, Road 45, Gulshan 2, Dhaka"
+    },
+    "clogo": "https://kaanarchitecture.com/wp-content/uploads/2024/08/son-logo.png"
+  },
+  {
+    "id": 102,
+    "title": "Senior Interior Architect",
+    "company": "VITTA Design Studio",
+    "location": "Dhaka (Uttara)",
+    "salary": {
+      "min": 45000,
+      "max": 70000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Architect/Interior Design",
+    "experience": [5, 10],
+    "subCategory": "Interior Architecture",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-30",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s / Master’s degree in Interior Design or Architecture",
+    "description": "Lead interior design projects for high-end residential and commercial clients, supervise junior designers, manage project timelines, and ensure design quality meets client expectations.",
+    "requirements": [
+      "5–10 years of experience in interior architecture",
+      "Strong portfolio of residential and commercial projects",
+      "Proficiency in AutoCAD, SketchUp, 3ds Max, and Photoshop",
+      "Ability to manage teams and coordinate with clients and contractors"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Health & medical allowance",
+      "Annual salary increment",
+      "Professional training & workshops"
+    ],
+    "skills": [
+      "Project leadership",
+      "Interior space planning",
+      "3D modeling & rendering",
+      "Material & furniture selection",
+      "Client management"
+    ],
+    "compnay": {
+      "website": "https://www.vittadesign.com",
+      "email": "hr@vittadesign.com",
+      "phone": "+8801714455667",
+      "address": "House 33, Road 10, Uttara Sector 7, Dhaka"
+    },
+    "clogo": "https://vintabd.com/wp-content/uploads/2024/09/Untitled-design-64.png"
+  },
+  {
+    "id": 103,
+    "title": "Sales Executive – Export & Distribution",
+    "company": "Transcom Distribution Ltd.",
+    "location": "Dhaka",
+    "salary": {
+      "min": 25000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "Importers/Distributors/Exporters",
+    "experience": [1, 3],
+    "subCategory": "Marketing",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Business Administration, Marketing or related field",
+    "description": "Responsible for generating sales, managing client accounts, and coordinating distribution and export operations for Transcom Distribution products nationwide and internationally.",
+    "requirements": [
+      "1–3 years experience in sales, distribution, or export",
+      "Strong client communication and negotiation skills",
+      "Ability to handle sales targets and reporting",
+      "Experience in FMCG or consumer goods preferred"
+    ],
+    "benefits": [
+      "Performance-based incentives",
+      "Festival bonuses",
+      "Medical allowance",
+      "Paid annual leave"
+    ],
+    "skills": [
+      "Sales & negotiation",
+      "Client relationship management",
+      "Distribution coordination",
+      "Export documentation knowledge",
+      "Reporting & documentation"
+    ],
+    "compnay": {
+      "website": "https://www.transcombd.com",
+      "email": "hr@transcombd.com",
+      "phone": "+88028877777",
+      "address": "Plot 45, Tejgaon Industrial Area, Dhaka"
+    },
+    "clogo": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Transcom_logo.png"
+  },
+  {
+    "id": 104,
+    "title": "Export Coordinator",
+    "company": "Apex Footwear Ltd.",
+    "location": "Gazipur, Dhaka",
+    "salary": {
+      "min": 30000,
+      "max": 45000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Importers/Distributors/Exporters",
+    "experience": [2, 5],
+    "subCategory": "Export",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s in Business, Logistics, or related field",
+    "description": "Coordinate international shipments, handle export documentation, liaise with clients and freight forwarders, and ensure timely delivery of Apex Footwear products to global markets.",
+    "requirements": [
+      "2–5 years experience in export operations or logistics",
+      "Knowledge of shipping and export documentation",
+      "Good communication and negotiation skills",
+      "Ability to handle export compliance and customs requirements"
+    ],
+    "benefits": [
+      "Medical allowance",
+      "Festival bonus",
+      "Travel reimbursement",
+      "Performance incentives"
+    ],
+    "skills": [
+      "Export documentation",
+      "Shipment coordination",
+      "Client communication",
+      "Logistics management",
+      "Problem solving"
+    ],
+    "compnay": {
+      "website": "https://www.apexfootwear.com",
+      "email": "hr@apexfootwear.com",
+      "phone": "+88028888888",
+      "address": "Gazipur Industrial Area, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/28/1/apex-shoes-logo-png_seeklogo-289498.png"
+  },
+  {
+    "id": 105,
+    "title": "Import & Logistics Officer",
+    "company": "Abdul Monem Ltd.",
+    "location": "Chittagong",
+    "salary": {
+      "min": 28000,
+      "max": 42000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Importers/Distributors/Exporters",
+    "experience": [2, 4],
+    "subCategory": "Import & Logistics",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s in Business, Supply Chain, or related field",
+    "description": "Manage imports, coordinate with suppliers and freight forwarders, track shipments, ensure customs compliance, and support smooth logistics operations for Abdul Monem Ltd.",
+    "requirements": [
+      "2–4 years experience in import operations or logistics",
+      "Knowledge of customs and import compliance",
+      "Strong coordination and documentation skills",
+      "Experience in shipping and supplier communication"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Festival bonuses",
+      "Performance-based incentive",
+      "Paid leave"
+    ],
+    "skills": [
+      "Import documentation",
+      "Customs compliance",
+      "Logistics coordination",
+      "Supplier communication",
+      "Problem solving"
+    ],
+    "compnay": {
+      "website": "https://www.amonem.com",
+      "email": "hr@amonem.com",
+      "phone": "+880311234567",
+      "address": "Nasirabad Industrial Area, Chittagong"
+    },
+    "clogo": "data:image/png;base64,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"
+  },
+  {
+    "id": 106,
+    "title": "Customer Service Executive",
+    "company": "Genex Infosys Ltd.",
+    "location": "Dhaka (Gulshan)",
+    "salary": {
+      "min": 18000,
+      "max": 25000,
+      "default": "Negotiable"
+    },
+    "vacancy": 10,
+    "category": "Services",
+    "experience": [0, 2],
+    "subCategory": "Customer Support",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-10",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Bachelor in any discipline",
+    "description": "Provide phone and chat-based customer support for local and international clients while maintaining professionalism, accuracy, and customer satisfaction.",
+    "requirements": [
+      "Excellent communication in Bangla and decent English",
+      "Willingness to work in roster shifts",
+      "Typing speed 25+ WPM",
+      "Experience in call center will be an advantage"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Performance bonus",
+      "Weekly 2 holidays",
+      "Health insurance"
+    ],
+    "skills": [
+      "Customer handling",
+      "Call management",
+      "CRM entry",
+      "Problem solving",
+      "Communication skills"
+    ],
+    "compnay": {
+      "website": "https://genexinfosys.com",
+      "email": "career@genexinfosys.com",
+      "phone": "+8809609001300",
+      "address": "Gulshan-1, Dhaka"
+    },
+    "clogo": "data:image/png;base64,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"
+  },
+  {
+    "id": 107,
+    "title": "Service Technician (Home Appliances)",
+    "company": "Walton Service Management",
+    "location": "Dhaka, Chattogram",
+    "salary": {
+      "min": 20000,
+      "max": 30000,
+      "default": "Negotiable"
+    },
+    "vacancy": 15,
+    "category": "Services",
+    "experience": [1, 3],
+    "subCategory": "Technical Services",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Diploma in Electrical / Refrigeration / Electronics",
+    "description": "Repair, maintain and install Walton home appliances such as refrigerators, AC, TV, and washing machines, ensuring customer satisfaction and after-sales service quality.",
+    "requirements": [
+      "Experience in appliance repair or servicing",
+      "Basic knowledge of electrical components",
+      "Field visit capability",
+      "Ability to handle customer queries politely"
+    ],
+
+    "benefits": [
+      "Mobile allowance",
+      "Yearly increment",
+      "Service bonus",
+      "Technical training"
+    ],
+    "skills": [
+      "Appliance troubleshooting",
+      "Electrical repair",
+      "Field service",
+      "Customer relations",
+      "Technical diagnosis"
+    ],
+    "compnay": {
+      "website": "https://waltonbd.com",
+      "email": "servicehr@waltonbd.com",
+      "phone": "+8809610001010",
+      "address": "Chandra, Kaliakair, Gazipur"
+    },
+    "clogo": "data:image/png;base64,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"
+  },
+  {
+    "id": 108,
+    "title": "Cleaning & Housekeeping Supervisor",
+    "company": "Elite Force Services Ltd.",
+    "location": "Dhaka",
+    "salary": {
+      "min": 22000,
+      "max": 35000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "Services",
+    "experience": [2, 4],
+    "subCategory": "Facility Management",
+    "employeeStatus": "Full Time",
+    "jobType": "Contractual",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-18",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Diploma / Bachelor",
+    "description": "Oversee cleaning teams, manage client sites, ensure proper housekeeping standards, and maintain service quality for commercial and residential facilities.",
+    "requirements": [
+      "2–4 years of experience in housekeeping or facility supervision",
+      "Ability to lead and train cleaning staff",
+      "Knowledge of cleaning equipment and chemicals",
+      "Strong reporting and coordination skills"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Uniform & food allowance",
+      "Yearly performance bonus",
+      "Accommodation for outstation sites"
+    ],
+    "skills": [
+      "Team supervision",
+      "Cleaning management",
+      "Client communication",
+      "Reporting",
+      "Time management"
+    ],
+    "compnay": {
+      "website": "https://eliteforcesecurity.com",
+      "email": "hr@eliteforcesecurity.com",
+      "phone": "+8801913222333",
+      "address": "Gulshan-2, Dhaka"
+    },
+    "clogo": "https://bpsspa.com/wp-content/uploads/2021/07/elite-force.png"
+  },
+  {
+    "id": 109,
+    "title": "Production Supervisor",
+    "company": "PRAN-RFL Group",
+    "location": "Narsingdi",
+    "salary": {
+      "min": 25000,
+      "max": 35000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "Manufacturing",
+    "experience": [2, 4],
+    "subCategory": "Production",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Diploma / BSc in Industrial Engineering or Mechanical Engineering",
+    "description": "Supervise daily production lines, monitor output quality, ensure machinery safety compliance, and coordinate workers to meet production targets in PRAN manufacturing plants.",
+    "requirements": [
+      "2–4 years of experience in production or factory operations",
+      "Knowledge of machine operation and production workflow",
+      "Ability to manage shift workers and handle pressure",
+      "Basic understanding of 5S, Lean, and Quality Control processes"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Subsidized lunch",
+      "Yearly increment",
+      "Attendance bonus"
+    ],
+    "skills": [
+      "Production planning",
+      "Team coordination",
+      "Quality assurance",
+      "Machine operation",
+      "Reporting"
+    ],
+    "compnay": {
+      "website": "https://pranrflgroup.com",
+      "email": "career@pranrflgroup.com",
+      "phone": "+8809609777788",
+      "address": "PRAN Industrial Park, Narsingdi"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/25/2/pran-logo-png_seeklogo-258211.png"
+  },
+  {
+    "id": 110,
+    "title": "Quality Assurance Executive",
+    "company": "Akij Food & Beverage Ltd.",
+    "location": "Dhaka (Tejgaon)",
+    "salary": {
+      "min": 28000,
+      "max": 42000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Manufacturing",
+    "experience": [1, 3],
+    "subCategory": "Quality Assurance",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "BSc in Chemistry / Applied Chemistry / Food Engineering",
+    "description": "Conduct quality checks, inspect raw materials, ensure compliance with food safety standards, and assist the QA team in maintaining hygienic production operations.",
+    "requirements": [
+      "1–3 years of experience in QA/QC in food or beverage manufacturing",
+      "Knowledge of GMP, HACCP, and ISO standards",
+      "Strong analytical ability and reporting skills",
+      "Experience using laboratory testing equipment"
+    ],
+    "benefits": [
+      "Medical facilities",
+      "Free transportation",
+      "Festival bonuses",
+      "Provident fund"
+    ],
+    "skills": [
+      "Quality inspection",
+      "Laboratory testing",
+      "Compliance monitoring",
+      "Documentation",
+      "Food safety knowledge"
+    ],
+    "compnay": {
+      "website": "https://akijfood.com",
+      "email": "hr@akij.net",
+      "phone": "+8809610010020",
+      "address": "Tejgaon Industrial Area, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/36/1/akij-group-logo-png_seeklogo-365567.png"
+  },
+  {
+    "id": 111,
+    "title": "Machine Operator (Knitting & Sewing)",
+    "company": "DBL Group",
+    "location": "Gazipur",
+    "salary": {
+      "min": 18000,
+      "max": 25000,
+      "default": "Negotiable"
+    },
+    "vacancy": 10,
+    "category": "Manufacturing",
+    "experience": [1, 2],
+    "subCategory": "Textile/Garments",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Minimum SSC / Vocational Training",
+    "description": "Operate knitting, sewing, or finishing machines in garments production lines, maintain basic machine settings, and ensure consistent output as per DBL production standards.",
+    "requirements": [
+      "1–2 years of experience in knitting or sewing machine operation",
+      "Ability to handle machine setup and minor adjustments",
+      "Understanding of garment production workflow",
+      "Basic safety awareness while operating machinery"
+    ],
+    "benefits": [
+      "Attendance bonus",
+      "Lunch & snacks",
+      "Overtime allowance",
+      "Festival bonus: 2"
+    ],
+    "skills": [
+      "Machine handling",
+      "Garments production",
+      "Operational discipline",
+      "Quality awareness",
+      "Basic maintenance"
+    ],
+    "compnay": {
+      "website": "https://dbl-group.com",
+      "email": "career@dbl-group.com",
+      "phone": "+8809611212121",
+      "address": "Kashimpur, Gazipur"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/39/1/dbl-group-logo-png_seeklogo-393232.png"
+  },
+  {
+    "id": 112,
+    "title": "Lecturer (Computer Science & Engineering)",
+    "company": "Daffodil International University",
+    "location": "Dhaka (Dhanmondi / Ashulia)",
+    "salary": {
+      "min": 35000,
+      "max": 50000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "Education/Training",
+    "experience": [0, 2],
+    "subCategory": "Teaching",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-30",
+    "gender": "Anyone Can Apply",
+    "education": "BSc & MSc in CSE from any UGC-approved University (Minimum CGPA 3.25)",
+    "description": "Deliver undergraduate-level CSE courses, prepare lesson plans, assess student performance, and engage in departmental academic activities under DIU.",
+    "requirements": [
+      "Excellent academic results with strong subject knowledge",
+      "Good presentation and communication skills",
+      "Ability to conduct labs, tutorials, and research work",
+      "Freshers encouraged with strong academic background"
+    ],
+    "benefits": [
+      "Provident fund",
+      "Health insurance",
+      "Festival bonuses",
+      "Research grants"
+    ],
+    "skills": [
+      "Teaching & presentation",
+      "Research capability",
+      "Classroom management",
+      "Syllabus planning",
+      "Python/Java programming knowledge"
+    ],
+    "compnay": {
+      "website": "https://daffodilvarsity.edu.bd",
+      "email": "hr@daffodilvarsity.edu.bd",
+      "phone": "+8809612101010",
+      "address": "Daffodil Tower, Dhanmondi, Dhaka"
+    },
+    "clogo": "https://i.pinimg.com/564x/72/2c/57/722c5710002814308caff02ffb294c0d.jpg"
+  },
+  {
+    "id": 113,
+    "title": "School Coordinator",
+    "company": "Scholastica",
+    "location": "Dhaka (Uttara)",
+    "salary": {
+      "min": 30000,
+      "max": 45000,
+      "default": "Negotiable"
+    },
+    "vacancy": 1,
+    "category": "Education/Training",
+    "experience": [2, 4],
+    "subCategory": "Administration",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Education, English, or relevant discipline",
+    "description": "Supervise academic activities, guide teachers, monitor curriculum implementation, communicate with parents, and maintain smooth daily operations of the school.",
+    "requirements": [
+      "2–4 years of experience in school administration",
+      "Strong leadership and organizational skills",
+      "Good communication in English & Bangla",
+      "Experience working with teachers, parents, and students"
+    ],
+    "benefits": [
+      "Provident fund",
+      "Lunch facilities",
+      "Festival bonuses",
+      "Yearly increment"
+    ],
+    "skills": [
+      "Team leadership",
+      "Academic coordination",
+      "Communication",
+      "Parent management",
+      "Curriculum monitoring"
+    ],
+    "compnay": {
+      "website": "https://www.scholasticabd.com",
+      "email": "jobs@scholasticabd.com",
+      "phone": "+8809613737373",
+      "address": "Uttara, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/21/1/scholastica-logo-png_seeklogo-211497.png"
+  },
+  {
+    "id": 114,
+    "title": "Training Officer",
+    "company": "BRAC Skills Development Programme",
+    "location": "Dhaka",
+    "salary": {
+      "min": 28000,
+      "max": 38000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Education/Training",
+    "experience": [1, 3],
+    "subCategory": "Training & Development",
+    "employeeStatus": "Full Time",
+    "jobType": "Contractual",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Education, Business, or Social Science",
+    "description": "Plan and conduct skill development training sessions, create training materials, assess participant performance, and assist in curriculum development for BRAC’s training programs.",
+    "requirements": [
+      "1–3 years of experience in training or facilitation",
+      "Strong presentation and communication capability",
+      "Ability to prepare training reports and assessments",
+      "Experience in community or youth training preferred"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Festival bonuses",
+      "Mobile bill",
+      "Travel allowance"
+    ],
+    "skills": [
+      "Presentation",
+      "Facilitation",
+      "Training module creation",
+      "Reporting",
+      "Communication"
+    ],
+    "compnay": {
+      "website": "https://www.brac.net",
+      "email": "career@brac.net",
+      "phone": "+8802222228122",
+      "address": "BRAC Centre, Mohakhali, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/31/2/brac-logo-png_seeklogo-313020.png"
+  },
+  {
+    "id": 115,
+    "title": "Project Officer (Field Operations)",
+    "company": "BRAC",
+    "location": "Dhaka & Field Areas",
+    "salary": {
+      "min": 30000,
+      "max": 40000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "N.G.O./Social Services",
+    "experience": [1, 3],
+    "subCategory": "Project Implementation",
+    "employeeStatus": "Full Time",
+    "jobType": "Contractual",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-15",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in Social Science / Development Studies / any relevant field",
+    "description": "Support project implementation, coordinate field activities, monitor beneficiary progress, and ensure smooth execution of community development projects under BRAC’s field operations program.",
+    "requirements": [
+      "1–3 years of experience in NGO field operations or community work",
+      "Strong communication and field coordination ability",
+      "Willingness to travel regularly to field locations",
+      "Knowledge of community mobilization and reporting"
+    ],
+    "benefits": [
+      "Provident fund",
+      "Festival bonuses",
+      "Health insurance",
+      "Travel allowance"
+    ],
+    "skills": [
+      "Field coordination",
+      "Reporting",
+      "Community mobilization",
+      "Communication",
+      "Teamwork"
+    ],
+    "compnay": {
+      "website": "https://www.brac.net",
+      "email": "hrd@brac.net",
+      "phone": "+880255663000",
+      "address": "BRAC Centre, 75 Mohakhali, Dhaka 1212"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/31/2/brac-logo-png_seeklogo-313020.png"
+  },
+  {
+    "id": 116,
+    "title": "Monitoring & Evaluation Officer",
+    "company": "ASA",
+    "location": "Dhaka",
+    "salary": {
+      "min": 35000,
+      "max": 50000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "N.G.O./Social Services",
+    "experience": [2, 4],
+    "subCategory": "Monitoring & Evaluation",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-25",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s or Master’s in Statistics, Development Studies, Economics, or relevant field",
+    "description": "Responsible for designing monitoring tools, conducting field assessments, collecting project data, analyzing program performance, and preparing evaluation reports to support ASA’s development initiatives.",
+    "requirements": [
+      "2–4 years of experience in monitoring, evaluation, or research",
+      "Strong data analysis and reporting skills",
+      "Proficiency in Excel/SPSS/Statistical tools",
+      "Ability to conduct field visits when required"
+    ],
+    "benefits": [
+      "Provident fund",
+      "Gratuity",
+      "Festival bonuses",
+      "Medical support"
+    ],
+    "skills": [
+      "Data analysis",
+      "Field assessment",
+      "Reporting",
+      "Monitoring tools development",
+      "Analytical thinking"
+    ],
+    "compnay": {
+      "website": "https://asa.org.bd",
+      "email": "info@asa.org.bd",
+      "phone": "+88029128531",
+      "address": "ASA Tower, 23/3 Bir Uttam A.N.M Shamsuzzoha Road, Shyamoli, Dhaka"
+    },
+    "clogo": "https://images.seeklogo.com/logo-png/41/1/asa-logo-png_seeklogo-410402.png"
+  },
+  {
+    "id": 117,
+    "title": "Community Health Worker",
+    "company": "JAAGO Foundation",
+    "location": "Chattogram & Cox’s Bazar",
+    "salary": {
+      "min": 18000,
+      "max": 22000,
+      "default": "Negotiable"
+    },
+    "vacancy": 5,
+    "category": "N.G.O./Social Services",
+    "experience": [0, 2],
+    "subCategory": "Community Outreach",
+    "employeeStatus": "Full Time",
+    "jobType": "Contractual",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "HSC / Diploma in Health, Social Work, or relevant area",
+    "description": "Work closely with local communities to raise awareness on hygiene, healthcare practices, and nutrition. Assist in health campaigns, collect field data, and support community-based outreach activities under JAAGO Foundation.",
+    "requirements": [
+      "0–2 years of experience in community development or health outreach",
+      "Comfortable working directly with underprivileged communities",
+      "Ability to support field-based awareness sessions",
+      "Basic record keeping and data collection skills"
+    ],
+    "benefits": [
+      "Field travel allowance",
+      "Festival bonus",
+      "Training and development",
+      "Mobile allowance"
+    ],
+    "skills": [
+      "Community outreach",
+      "Communication",
+      "Fieldwork",
+      "Basic reporting",
+      "Team collaboration"
+    ],
+    "compnay": {
+      "website": "https://jaago.com.bd",
+      "email": "info@jaago.com.bd",
+      "phone": "+88028837853",
+      "address": "KA-10/5, Shahjadpur, Pragati Sarani, Gulshan, Dhaka"
+    },
+    "clogo": "https://ik.imagekit.io/a4izklulj/images/2024/09/jaago-logo_1727084165_w2fULrshk.png?tr=f-auto"
+  },
+  {
+    "id": 118,
+    "title": "Recruitment Executive",
+    "company": "Bdjobs.com Ltd.",
+    "location": "Dhaka (Kawran Bazar)",
+    "salary": {
+      "min": 25000,
+      "max": 35000,
+      "default": "Negotiable"
+    },
+    "vacancy": 3,
+    "category": "Recruitment/Employment Firms",
+    "experience": [1, 3],
+    "subCategory": "Talent Acquisition",
+    "employeeStatus": "Full Time",
+    "jobType": "Permanent",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-20",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in HRM / Business / Psychology",
+    "description": "Source, screen, and shortlist candidates for multiple clients under Bdjobs HR Solutions, ensuring high-quality recruitment support and timely placement delivery.",
+    "requirements": [
+      "1–3 years of experience in recruitment or HR operations",
+      "Strong interviewing and candidate assessment skills",
+      "Ability to manage multiple job openings at the same time",
+      "Knowledge of ATS and candidate sourcing techniques"
+    ],
+    "benefits": [
+      "Performance bonus",
+      "Festival bonus",
+      "Lunch facility",
+      "Mobile bill allowance"
+    ],
+    "skills": [
+      "Candidate sourcing",
+      "Interviewing",
+      "Communication skills",
+      "Client coordination",
+      "CV screening"
+    ],
+    "compnay": {
+      "website": "https://www.bdjobs.com",
+      "email": "hr@bdjobs.com",
+      "phone": "+880258155120",
+      "address": "Plot E-5, CWS (B), Gulshan South Avenue, Dhaka-1212"
+    },
+    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH02_ZqwDwqAa-BG704onHwtjhterrcwsOnQ&s"
+  },
+  {
+    "id": 119,
+    "title": "Senior Recruitment Consultant",
+    "company": "Grow n Excel",
+    "location": "Dhaka (Banani)",
+    "salary": {
+      "min": 40000,
+      "max": 60000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Recruitment/Employment Firms",
+    "experience": [3, 6],
+    "subCategory": "Executive Search",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-02-01",
+    "gender": "Anyone Can Apply",
+    "education": "MBA in HRM or Business Administration",
+    "description": "Lead end-to-end recruitment for mid to senior-level roles, manage client accounts, and provide consulting support for workforce planning to major corporate clients.",
+    "requirements": [
+      "3–6 years of experience in recruitment consultancy",
+      "Experience handling corporate clients and senior-level hiring",
+      "Strong networking and talent mapping abilities",
+      "Excellent written and verbal communication skills"
+    ],
+    "benefits": [
+      "Competitive fixed salary",
+      "Client-based incentive structure",
+      "Festival bonuses",
+      "Yearly performance appraisal"
+    ],
+    "skills": [
+      "Executive search",
+      "Client handling",
+      "Talent mapping",
+      "Interviewing",
+      "Negotiation"
+    ],
+    "compnay": {
+      "website": "https://www.grownexcel.com",
+      "email": "career@grownexcel.com",
+      "phone": "+88028822286",
+      "address": "House 15, Block C, Road 28, Banani, Dhaka"
+    },
+    "clogo": "https://grownexcel.com/images/02%20GNE%20Logo.jpg"
+  },
+  {
+    "id": 120,
+    "title": "Talent Acquisition Specialist",
+    "company": "Enroute International Ltd.",
+    "location": "Dhaka (Tejgaon)",
+    "salary": {
+      "min": 30000,
+      "max": 45000,
+      "default": "Negotiable"
+    },
+    "vacancy": 2,
+    "category": "Recruitment/Employment Firms",
+    "experience": [2, 4],
+    "subCategory": "Recruitment Outsourcing",
+    "employeeStatus": "Full Time",
+    "jobType": "Contractual",
+    "jobPostedDate": "2025-12-10",
+    "jobEndDate": "2026-01-30",
+    "gender": "Anyone Can Apply",
+    "education": "Bachelor’s degree in HRM / Management / English",
+    "description": "Manage high-volume recruitment projects, conduct candidate assessments, coordinate with clients such as multinational organizations, and ensure smooth recruitment operations for outsourced HR projects.",
+    "requirements": [
+      "2–4 years of experience in recruitment or HR outsourcing",
+      "Ability to manage bulk hiring projects",
+      "Experience in coordinating with corporate clients",
+      "Good knowledge of HR documentation and compliance"
+    ],
+    "benefits": [
+      "Festival bonuses",
+      "Health insurance",
+      "Monthly mobile bill",
+      "Professional training opportunities"
+    ],
+    "skills": [
+      "Bulk recruitment",
+      "Candidate assessment",
+      "Client communication",
+      "Reporting & documentation",
+      "HR operations management"
+    ],
+    "compnay": {
+      "website": "https://www.enroute.com.bd",
+      "email": "jobs@enroute.com.bd",
+      "phone": "+8809612244222",
+      "address": "House 57, Road 25, Block A, Banani, Dhaka"
+    },
+    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yH0MUlK6enaWh93Xoe9OP53pAphoCtcOfQ&s"
   }
 ]

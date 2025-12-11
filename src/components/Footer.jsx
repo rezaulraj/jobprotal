@@ -12,8 +12,10 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  
   const functionalAreaJobs = [
     {
       label: "Sales & Business Development Jobs",
@@ -69,42 +71,137 @@ const Footer = () => {
 
   const jobsByIndustry = [
     {
-      label: "Business Development Jobs",
-      path: "/jobs/industry/business-development",
+      label: "Accounting/Finance",
+      path: "/jobs/accounting-finance",
     },
     {
-      label: "Information Technology Jobs",
-      path: "/jobs/industry/information-technology",
+      label: "Business Development",
+      path: "/jobs/business-development",
     },
     {
-      label: "Recruitment / Employment Firms Jobs",
-      path: "/jobs/industry/recruitment",
-    },
-    { label: "Services Jobs", path: "/jobs/industry/services" },
-    { label: "Education/Training Jobs", path: "/jobs/industry/education" },
-    {
-      label: "Banking/Financial Services Jobs",
-      path: "/jobs/industry/banking",
+      label: "Sales/Marketing",
+      path: "/jobs/sales-marketing",
     },
     {
-      label: "Travel/Tourism/Transportation Jobs",
-      path: "/jobs/industry/travel",
+      label: "IT/Telecommunication",
+      path: "/jobs/it-telecommunication",
     },
-    { label: "Manufacturing Jobs", path: "/jobs/industry/manufacturing" },
-    { label: "Call Center Jobs", path: "/jobs/industry/call-center" },
-    { label: "Consultants Jobs", path: "/jobs/industry/consultants" },
     {
-      label: "Healthcare / Hospital / Medical Jobs",
-      path: "/jobs/industry/healthcare",
+      label: "Information Technology",
+      path: "/jobs/information-technology",
     },
-    { label: "BPO Jobs", path: "/jobs/industry/bpo" },
     {
-      label: "Importers / Distributors/Exporters Jobs",
-      path: "/jobs/industry/import-export",
+      label: "Engineering",
+      path: "/jobs/engineering",
     },
-    { label: "N.G.O./Social Services Jobs", path: "/jobs/industry/ngo" },
-    { label: "Other Jobs", path: "/jobs/industry/other" },
+    {
+      label: "Manufacturing",
+      path: "/jobs/manufacturing",
+    },
+    {
+      label: "Services",
+      path: "/jobs/services",
+    },
+    {
+      label: "Recruitment/Employment Firms",
+      path: "/jobs/recruitment-employment",
+    },
+    {
+      label: "Data Entry/Office Support",
+      path: "/jobs/data-entry-office-support",
+    },
+    {
+      label: "Hospitality/Travel/Tourism",
+      path: "/jobs/hospitality-travel-tourism",
+    },
+    {
+      label: "Education/Training",
+      path: "/jobs/education-training",
+    },
+    {
+      label: "Customer/Service/Call Centre",
+      path: "/jobs/customer-service-call-centre",
+    },
+    {
+      label: "Consultants",
+      path: "/jobs/consultants",
+    },
+    {
+      label: "Banking/Financial Services",
+      path: "/jobs/banking-financial-services",
+    },
+    {
+      label: "N.G.O./Social Services",
+      path: "/jobs/ngo-social-services",
+    },
+    {
+      label: "E-Commerce/E-Business",
+      path: "/jobs/ecommerce-ebusiness",
+    },
+    {
+      label: "Real Estate/Property",
+      path: "/jobs/real-estate-property",
+    },
+    {
+      label: "Healthcare/Hospital/Medical",
+      path: "/jobs/healthcare-hospital-medical",
+    },
+    {
+      label: "BPO",
+      path: "/jobs/bpo",
+    },
+    {
+      label: "Construction/Cement/Metals",
+      path: "/jobs/construction-cement-metals",
+    },
+    {
+      label: "Architect/Interior Design",
+      path: "/jobs/architect-interior-design",
+    },
+    {
+      label: "Importers/ Distributors/Exporters",
+      path: "/jobs/importers-distributors-exporters",
+    },
   ];
+
+  // const jobsByIndustry = [
+  //   {
+  //     label: "Business Development Jobs",
+  //     path: "/jobs/industry/business-development",
+  //   },
+  //   {
+  //     label: "Information Technology Jobs",
+  //     path: "/jobs/industry/information-technology",
+  //   },
+  //   {
+  //     label: "Recruitment / Employment Firms Jobs",
+  //     path: "/jobs/industry/recruitment",
+  //   },
+  //   { label: "Services Jobs", path: "/jobs/industry/services" },
+  //   { label: "Education/Training Jobs", path: "/jobs/industry/education" },
+  //   {
+  //     label: "Banking/Financial Services Jobs",
+  //     path: "/jobs/industry/banking",
+  //   },
+  //   {
+  //     label: "Travel/Tourism/Transportation Jobs",
+  //     path: "/jobs/industry/travel",
+  //   },
+  //   { label: "Manufacturing Jobs", path: "/jobs/industry/manufacturing" },
+  //   { label: "Call Center Jobs", path: "/jobs/industry/call-center" },
+  //   { label: "Consultants Jobs", path: "/jobs/industry/consultants" },
+  //   {
+  //     label: "Healthcare / Hospital / Medical Jobs",
+  //     path: "/jobs/industry/healthcare",
+  //   },
+  //   { label: "BPO Jobs", path: "/jobs/industry/bpo" },
+  //   {
+  //     label: "Importers / Distributors/Exporters Jobs",
+  //     path: "/jobs/industry/import-export",
+  //   },
+  //   { label: "N.G.O./Social Services Jobs", path: "/jobs/industry/ngo" },
+  //   { label: "Other Jobs", path: "/jobs/industry/other" },
+  // ];
 
   // const jobSeekersLinks = [
   //   {
@@ -117,7 +214,7 @@ const Footer = () => {
   //   { label: "Success Stories", path: "/success-stories" },
   //   { label: "Contact Us", path: "/contact" },
   // ];
-   const jobSeekersLinks = [
+  const jobSeekersLinks = [
     {
       label: "British Council Online Placement Test",
       path: "",
@@ -129,23 +226,39 @@ const Footer = () => {
     { label: "Contact Us", path: "" },
   ];
 
-
+  // const employersLinks = [
+  //   { label: "Create Account", path: "/employer/signup" },
+  //   { label: "Post a Job", path: "/employers/post-job" },
+  //   { label: "Employer Plan", path: "/employers/plan" },
+  //   { label: "Employer Support ", path: "/employers/support" },
+  // ];
   const employersLinks = [
     { label: "Create Account", path: "/employer/signup" },
     { label: "Post a Job", path: "/employers/post-job" },
-    { label: "Employer Products", path: "/employers/products" },
-    { label: "Contact Sales", path: "/employers/contact-sales" },
+    { label: "Employer Plan", path: "" },
+    { label: "Employer Support ", path: "" },
   ];
 
+  // const internationalJobs = [
+  //   { label: "Jobs in Saudi Arabia", path: "/jobs/international/saudi-arabia" },
+  //   { label: "Jobs in Bahrain", path: "/jobs/international/bahrain" },
+  //   { label: "Jobs in Qatar", path: "/jobs/international/qatar" },
+  //   { label: "Jobs in UAE", path: "/jobs/international/uae" },
+  //   { label: "Jobs in Malaysia", path: "/jobs/international/malaysia" },
+  //   { label: "Jobs in Singapore", path: "/jobs/international/singapore" },
+  //   { label: "Jobs in Kuwait", path: "/jobs/international/kuwait" },
+  //   { label: "Jobs in Oman", path: "/jobs/international/oman" },
+  // ];
+
   const internationalJobs = [
-    { label: "Jobs in Saudi Arabia", path: "/jobs/international/saudi-arabia" },
-    { label: "Jobs in Bahrain", path: "/jobs/international/bahrain" },
-    { label: "Jobs in Qatar", path: "/jobs/international/qatar" },
-    { label: "Jobs in UAE", path: "/jobs/international/uae" },
-    { label: "Jobs in Malaysia", path: "/jobs/international/malaysia" },
-    { label: "Jobs in Singapore", path: "/jobs/international/singapore" },
-    { label: "Jobs in Kuwait", path: "/jobs/international/kuwait" },
-    { label: "Jobs in Oman", path: "/jobs/international/oman" },
+    { label: "Jobs in Saudi Arabia", path: "" },
+    { label: "Jobs in Bahrain", path: "" },
+    { label: "Jobs in Qatar", path: "" },
+    { label: "Jobs in UAE", path: "" },
+    { label: "Jobs in Malaysia", path: "" },
+    { label: "Jobs in Singapore", path: "" },
+    { label: "Jobs in Kuwait", path: "" },
+    { label: "Jobs in Oman", path: "" },
   ];
 
   const socialLinks = [
@@ -341,15 +454,15 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 {section.data.map((item, itemIndex) => (
                   <li key={itemIndex}>
-                    <a
-                      href={item.path}
+                    <Link
+                      to={item.path}
                       className="text-xs text-gray-400 hover:text-emerald-300 transition-colors duration-200 flex items-start group"
                     >
                       <span className="text-emerald-500 opacity-0 group-hover:opacity-100 mr-2 mt-0.5 transition-opacity duration-200">
                         •
                       </span>
                       <span className="leading-relaxed">{item.label}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
