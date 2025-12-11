@@ -169,7 +169,7 @@ const SeekerSignin = () => {
             <p className="text-gray-600">
               Don't have an account?{" "}
               <Link
-                to="/seeker/signup"
+                to="/jobseeker/signup"
                 className="text-[#1e2558] hover:text-[#4eb956] font-semibold hover:underline transition-colors duration-300 cursor-pointer"
               >
                 Create one now

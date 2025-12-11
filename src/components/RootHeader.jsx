@@ -429,6 +429,7 @@ const RootHeader = () => {
   const actionButtons = [
     {
       label: "Post a Job",
+      path: "/post-new-job",
       icon: <FaJob className="text-xs" />,
       color: "from-[#1E2558] to-[#2d377a]",
     },
@@ -824,7 +825,8 @@ const RootHeader = () => {
 
               <div className="hidden lg:flex items-center space-x-2">
                 {actionButtons.map((button, index) => (
-                  <button
+                  <Link
+                    to={button.path}
                     key={index}
                     className={`flex items-center space-x-1.5 px-3 py-1.5 ${
                       button.outline
@@ -834,7 +836,7 @@ const RootHeader = () => {
                   >
                     {button.icon}
                     <span>{button.label}</span>
-                  </button>
+                  </Link>
                 ))}
               </div>
 
