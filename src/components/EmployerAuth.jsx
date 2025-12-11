@@ -28,7 +28,7 @@ const EmployerAuth = () => {
     companyPhone: "",
     taxId: "",
 
-    // Recruiter Information
+    // Employer Information
     firstName: "",
     lastName: "",
     email: "",
@@ -132,7 +132,7 @@ const EmployerAuth = () => {
         !formData.email ||
         !formData.jobTitle
       ) {
-        alert("Please fill in all required recruiter information");
+        alert("Please fill in all required employer information");
         return;
       }
     } else if (currentSection === 3) {
@@ -274,7 +274,7 @@ const EmployerAuth = () => {
 
           {/* Progress Labels */}
           <div className="flex justify-between mt-3">
-            {["Company Info", "Recruiter Info", "Account Setup", "Review"].map(
+            {["Company Info", "Employer Info", "Account Setup", "Review"].map(
               (label, index) => (
                 <div
                   key={index}
@@ -484,11 +484,11 @@ const EmployerAuth = () => {
                 </div>
               )}
 
-              {/* Section 2: Recruiter Information */}
+              {/* Section 2: Employer Information */}
               {currentSection === 2 && (
                 <div className="space-y-6">
                   <h2 className="text-xl font-bold text-gray-800 mb-4 border-b pb-3">
-                    2. Recruiter Information
+                    2. Employer Information
                   </h2>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -726,7 +726,7 @@ const EmployerAuth = () => {
 
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-3">
-                        Recruiter Information
+                        Employer Information
                       </h3>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>

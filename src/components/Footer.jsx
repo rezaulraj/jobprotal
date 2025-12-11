@@ -106,20 +106,32 @@ const Footer = () => {
     { label: "Other Jobs", path: "/jobs/industry/other" },
   ];
 
-  const jobSeekersLinks = [
+  // const jobSeekersLinks = [
+  //   {
+  //     label: "British Council Online Placement Test",
+  //     path: "/resources/placement-test",
+  //   },
+  //   { label: "Top Professionals", path: "/professionals" },
+  //   { label: "CV Writing", path: "/services/cv-writing" },
+  //   { label: "Free CV Review", path: "/services/cv-review" },
+  //   { label: "Success Stories", path: "/success-stories" },
+  //   { label: "Contact Us", path: "/contact" },
+  // ];
+   const jobSeekersLinks = [
     {
       label: "British Council Online Placement Test",
-      path: "/resources/placement-test",
+      path: "",
     },
-    { label: "Top Professionals", path: "/professionals" },
-    { label: "CV Writing", path: "/services/cv-writing" },
-    { label: "Free CV Review", path: "/services/cv-review" },
-    { label: "Success Stories", path: "/success-stories" },
-    { label: "Contact Us", path: "/contact" },
+    { label: "Top Professionals", path: "" },
+    { label: "CV Writing", path: "" },
+    { label: "Free CV Review", path: "" },
+    { label: "Success Stories", path: "" },
+    { label: "Contact Us", path: "" },
   ];
 
+
   const employersLinks = [
-    { label: "Create Account", path: "/employers/register" },
+    { label: "Create Account", path: "/employer/signup" },
     { label: "Post a Job", path: "/employers/post-job" },
     { label: "Employer Products", path: "/employers/products" },
     { label: "Contact Sales", path: "/employers/contact-sales" },

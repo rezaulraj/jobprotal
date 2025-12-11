@@ -29,7 +29,7 @@ function App() {
           <Route path="jobseeker/login" element={<SeekerSignin />} />
           <Route path="employer/signup" element={<EmployerAuth />} />
           <Route path="employer/login" element={<EmployerLogin />} />
-          <Route path="post-new-job" element={<Jobpost />} />
+          <Route path="employers/post-job" element={<Jobpost />} />
           <Route path="*" element={<UnderDevelopment />} />
         </Route>
       </Routes>
