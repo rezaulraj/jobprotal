@@ -36,7 +36,7 @@ const Benefit = () => {
           {benefits.map((benefit, index) => (
             <Link
               key={index}
-              to={benefit.path}
+              // to={benefit.path}
               className={`flex flex-col items-start p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform ${benefit.bgColor}`}
             >
               <div className="mb-4 p-3 bg-gray-400 rounded-full">
