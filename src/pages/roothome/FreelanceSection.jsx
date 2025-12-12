@@ -30,11 +30,11 @@ const FreelanceSection = () => {
   };
 
   const handleViewAll = () => {
-    navigate("/freelance-jobs");
+    navigate("/jobs");
   };
 
   const handleHireFreelancer = () => {
-    navigate("/hire-freelancer");
+    navigate("/freelancer/post-job");
   };
 
   return (

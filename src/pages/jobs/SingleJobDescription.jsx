@@ -852,7 +852,7 @@ const SingleJobDescription = () => {
           </button>
         </div>
       </div>
-      {showApplyPopup && selectedJobForApply && (
+      {/* {showApplyPopup && selectedJobForApply && (
         <ApplyPopUps
           isOpen={showApplyPopup}
           onClose={() => {
@@ -862,7 +862,7 @@ const SingleJobDescription = () => {
           jobTitle={selectedJobForApply.title}
           company={selectedJobForApply.company}
         />
-      )}
+      )} */}
     </div>
   );
 };
