@@ -198,8 +198,41 @@ const AllJobs = () => {
     const locationParam = searchParams.get("location");
     const minSalary = searchParams.get("minSalary");
     const subcategoryParam = searchParams.get("subcategory");
-
+    const filter = searchParams.get("filter");
     // Update search states based on URL parameters
+    if (filter) {
+      switch (filter) {
+        case "recent":
+          // Set to show recent jobs (posted in last 7 days)
+          setSortBy("newest");
+          break;
+        case "deadline_tomorrow":
+          setSelectedDeadline(["Within 24 Hours"]);
+          break;
+        case "internship":
+          setSearchTerm("intern");
+          setSelectedJobTypes(["Internship"]);
+          break;
+        case "contractual":
+          setSearchTerm("contractual");
+          setSelectedJobTypes(["Contractual"]);
+          break;
+        case "part_time":
+          setSearchTerm("part time");
+          setSelectedJobTypes(["Part Time"]);
+          break;
+        case "overseas":
+          setSearchTerm("overseas");
+          break;
+        case "remote":
+          setSelectedJobTypes(["Remote", "Hybrid"]);
+          break;
+        case "fresher":
+          setSelectedExperience(["Fresher"]);
+          break;
+      }
+    }
+
     if (searchQuery) {
       setSearchTerm(searchQuery);
     }

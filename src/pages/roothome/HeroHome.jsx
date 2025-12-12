@@ -680,9 +680,12 @@ const HeroHome = () => {
                     {quickLinks.map((link, index) => (
                       <Link
                         key={index}
-                        to={`${link.path}${
-                          link.path.includes("?") ? "&" : "?"
-                        }source=quicklink`}
+                        to={link.path}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          // Pass filter parameters to the jobs page
+                          navigate(link.path);
+                        }}
                         className="group flex items-center justify-between py-2 px-2 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-0 cursor-pointer"
                       >
                         <div className="flex items-center">
