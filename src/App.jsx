@@ -12,6 +12,7 @@ import EmployerAuth from "./components/EmployerAuth";
 import EmployerLogin from "./components/EmployerLogin";
 import Jobpost from "./pages/post/Jobpost";
 import FreelancerJobPost from "./pages/post/FreelancerJobPost";
+import Employer from "./pages/post/Employer";
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
           <Route path="employer/login" element={<EmployerLogin />} />
           <Route path="employers/post-job" element={<Jobpost />} />
           <Route path="freelancer/post-job" element={<FreelancerJobPost />} />
+          <Route path="employer" element={<Employer />} />
           <Route path="*" element={<UnderDevelopment />} />
         </Route>
       </Routes>

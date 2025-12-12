@@ -351,12 +351,12 @@ const RootHeader = () => {
     },
     {
       label: "Community",
-      path: "/community",
+      path: "",
       icon: <FaComments className="text-xs" />,
     },
     {
       label: "Free CV Review",
-      path: "/free-cv-review",
+      path: "",
       icon: <FaFileAlt className="text-xs" />,
     },
     {
@@ -441,6 +441,7 @@ const RootHeader = () => {
     },
     {
       label: "Employers",
+      path: "employer",
       icon: <FaCompany className="text-xs" />,
       outline: true,
     },
@@ -518,9 +519,9 @@ const RootHeader = () => {
               {/* Options Grid - Side by Side */}
               <div className="grid grid-cols-2 gap-3">
                 {accountType.options.map((option, idx) => (
-                  <a
+                  <Link
                     key={idx}
-                    href={option.path}
+                    to={option.path}
                     className={`flex flex-col items-center justify-center p-4 rounded-lg bg-white border border-gray-100 transition-all duration-300 hover:shadow-md hover:scale-[1.02] group`}
                     onClick={() => {
                       setShowLoginSubNav(false);
@@ -540,21 +541,21 @@ const RootHeader = () => {
                     <p className="text-xs text-gray-500 text-center leading-tight">
                       {option.description}
                     </p>
-                  </a>
+                  </Link>
                 ))}
               </div>
 
               {/* Quick Link */}
               <div className="mt-4 pt-4 border-t border-gray-200">
-                <a
-                  // href={type === "login" ? "/forgot-password" : "/learn-more"}
+                <Link
+                  // to={type === "login" ? "/forgot-password" : "/learn-more"}
                   className={`text-xs font-medium ${accountType.textColor} hover:underline flex items-center justify-center`}
                 >
                   {type === "login"
                     ? "Forgot Password?"
                     : "Learn more about this account"}
                   <FaChevronRight className="ml-1 text-[10px]" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -564,12 +565,12 @@ const RootHeader = () => {
         <div className="mt-6 pt-4 border-t border-gray-100 text-center">
           <p className="text-xs text-gray-500">
             Need help choosing?{" "}
-            <a
-              href="/help"
+            <Link
+              // to="/help"
               className="text-blue-600 hover:underline font-medium"
             >
               Contact Support
-            </a>
+            </Link>
           </p>
         </div>
       </div>
@@ -684,8 +685,8 @@ const RootHeader = () => {
                       ) : null}
                     </>
                   ) : (
-                    <a
-                      href={item.path}
+                    <Link
+                      to={item.path}
                       className="flex flex-col items-center space-y-1 group"
                       onClick={() => setActiveNav(null)}
                     >
@@ -695,7 +696,7 @@ const RootHeader = () => {
                       <span className="text-[10px] font-medium text-gray-600 group-hover:text-[#4EB956] uppercase tracking-wider transition-colors duration-200">
                         {item.label}
                       </span>
-                    </a>
+                    </Link>
                   )}
 
                   {item.subNav && activeNav === item.label && (
@@ -706,9 +707,9 @@ const RootHeader = () => {
                       <div className="container mx-auto px-4 py-6">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {item.subNav.map((subItem, subIndex) => (
-                            <a
+                            <Link
                               key={subIndex}
-                              href={subItem.path}
+                              to={subItem.path}
                               className={`flex items-center justify-between p-3 hover:bg-gray-50 rounded transition-colors duration-200 group/sub ${
                                 subItem.isAllIndustry
                                   ? "border-2 border-[#4EB956] bg-[#4EB956]/5"
@@ -755,18 +756,18 @@ const RootHeader = () => {
                                     : "text-gray-300 group-hover/sub:text-[#4EB956]"
                                 }`}
                               />
-                            </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="mt-4 pt-4 border-t border-gray-100">
-                          <a
-                            href="/jobs"
+                          <Link
+                            to="/jobs"
                             className="text-xs text-primary hover:text-secondary font-medium hover:underline flex items-center space-x-1 cursor-pointer"
                             onClick={() => setActiveNav(null)}
                           >
                             <span>View all job categories</span>
                             <FaChevronRight className="text-[8px]" />
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -857,9 +858,9 @@ const RootHeader = () => {
           <div className="hidden md:flex lg:hidden justify-center border-t border-gray-100 pt-3 pb-2">
             <div className="flex items-center justify-center space-x-6">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={item.path}
+                  to={item.path}
                   className="flex flex-col items-center space-y-1 group cursor-pointer"
                 >
                   <div className="text-gray-500 group-hover:text-[#4EB956] transition-colors duration-200">
@@ -868,7 +869,7 @@ const RootHeader = () => {
                   <span className="text-[10px] font-medium text-gray-600 group-hover:text-[#4EB956] uppercase tracking-wider transition-colors duration-200">
                     {item.label}
                   </span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -966,9 +967,9 @@ const RootHeader = () => {
                             <div className="pl-8 pb-3">
                               <div className="space-y-2 max-h-60 overflow-y-auto pr-2">
                                 {item.subNav.map((subItem, subIndex) => (
-                                  <a
+                                  <Link
                                     key={subIndex}
-                                    href={subItem.path}
+                                    to={subItem.path}
                                     className={`flex items-center justify-between py-2 text-gray-600 hover:text-[#4EB956] transition-colors duration-200 group ${
                                       subItem.isAllIndustry
                                         ? "border-l-2 border-[#4EB956] pl-2 bg-[#4EB956]/5"
@@ -1012,16 +1013,16 @@ const RootHeader = () => {
                                         {subItem.jobCount}
                                       </span>
                                     )}
-                                  </a>
+                                  </Link>
                                 ))}
                               </div>
-                              <a
+                              <Link
                                 href="/jobs"
                                 className="block mt-2 text-xs text-primary hover:text-secondary font-medium hover:underline"
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 View all categories →
-                              </a>
+                              </Link>
                             </div>
                           )}
                         </div>
@@ -1068,9 +1069,9 @@ const RootHeader = () => {
                                     </div>
                                     <div className="grid grid-cols-2 gap-2">
                                       {type.options.map((option, idx) => (
-                                        <a
+                                        <Link
                                           key={idx}
-                                          href={option.path}
+                                          to={option.path}
                                           className={`flex flex-col items-center justify-center p-3 rounded-lg ${type.bgColor} border ${type.borderColor} transition-all duration-300`}
                                           onClick={() => setIsMenuOpen(false)}
                                         >
@@ -1084,7 +1085,7 @@ const RootHeader = () => {
                                           >
                                             {option.label}
                                           </span>
-                                        </a>
+                                        </Link>
                                       ))}
                                     </div>
                                   </div>
@@ -1094,8 +1095,8 @@ const RootHeader = () => {
                           )}
                         </div>
                       ) : (
-                        <a
-                          href={item.path}
+                        <Link
+                          to={item.path}
                           className="flex items-center space-x-3 py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200"
                           onClick={() => setIsMenuOpen(false)}
                         >
@@ -1103,7 +1104,7 @@ const RootHeader = () => {
                           <span className="text-sm font-medium">
                             {item.label}
                           </span>
-                        </a>
+                        </Link>
                       )}
                     </div>
                   ))}

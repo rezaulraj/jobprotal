@@ -15,7 +15,6 @@ import { SiTiktok } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  
   const functionalAreaJobs = [
     {
       label: "Sales & Business Development Jobs",
@@ -490,13 +489,13 @@ const Footer = () => {
                 "Sitemap",
                 "Help Center",
               ].map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href="/policy"
+                  // to="/policy"
                   className="text-xs text-gray-400 hover:text-emerald-300 transition-colors duration-200"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
