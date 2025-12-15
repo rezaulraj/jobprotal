@@ -265,10 +265,10 @@ const AllJobs = () => {
 
   // Calculate days left until deadline
   const getDaysLeft = (job) => {
-    if (!job.jobEndDate) return Infinity; // No deadline, show last
+    if (!job.jobEndDate) return Infinity;
 
     const endDate = new Date(job.jobEndDate);
-    const today = new Date("2025-12-10"); // Current date from your data
+    const today = new Date("2025-12-10");
     const diffTime = endDate - today;
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
@@ -412,7 +412,6 @@ const AllJobs = () => {
           // Sort by deadline (closest first)
           const deadlineA = getDaysLeft(a);
           const deadlineB = getDaysLeft(b);
-          // Jobs without deadline go last
           if (deadlineA === Infinity && deadlineB === Infinity) return 0;
           if (deadlineA === Infinity) return 1;
           if (deadlineB === Infinity) return -1;
@@ -486,17 +485,15 @@ const AllJobs = () => {
     setSearchTerm("");
     setSortBy("relevance");
     if (jobData.length > 0) {
-      setSelectedJob(jobData[0]); // Reset to first job
+      setSelectedJob(jobData[0]);
     }
-    navigate("/jobs"); // Navigate back to all jobs
+    navigate("/jobs");
   };
 
-  // Get unique values for filters from actual job data
   const uniqueLocations = [
     ...new Set(
       jobs
         .flatMap((job) => {
-          // Clean up location data
           let location = job.location;
           if (location && location.includes("(")) {
             location = location.split("(")[0].trim();
@@ -530,7 +527,6 @@ const AllJobs = () => {
     ...new Set(jobs.map((job) => job.subCategory).filter((subcat) => subcat)),
   ].sort();
 
-  // Handle job selection
   const handleJobSelect = (job) => {
     setSelectedJob(job);
     if (window.innerWidth < 1024) {
@@ -538,7 +534,6 @@ const AllJobs = () => {
     }
   };
 
-  // Filter options
   const filterOptions = {
     categories: uniqueCategories,
     locations: uniqueLocations,
@@ -589,7 +584,7 @@ const AllJobs = () => {
     if (!job.jobPostedDate) return "Recently posted";
 
     const postedDate = new Date(job.jobPostedDate);
-    const today = new Date("2025-12-10"); // Current date from your data
+    const today = new Date("2025-12-10");
     const diffTime = Math.abs(today - postedDate);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
@@ -637,14 +632,13 @@ const AllJobs = () => {
     </label>
   );
 
-  // Check if job is urgent/featured based on dates
+  // Check if job is urgent/featured
   const isUrgent = (job) => {
     const daysLeft = getDaysLeft(job);
-    return daysLeft <= 3 && daysLeft >= 0; // Urgent if deadline within 3 days
+    return daysLeft <= 3 && daysLeft >= 0;
   };
 
   const isFeatured = (job) => {
-    // Featured if posted recently (within 7 days)
     if (!job.jobPostedDate) return false;
     const postedDate = new Date(job.jobPostedDate);
     const today = new Date("2025-12-10");
@@ -702,7 +696,6 @@ const AllJobs = () => {
       </div>
 
       <div className="container mx-auto px-4 py-6">
-        {/* Mobile Filter Toggle */}
         <div className="lg:hidden mb-6">
           <button
             onClick={() => setIsFilterOpen(!isFilterOpen)}
@@ -733,7 +726,6 @@ const AllJobs = () => {
         </div>
 
         <div className="flex gap-6">
-          {/* Filters Sidebar */}
           <div
             className={`
             ${isFilterOpen ? "block" : "hidden"}

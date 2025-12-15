@@ -22,6 +22,8 @@ import {
   FaShippingFast,
   FaPlusCircle,
   FaChevronRight,
+  FaChevronDown,
+  FaChevronUp,
   FaCode,
   FaUserTie,
   FaSearch,
@@ -47,6 +49,20 @@ const JobCategory = () => {
   const [actualCompanies, setActualCompanies] = useState([]);
   const [actualLocations, setActualLocations] = useState([]);
   const [functions, setFunctions] = useState([]);
+  const [showAllCategories, setShowAllCategories] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Calculate total vacancies for a category
   const calculateVacancyCount = (categoryName) => {
@@ -406,47 +422,89 @@ const JobCategory = () => {
     },
   ];
 
+  // Get categories to display based on mobile and showAll state
+  const getDisplayCategories = () => {
+    if (activeTab !== "industry") return jobCategories;
+
+    if (isMobile && !showAllCategories) {
+      return jobCategories.slice(0, 10); // Show only 10 on mobile
+    }
+    return jobCategories;
+  };
+
   const renderContent = () => {
+    const displayCategories = getDisplayCategories();
+
     switch (activeTab) {
       case "industry":
         return (
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 ">
-            {jobCategories.map((category) => (
-              <motion.div
-                key={category.name}
-                whileHover={{ y: -2 }}
-                className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200 group"
-              >
-                <span className="text-gray-400 mr-3 text-lg shrink-0 group-hover:text-secondary">
-                  {category.icon}
-                </span>
-                <Link
-                  to={`/jobs/${category.path}`}
-                  className="text-gray-700 group-hover:text-primary flex items-center font-lato w-full min-w-0"
+          <div className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {displayCategories.map((category) => (
+                <motion.div
+                  key={category.name}
+                  whileHover={{ y: -2 }}
+                  className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200 group"
                 >
-                  <span className="truncate flex-1">{category.name}</span>
-                  <div className="flex flex-col items-end ml-2 shrink-0">
-                    <span className="text-xs text-gray-500">
-                      {category.jobCount} jobs
-                    </span>
-                    <span className="text-xs font-medium text-secondary">
-                      {category.vacancyCount} vacancies
-                    </span>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-            <motion.div
-              whileHover={{ y: -2 }}
-              className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200"
-            >
-              <span className="text-gray-400 mr-3 text-lg">
-                <FaPlusCircle />
-              </span>
-              <Link to="/jobs" className="text-primary font-lato font-semibold">
-                All Industries
-              </Link>
-            </motion.div>
+                  <span className="text-gray-400 mr-3 text-lg shrink-0 group-hover:text-secondary">
+                    {category.icon}
+                  </span>
+                  <Link
+                    to={`/jobs/${category.path}`}
+                    className="text-gray-700 group-hover:text-primary flex items-center font-lato w-full min-w-0"
+                  >
+                    <span className="truncate flex-1">{category.name}</span>
+                    <div className="flex flex-col items-end ml-2 shrink-0">
+                      <span className="text-xs text-gray-500">
+                        {category.jobCount} jobs
+                      </span>
+                      <span className="text-xs font-medium text-secondary">
+                        {category.vacancyCount} vacancies
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+              {(!isMobile || showAllCategories) && (
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-200"
+                >
+                  <span className="text-gray-400 mr-3 text-lg">
+                    <FaPlusCircle />
+                  </span>
+                  <Link
+                    to="/jobs"
+                    className="text-primary font-lato font-semibold"
+                  >
+                    All Industries
+                  </Link>
+                </motion.div>
+              )}
+            </div>
+
+            {/* See More/Less button for mobile */}
+            {isMobile && (
+              <div className="flex justify-center mt-4">
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowAllCategories(!showAllCategories)}
+                  className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  {showAllCategories ? (
+                    <>
+                      <FaChevronUp className="mr-2" />
+                      Show Less
+                    </>
+                  ) : (
+                    <>
+                      <FaChevronDown className="mr-2" />
+                      Show More Categories
+                    </>
+                  )}
+                </motion.button>
+              </div>
+            )}
           </div>
         );
       case "city":
@@ -594,7 +652,13 @@ const JobCategory = () => {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => {
+                    setActiveTab(tab.id);
+                    // Reset showAllCategories when switching tabs
+                    if (tab.id !== "industry") {
+                      setShowAllCategories(false);
+                    }
+                  }}
                   className={`px-4 py-3 text-sm font-semibold rounded-t-lg mx-2 transition-all duration-200 ${
                     activeTab === tab.id
                       ? "text-primary border-b-2 border-secondary bg-blue-50"
