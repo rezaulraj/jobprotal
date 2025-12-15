@@ -51,11 +51,12 @@ const HeroHome = () => {
   const calculateInternshipCount = () => {
     return jobData.filter(
       (job) =>
-        job.title.toLowerCase().includes("intern") ||
+        job.title.toLowerCase().includes("internship") ||
         (job.employeeStatus &&
-          job.employeeStatus.toLowerCase().includes("intern")) ||
-        (job.description && job.description.toLowerCase().includes("intern")) ||
-        (job.jobType && job.jobType.toLowerCase().includes("intern"))
+          job.employeeStatus.toLowerCase().includes("internship")) ||
+        (job.description &&
+          job.description.toLowerCase().includes("internship")) ||
+        (job.jobType && job.jobType.toLowerCase().includes("internship"))
     ).length;
   };
 
