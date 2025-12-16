@@ -315,17 +315,17 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: <FaPhone className="w-4 h-4 text-gray-400" />,
-      text: "+880 1700 000000",
-      href: "tel:+8801700000000",
+      text: "+880 1906-499721",
+      href: "tel:+8801906499721",
     },
     {
       icon: <FaEnvelope className="w-4 h-4 text-gray-400" />,
-      text: "info@jobsplusbd.com",
-      href: "mailto:info@jobsplusbd.com",
+      text: "Enquiry@jobplus.com.bd",
+      href: "mailto:Enquiry@jobplus.com.bd",
     },
     {
       icon: <FaMapMarkerAlt className="w-4 h-4 text-gray-400" />,
-      text: "Road 12, Block C, Uttara, Dhaka 1213, Bangladesh",
+      text: "প্লট-০২, সোনারগাঁও জনপথ রোড, সেক্টর-১২, উত্তরা, ঢাকা-১২৩০",
     },
   ];
 

@@ -292,7 +292,7 @@ const Employer = () => {
                 Need help? Call us
               </div>
               <div className="text-xl font-bold text-white bg-gradient-to-r from-white to-emerald-100 bg-clip-text text-transparent">
-                +880 1700 000000 (JOBS PLUS)
+                +8801906-499721 (JOBS PLUS)
               </div>
             </div>
             <motion.div

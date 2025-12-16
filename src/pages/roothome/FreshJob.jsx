@@ -77,7 +77,7 @@ const FreshJob = () => {
     return (
       <div className="container mx-auto px-4 py-10 font-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          <div className="grid grid-cols-2 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 items-center">
             <div className="space-y-9">
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
