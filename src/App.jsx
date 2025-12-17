@@ -14,6 +14,7 @@ import Jobpost from "./pages/post/Jobpost";
 import FreelancerJobPost from "./pages/post/FreelancerJobPost";
 import Employer from "./pages/post/Employer";
 import Company from "./pages/company/Company";
+import NotFoundPage from "./components/NotFoundPage";
 function App() {
   return (
     <>
@@ -36,7 +37,8 @@ function App() {
           <Route path="freelancer/post-job" element={<FreelancerJobPost />} />
           <Route path="companys" element={<Company />} />
           <Route path="employer" element={<Employer />} />
-          <Route path="*" element={<UnderDevelopment />} />
+          {/* <Route path="*" element={<UnderDevelopment />} /> */}
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </>
