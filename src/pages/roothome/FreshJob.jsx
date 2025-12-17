@@ -164,7 +164,7 @@ const FreshJob = () => {
             </div>
 
             <div>
-              <Link to="/jobs?experience=Fresher">
+              <Link to="/jobs?filter=fresher">
                 <button className="bg-[#4EB956] px-6 py-3 text-lg md:text-xl font-bold uppercase text-white hover:bg-[#3da345] transition-colors cursor-pointer">
                   Graduate Jobs
                 </button>

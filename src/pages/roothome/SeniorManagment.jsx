@@ -63,7 +63,7 @@ const SeniorManagment = () => {
           </div>
           <div className="shrink-0">
             <a
-              href=""
+              href="/jobs"
               className="hover:text-blue-700 text-sm font-lato hover:underline text-blue-800 font-semibold transition-colors"
             >
               View All &rarr;
