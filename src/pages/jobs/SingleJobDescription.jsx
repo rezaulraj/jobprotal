@@ -762,7 +762,7 @@ const SingleJobDescription = () => {
                     ))}
                   </div>
                   <Link
-                    to="/senior-jobs"
+                    to="/jobs"
                     className="block mt-4 text-center py-2 text-sm rounded-lg border transition-colors"
                     style={{
                       borderColor: colors.primary,

@@ -41,51 +41,59 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/123769_1.png"
+    "clogo": "https://placehold.co/200x200?text=HBL"
   },
   {
-    "id": 6,
-    "title": "Associate Director, Finance & Administration",
-    "company": "Jhpiego",
+    "id": 62,
+    "title": "Senior Flutter / UI‑UX Developer",
+    "company": "ChefOnline",
     "location": "Dhaka",
     "salary": {
       "min": 0,
       "max": 0,
-      "default": "Not specified"
+      "default": "Negotiable"
     },
-    "vacancy": 5,
-    "experience": 8,
-    "category": "Accounting/Finance",
-    "type": "Contractual",
-    "gender": "All eligible",
-    "education": "Master's in Finance/Accounting. CA/ACCA preferred",
-    "description": "Lead finance and administration functions for health programs. Responsibilities include financial management, compliance, procurement, team leadership, reporting, and supporting program implementation.",
+    "vacancy": 3,
+    "category": "IT/Telecommunication",
+    "experience": [7, 10],
+    "subCategory": "App Developer",
+    "employeeStatus": "Full Time",
+    "jobType": "Hybrid",
+    "jobPostedDate": "2025-11-21",
+    "jobEndDate": "2025-12-30",
+    "gender": "Anyone Can Apply",
+    "education": "BSc in Graphic Design, Multimedia, Computer Science or related",
+    "description": "Lead the design and development of modern, user‑centric mobile applications for ChefOnline. Manage full mobile app lifecycle from concept and UI/UX design to deployment, ensuring quality, performance, responsiveness and brand compliance.",
     "requirements": [
-      "Oversee financial management and budgeting",
-      "Ensure compliance with donor and organizational policies",
-      "Manage procurement and administrative operations",
-      "Lead and mentor finance and admin teams",
-      "Prepare financial reports and ensure audit readiness",
-      "Support program implementation with financial oversight"
+      "Proven experience with Flutter and strong UI/UX portfolio",
+      "Advanced proficiency in Flutter, Dart, mobile architectures",
+      "Skilled with design tools like Figma or Adobe XD",
+      "Experience with REST APIs, Firebase or similar backend integrations",
+      "Strong understanding of mobile UX principles, prototyping, animations and responsive design",
+      "Good communication skills"
     ],
-    "benefits": ["As per organization policy"],
+    "benefits": [
+      "Weekly 2 holidays",
+      "Yearly salary review",
+      "2 Festival Bonuses"
+    ],
     "skills": [
-      "Financial Management",
-      "Donor Compliance",
-      "Budgeting",
-      "Team Leadership",
-      "NGO Operations",
-      "Strong leadership skills",
-      "Detail-oriented and analytical",
-      "Excellent communication"
+      "Flutter",
+      "Dart",
+      "Mobile App Development",
+      "UI/UX Design",
+      "Figma / Adobe XD",
+      "REST API Integration",
+      "Firebase (or similar)",
+      "Animations & Custom UI"
     ],
     "compnay": {
       "website": "",
-      "email": "bd-recruitment@jhpiego.org",
+      "email": "",
       "phone": "",
-      "address": "Dhaka"
+      "address": "21/A Navana Tower, 45 Gulshan South C/A, Circle‑1, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/52990_1.png"
+    "clogo": "https://corporate.bdjobs.com/logos/85641_1.png"
   },
   {
     "id": 7,
@@ -136,63 +144,9 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/47268_1.png"
+    "clogo": "https://placehold.co/200x200?text=DPGSL"
   },
-  {
-    "id": 11,
-    "title": "Senior Officer, Finance and Accounts",
-    "company": "BRAC Institute of Governance and Development (BIGD)",
-    "location": "Dhaka",
-    "salary": {
-      "min": 0,
-      "max": 0,
-      "default": "Not specified"
-    },
-    "vacancy": 2,
-    "experience": 4,
-    "category": "Accounting/Finance",
-    "type": "Full Time",
-    "gender": "All eligible",
-    "education": "MBA (Accounting/Finance) or MBS in Accounting or equivalent; CA knowledge under supervision of a reputed CA firm is an advantage",
-    "description": "Manage day-to-day finance and accounts operations for BIGD, including project accounting, donor-funded project financial reporting, bank operations, and reconciliation.",
-    "requirements": [
-      "Prepare financial proposals for various donors and donor-reports",
-      "Prepare project budgets and monitor fund utilization",
-      "Update project expenses and ensure accurate booking under correct project head",
-      "Post regular transactions into accounting software and perform monthly bank and cash reconciliation",
-      "Maintain proper vouchers, documents and records",
-      "Manage banking operations including cheque/EFT preparation and disbursement",
-      "Coordinate with internal and external audit teams",
-      "Provide monthly, quarterly and annual closing entries/journal vouchers",
-      "Prepare monthly, quarterly and annual financial statements",
-      "Coordinate with program teams to reconcile donor reports with project accounts",
-      "Liaise with banks/NBFIs for day-to-day operations",
-      "Other finance/accounting related tasks as assigned"
-    ],
-    "benefits": [],
-    "skills": [
-      "Accounting / Book-keeping",
-      "Project Financial Management",
-      "Budgeting & Fund Utilization Monitoring",
-      "Accounting Software Usage",
-      "Bank Reconciliation",
-      "Donor Reporting",
-      "Audit Coordination",
-      "Financial Statement Preparation",
-      "Good interpersonal and communication skills",
-      "Time management",
-      "Integrity",
-      "Attention to detail",
-      "Ability to work under deadlines"
-    ],
-    "compnay": {
-      "website": "",
-      "email": "",
-      "phone": "",
-      "address": "Mohakhali, Dhaka"
-    },
-    "clogo": "https://corporate.bdjobs.com/logos/33061_6.png"
-  },
+
   {
     "id": 13,
     "title": "Senior Analyst - Internal Audit & Compliance",
@@ -358,6 +312,67 @@
       "address": "Red Crescent Concord Tower, 17 Mohakhali C/A, Dhaka-1212"
     },
     "clogo": "https://corporate.bdjobs.com/logos/24849_2.png"
+  },
+  {
+    "id": 27,
+    "title": "Senior Officer, Inquiry",
+    "company": "BRAC",
+    "location": "Dhaka",
+    "salary": {
+      "min": 0,
+      "max": 0,
+      "default": "Not specified"
+    },
+    "vacancy": 3,
+    "category": "Law/Legal",
+    "experience": [3, 5],
+    "subCategory": "Law",
+    "employeeStatus": "Full Time",
+    "jobType": "Onsite",
+    "jobPostedDate": "2025-12-09",
+    "jobEndDate": "2026-01-10",
+    "gender": "Anyone Can Apply",
+    "education": "Master’s degree in Law or relevant discipline",
+    "description": "Handle and resolve complaints through fair and thorough inquiry processes ensuring adherence to organisational policies, legal standards, and safeguarding guidelines.",
+    "requirements": [
+      "Review assigned complaints and assess risks, identifying key issues for investigation.",
+      "Develop an inquiry plan — prepare checklists, questionnaires, identify interviewees and required documents/evidence.",
+      "Engage with concerned personnel to secure cooperation for investigation and evidence collection.",
+      "Conduct interviews of parties and witnesses, verify evidence and maintain proper records with signatures.",
+      "Prepare and submit inquiry reports (preliminary and final), issue show-cause or notice letters, support review hearings.",
+      "Present findings to the SGMC forum and/or Ombudsperson, ensuring fair hearing and informed decisions.",
+      "Ensure confidentiality, due process and procedural integrity throughout the inquiry.",
+      "Promote and uphold safeguarding standards, including prevention of harassment, exploitation, abuse (SEA), and awareness on PSHEA policies.",
+      "Follow safeguarding reporting procedures in case of reportable incidents, and support safeguarding implementation across teams."
+    ],
+    "benefits": [
+      "Festival Bonus",
+      "Contributory Provident Fund",
+      "Gratuity",
+      "Health & Life Insurance",
+      "Maternity/Paternity Leave",
+      "Wellness Centre",
+      "Day Care facility (as per policy)"
+    ],
+    "skills": [
+      "Verbal and written communication",
+      "MS Office proficiency",
+      "Typing / transcription (Bijoy/Avro)",
+      "Understanding of labour laws and safeguarding/PSHEA standards",
+      "Investigation skills",
+      "Report writing",
+      "Integrity",
+      "Confidentiality",
+      "Analytical thinking",
+      "Ability to travel as needed"
+    ],
+    "compnay": {
+      "website": "",
+      "email": "",
+      "phone": "",
+      "address": "Mohakhali, Dhaka-1212, Bangladesh"
+    },
+    "clogo": "https://corporate.bdjobs.com/logos/91316_2.png"
   },
   {
     "id": 40,
