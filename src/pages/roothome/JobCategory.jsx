@@ -146,7 +146,6 @@ const JobCategory = () => {
       }
     });
 
-    // Get function icon
     const getFunctionIcon = (funcName) => {
       const iconMap = {
         Accounting: <FaCalculator />,
@@ -197,7 +196,7 @@ const JobCategory = () => {
           .replace(/\s+/g, "-"),
       }))
       .sort((a, b) => b.count - a.count)
-      .slice(0, 8); // Top 8 functions
+      .slice(0, 8);
   };
 
   // Get unique companies from jobData
@@ -227,7 +226,6 @@ const JobCategory = () => {
     const locationMap = {};
     jobData.forEach((job) => {
       if (job.location) {
-        // Clean up location data (remove extra details)
         let cleanLocation = job.location;
         if (cleanLocation.includes("(")) {
           cleanLocation = cleanLocation.split("(")[0].trim();
@@ -422,12 +420,11 @@ const JobCategory = () => {
     },
   ];
 
-  // Get categories to display based on mobile and showAll state
   const getDisplayCategories = () => {
     if (activeTab !== "industry") return jobCategories;
 
     if (isMobile && !showAllCategories) {
-      return jobCategories.slice(0, 10); // Show only 10 on mobile
+      return jobCategories.slice(0, 10);
     }
     return jobCategories;
   };
@@ -483,7 +480,6 @@ const JobCategory = () => {
               )}
             </div>
 
-            {/* See More/Less button for mobile */}
             {isMobile && (
               <div className="flex justify-center mt-4">
                 <motion.button
@@ -627,7 +623,6 @@ const JobCategory = () => {
     { id: "function", label: "By Function" },
   ];
 
-  // Calculate total job count
   const totalJobs = jobData.length;
   const totalVacancies = jobData.reduce(
     (sum, job) => sum + (Number(job.vacancy) || 0),
@@ -654,7 +649,6 @@ const JobCategory = () => {
                   key={tab.id}
                   onClick={() => {
                     setActiveTab(tab.id);
-                    // Reset showAllCategories when switching tabs
                     if (tab.id !== "industry") {
                       setShowAllCategories(false);
                     }

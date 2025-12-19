@@ -264,7 +264,7 @@ const Footer = () => {
     {
       icon: <FaFacebookF className="w-4 h-4" />,
       label: "Facebook",
-      link: "https://www.facebook.com/jobsplus01/",
+      link: "https://www.facebook.com/jobsplus.official",
       color: "hover:bg-blue-600",
       bg: "bg-gray-700",
     },
