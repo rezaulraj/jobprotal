@@ -2,7 +2,7 @@
   {
     "id": 2,
     "title": "Senior Executive/Executive (Internal Audit)",
-    "company": "Haque Brothers Ltd",
+    "company": "Haque Brothers Industries Ltd",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -41,7 +41,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "https://placehold.co/200x200?text=HBL"
+    "clogo": "/public/images/company/2-img.jpg"
   },
   {
     "id": 62,
@@ -98,7 +98,7 @@
   {
     "id": 7,
     "title": "Senior Engineer (I&C)",
-    "company": "Doreen Power Generations and Systems Limited",
+    "company": "ActioNova Engineering & Construction Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -144,13 +144,13 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "https://placehold.co/200x200?text=DPGSL"
+    "clogo": "/public/images/company/4-img.jpg"
   },
 
   {
     "id": 13,
     "title": "Senior Analyst - Internal Audit & Compliance",
-    "company": "Expo Holdings (BD) Limited",
+    "company": "ExpoLink Holdings Bangladesh Ltd.",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 30000,
@@ -196,12 +196,12 @@
       "phone": "",
       "address": "206/A (Level 2), Tejgaon Industrial Area, Dhaka-1208"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/103391_1.png"
+    "clogo": "/public/images/company/13-img.jpg"
   },
   {
     "id": 15,
     "title": "Sr. Executive / Executive - Finance",
-    "company": "Galaxy Bangladesh Group",
+    "company": "Galaxy Star Enterprises (BD) Ltd",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -262,12 +262,12 @@
       "phone": "",
       "address": "Taj Marriott 5th floor, 25 Gulshan Avenue, Gulshan-1, Dhaka-1212, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/25467_1.png"
+    "clogo": "/public/images/company/15-img.jpg"
   },
   {
     "id": 17,
     "title": "Manager - Costing, Budgeting & MIS",
-    "company": "M & J Group",
+    "company": "P&J Manufacturing Group Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -311,12 +311,12 @@
       "phone": "",
       "address": "Red Crescent Concord Tower, 17 Mohakhali C/A, Dhaka-1212"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/24849_2.png"
+    "clogo": "/public/images/company/17-img.jpg"
   },
   {
     "id": 27,
     "title": "Senior Officer, Inquiry",
-    "company": "BRAC",
+    "company": "BRACON Development Trust",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -372,12 +372,12 @@
       "phone": "",
       "address": "Mohakhali, Dhaka-1212, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/91316_2.png"
+    "clogo": "/public/images/company/27-img.jpg"
   },
   {
     "id": 40,
     "title": "Senior Counselor / Counselor (Tourist Visa)",
-    "company": "Visa World Bangladesh",
+    "company": "GlobalPass Bangladesh Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -421,7 +421,7 @@
       "phone": "",
       "address": "Florida Castle, Level-3, House-7, Road 23/A, Gulshan-1, Dhaka-1212, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/39765_0.png"
+    "clogo": "/public/images/company/40-img.jpg"
   },
   {
     "id": 70,

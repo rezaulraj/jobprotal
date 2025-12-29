@@ -49,7 +49,7 @@ const Company = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
             Companies
@@ -87,12 +87,12 @@ const Company = () => {
                 <motion.div
                   whileHover={{ rotate: [0, 10, -10, 0] }}
                   transition={{ duration: 0.5 }}
-                  className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-white shadow-md"
+                  className="w-20 h-20 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white shadow-md"
                 >
                   <img
                     src={company.logo}
                     alt={company.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-center"
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = `https://ui-avatars.com/api/?name=${company.name}&background=4f46e5&color=fff&bold=true`;
