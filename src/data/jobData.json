@@ -5648,7 +5648,7 @@
   {
     "id": 110,
     "title": "Quality Assurance Executive",
-    "company": "Akij Food & Beverage Ltd.",
+    "company": "Avaran Nourish & Brew Co.",
     "location": "Dhaka (Tejgaon)",
     "salary": {
       "min": 28000,
@@ -5691,12 +5691,12 @@
       "phone": "+8809610010020",
       "address": "Tejgaon Industrial Area, Dhaka"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/36/1/akij-group-logo-png_seeklogo-365567.png"
+    "clogo": "/images/company/110-img.png"
   },
   {
     "id": 111,
     "title": "Machine Operator (Knitting & Sewing)",
-    "company": "DBL Group",
+    "company": "Terranova Nexus Industries",
     "location": "Gazipur",
     "salary": {
       "min": 18000,
@@ -5739,12 +5739,12 @@
       "phone": "+8809611212121",
       "address": "Kashimpur, Gazipur"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/39/1/dbl-group-logo-png_seeklogo-393232.png"
+    "clogo": "/images/company/111-img.png"
   },
   {
     "id": 112,
     "title": "Lecturer (Computer Science & Engineering)",
-    "company": "Daffodil International University",
+    "company": "Aurelian Global Academia",
     "location": "Dhaka (Dhanmondi / Ashulia)",
     "salary": {
       "min": 35000,
@@ -5787,12 +5787,12 @@
       "phone": "+8809612101010",
       "address": "Daffodil Tower, Dhanmondi, Dhaka"
     },
-    "clogo": "https://i.pinimg.com/564x/72/2c/57/722c5710002814308caff02ffb294c0d.jpg"
+    "clogo": "/images/company/112-img.png"
   },
   {
     "id": 113,
     "title": "School Coordinator",
-    "company": "Scholastica",
+    "company": "Axiom Prep Collegiate",
     "location": "Dhaka (Uttara)",
     "salary": {
       "min": 30000,
@@ -5835,12 +5835,12 @@
       "phone": "+8809613737373",
       "address": "Uttara, Dhaka"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/21/1/scholastica-logo-png_seeklogo-211497.png"
+    "clogo": "/images/company/113-img.png"
   },
   {
     "id": 114,
     "title": "Training Officer",
-    "company": "BRAC Skills Development Programme",
+    "company": "Vistara Capability Initiative (VCI)",
     "location": "Dhaka",
     "salary": {
       "min": 28000,
@@ -5883,12 +5883,12 @@
       "phone": "+8802222228122",
       "address": "BRAC Centre, Mohakhali, Dhaka"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/31/2/brac-logo-png_seeklogo-313020.png"
+    "clogo": "/images/company/114-img.png"
   },
   {
     "id": 115,
     "title": "Project Officer (Field Operations)",
-    "company": "BRAC",
+    "company": "The Aurora Reach Collective",
     "location": "Dhaka & Field Areas",
     "salary": {
       "min": 30000,
@@ -5931,12 +5931,12 @@
       "phone": "+880255663000",
       "address": "BRAC Centre, 75 Mohakhali, Dhaka 1212"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/31/2/brac-logo-png_seeklogo-313020.png"
+    "clogo": "/images/company/115-img.png"
   },
   {
     "id": 116,
     "title": "Monitoring & Evaluation Officer",
-    "company": "ASA",
+    "company": "Solstice Microfinance Alliance",
     "location": "Dhaka",
     "salary": {
       "min": 35000,
@@ -5979,12 +5979,12 @@
       "phone": "+88029128531",
       "address": "ASA Tower, 23/3 Bir Uttam A.N.M Shamsuzzoha Road, Shyamoli, Dhaka"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/41/1/asa-logo-png_seeklogo-410402.png"
+    "clogo": "/images/company/116-img.png"
   },
   {
     "id": 117,
     "title": "Community Health Worker",
-    "company": "JAAGO Foundation",
+    "company": "Awaken Horizons Trust",
     "location": "Chattogram & Cox’s Bazar",
     "salary": {
       "min": 18000,
@@ -6027,12 +6027,12 @@
       "phone": "+88028837853",
       "address": "KA-10/5, Shahjadpur, Pragati Sarani, Gulshan, Dhaka"
     },
-    "clogo": "https://ik.imagekit.io/a4izklulj/images/2024/09/jaago-logo_1727084165_w2fULrshk.png?tr=f-auto"
+    "clogo": "/images/company/117-img.png"
   },
   {
     "id": 118,
     "title": "Recruitment Executive",
-    "company": "Bdjobs.com Ltd.",
+    "company": "CareerLoom Digital",
     "location": "Dhaka (Kawran Bazar)",
     "salary": {
       "min": 25000,
@@ -6075,12 +6075,12 @@
       "phone": "+880258155120",
       "address": "Plot E-5, CWS (B), Gulshan South Avenue, Dhaka-1212"
     },
-    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH02_ZqwDwqAa-BG704onHwtjhterrcwsOnQ&s"
+    "clogo": "/images/company/118-img.png"
   },
   {
     "id": 119,
     "title": "Senior Recruitment Consultant",
-    "company": "Grow n Excel",
+    "company": "Flourish & Ascent",
     "location": "Dhaka (Banani)",
     "salary": {
       "min": 40000,
@@ -6123,12 +6123,12 @@
       "phone": "+88028822286",
       "address": "House 15, Block C, Road 28, Banani, Dhaka"
     },
-    "clogo": "https://grownexcel.com/images/02%20GNE%20Logo.jpg"
+    "clogo": "/images/company/119-img.png"
   },
   {
     "id": 120,
     "title": "Talent Acquisition Specialist",
-    "company": "Enroute International Ltd.",
+    "company": "Waypoint Global Ventures",
     "location": "Dhaka (Tejgaon)",
     "salary": {
       "min": 30000,
@@ -6171,6 +6171,6 @@
       "phone": "+8809612244222",
       "address": "House 57, Road 25, Block A, Banani, Dhaka"
     },
-    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yH0MUlK6enaWh93Xoe9OP53pAphoCtcOfQ&s"
+    "clogo": "/images/company/120-img.png"
   }
 ]
