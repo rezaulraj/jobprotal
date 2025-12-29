@@ -9,9 +9,9 @@ const processCompanyData = () => {
   jobData.forEach((job) => {
     if (!companyMap.has(job.company)) {
       companyMap.set(job.company, {
-        name: job.company,
+        name: job?.company,
         logo:
-          job.clogo ||
+          job?.clogo ||
           `https://ui-avatars.com/api/?name=${job.company}&background=4f46e5&color=fff&bold=true`,
         totalJobs: 0,
       });
@@ -90,7 +90,7 @@ const Company = () => {
                   className="w-20 h-20 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white shadow-md"
                 >
                   <img
-                    src={company.logo}
+                    src={company?.logo}
                     alt={company.name}
                     className="w-full h-full object-center"
                     onError={(e) => {
