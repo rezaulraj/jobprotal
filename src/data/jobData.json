@@ -43,7 +43,7 @@
       "phone": "",
       "address": "C Block, Sector 8, Noida, Uttar Pradesh 201301"
     },
-    "clogo": "/public/images/company/1-img.jpg"
+    "clogo": "/images/company/1-img.jpg"
   },
   {
     "id": 2,
@@ -91,7 +91,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/2-img.jpg"
+    "clogo": "/images/company/2-img.jpg"
   },
   {
     "id": 3,
@@ -141,7 +141,7 @@
       "phone": "",
       "address": "Dhaka, Bangladesh"
     },
-    "clogo": "/public/images/company/2-img.jpg"
+    "clogo": "/images/company/2-img.jpg"
   },
   {
     "id": 4,
@@ -196,7 +196,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/3-img.jpg"
+    "clogo": "/images/company/3-img.jpg"
   },
   {
     "id": 5,
@@ -249,7 +249,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/4-img.jpg"
+    "clogo": "/images/company/4-img.jpg"
   },
   {
     "id": 6,
@@ -297,7 +297,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/5-img.jpg"
+    "clogo": "/images/company/5-img.jpg"
   },
   {
     "id": 7,
@@ -352,7 +352,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/4-img.jpg"
+    "clogo": "/images/company/4-img.jpg"
   },
   {
     "id": 8,
@@ -400,7 +400,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/7-img.jpg"
+    "clogo": "/images/company/7-img.jpg"
   },
   {
     "id": 9,
@@ -453,7 +453,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/4-img.jpg"
+    "clogo": "/images/company/4-img.jpg"
   },
   {
     "id": 10,
@@ -503,7 +503,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/4-img.jpg"
+    "clogo": "/images/company/4-img.jpg"
   },
   {
     "id": 11,
@@ -562,7 +562,7 @@
       "phone": "",
       "address": "Mohakhali, Dhaka"
     },
-    "clogo": "/public/images/company/11-img.jpg"
+    "clogo": "/images/company/11-img.jpg"
   },
   {
     "id": 12,
@@ -622,7 +622,7 @@
       "phone": "",
       "address": "Corporate Head Office: Primitek Tower, House # 43/B, Road # 24, Block # CWS(B), Gulshan-1, Dhaka-1212, Bangladesh"
     },
-    "clogo": "/public/images/company/12-img.jpg"
+    "clogo": "/images/company/12-img.jpg"
   },
   {
     "id": 13,
@@ -677,7 +677,7 @@
       "phone": "",
       "address": "206/A (Level 2), Tejgaon Industrial Area, Dhaka-1208"
     },
-    "clogo": "/public/images/company/13-img.jpg"
+    "clogo": "/images/company/13-img.jpg"
   },
   {
     "id": 14,
@@ -730,7 +730,7 @@
       "phone": "",
       "address": "Suvastu Suraiya Trade Center, 9th-13th Floor, Plot 57, Road 21, Kemal Ataturk Avenue, Banani, Dhaka-1213"
     },
-    "clogo": "/public/images/company/14-img.jpg"
+    "clogo": "/images/company/14-img.jpg"
   },
   {
     "id": 15,
@@ -800,7 +800,7 @@
       "phone": "",
       "address": "Taj Marriott 5th floor, 25 Gulshan Avenue, Gulshan-1, Dhaka-1212, Bangladesh"
     },
-    "clogo": "/public/images/company/15-img.jpg"
+    "clogo": "/images/company/15-img.jpg"
   },
   {
     "id": 16,
@@ -848,7 +848,7 @@
       "phone": "",
       "address": "House 664/A, Road 09 (Main Road), DOHS Mirpur, Dhaka"
     },
-    "clogo": "/public/images/company/16-img.jpg"
+    "clogo": "/images/company/16-img.jpg"
   },
   {
     "id": 17,
@@ -901,7 +901,7 @@
       "phone": "",
       "address": "Red Crescent Concord Tower, 17 Mohakhali C/A, Dhaka-1212"
     },
-    "clogo": "/public/images/company/17-img.jpg"
+    "clogo": "/images/company/17-img.jpg"
   },
   {
     "id": 18,
@@ -950,7 +950,7 @@
       "phone": "",
       "address": "Not specified"
     },
-    "clogo": "/public/images/company/18-img.jpg"
+    "clogo": "/images/company/18-img.jpg"
   },
   {
     "id": 19,
@@ -1013,7 +1013,7 @@
       "phone": "",
       "address": "Dhaka (Shyamoli)"
     },
-    "clogo": "/public/images/company/19-img.jpg"
+    "clogo": "/images/company/19-img.jpg"
   },
   {
     "id": 20,
@@ -1074,7 +1074,7 @@
       "phone": "01752063857",
       "address": "Bhai Bhai Market (3rd Floor), Hasnabad Container Port Road, South Keraniganj, Dhaka‑1311"
     },
-    "clogo": "/public/images/company/20-img.jpg"
+    "clogo": "/images/company/20-img.jpg"
   },
   {
     "id": 21,
@@ -1129,7 +1129,7 @@
       "phone": "",
       "address": "House‑11/B, 1st Floor, Road‑130, Gulshan‑1, Dhaka‑1212"
     },
-    "clogo": "/public/images/company/21-img.jpg"
+    "clogo": "/images/company/21-img.jpg"
   },
   {
     "id": 22,
@@ -1181,7 +1181,7 @@
       "phone": "",
       "address": "RK Road, Kaliganj, Kurigram‑5600, Bangladesh"
     },
-    "clogo": "/public/images/company/22-img.jpg"
+    "clogo": "/images/company/22-img.jpg"
   },
 
   {
@@ -1241,7 +1241,7 @@
       "phone": "",
       "address": "Islam Chamber (Level 12), 125/A, Motijheel C/A, Dhaka-1000"
     },
-    "clogo": "/public/images/company/23-img.jpg"
+    "clogo": "/images/company/23-img.jpg"
   },
   {
     "id": 24,
@@ -1306,7 +1306,7 @@
       "phone": "",
       "address": "Borak Mehnur 51/B, Kemal Ataturk Avenue, Banani, Dhaka-1213"
     },
-    "clogo": "/public/images/company/24-img.jpg"
+    "clogo": "/images/company/24-img.jpg"
   },
   {
     "id": 25,
@@ -1373,7 +1373,7 @@
       "phone": "",
       "address": "TSL Tower, House #43, Level #03, Sonargaon Janapath Road, Sector-12, Uttara, Dhaka-1230, Bangladesh"
     },
-    "clogo": "/public/images/company/25-img.jpg"
+    "clogo": "/images/company/25-img.jpg"
   },
   {
     "id": 26,
@@ -1424,7 +1424,7 @@
       "phone": "",
       "address": "Tower 117/A, Tejgaon I/A, Dhaka-1208, Bangladesh"
     },
-    "clogo": "/public/images/company/26-img.jpg"
+    "clogo": "/images/company/26-img.jpg"
   },
   {
     "id": 27,
@@ -1485,7 +1485,7 @@
       "phone": "",
       "address": "Mohakhali, Dhaka-1212, Bangladesh"
     },
-    "clogo": "/public/images/company/27-img.jpg"
+    "clogo": "/images/company/27-img.jpg"
   },
   {
     "id": 28,
@@ -1523,7 +1523,7 @@
       "phone": "",
       "address": "Mobarakgona, Mirsharai, Chattogram, Bangladesh"
     },
-    "clogo": "/public/images/company/28-img.jpg"
+    "clogo": "/images/company/28-img.jpg"
   },
   {
     "id": 29,
@@ -1583,7 +1583,7 @@
       "phone": "",
       "address": "Chaugachha, Jashore, Bangladesh"
     },
-    "clogo": "/public/images/company/29-img.jpg"
+    "clogo": "/images/company/29-img.jpg"
   },
   {
     "id": 30,
@@ -1642,7 +1642,7 @@
       "phone": "",
       "address": "Ventura Iconia, House 37, Level 3, Road 11, Block H, Banani, Dhaka-1213"
     },
-    "clogo": "/public/images/company/30-img.jpg"
+    "clogo": "/images/company/30-img.jpg"
   },
   {
     "id": 31,
@@ -1692,7 +1692,7 @@
       "phone": "",
       "address": "Dhaka"
     },
-    "clogo": "/public/images/company/31-img.jpg"
+    "clogo": "/images/company/31-img.jpg"
   },
   {
     "id": 32,
@@ -1748,7 +1748,7 @@
       "phone": "",
       "address": "House # 103, Level # 03, Suharwardy Avenue, Block # K, Sector # 10, Baridhara Diplomatic Zone, Dhaka, Bangladesh"
     },
-    "clogo": "/public/images/company/32-img.jpg"
+    "clogo": "/images/company/32-img.jpg"
   },
   {
     "id": 33,
@@ -1806,7 +1806,7 @@
       "phone": "",
       "address": "Plot-1/A, Road-2/A, Baridhara, Block-J, Dhaka-1212, Bangladesh"
     },
-    "clogo": "/public/images/company/33-img.jpg"
+    "clogo": "/images/company/33-img.jpg"
   },
   {
     "id": 34,
@@ -1860,7 +1860,7 @@
       "phone": "",
       "address": "House # 181A, Road # 13Ranavola Avenue, Sector # 10Uttara West Thana, Uttara, Dhaka-1230. Bangladesh"
     },
-    "clogo": "/public/images/company/34-img.jpg"
+    "clogo": "/images/company/34-img.jpg"
   },
   {
     "id": 35,
@@ -1922,7 +1922,7 @@
       "phone": "",
       "address": "90/1, City Center, Level 30, Motijheel C/A, Dhaka-1000"
     },
-    "clogo": "/public/images/company/35-img.jpg"
+    "clogo": "/images/company/35-img.jpg"
   },
   {
     "id": 36,
@@ -1973,7 +1973,7 @@
       "phone": "",
       "address": "Uttara, Dhaka, Bangladesh"
     },
-    "clogo": "/public/images/company/36-img.jpg"
+    "clogo": "/images/company/36-img.jpg"
   },
   {
     "id": 37,
@@ -2025,7 +2025,7 @@
       "phone": "",
       "address": "Ahmed Tower (6th Floor), Kemal Ataturk Avenue, Banani, Dhaka‑1213, Bangladesh"
     },
-    "clogo": "/public/images/company/37-img.jpg"
+    "clogo": "/images/company/37-img.jpg"
   },
   {
     "id": 38,
@@ -2080,7 +2080,7 @@
       "phone": "",
       "address": "Banani, Dhaka"
     },
-    "clogo": "/public/images/company/38-img.jpg"
+    "clogo": "/images/company/38-img.jpg"
   },
   {
     "id": 39,
@@ -2133,7 +2133,7 @@
       "phone": "",
       "address": "Dhaka, Bangladesh"
     },
-    "clogo": "/public/images/company/39-img.jpg"
+    "clogo": "/images/company/39-img.jpg"
   },
   {
     "id": 40,
@@ -2186,7 +2186,7 @@
       "phone": "",
       "address": "Florida Castle, Level-3, House-7, Road 23/A, Gulshan-1, Dhaka-1212, Bangladesh"
     },
-    "clogo": "/public/images/company/40-img.jpg"
+    "clogo": "/images/company/40-img.jpg"
   },
   {
     "id": 41,
