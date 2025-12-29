@@ -131,15 +131,15 @@ const SeniorManagment = () => {
             {seniorJobs.map((job, index) => (
               <div key={index} className="w-56 shrink-0 overflow-hidden">
                 <Link to={`/job/${job.id}`} className="block">
-                  <div className="w-36 overflow-hidden">
+                  <div className="w-46 h-36 overflow-hidden">
                     <img
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-center"
                       src={job.clogo}
                       alt={job.companyname}
                     />
                   </div>
 
-                  <div className="p-4">
+                  <div className="px-2 py-4">
                     <h3 className="text-[15px] font-semibold font-lato text-gray-700 mb-1 line-clamp-1">
                       {job.title}
                     </h3>

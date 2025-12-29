@@ -92,7 +92,7 @@ const Company = () => {
                   <img
                     src={company?.logo}
                     alt={company.name}
-                    className="w-full h-full object-center"
+                    className="w-full h-full object-cover object-center"
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = `https://ui-avatars.com/api/?name=${company.name}&background=4f46e5&color=fff&bold=true`;
