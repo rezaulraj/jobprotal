@@ -39,7 +39,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "support@classifyiq.com",
+      "email": "",
       "phone": "",
       "address": "C Block, Sector 8, Noida, Uttar Pradesh 201301"
     },
@@ -87,7 +87,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "Not specified",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -137,7 +137,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "hr@haquebrothers.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka, Bangladesh"
     },
@@ -192,7 +192,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "hr@mirtelecom.net",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -245,7 +245,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "pabnaction@gmail.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -293,7 +293,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "bd-recruitment@jhpiego.org",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -348,7 +348,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "hr@doreenpower.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -396,7 +396,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "career@apexfootwear.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -449,7 +449,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "pabnaction@gmail.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -499,7 +499,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "pabnaction@gmail.com",
+      "email": "",
       "phone": "",
       "address": "Dhaka"
     },
@@ -844,7 +844,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "eel.service24@gmail.com",
+      "email": "",
       "phone": "",
       "address": "House 664/A, Road 09 (Main Road), DOHS Mirpur, Dhaka"
     },
@@ -1071,7 +1071,7 @@
     "compnay": {
       "website": "",
       "email": "",
-      "phone": "01752063857",
+      "phone": "",
       "address": "Bhai Bhai Market (3rd Floor), Hasnabad Container Port Road, South Keraniganj, Dhaka‑1311"
     },
     "clogo": "/images/company/20-img.png"
@@ -1177,7 +1177,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "afadkuri@gmail.com",
+      "email": "",
       "phone": "",
       "address": "RK Road, Kaliganj, Kurigram‑5600, Bangladesh"
     },
@@ -1802,7 +1802,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "Jobs.SagorConsultancy@gmail.com",
+      "email": "",
       "phone": "",
       "address": "Plot-1/A, Road-2/A, Baridhara, Block-J, Dhaka-1212, Bangladesh"
     },
@@ -2076,7 +2076,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "info@visabeebd.com",
+      "email": "",
       "phone": "",
       "address": "Banani, Dhaka"
     },
@@ -2182,7 +2182,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "info.hrvwb@gmail.com",
+      "email": "",
       "phone": "",
       "address": "Florida Castle, Level-3, House-7, Road 23/A, Gulshan-1, Dhaka-1212, Bangladesh"
     },
@@ -2716,7 +2716,7 @@
   {
     "id": 51,
     "title": "Customer Care Executive (Female)",
-    "company": "Global.",
+    "company": "NovaTech Agency Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 13000,
@@ -2756,16 +2756,16 @@
     ],
     "compnay": {
       "website": "",
-      "email": "hr.globalbangladesh@gmail.com",
+      "email": "",
       "phone": "",
       "address": "H-04, R-20, Pallabi, Mirpur-12, Dhaka, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/38002_0.png"
+    "clogo": "/images/company/51-img.png"
   },
   {
     "id": 52,
     "title": "Officer, IT and Support",
-    "company": "PMASPIRE LIMITED",
+    "company": "ProMentor Vision Limited",
     "location": "Dhaka",
     "salary": {
       "min": 30000,
@@ -2816,12 +2816,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/46189_3.png"
+    "clogo": "/images/company/52-img.png"
   },
   {
     "id": 53,
     "title": "Telesales Executive (Female)",
-    "company": "Bdjobs.com Limited",
+    "company": "CareerBridge Online",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -2869,12 +2869,12 @@
       "phone": "",
       "address": "BDBL Building (Old BSRS), 12 Kawran Bazar C/A, Dhaka-1215, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/15131_5.png"
+    "clogo": "/images/company/53-img.png"
   },
   {
     "id": 54,
     "title": "Executive/Sr. Executive – Communication & Business Development",
-    "company": "Zubion Development Solutions Limited (ZDSL)",
+    "company": "TechZora Development Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -2929,14 +2929,14 @@
       "website": "",
       "email": "",
       "phone": "",
-      "address": "Zubion Centre, House-08, Road-2/A, Sector-15/I, Uttara, Dhaka-1230"
+      "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/97207_0.jpg"
+    "clogo": "/images/company/54-img.png"
   },
   {
     "id": 55,
     "title": "Full Stack Developer (React / Next.js / Node.js)",
-    "company": "R & H Business Solution",
+    "company": "AxisPoint Business Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -2981,12 +2981,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/101126_0.png"
+    "clogo": "/images/company/55-img.png"
   },
   {
     "id": 56,
     "title": "Front End Engineer (React / Next.js)",
-    "company": "Project 2morrow Software Ltd.",
+    "company": "NextPhase Software Technologies Ltd",
     "location": "Dhaka",
     "salary": {
       "min": 20000,
@@ -3032,16 +3032,16 @@
     ],
     "compnay": {
       "website": "",
-      "email": "hr@p2msoft.com",
+      "email": "",
       "phone": "",
       "address": "House No. 40, Block – I, Rd No 1/A, Banani, Dhaka 1212, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/195095_0.png"
+    "clogo": "/images/company/56-img.png"
   },
   {
     "id": 57,
     "title": "Odoo Developer / Software Engineer",
-    "company": "Equal & Co. Consulting Ltd",
+    "company": "BalancePoint Consulting Group",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -3086,17 +3086,17 @@
       "ERP / Accounting workflows"
     ],
     "compnay": {
-      "website": "https://www.equalandco.com",
+      "website": "",
       "email": "",
       "phone": "",
       "address": "House # 18‑20, Road # 10, South Banasree, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/196416_0.jpg"
+    "clogo": "/images/company/57-img.png"
   },
   {
     "id": 58,
     "title": "Tech Support Specialist",
-    "company": "Planet Education Networks Limited",
+    "company": "EduOrbit Learning Networks Ltd.",
     "location": "Chattogram",
     "salary": {
       "min": 60000,
@@ -3138,18 +3138,18 @@
       "English proficiency"
     ],
     "compnay": {
-      "website": "https://www.pengroup.com",
+      "website": "",
       "email": "",
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/158794_1.png"
+    "clogo": "/images/company/58-img.png"
   },
 
   {
     "id": 59,
     "title": "Software Developer",
-    "company": "Hana System Limited",
+    "company": "Vionix System Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 30000,
@@ -3196,16 +3196,16 @@
     ],
     "compnay": {
       "website": "",
-      "email": "HR@hana-ltd.com",
+      "email": "",
       "phone": "",
       "address": "Shanta Western Tower Level-3, 186, Bir Uttam Mir Shawkat Ali Road, Tejgaon I/A, Dhaka‑1208, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/69777_2.png"
+    "clogo": "/images/company/59-img.png"
   },
   {
     "id": 60,
     "title": "Senior SEO Analyst / Executive (Night Shift)",
-    "company": "ChefOnline",
+    "company": "Craft Digital Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3249,12 +3249,12 @@
       "phone": "",
       "address": "Gulshan‑1, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/85641_1.png"
+    "clogo": "/images/company/60-img.png"
   },
   {
     "id": 61,
     "title": "SEO Manager / Strategist (Senior – Data & Analytics Focus)",
-    "company": "ChefOnline",
+    "company": "Craft Digital Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3271,7 +3271,7 @@
     "jobEndDate": "2025-12-30",
     "gender": "Anyone Can Apply",
     "education": "Bachelor’s or Master’s in Marketing, Business, or relevant field",
-    "description": "Lead SEO and analytics strategy for ChefOnline, focusing on data‑driven growth. Oversee technical SEO audits, keyword research, content optimization, and performance tracking. Collaborate with content, design, and development teams to improve search visibility, user acquisition and conversion metrics.",
+    "description": "Lead SEO and analytics strategy for Craft Digital Solutions, focusing on data‑driven growth. Oversee technical SEO audits, keyword research, content optimization, and performance tracking. Collaborate with content, design, and development teams to improve search visibility, user acquisition and conversion metrics.",
     "requirements": [
       "Minimum 7 years experience in SEO with strong expertise in technical SEO, audits, and analytics",
       "Deep knowledge of SEO tools, Google Analytics, Search Console, and data‑driven decision making",
@@ -3297,12 +3297,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/85641_1.png"
+    "clogo": "/images/company/60-img.png"
   },
   {
     "id": 62,
     "title": "Senior Flutter / UI‑UX Developer",
-    "company": "ChefOnline",
+    "company": "Craft Digital Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3319,7 +3319,7 @@
     "jobEndDate": "2025-12-30",
     "gender": "Anyone Can Apply",
     "education": "BSc in Graphic Design, Multimedia, Computer Science or related",
-    "description": "Lead the design and development of modern, user‑centric mobile applications for ChefOnline. Manage full mobile app lifecycle from concept and UI/UX design to deployment, ensuring quality, performance, responsiveness and brand compliance.",
+    "description": "Lead the design and development of modern, user‑centric mobile applications for Craft Digital Solutions. Manage full mobile app lifecycle from concept and UI/UX design to deployment, ensuring quality, performance, responsiveness and brand compliance.",
     "requirements": [
       "Proven experience with Flutter and strong UI/UX portfolio",
       "Advanced proficiency in Flutter, Dart, mobile architectures",
@@ -3349,12 +3349,12 @@
       "phone": "",
       "address": "21/A Navana Tower, 45 Gulshan South C/A, Circle‑1, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/85641_1.png"
+    "clogo": "/images/company/60-img.png"
   },
   {
     "id": 63,
     "title": "Junior Software Engineer",
-    "company": "Arena Phone BD Ltd.",
+    "company": "Metro Phone BD Ltd",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3390,12 +3390,12 @@
       "phone": "",
       "address": "House 2 Road 23/A, Gulshan‑1, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/23446_0.png"
+    "clogo": "/images/company/63-img.png"
   },
   {
     "id": 64,
     "title": "WordPress Elementor and Shopify Experts",
-    "company": "Tech Maximus",
+    "company": "Byte Maximus",
     "location": "Dhaka",
     "salary": {
       "min": 18000,
@@ -3441,12 +3441,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/173530_0.jpg"
+    "clogo": "/images/company/64-img.png"
   },
   {
     "id": 65,
     "title": "Sr. Software Developer (PHP, SQL – MySQL, PostgreSQL, MS SQL)",
-    "company": "BDTASK",
+    "company": "Task Daily",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3463,7 +3463,7 @@
     "jobEndDate": "2025-12-30",
     "gender": "Only Male",
     "education": "Bachelor’s degree in CSE / IT / Software Engineering / Information Systems",
-    "description": "As a Senior Software Developer at BDTASK, you will design, develop and maintain web‑based applications and their underlying databases. The role involves building robust backend and database solutions, optimizing performance, and working with complex data. You will collaborate with cross‑functional teams, contribute to system design decisions, and ensure code and data integrity. Accounting or finance‑related knowledge is a plus — so developers with ERP / accounting background are preferred.",
+    "description": "As a Senior Software Developer at Task Daily, you will design, develop and maintain web‑based applications and their underlying databases. The role involves building robust backend and database solutions, optimizing performance, and working with complex data. You will collaborate with cross‑functional teams, contribute to system design decisions, and ensure code and data integrity. Accounting or finance‑related knowledge is a plus — so developers with ERP / accounting background are preferred.",
     "requirements": [
       "3–5 years of professional experience in PHP development",
       "Strong experience with SQL databases: MySQL, PostgreSQL, MS SQL / SQL Server (T‑SQL, stored procedures, indexing, query‑optimization)",
@@ -3489,17 +3489,17 @@
       "Data Analysis"
     ],
     "compnay": {
-      "website": "https://www.bdtask.com/",
+      "website": "",
       "email": "",
       "phone": "",
-      "address": "B‑25, Mannan Plaza, 4th Floor, Khilkhet, Dhaka, Bangladesh"
+      "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/45506_1.png"
+    "clogo": "/images/company/65-img.png"
   },
   {
     "id": 66,
     "title": "Full‑Stack Developer (ERPNext, Frappe, Python)",
-    "company": "Starkology Solution Limited",
+    "company": "StarLogic Solution Limited",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3546,16 +3546,16 @@
     ],
     "compnay": {
       "website": "",
-      "email": "fahad@starkology.com",
+      "email": "",
       "phone": "",
-      "address": "House 50, Road 28, Gulshan 1, Dhaka"
+      "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/196812_0.png"
+    "clogo": "/images/company/66-img.png"
   },
   {
     "id": 67,
     "title": "Software Developer",
-    "company": "JOYcalls Bangladesh Limited",
+    "company": "Connect Bangladesh Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 60000,
@@ -3609,12 +3609,12 @@
       "phone": "",
       "address": "Plot #34, Awal Centre (4th Floor), Kemal Ataturk Avenue, Banani PS, Dhaka‑1213"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/76918_1.png"
+    "clogo": "/images/company/67-img.png"
   },
   {
     "id": 68,
     "title": "WordPress Web Developer",
-    "company": "Corporate Care IT",
+    "company": "PrimeEdge IT Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3651,12 +3651,12 @@
       "phone": "",
       "address": "Flat‑A1, House‑40/5, Abdul Hadi Lane, Bangshal, Dhaka‑1000, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/112347_1.png"
+    "clogo": "/images/company/68-img.png"
   },
   {
     "id": 69,
     "title": "Associate Manager / Manager, Information & Communication Technology Audit, ICC",
-    "company": "BRAC Bank PLC",
+    "company": "Trust Accessories Ltd.",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -3698,12 +3698,12 @@
       "phone": "",
       "address": "Anik Tower (Level‑9), 220/B, Tejgaon Gulshan Link Road, Dhaka‑1208"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/25059_4.png"
+    "clogo": "/images/company/69-img.png"
   },
   {
     "id": 70,
     "title": "Senior Full Stack App & Web Developer",
-    "company": "The Second Source",
+    "company": "NextOrigin Resources Ltd.",
     "location": "Rajshahi",
     "salary": {
       "min": 0,
@@ -3755,12 +3755,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/134642_0.jpg"
+    "clogo": "/images/company/70-img.png"
   },
   {
     "id": 71,
     "title": "Data Entry Computer Operator",
-    "company": "Reazaur Rahman & Associates",
+    "company": "HeritageLaw & Associates",
     "location": "Dhaka",
     "salary": {
       "min": 12500,
@@ -3802,12 +3802,12 @@
       "phone": "",
       "address": "Happy Rahman Plaza, (4th Floor), 25‑27 Banglamotor, Dhaka‑1000"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/66776_0.jpg"
+    "clogo": "/images/company/71-img.png"
   },
   {
     "id": 72,
     "title": "Computer Operator",
-    "company": "BANGLADESH LINK TOURS & TRAVELS",
+    "company": "DeshRoute Tours & Travels Ltd.",
     "location": "Kishoreganj",
     "salary": {
       "min": 10000,
@@ -3847,12 +3847,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/188810_1.png"
+    "clogo": "/images/company/72-img.png"
   },
   {
     "id": 73,
     "title": "Computer Operator",
-    "company": "Croydon Kowloon Design Ltd.",
+    "company": "UrbanCraft Design Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -3897,12 +3897,12 @@
       "Time/Task management"
     ],
     "compnay": {
-      "website": "https://ckdlbd.com/",
+      "website": "",
       "email": "",
       "phone": "",
-      "address": "DEPZ, Ashulia, Dhaka"
+      "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/92782_0.jpg"
+    "clogo": "/images/company/73-img.png"
   },
   {
     "id": 74,
@@ -3949,7 +3949,7 @@
     ],
     "compnay": {
       "website": "",
-      "email": "directorblhl@gmail.com",
+      "email": "",
       "phone": "",
       "address": "1 East Rampura, DIT Road, Dhaka-1219, Bangladesh"
     },
@@ -4001,7 +4001,7 @@
   {
     "id": 76,
     "title": "Medical Information Associate",
-    "company": "Nevian Lifescience PLC",
+    "company": "Veriton BioScience PLC",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -4040,12 +4040,12 @@
       "phone": "",
       "address": "Tower One One Seven (5th Floor), Plot 117/A, Tejgaon I/A, Dhaka-1208, Bangladesh"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/191601_0.png"
+    "clogo": "/images/company/76-img.png"
   },
   {
     "id": 77,
     "title": "Hatchery Engineer",
-    "company": "Kazi Farms Group",
+    "company": "Harbin Farms Group",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -4086,12 +4086,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/19515_6.png"
+    "clogo": "/images/company/77-img.png"
   },
   {
     "id": 78,
     "title": "Project Engineer / Site-Contract Specialist",
-    "company": "National Development Engineers Ltd. (NDE)",
+    "company": "Nation Engineering Works Ltd",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -4130,12 +4130,12 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/21252_5.jpg"
+    "clogo": "/images/company/78-img.png"
   },
   {
     "id": 79,
     "title": "Senior Architect (Real-Estate & Interior Design)",
-    "company": "G A Foundation",
+    "company": "Aid Foundation",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -4176,17 +4176,17 @@
       "Project Management"
     ],
     "compnay": {
-      "website": "gafoundationltd.com",
+      "website": "",
       "email": "",
       "phone": "",
       "address": "Road-1, House-5, Main Road Pallabi, Dhaka-1216"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/96757_1.png"
+    "clogo": "/images/company/79-img.png"
   },
   {
     "id": 80,
     "title": "Manager (Civil Engineering)",
-    "company": "Akij Insaf Group",
+    "company": "Rohoman Group",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -4203,7 +4203,7 @@
     "jobEndDate": "2025-12-30",
     "gender": "Anyone Can Apply",
     "education": "BSc in Civil Engineering",
-    "description": "Lead civil‑engineering projects for Akij Insaf Group, overseeing feasibility, planning, execution and completion of construction works, ensuring compliance with building codes, safety standards, and project budgets/timeframes. Coordinate with multidisciplinary teams (architects, structural, electrical, plumbing engineers), liaise with regulatory bodies, and monitor project progress from inception to delivery.",
+    "description": "Lead civil‑engineering projects for Rohoman Group, overseeing feasibility, planning, execution and completion of construction works, ensuring compliance with building codes, safety standards, and project budgets/timeframes. Coordinate with multidisciplinary teams (architects, structural, electrical, plumbing engineers), liaise with regulatory bodies, and monitor project progress from inception to delivery.",
     "requirements": [
       "BSc in Civil Engineering from a reputed university.",
       "Minimum 12 years of relevant experience in civil‑engineering / construction projects.",
@@ -4233,9 +4233,9 @@
       "website": "",
       "email": "",
       "phone": "",
-      "address": "Akij House, 198, Bir Uttam Mir Shawkat Sarak (Gulshan Link Road), Tejgaon, Dhaka"
+      "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/120866_5.png"
+    "clogo": "/images/company/80-img.png"
   },
   {
     "id": 81,
@@ -6166,9 +6166,9 @@
       "HR operations management"
     ],
     "compnay": {
-      "website": "https://www.enroute.com.bd",
-      "email": "jobs@enroute.com.bd",
-      "phone": "+8809612244222",
+      "website": "",
+      "email": "",
+      "phone": "",
       "address": "House 57, Road 25, Block A, Banani, Dhaka"
     },
     "clogo": "/images/company/120-img.png"
