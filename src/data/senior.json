@@ -46,7 +46,7 @@
   {
     "id": 62,
     "title": "Senior Flutter / UI‑UX Developer",
-    "company": "ChefOnline",
+    "company": "Craft Digital Solutions",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -93,7 +93,7 @@
       "phone": "",
       "address": "21/A Navana Tower, 45 Gulshan South C/A, Circle‑1, Dhaka"
     },
-    "clogo": "https://corporate.bdjobs.com/logos/85641_1.png"
+    "clogo": "/images/company/60-img.png"
   },
   {
     "id": 7,
@@ -426,7 +426,7 @@
   {
     "id": 70,
     "title": "Senior Full Stack App & Web Developer",
-    "company": "The Second Source",
+    "company": "NextOrigin Resources Ltd.",
     "location": "Rajshahi",
     "salary": {
       "min": 0,
@@ -474,6 +474,6 @@
       "phone": "",
       "address": ""
     },
-    "clogo": "https://corporate.bdjobs.com/logos/134642_0.jpg"
+    "clogo": "/images/company/70-img.png"
   }
 ]
