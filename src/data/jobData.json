@@ -4186,7 +4186,7 @@
   {
     "id": 80,
     "title": "Manager (Civil Engineering)",
-    "company": "Akij Insaf Group",
+    "company": "Insafi Nexus Holdings",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -4240,7 +4240,7 @@
   {
     "id": 81,
     "title": "Engineer - Technical Coordinator",
-    "company": "Alphatek Engineering Limited",
+    "company": "Apexforge Technologies Ltd.",
     "location": "Dhaka",
     "salary": {
       "min": 20000,
@@ -4294,7 +4294,7 @@
   {
     "id": 82,
     "title": "Visual Design & Concept Artist – Architecture Support",
-    "company": "SANGATH",
+    "company": "Unity Link Foundation",
     "location": "Dhaka",
     "salary": {
       "min": 0,
@@ -4346,7 +4346,7 @@
   {
     "id": 83,
     "title": "Assistant Biomedical Engineer",
-    "company": "Biotrade Ltd",
+    "company": "VitaSphere Commodities",
     "location": "Anywhere in Bangladesh",
     "salary": {
       "min": 0,
@@ -4399,7 +4399,7 @@
   {
     "id": 84,
     "title": "Civil Engineer",
-    "company": "Eastern University",
+    "company": "Solrise Global University",
     "location": "Dhaka",
     "salary": {
       "min": 20000,
@@ -4444,7 +4444,7 @@
   {
     "id": 85,
     "title": "Warehouse Operations Executive",
-    "company": "Daraz Bangladesh Ltd.",
+    "company": "Bazara Digital Marketplace",
     "location": "Dhaka (Tejgaon)",
     "salary": {
       "min": 22000,
@@ -4487,12 +4487,12 @@
       "phone": "+8809610098888",
       "address": "House 10, Road 11, Block H, Banani, Dhaka"
     },
-    "clogo": "data:image/png;base64,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"
+    "clogo": "efge"
   },
   {
     "id": 86,
     "title": "Customer Support Officer",
-    "company": "Bikroy.com",
+    "company": "BarterNet Commerce",
     "location": "Dhaka",
     "salary": {
       "min": 18000,
@@ -4540,7 +4540,7 @@
   {
     "id": 87,
     "title": "Digital Marketing Executive",
-    "company": "AjkerDeal.com",
+    "company": "InstaOffer Online",
     "location": "Dhaka (Uttara)",
     "salary": {
       "min": 25000,
@@ -4588,7 +4588,7 @@
   {
     "id": 88,
     "title": "Sales Executive (Real Estate)",
-    "company": "Bashundhara Group – Real Estate Division",
+    "company": "Veridia Properties Consortium",
     "location": "Dhaka (Bashundhara R/A)",
     "salary": {
       "min": 25000,
@@ -4636,7 +4636,7 @@
   {
     "id": 89,
     "title": "Civil Engineer",
-    "company": "Concord Real Estate & Building Products Ltd.",
+    "company": "Harmony Constructs & Dwellings",
     "location": "Dhaka (Gulshan)",
     "salary": {
       "min": 30000,
@@ -4684,7 +4684,7 @@
   {
     "id": 90,
     "title": "Property Manager",
-    "company": "Navana Real Estate Ltd.",
+    "company": "Solara Estates & Holdings",
     "location": "Dhaka (Banani)",
     "salary": {
       "min": 35000,
@@ -4727,12 +4727,12 @@
       "phone": "+8802222229000",
       "address": "House 19, Road 96, Gulshan 2, Dhaka"
     },
-    "clogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Logo_of_Navana_Group.svg/2560px-Logo_of_Navana_Group.svg.png"
+    "clogo": "/images/company/90-img.png"
   },
   {
     "id": 91,
     "title": "Staff Nurse",
-    "company": "Square Hospitals Ltd.",
+    "company": "Equinox Healthcare Group",
     "location": "Dhaka (Panthapath)",
     "salary": {
       "min": 25000,
@@ -4777,12 +4777,12 @@
       "phone": "+8809618300000",
       "address": "Panthapath, Dhaka 1205, Bangladesh"
     },
-    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRmpS2bQm44qRQw_Z2FI2COXTYcAeVr2fflg&s"
+    "clogo": "/images/company/91-img.png"
   },
   {
     "id": 92,
     "title": "Lab Technician",
-    "company": "Popular Diagnostic Center",
+    "company": "OmniScan Diagnostics Network",
     "location": "Chattogram (GEC Circle)",
     "salary": {
       "min": 20000,
@@ -4826,12 +4826,12 @@
       "phone": "+880312557788",
       "address": "GEC Circle, Chattogram, Bangladesh"
     },
-    "clogo": "https://akhil.populardiagnostic.com/Images/Logo/logo.png"
+    "clogo": "/images/company/92-img.png"
   },
   {
     "id": 93,
     "title": "Receptionist / Front Desk Officer",
-    "company": "Apollo Hospitals Dhaka",
+    "company": "Aeterna Medical Center Dhaka",
     "location": "Dhaka (Bashundhara R/A)",
     "salary": {
       "min": 18000,
@@ -4874,12 +4874,12 @@
       "phone": "+8809615011111",
       "address": "House 20, Road 15, Block C, Bashundhara R/A, Dhaka"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/26/1/apollo-hospitals-logo-png_seeklogo-264932.png"
+    "clogo": "/images/company/93-img.png"
   },
   {
     "id": 94,
     "title": "Customer Support Executive",
-    "company": "Genex Infosys Bangladesh Ltd.",
+    "company": "CogniCore Data Solutions Limited",
     "location": "Dhaka (Banani)",
     "salary": {
       "min": 18000,
@@ -4922,12 +4922,12 @@
       "phone": "+8809611111000",
       "address": "House 45, Road 11, Banani, Dhaka-1213"
     },
-    "clogo": "https://genexinfosys.com/images/bu_logo.png"
+    "clogo": "/images/company/94-img.png"
   },
   {
     "id": 95,
     "title": "Technical Support Executive",
-    "company": "Magnito Digital",
+    "company": "Polaris Digital Dynamics",
     "location": "Dhaka (Uttara)",
     "salary": {
       "min": 20000,
@@ -4970,12 +4970,12 @@
       "phone": "+8801922223344",
       "address": "Uttara Sector 7, Dhaka-1230"
     },
-    "clogo": "https://www.moumachi.com.bd//images/listings/45293/business/20249-magnito-logo.jpg"
+    "clogo": "/images/company/95-img.png"
   },
   {
     "id": 96,
     "title": "Outbound Sales Executive",
-    "company": "Telebarta Bangladesh Ltd.",
+    "company": "Nexus Broadcast Network",
     "location": "Dhaka",
     "salary": {
       "min": 20000,
@@ -5018,12 +5018,12 @@
       "phone": "+8801788889900",
       "address": "House 23, Road 15, Banani, Dhaka"
     },
-    "clogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHZCE1teFnZHzSF-n3SgAAZrWGIa8RyGy_A&s"
+    "clogo": "/images/company/96-img.png"
   },
   {
     "id": 97,
     "title": "Site Engineer",
-    "company": "Abul Khair Steel & Engineering Ltd.",
+    "company": "ForgeCraft Steelworks & Engineering",
     "location": "Chittagong, Bangladesh",
     "salary": {
       "min": 30000,
@@ -5066,12 +5066,12 @@
       "phone": "+880311222333",
       "address": "Fouzdarhat Industrial Area, Chittagong, Bangladesh"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/38/1/abul-khair-group-logo-png_seeklogo-387962.png"
+    "clogo": "/images/company/97-img.png"
   },
   {
     "id": 98,
     "title": "Production Engineer",
-    "company": "HeidelbergCement Bangladesh Ltd.",
+    "company": "TerraFirma Cement Group",
     "location": "Chhatak, Sylhet, Bangladesh",
     "salary": {
       "min": 40000,
@@ -5114,12 +5114,12 @@
       "phone": "+880821223344",
       "address": "Chhatak Cement Plant, Sylhet, Bangladesh"
     },
-    "clogo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Heidelberg-Logo.svg/2560px-Heidelberg-Logo.svg.png"
+    "clogo": "/images/company/98-img.png"
   },
   {
     "id": 99,
     "title": "Quality Control Officer",
-    "company": "Meghna Group of Industries – Steel Division",
+    "company": "Cyclone Forge Industries (Steel Sector)",
     "location": "Dhaka, Bangladesh",
     "salary": {
       "min": 28000,
@@ -5162,7 +5162,7 @@
       "phone": "+8802-22223344",
       "address": "Meghna Industrial Area, Dhaka, Bangladesh"
     },
-    "clogo": "https://images.seeklogo.com/logo-png/29/1/meghna-logo-png_seeklogo-290584.png"
+    "clogo": "/images/company/99-img.png"
   },
   {
     "id": 100,
