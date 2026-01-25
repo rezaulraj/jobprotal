@@ -435,7 +435,7 @@ const JobCategory = () => {
     switch (activeTab) {
       case "industry":
         return (
-          <div className="space-y-4">
+          <div className="space-y-4 font-source">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {displayCategories.map((category) => (
                 <motion.div
@@ -505,7 +505,7 @@ const JobCategory = () => {
         );
       case "city":
         return (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-source">
             {actualLocations.map((location) => (
               <motion.div
                 key={location.name}
@@ -541,7 +541,7 @@ const JobCategory = () => {
         );
       case "company":
         return (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-source">
             {actualCompanies.map((company) => (
               <motion.div
                 key={company.name}
@@ -577,7 +577,7 @@ const JobCategory = () => {
         );
       case "function":
         return (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-source">
             {functions.map((func) => (
               <motion.div
                 key={func.name}
@@ -630,7 +630,7 @@ const JobCategory = () => {
   );
 
   return (
-    <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-6">
+    <div className="bg-linear-to-br from-gray-50 to-gray-100 pb-12 pt-4 px-4 sm:px-6 lg:px-6 font-source">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           <div className="lg:col-span-3 bg-white rounded-xl shadow-lg p-6">

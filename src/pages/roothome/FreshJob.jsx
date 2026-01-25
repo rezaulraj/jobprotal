@@ -51,17 +51,17 @@ const FreshJob = () => {
 
   const handlePrev = () => {
     setCurrentJobIndex((prevIndex) =>
-      prevIndex === 0 ? Math.max(0, freshJobs.length - 8) : prevIndex - 8
+      prevIndex === 0 ? Math.max(0, freshJobs.length - 4) : prevIndex - 4,
     );
   };
 
   const handleNext = () => {
     setCurrentJobIndex((prevIndex) =>
-      prevIndex + 8 >= freshJobs.length ? 0 : prevIndex + 8
+      prevIndex + 8 >= freshJobs.length ? 0 : prevIndex + 4,
     );
   };
 
-  const visibleJobs = freshJobs.slice(currentJobIndex, currentJobIndex + 8);
+  const visibleJobs = freshJobs.slice(currentJobIndex, currentJobIndex + 4);
 
   const formatLocation = (location) => {
     if (!location) return "Location not specified";
@@ -142,7 +142,7 @@ const FreshJob = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-10 font-sans">
+    <div className="container mx-auto px-4 py-10 font-source">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         <div className="grid grid-cols-2 items-center">
           <div className="space-y-9">
@@ -222,7 +222,7 @@ const FreshJob = () => {
                 <h3 className="text-lg font-semibold text-gray-800 mb-1 truncate group-hover:text-[#1E2558]">
                   {job.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm line-clamp-1">
                   {job.company}, {formatLocation(job.location)}
                 </p>
                 <div className="flex items-center gap-2 mt-2">

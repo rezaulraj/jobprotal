@@ -53,7 +53,7 @@ const SeniorManagment = () => {
   };
 
   return (
-    <div className="hidden md:block bg-white py-12 px-4 sm:px-6 lg:px-12">
+    <div className="hidden md:block bg-white py-12 px-4 sm:px-6 lg:px-12 font-source">
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-10">
           <div className="grow text-center">

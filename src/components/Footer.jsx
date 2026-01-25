@@ -358,7 +358,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-300 pt-12 pb-8">
+    <footer className="bg-linear-to-b from-gray-900 via-gray-800 to-gray-900 font-source text-gray-300 pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-10 border-b border-gray-700">
           <div className="space-y-4">

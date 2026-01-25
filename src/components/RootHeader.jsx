@@ -580,11 +580,11 @@ const RootHeader = () => {
   return (
     <>
       <nav
-        className={`bg-white sticky top-0 z-50 transition-all duration-300 ${
+        className={`bg-white sticky top-0 z-50 transition-all duration-300 font-ubuntu ${
           scrolled ? "shadow-md" : "shadow-sm"
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
               <Link to={"/"}>

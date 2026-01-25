@@ -38,7 +38,7 @@ const FreelanceSection = () => {
   };
 
   return (
-    <section className="py-8 bg-gray-100 hidden md:block">
+    <section className="py-8 bg-gray-100 hidden md:block font-source">
       <div className="container mx-auto px-4">
         <div className="border-b border-gray-300 mb-4 flex items-center justify-center">
           <h2 className="flex-1 text-xl lg:text-2xl font-bold text-center mb-8 text-gray-700 ">

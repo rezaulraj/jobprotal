@@ -30,7 +30,7 @@ const benefits = [
 
 const Benefit = () => {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12 font-source">
       <div className="container mx-auto px-4 sm:px-6 lg:px-2">
         <div className="grid gap-6 md:grid-cols-3">
           {benefits.map((benefit, index) => (

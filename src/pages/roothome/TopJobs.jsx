@@ -61,7 +61,7 @@ const TopJobs = () => {
   }
 
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12 font-source">
       <div className="container mx-auto px-4 sm:px-6 lg:px-2">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-2xl font-bold text-[#1E2558]/90">Top Jobs</h2>
@@ -108,7 +108,7 @@ const TopJobs = () => {
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 group-hover:text-[#1E2558] mb-1">
+                  <h3 className="text-sm font-semibold text-gray-800 line-clamp-1 group-hover:text-[#1E2558] mb-1">
                     {job.title}
                   </h3>
                   <p className="text-xs text-gray-600 line-clamp-1 mb-2">
