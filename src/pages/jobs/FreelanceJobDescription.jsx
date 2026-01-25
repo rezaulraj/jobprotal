@@ -170,7 +170,7 @@ const FreelanceJobDescription = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 py-8 font-ubuntu">
       <div className="container mx-auto px-4">
         {/* Back Button */}
         <button
@@ -187,10 +187,10 @@ const FreelanceJobDescription = () => {
             <Link to="/" className="hover:text-secondary">
               Home
             </Link>
-            <ChevronRight className="w-4 h-4" />
-            <Link to="/freelance-jobs" className="hover:text-secondary">
+            {/* <ChevronRight className="w-4 h-4" /> */}
+            {/* <Link to="/freelance-jobs" className="hover:text-secondary">
               Freelance Jobs
-            </Link>
+            </Link> */}
             <ChevronRight className="w-4 h-4" />
             <span className="text-gray-900 font-medium">
               {selectedJob.title}

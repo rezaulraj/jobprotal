@@ -663,7 +663,7 @@ const AllJobs = () => {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: colors.bgLight }}>
+    <div className="min-h-screen font-ubuntu" style={{ backgroundColor: colors.bgLight }}>
       <div
         className="sticky top-0 z-40 bg-white shadow-sm border-b"
         style={{ borderColor: colors.border }}
@@ -816,7 +816,6 @@ const AllJobs = () => {
                 </div>
               </div>
 
-              {/* Experience */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4">
                   <Award

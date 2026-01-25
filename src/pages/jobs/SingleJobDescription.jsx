@@ -137,7 +137,7 @@ const SingleJobDescription = () => {
   if (!job) {
     return (
       <div
-        className="min-h-screen flex items-center justify-center"
+        className="min-h-screen flex items-center justify-center font-source"
         style={{ backgroundColor: colors.bgLight }}
       >
         <div className="text-center">
@@ -164,7 +164,7 @@ const SingleJobDescription = () => {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: colors.bgLight }}>
+    <div className="min-h-screen font-ubuntu" style={{ backgroundColor: colors.bgLight }}>
       {/* Header */}
       <div
         className="sticky top-0 z-40 bg-white shadow-sm border-b"
