@@ -172,7 +172,6 @@ const FreelanceJobDescription = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 font-ubuntu">
       <div className="container mx-auto px-4">
-        {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 text-gray-600 hover:text-secondary cursor-pointer mb-6 transition-colors"
@@ -181,7 +180,6 @@ const FreelanceJobDescription = () => {
           Back to Jobs
         </button>
 
-        {/* Breadcrumb */}
         <div className="mb-6">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-secondary">
