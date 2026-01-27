@@ -16,6 +16,7 @@ import {
   FiTarget,
 } from "react-icons/fi";
 import { HiOutlineClipboardCheck } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import {
   BarChart,
   Bar,
@@ -158,7 +159,9 @@ const SeekerDashboard = () => {
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="py-3">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <FiHome size={16} />
+              <Link to={"/"}>
+                <FiHome size={16} />
+              </Link>
               <span>/</span>
               <span className="text-[#1e2558] font-medium">Dashboard</span>
             </div>
