@@ -418,9 +418,9 @@ const SeekerHeader = () => {
       color: "text-blue-600",
     },
     {
-      label: "Wishlist",
+      label: "Saved Jobs",
       icon: <FaHeart className="text-sm" />,
-      path: "seeker/wishlist",
+      path: "seeker/saved-jobs",
       color: "text-red-600",
       badge: "3",
     },

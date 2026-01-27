@@ -80,7 +80,7 @@ function App() {
               <Route path="dashboard" element={<SeekerDashboard />} />
               <Route path="profile" element={<SeekerProfile />} />
               <Route path="cv-upload" element={<SeekerCVUpload />} />
-              <Route path="wishlist" element={<SeekerWishlist />} />
+              <Route path="saved-jobs" element={<SeekerWishlist />} />
               <Route path="applied-jobs" element={<SeekerAppliedJobs />} />
               <Route path="shortlisted" element={<SeekerShortlisted />} />
               <Route
