@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FiEdit2,
   FiPlus,
@@ -9,9 +9,7 @@ import {
   FiMapPin,
   FiBriefcase,
   FiDollarSign,
-  FiSave,
   FiX,
-  FiUpload,
   FiDownload,
   FiVideo,
   FiGlobe,
@@ -25,7 +23,6 @@ import {
   FiExternalLink,
 } from "react-icons/fi";
 
-// Main Component
 const SeekerProfile = () => {
   const [activePopup, setActivePopup] = useState(null);
   const [profile, setProfile] = useState({
@@ -52,12 +49,11 @@ const SeekerProfile = () => {
     }[size];
 
     return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-md flex items-center justify-center z-50 p-4">
         <div
           className={`bg-white rounded-lg w-full ${sizeClass} max-h-[90vh] overflow-y-auto`}
         >
-          {/* Rest of the Popup component remains the same */}
-          <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center">
+          <div className="sticky top-0 bg-white p-4  flex justify-between items-center">
             <h3 className="text-lg font-semibold">{title}</h3>
             <button
               onClick={onClose}
@@ -67,7 +63,7 @@ const SeekerProfile = () => {
             </button>
           </div>
           <div className="p-4">{children}</div>
-          <div className="sticky bottom-0 bg-white p-4 border-t flex justify-end gap-3">
+          <div className="sticky bottom-0 border-gray-300 bg-white p-4 border-t flex justify-end gap-3">
             <button
               onClick={onClose}
               className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
@@ -751,7 +747,7 @@ const SeekerProfile = () => {
     );
   };
 
-  // Job Preferences Popup (NEW)
+  // Job Preferences Popup
   const JobPreferencesPopup = () => {
     const [preferences, setPreferences] = useState({
       desiredJobTitle: "",
@@ -974,7 +970,7 @@ const SeekerProfile = () => {
     );
   };
 
-  // Projects Popup (NEW)
+  // Projects Popup
   const ProjectsPopup = () => {
     const [project, setProject] = useState({
       name: "",
@@ -1220,7 +1216,7 @@ const SeekerProfile = () => {
     );
   };
 
-  // Languages Popup (NEW)
+  // Languages Popup
   const LanguagesPopup = () => {
     const [language, setLanguage] = useState({
       name: "",
@@ -1334,7 +1330,7 @@ const SeekerProfile = () => {
     );
   };
 
-  // Upload Video CV Popup (NEW)
+  // Upload Video CV Popup
   const UploadVideoPopup = () => {
     const [videoData, setVideoData] = useState({
       title: "",
@@ -1349,7 +1345,6 @@ const SeekerProfile = () => {
       const file = e.target.files[0];
       if (file && file.type.startsWith("video/")) {
         if (file.size > 50 * 1024 * 1024) {
-          // 50MB limit
           alert("File size must be less than 50MB");
           return;
         }
@@ -1604,7 +1599,6 @@ const SeekerProfile = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main Content - 70% */}
           <div className="lg:w-7/12">
             {/* Personal Information */}
             <div className="bg-white rounded-lg p-6 mb-6 shadow-sm border border-gray-200">
@@ -1674,19 +1668,16 @@ const SeekerProfile = () => {
                   </div>
                 </div>
 
-                {/* Personal Details - Always show name, email, phone with default values */}
                 <div className="flex-1">
                   <div className="space-y-4">
-                    {/* Name */}
+                   
                     <div>
                       <h3 className="text-xl font-semibold">
                         {profile.personalInfo?.name || "Rezaul Karim"}
                       </h3>
                     </div>
-
-                    {/* Contact Information - Always shown */}
                     <div className="space-y-2">
-                      {/* Email */}
+                      
                       <div className="flex items-center gap-3">
                         <FiMail
                           size={18}
@@ -1697,7 +1688,7 @@ const SeekerProfile = () => {
                         </span>
                       </div>
 
-                      {/* Phone */}
+                    
                       <div className="flex items-center gap-3">
                         <FiPhone
                           size={18}
@@ -1708,7 +1699,6 @@ const SeekerProfile = () => {
                         </span>
                       </div>
 
-                      {/* Optional: Date of Birth (only if exists) */}
                       {profile.personalInfo?.dob?.month &&
                         profile.personalInfo?.dob?.year && (
                           <div className="flex items-center gap-3">
@@ -1723,7 +1713,6 @@ const SeekerProfile = () => {
                           </div>
                         )}
 
-                      {/* Optional: Location (only if exists) */}
                       {(profile.personalInfo?.city ||
                         profile.personalInfo?.country) && (
                         <div className="flex items-center gap-3">
@@ -1742,7 +1731,6 @@ const SeekerProfile = () => {
                         </div>
                       )}
 
-                      {/* Optional: Expected Salary (only if exists) */}
                       {profile.personalInfo?.expectedSalary && (
                         <div className="flex items-center gap-3">
                           <FiDollarSign
@@ -2022,11 +2010,9 @@ const SeekerProfile = () => {
             </div>
           </div>
 
-          {/* Sidebar - 30% */}
-          {/* Sidebar - 30% */}
+          {/* Sidebar */}
           <div className="lg:w-5/12">
             <div className="sticky top-8 space-y-6">
-              {/* Upload Video CV - Using the component */}
               <UploadVideoSection />
 
               {/* Download CV */}
