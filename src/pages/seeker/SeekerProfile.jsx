@@ -758,13 +758,13 @@ const SeekerProfile = () => {
     });
 
     const salaryRanges = [
-      "20,000 - 40,000 PKR",
-      "40,000 - 60,000 PKR",
-      "60,000 - 80,000 PKR",
-      "80,000 - 100,000 PKR",
-      "100,000 - 150,000 PKR",
-      "150,000 - 200,000 PKR",
-      "200,000+ PKR",
+      "20,000 - 40,000 BDT",
+      "40,000 - 60,000 BDT",
+      "60,000 - 80,000 BDT",
+      "80,000 - 100,000 BDT",
+      "100,000 - 150,000 BDT",
+      "150,000 - 200,000 BDT",
+      "200,000+ BDT",
     ];
 
     const relocationOptions = [
@@ -1356,8 +1356,6 @@ const SeekerProfile = () => {
           isUploading: true,
           uploadProgress: 0,
         });
-
-        // Simulate upload progress
         const interval = setInterval(() => {
           setVideoData((prev) => {
             if (prev.uploadProgress >= 100) {
@@ -1597,7 +1595,7 @@ const SeekerProfile = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="container mx-auto  py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-7/12">
             {/* Personal Information */}
@@ -1990,7 +1988,7 @@ const SeekerProfile = () => {
               </div>
             </Section>
 
-            {/* CV Privacy Settings */}
+            {/* CV Privacy */}
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <div className="flex items-center gap-2 mb-4">
                 <FiGlobe className="text-[#4eb956]" size={20} />
