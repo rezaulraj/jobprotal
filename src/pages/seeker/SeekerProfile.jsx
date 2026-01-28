@@ -1625,7 +1625,6 @@ const SeekerProfile = () => {
               </div>
 
               <div className="flex flex-col md:flex-row gap-6">
-                {/* Profile Image */}
                 <div className="flex flex-col items-center">
                   <div className="relative">
                     <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden border-4 border-white shadow">
