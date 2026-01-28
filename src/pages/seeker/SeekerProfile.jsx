@@ -1621,63 +1621,91 @@ const SeekerProfile = () => {
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex flex-col items-center">
                   <div className="relative">
-                    <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden border-4 border-white shadow">
-                      {profile.profileImage ? (
-                        <img
-                          src={profile.profileImage}
-                          alt="Profile"
-                          className="w-full h-full object-cover"
+                    <div className="relative w-40 h-40">
+                      <svg
+                        className="w-full h-full transform -rotate-90"
+                        viewBox="0 0 100 100"
+                      >
+                        <circle
+                          cx="50"
+                          cy="50"
+                          r="45"
+                          stroke="#4eb956"
+                          strokeWidth="4"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeDasharray="282.74"
+                          strokeDashoffset={282.74 - (282.74 * 65) / 100}
                         />
-                      ) : (
-                        <FiUser size={48} className="text-gray-400" />
-                      )}
-                    </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <div className="relative">
-                        <div className="w-8 h-8 bg-[#4eb956] rounded-full flex items-center justify-center cursor-pointer hover:bg-[#3da944]">
-                          <FiPlus size={16} className="text-white" />
+                      </svg>
+
+                      {/* Profile Image */}
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden border-4 border-white shadow">
+                          {profile.profileImage ? (
+                            <img
+                              src={profile.profileImage}
+                              alt="Profile"
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <FiUser size={48} className="text-gray-400" />
+                          )}
                         </div>
-                        <input
-                          type="file"
-                          className="absolute inset-0 opacity-0 cursor-pointer"
-                          accept="image/*"
-                          onChange={(e) => {
-                            const file = e.target.files[0];
-                            if (file) {
-                              const reader = new FileReader();
-                              reader.onloadend = () => {
-                                setProfile((prev) => ({
-                                  ...prev,
-                                  profileImage: reader.result,
-                                }));
-                              };
-                              reader.readAsDataURL(file);
-                            }
-                          }}
-                        />
+                      </div>
+
+                      {/* Upload Button */}
+                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                        <div className="relative">
+                          <div className="w-8 h-8 bg-[#4eb956] rounded-full flex items-center justify-center cursor-pointer hover:bg-[#3da944]">
+                            <FiPlus size={16} className="text-white" />
+                          </div>
+                          <input
+                            type="file"
+                            className="absolute inset-0 opacity-0 cursor-pointer"
+                            accept="image/*"
+                            onChange={(e) => {
+                              const file = e.target.files[0];
+                              if (file) {
+                                const reader = new FileReader();
+                                reader.onloadend = () => {
+                                  setProfile((prev) => ({
+                                    ...prev,
+                                    profileImage: reader.result,
+                                  }));
+                                };
+                                reader.readAsDataURL(file);
+                              }
+                            }}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Percentage Badge */}
+                      <div className="absolute -top-3 -right-3 w-12 h-12 bg-[#4eb956] rounded-full flex items-center justify-center shadow-md">
+                        <span className="text-xs font-bold text-white">
+                          65%
+                        </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-4 text-center">
-                    <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-[#4eb956] w-2/3"></div>
+                    <div className="mt-3 text-center">
+                      <p className="text-sm text-gray-600 font-medium">
+                        Profile Complete
+                      </p>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Profile Complete: 65%
-                    </p>
                   </div>
                 </div>
 
+                {/* Personal Details */}
                 <div className="flex-1">
                   <div className="space-y-4">
-                   
                     <div>
                       <h3 className="text-xl font-semibold">
                         {profile.personalInfo?.name || "Rezaul Karim"}
                       </h3>
                     </div>
+
                     <div className="space-y-2">
-                      
                       <div className="flex items-center gap-3">
                         <FiMail
                           size={18}
@@ -1688,7 +1716,6 @@ const SeekerProfile = () => {
                         </span>
                       </div>
 
-                    
                       <div className="flex items-center gap-3">
                         <FiPhone
                           size={18}
