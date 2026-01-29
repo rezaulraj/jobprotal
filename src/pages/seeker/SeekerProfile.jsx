@@ -83,6 +83,7 @@ const SeekerProfile = () => {
   };
 
   // Personal Info Popup
+  // Update the Personal Info Popup to include all fields
   const PersonalInfoPopup = () => {
     const [formData, setFormData] = useState({
       name: "",
@@ -119,6 +120,52 @@ const SeekerProfile = () => {
       { length: 50 },
       (_, i) => new Date().getFullYear() - i,
     );
+
+    const careerLevels = [
+      "Entry Level",
+      "Intermediate",
+      "Senior",
+      "Manager",
+      "Director",
+      "Executive",
+    ];
+
+    const experienceYears = [
+      "No experience",
+      "Less than 1 year",
+      "1-2 years",
+      "3-5 years",
+      "6-10 years",
+      "More than 10 years",
+    ];
+
+    const countries = [
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "Germany",
+      "France",
+      "Japan",
+      "India",
+      "Bangladesh",
+      "Pakistan",
+      "Other",
+    ];
+
+    const nationalities = [
+      "American",
+      "British",
+      "Canadian",
+      "Australian",
+      "German",
+      "French",
+      "Japanese",
+      "Indian",
+      "Bangladeshi",
+      "Pakistani",
+      "Other",
+    ];
 
     return (
       <Popup
@@ -254,6 +301,65 @@ const SeekerProfile = () => {
             </select>
           </div>
 
+          {/* ADDED: Nationality Field */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Nationality *
+            </label>
+            <select
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4eb956]"
+              value={formData.nationality}
+              onChange={(e) =>
+                setFormData({ ...formData, nationality: e.target.value })
+              }
+            >
+              <option value="">Select nationality</option>
+              {nationalities.map((nationality) => (
+                <option key={nationality} value={nationality}>
+                  {nationality}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* ADDED: Country Field */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Country *
+            </label>
+            <select
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4eb956]"
+              value={formData.country}
+              onChange={(e) =>
+                setFormData({ ...formData, country: e.target.value })
+              }
+            >
+              <option value="">Select country</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* ADDED: City Field */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              City *
+            </label>
+            <input
+              type="text"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4eb956]"
+              value={formData.city}
+              onChange={(e) =>
+                setFormData({ ...formData, city: e.target.value })
+              }
+              placeholder="Enter your city"
+            />
+          </div>
+
+          {/* ADDED: Mobile Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Mobile *
@@ -268,7 +374,50 @@ const SeekerProfile = () => {
               onChange={(e) =>
                 setFormData({ ...formData, mobile: e.target.value })
               }
+              placeholder="+1 (555) 123-4567"
             />
+          </div>
+
+          {/* ADDED: Career Level Field */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Career Level *
+            </label>
+            <select
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4eb956]"
+              value={formData.careerLevel}
+              onChange={(e) =>
+                setFormData({ ...formData, careerLevel: e.target.value })
+              }
+            >
+              <option value="">Select career level</option>
+              {careerLevels.map((level) => (
+                <option key={level} value={level}>
+                  {level}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* ADDED: Experience Field */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Total Experience *
+            </label>
+            <select
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#4eb956]"
+              value={formData.experience}
+              onChange={(e) =>
+                setFormData({ ...formData, experience: e.target.value })
+              }
+            >
+              <option value="">Select years of experience</option>
+              {experienceYears.map((exp) => (
+                <option key={exp} value={exp}>
+                  {exp}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div>
