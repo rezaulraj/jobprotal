@@ -28,7 +28,6 @@ const SeekerCVUpload = () => {
       title: "My Professional CV",
       fileName: "professional_cv.pdf",
       uploadDate: "2024-01-15",
-      // fileSize: "2.1 MB",
       isDefault: true,
       isPrivate: false,
       fileType: "pdf",
@@ -38,7 +37,6 @@ const SeekerCVUpload = () => {
       title: "Technical CV",
       fileName: "technical_skills.docx",
       uploadDate: "2024-01-10",
-      // fileSize: "1.8 MB",
       isDefault: false,
       isPrivate: true,
       fileType: "docx",
@@ -48,7 +46,6 @@ const SeekerCVUpload = () => {
       title: "Profile CV",
       fileName: "profile_generated.pdf",
       uploadDate: "System",
-      // fileSize: "1.5 MB",
       isDefault: false,
       isPrivate: false,
       fileType: "pdf",
@@ -60,13 +57,11 @@ const SeekerCVUpload = () => {
   const handleFileSelect = (e) => {
     const file = e.target.files?.[0];
     if (file) {
-      // Check file size (10MB max)
       if (file.size > 10 * 1024 * 1024) {
         alert("File size must be less than 10MB");
         return;
       }
 
-      // Check file type
       const allowedTypes = [
         "application/pdf",
         "application/msword",
@@ -83,7 +78,6 @@ const SeekerCVUpload = () => {
       }
 
       setSelectedFile(file);
-      // Auto-fill title from filename without extension
       const title = file.name.replace(/\.[^/.]+$/, "");
       setCvTitle(title);
     }
@@ -103,8 +97,6 @@ const SeekerCVUpload = () => {
       setUploadProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-
-          // Add new CV to list
           const fileExtension = selectedFile.name
             .split(".")
             .pop()
@@ -160,7 +152,6 @@ const SeekerCVUpload = () => {
   };
 
   const handleDownload = (cv) => {
-    // In a real app, this would download the actual file
     alert(`Downloading ${cv.fileName}`);
   };
 
@@ -184,7 +175,6 @@ const SeekerCVUpload = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-6">
-      {/* Header */}
       <div className="container mx-auto">
         <div className="mb-6">
           <nav className="text-sm text-gray-600 mb-4">
@@ -200,7 +190,7 @@ const SeekerCVUpload = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Main Content - 2/3 width */}
+          {/* Main Content */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
               <div className="flex justify-between items-center mb-6">
@@ -267,8 +257,6 @@ const SeekerCVUpload = () => {
                             {cv.fileName}
                           </p>
                           <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-                            {/* <span>Size: {cv.fileSize}</span> */}
-                            {/* <span>•</span> */}
                             <span>Uploaded: {cv.uploadDate}</span>
                           </div>
                         </div>
@@ -340,8 +328,6 @@ const SeekerCVUpload = () => {
                         )}
                       </div>
                     </div>
-
-                    {/* Make Default Button for non-default CVs */}
                     {cv.id !== 0 && !cv.isDefault && (
                       <div className="mt-3 pt-3 border-t border-gray-100">
                         <button
@@ -359,7 +345,7 @@ const SeekerCVUpload = () => {
             </div>
           </div>
 
-          {/* Quick Guide - 1/3 width */}
+          {/* Quick Guide */}
           <div className="lg:w-1/3">
             <div className="bg-white rounded-xl shadow-sm p-6 sticky top-6">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">
@@ -415,7 +401,6 @@ const SeekerCVUpload = () => {
                 </div>
               </div>
 
-              {/* Tips Section */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <h3 className="font-medium text-gray-800 mb-3">Quick Tips:</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -440,9 +425,8 @@ const SeekerCVUpload = () => {
 
       {/* Upload Modal */}
       {showUploadModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 bg-black/50 drop-shadow-lg flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl shadow-xl w-full max-w-md">
-            {/* Modal Header */}
             <div className="p-6 border-b border-gray-200">
               <div className="flex justify-between items-center">
                 <h2 className="text-xl font-bold text-gray-800">
@@ -464,37 +448,35 @@ const SeekerCVUpload = () => {
               </div>
             </div>
 
-            {/* Modal Body */}
             <div className="p-6">
-              <div className="mb-6 bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-medium text-gray-700 mb-2">
+              <div className="mb-2 bg-gray-50 p-4 rounded-lg">
+                <h3 className="font-medium text-gray-700">
                   Upload Requirements:
                 </h3>
-                <ul className="text-sm text-gray-600 space-y-2">
+                <ul className="text-sm text-gray-600 space-y-1">
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Not be larger than 3 MB in size</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Not be other than Word Document or PDF file</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Not be password protected</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Not contain any macros or viruses</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Give printing rights to everyone</span>
                   </li>
                 </ul>
               </div>
 
-              {/* CV Title Input */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   CV Title *
@@ -509,7 +491,6 @@ const SeekerCVUpload = () => {
                 />
               </div>
 
-              {/* File Upload */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Select File
@@ -573,7 +554,6 @@ const SeekerCVUpload = () => {
                 )}
               </div>
 
-              {/* Upload Progress */}
               {isUploading && (
                 <div className="mb-6">
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -589,7 +569,6 @@ const SeekerCVUpload = () => {
                 </div>
               )}
 
-              {/* Modal Actions */}
               <div className="flex gap-3">
                 <button
                   onClick={() => {

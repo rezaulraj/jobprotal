@@ -20,7 +20,6 @@ import AuthGuard from "./store/AuthGuard";
 import SeekerDashboard from "./pages/seeker/SeekerDashboard";
 import SeekerProfile from "./pages/seeker/SeekerProfile";
 import SeekerCVUpload from "./pages/seeker/SeekerCVUpload";
-import SeekerWishlist from "./pages/seeker/SeekerWishlist";
 import SeekerAppliedJobs from "./pages/seeker/SeekerAppliedJobs";
 import SeekerShortlisted from "./pages/seeker/SeekerShortlisted";
 import SeekerChangePassword from "./pages/seeker/SeekerChangePassword";
@@ -28,6 +27,7 @@ import CVWriting from "./pages/seeker/features/CVWriting";
 import CareerTips from "./pages/seeker/features/CareerTips";
 import InterviewTips from "./pages/seeker/features/InterviewTips";
 import SkillDevelopment from "./pages/seeker/features/SkillDevelopment";
+import SeekerSaveJobs from "./pages/seeker/SeekerSaveJobs";
 function App() {
   const isAuthenticated = true;
   return (
@@ -80,7 +80,7 @@ function App() {
               <Route path="dashboard" element={<SeekerDashboard />} />
               <Route path="profile" element={<SeekerProfile />} />
               <Route path="cv-upload" element={<SeekerCVUpload />} />
-              <Route path="saved-jobs" element={<SeekerWishlist />} />
+              <Route path="saved-jobs" element={<SeekerSaveJobs />} />
               <Route path="applied-jobs" element={<SeekerAppliedJobs />} />
               <Route path="shortlisted" element={<SeekerShortlisted />} />
               <Route
