@@ -444,12 +444,12 @@ const SeekerHeader = () => {
       path: "seeker/change-password",
       color: "text-yellow-600",
     },
-    {
-      label: "Settings",
-      icon: <FaCog className="text-sm" />,
-      path: "seeker/settings",
-      color: "text-gray-600",
-    },
+    // {
+    //   label: "Settings",
+    //   icon: <FaCog className="text-sm" />,
+    //   path: "seeker/settings",
+    //   color: "text-gray-600",
+    // },
     {
       label: "Logout",
       icon: <FaSignOutAlt className="text-sm" />,
