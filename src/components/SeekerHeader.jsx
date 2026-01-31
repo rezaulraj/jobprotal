@@ -63,7 +63,7 @@ const SeekerHeader = () => {
     name: "John Doe",
     email: "john.doe@example.com",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    profileComplete: 85,
+    profileComplete: 65,
   });
 
   // Calculate total vacancies for a category
