@@ -35,7 +35,7 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-        {/* Public routes (when not authenticated) */}
+        {/* Public routes */}
         {!isAuthenticated && (
           <Route path="/" element={<Layout />}>
             <Route index element={<RootHome />} />
@@ -58,12 +58,11 @@ function App() {
           </Route>
         )}
 
-        {/* Protected routes (when authenticated) */}
+        {/* Protected */}
         <Route element={<AuthGuard />}>
           <Route path="/" element={<SeekerLayout />}>
             <Route index element={<RootHome />} />
 
-            {/* IMPORTANT: These routes are relative to root when authenticated */}
             <Route path="jobs">
               <Route index element={<AllJobs />} />
               <Route path=":cate" element={<AllJobs />} />
@@ -76,7 +75,7 @@ function App() {
             />
             <Route path="companys" element={<Company />} />
 
-            {/* Seeker routes - these should use absolute paths in navigation */}
+            {/* Seeker routes */}
             <Route path="seeker">
               <Route path="dashboard" element={<SeekerDashboard />} />
               <Route path="profile" element={<SeekerProfile />} />
@@ -121,7 +120,6 @@ function App() {
           </Route>
         </Route>
 
-        {/* Fallback for when isAuthenticated is false */}
         {!isAuthenticated && (
           <Route path="*" element={<Navigate to="/" replace />} />
         )}
