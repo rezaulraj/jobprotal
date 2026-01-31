@@ -66,14 +66,42 @@ const SeekerDashboard = () => {
   ];
 
   const quickLinks = [
-    { icon: <FiHeart size={22} />, label: "Saved Jobs", count: 18 },
-    { icon: <FiBell size={22} />, label: "Job Alerts", count: 7 },
-    { icon: <FiFileText size={22} />, label: "My CV" },
-    { icon: <FiBriefcase size={22} />, label: "Applications", count: 42 },
-    { icon: <FiTrendingUp size={22} />, label: "Career Tips" },
-    { icon: <FiEye size={22} />, label: "Profile Views", count: 128 },
-    { icon: <FiSettings size={22} />, label: "Settings" },
-    { icon: <FiLinkedin size={22} />, label: "LinkedIn" },
+    {
+      icon: <FiHeart size={22} />,
+      label: "Saved Jobs",
+      path: "/seeker/saved-jobs",
+      count: 18,
+    },
+    {
+      icon: <FiBell size={22} />,
+      label: "Job Alerts",
+      path: "/seeker/job-alerts",
+      count: 7,
+    },
+    {
+      icon: <FiFileText size={22} />,
+      label: "My CV",
+      path: "/seeker/cv-upload",
+    },
+    {
+      icon: <FiBriefcase size={22} />,
+      label: "Applications",
+      path: "/seeker/applied-jobs",
+      count: 42,
+    },
+    {
+      icon: <FiTrendingUp size={22} />,
+      label: "Career Tips",
+      path: "/features/career-tips",
+    },
+    {
+      icon: <FiEye size={22} />,
+      label: "Profile Views",
+      path: "/seeker/profile",
+      count: 128,
+    },
+    { icon: <FiSettings size={22} />, label: "Settings", path: "" },
+    { icon: <FiLinkedin size={22} />, label: "LinkedIn", path: "" },
   ];
 
   const recentApplications = [
@@ -502,9 +530,9 @@ const SeekerDashboard = () => {
               </h3>
               <div className="grid grid-cols-2 gap-2">
                 {quickLinks.map((link, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href="#"
+                    to={link.path}
                     className="flex flex-col items-center justify-center p-3 rounded-lg border border-gray-100 hover:border-[#4eb956] hover:shadow-sm transition-all group"
                   >
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#4eb956] to-[#3da845] flex items-center justify-center text-white mb-2 group-hover:scale-105 transition-transform">
@@ -518,7 +546,7 @@ const SeekerDashboard = () => {
                         {link.count || link.version}
                       </span>
                     )}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
