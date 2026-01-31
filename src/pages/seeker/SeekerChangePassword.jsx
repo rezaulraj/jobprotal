@@ -129,7 +129,6 @@ const SeekerChangePassword = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#4eb956] to-[#3da844] rounded-full mb-4 shadow-lg">
             <FiShield className="text-white text-2xl" />
