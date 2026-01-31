@@ -12,6 +12,7 @@ import {
   FaHourglassHalf,
   FaMoneyBillWave,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SeekerAppliedJobs = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -90,7 +91,7 @@ const SeekerAppliedJobs = () => {
     },
   ]);
 
-  // Filter jobs based on search query and status
+  // Filter jobs
   const filteredJobs = appliedJobs.filter((job) => {
     const matchesSearch =
       !searchQuery ||
@@ -145,9 +146,9 @@ const SeekerAppliedJobs = () => {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <nav className="text-sm text-gray-600 mb-2">
-                <span className="hover:text-green-600 cursor-pointer">
+                <Link to="/" className="hover:text-green-600 cursor-pointer">
                   Home
-                </span>
+                </Link>
                 <span className="mx-2">/</span>
                 <span className="text-green-600 font-medium">Applied Jobs</span>
               </nav>

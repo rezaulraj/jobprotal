@@ -207,7 +207,7 @@ const SeekerChangePassword = () => {
                     </button>
                   </div>
 
-                  {/* Password Strength Indicator */}
+                  {/* Password */}
                   {formData.newPassword && (
                     <div className="mt-4 space-y-3">
                       <div className="flex items-center justify-between">
