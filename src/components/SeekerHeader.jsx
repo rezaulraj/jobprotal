@@ -47,6 +47,7 @@ import ReactCountryFlag from "react-country-flag";
 import { Link } from "react-router-dom";
 import logo from "/logo.png";
 import jobData from "../data/jobData.json";
+import { IoMdNotifications } from "react-icons/io";
 
 const SeekerHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -439,17 +440,18 @@ const SeekerHeader = () => {
       badge: "5",
     },
     {
+      label: "Job Alerts",
+      icon: <IoMdNotifications className="text-sm" />,
+      path: "seeker/job-alerts",
+      color: "text-blue-600",
+      badge: "2",
+    },
+    {
       label: "Change Password",
       icon: <FaKey className="text-sm" />,
       path: "seeker/change-password",
       color: "text-yellow-600",
     },
-    // {
-    //   label: "Settings",
-    //   icon: <FaCog className="text-sm" />,
-    //   path: "seeker/settings",
-    //   color: "text-gray-600",
-    // },
     {
       label: "Logout",
       icon: <FaSignOutAlt className="text-sm" />,

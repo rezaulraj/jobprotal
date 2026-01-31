@@ -3,17 +3,11 @@ import {
   FiCheck,
   FiMail,
   FiPhone,
-  FiMessageSquare,
   FiFileText,
   FiSearch,
-  FiEdit2,
   FiStar,
   FiUsers,
-  FiBriefcase,
-  FiTrendingUp,
   FiSend,
-  FiChevronRight,
-  FiArrowRight,
 } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
@@ -37,7 +31,6 @@ const CVWriting = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Handle form submission
   };
 
   const services = [
@@ -70,7 +63,7 @@ const CVWriting = () => {
       features: [
         "Review & Critique",
         "Editable & PDF File",
-        "Optimized Rozee Profile",
+        "Optimized JobsPlus Profile",
         "Designed to score with Application Tracking Software (ATS)",
         "Keyword-rich to match job postings",
         "Choose from 2 CV Layouts",
@@ -85,7 +78,7 @@ const CVWriting = () => {
       features: [
         "Review & Critique",
         "Editable & PDF File",
-        "Optimized Rozee Profile",
+        "Optimized JobsPlus Profile",
         "Designed to score with Application Tracking Software (ATS)",
         "Keyword-rich to match job postings",
         "Choose from 3 CV Layouts",
@@ -102,7 +95,7 @@ const CVWriting = () => {
       features: [
         "Review & Critique",
         "Editable & PDF File",
-        "Optimized Rozee Profile",
+        "Optimized JobsPlus Profile",
         "Designed to score with Application Tracking Software (ATS)",
         "Keyword-rich to match job postings",
         "Choose from 4 CV Layouts",
@@ -119,7 +112,7 @@ const CVWriting = () => {
       features: [
         "Review & Critique",
         "Editable & PDF File",
-        "Optimized Rozee Profile",
+        "Optimized JobsPlus Profile",
         "Designed to score with Application Tracking Software (ATS)",
         "Keyword-rich to match job postings",
         "Choose from 4 CV Layouts",
@@ -194,7 +187,7 @@ const CVWriting = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Showcase Your
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4eb956] to-white">
@@ -206,19 +199,10 @@ const CVWriting = () => {
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl">
                 The Right Way before even meeting the employer to make a great
                 first impression
               </p>
-
-              <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-[#1e2558] font-semibold rounded-lg hover:bg-gray-100 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center gap-2">
-                  Get Started <FiArrowRight />
-                </button>
-                <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all">
-                  View Packages
-                </button>
-              </div>
             </div>
 
             {/* Image */}
@@ -228,7 +212,7 @@ const CVWriting = () => {
                   <img
                     src="/cvwriten.png"
                     alt="Professional CV Writing"
-                    className="w-full h-[400px] lg:h-[500px] object-cover object-center"
+                    className="w-full h-[300px] lg:h-[400px] object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
 
@@ -312,11 +296,11 @@ const CVWriting = () => {
                 )}
 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {pkg.title}
                   </h3>
                   <div className="flex items-baseline gap-1 mb-3">
-                    <span className="text-4xl font-bold text-[#1e2558]">
+                    <span className="text-3xl font-bold text-[#1e2558]">
                       {pkg.price}
                     </span>
                     <span className="text-gray-500">/package</span>
@@ -386,7 +370,7 @@ const CVWriting = () => {
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
                     <p className="font-semibold text-gray-900">
-                      rezaul.coderhunt@gmail.com
+                      Enquiry@jobplus.com.bd
                     </p>
                   </div>
                 </div>
@@ -397,11 +381,9 @@ const CVWriting = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Phone</p>
-                    <p className="font-semibold text-gray-900">MD. KARIM</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-gray-500">+880</span>
+                    <div className="flex items-center mt-1">
                       <span className="font-semibold text-gray-900">
-                        01877796011
+                        +880 1906-499721
                       </span>
                     </div>
                   </div>

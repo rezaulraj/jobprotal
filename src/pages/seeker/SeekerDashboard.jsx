@@ -42,8 +42,8 @@ const SeekerDashboard = () => {
   const applicationData = [
     { name: "Applied", value: 42, color: "#4eb956" },
     { name: "Viewed", value: 28, color: "#3da845" },
-    { name: "Processing", value: 18, color: "#2c9735" },
-    { name: "Completed", value: 12, color: "#1b8625" },
+    { name: "Pending", value: 18, color: "#2c9735" },
+    { name: "Shortlisted", value: 12, color: "#1b8625" },
   ];
 
   const monthlyData = [
@@ -121,11 +121,11 @@ const SeekerDashboard = () => {
       change: "+18%",
       icon: <FiBriefcase />,
     },
-    { label: "Profile Views", value: "128", change: "+32%", icon: <FiEye /> },
+    { label: "Profile Views", value: "28", change: "+32%", icon: <FiEye /> },
     { label: "Saved Jobs", value: "18", change: "+5%", icon: <FiHeart /> },
     {
       label: "Shortlisted Jobs",
-      value: "8",
+      value: "12",
       change: "",
       icon: <HiOutlineClipboardCheck />,
     },

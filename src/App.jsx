@@ -28,6 +28,7 @@ import CareerTips from "./pages/seeker/features/CareerTips";
 import InterviewTips from "./pages/seeker/features/InterviewTips";
 import SkillDevelopment from "./pages/seeker/features/SkillDevelopment";
 import SeekerSaveJobs from "./pages/seeker/SeekerSaveJobs";
+import SeekerJobsAlert from "./pages/seeker/SeekerJobsAlert";
 function App() {
   const isAuthenticated = true;
   return (
@@ -83,6 +84,7 @@ function App() {
               <Route path="saved-jobs" element={<SeekerSaveJobs />} />
               <Route path="applied-jobs" element={<SeekerAppliedJobs />} />
               <Route path="shortlisted" element={<SeekerShortlisted />} />
+              <Route path="job-alerts" element={<SeekerJobsAlert />} />
               <Route
                 path="change-password"
                 element={<SeekerChangePassword />}
