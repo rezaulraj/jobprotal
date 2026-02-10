@@ -437,7 +437,7 @@ const SingleJobDescription = () => {
                       {job.requirements.map((req, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle
-                            className="w-5 h-5 mt-0.5 flex-shrink-0"
+                            className="w-5 h-5 mt-0.5 shrink-0"
                             style={{ color: colors.secondary }}
                           />
                           <span className="text-gray-700">{req}</span>

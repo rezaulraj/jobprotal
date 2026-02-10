@@ -33,7 +33,6 @@ const HeroHome = () => {
   const locationInputRef = useRef(null);
   const salaryInputRef = useRef(null);
 
-  // Helper functions to calculate counts based on actual job data
   const calculateDeadlineTomorrowCount = () => {
     const today = new Date("2025-12-10");
     const tomorrow = new Date(today);
@@ -41,7 +40,7 @@ const HeroHome = () => {
 
     return jobData.filter((job) => {
       const jobEndDate = new Date(job.jobEndDate);
-      // Check if deadline is tomorrow or within 24 hours
+      // Check if deadline
       const diffTime = jobEndDate - tomorrow;
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       return diffDays <= 1 && diffDays >= 0;
@@ -319,7 +318,6 @@ const HeroHome = () => {
     }
 
     if (field === "jobTitleSkillsCompany" && value.length > 0) {
-      // Generate search suggestions from job data
       const suggestions = generateSearchSuggestions(value);
       setSearchSuggestions(suggestions);
     } else if (field === "jobTitleSkillsCompany" && value.length === 0) {
@@ -331,7 +329,6 @@ const HeroHome = () => {
     const lowerQuery = query.toLowerCase();
     const suggestions = new Set();
 
-    // Search in job titles
     jobData.forEach((job) => {
       if (job.title.toLowerCase().includes(lowerQuery)) {
         suggestions.add(job.title);
@@ -351,7 +348,7 @@ const HeroHome = () => {
       }
     });
 
-    return Array.from(suggestions).slice(0, 8); // Limit to 8 suggestions
+    return Array.from(suggestions).slice(0, 8);
   };
 
   const handleSuggestionClick = (suggestion) => {

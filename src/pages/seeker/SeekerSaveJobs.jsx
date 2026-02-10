@@ -72,7 +72,7 @@ const SeekerSaveJobs = () => {
     },
   ]);
 
-  // Filter jobs based on search query
+  // Filter
   const filteredJobs = savedJobs.filter((job) => {
     if (!searchQuery) return job.isActive;
 
@@ -164,7 +164,7 @@ const SeekerSaveJobs = () => {
                   )}
                 </div>
 
-                {/* Filter Dropdown */}
+                {/* Filter */}
                 <div className="relative">
                   <select
                     value={filterType}
@@ -237,7 +237,7 @@ const SeekerSaveJobs = () => {
           </div>
         </div>
 
-        {/* Jobs List */}
+        {/* Jobs */}
         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <h2 className="text-lg font-semibold text-gray-800">
@@ -382,7 +382,6 @@ const SeekerSaveJobs = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-xl shadow-sm">
             <div className="flex items-center gap-3 mb-3">

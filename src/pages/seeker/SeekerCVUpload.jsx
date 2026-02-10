@@ -206,7 +206,7 @@ const SeekerCVUpload = () => {
                 </button>
               </div>
 
-              {/* CV List */}
+              {/* CV */}
               <div className="space-y-4">
                 {cvs.map((cv) => (
                   <div
@@ -283,7 +283,7 @@ const SeekerCVUpload = () => {
                           </button>
                         )}
 
-                        {/* Privacy Toggle */}
+                        {/* Privacy */}
                         {cv.id !== 0 && (
                           <button
                             onClick={() => togglePrivacy(cv.id)}
@@ -296,7 +296,6 @@ const SeekerCVUpload = () => {
                           </button>
                         )}
 
-                        {/* Download */}
                         <button
                           onClick={() => handleDownload(cv)}
                           className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors duration-200"
@@ -305,7 +304,6 @@ const SeekerCVUpload = () => {
                           <FaDownload />
                         </button>
 
-                        {/* Set as Default */}
                         {cv.id !== 0 && !cv.isDefault && (
                           <button
                             onClick={() => setAsDefault(cv.id)}

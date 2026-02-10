@@ -525,7 +525,7 @@ const FreelanceJobDescription = () => {
                   <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
                   <span className="text-sm text-gray-600">
                     Highlight relevant experience in your cover letter
-                  </span>
+                0  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />

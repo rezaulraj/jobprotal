@@ -1651,7 +1651,6 @@ const SeekerProfile = () => {
     );
   };
 
-  // Update the Section component to handle different popup triggers
   const Section = ({ title, icon: Icon, children, onAdd, hasData }) => {
     return (
       <div className="bg-white rounded-lg p-6 mb-6 shadow-sm border border-gray-200">
@@ -1689,7 +1688,6 @@ const SeekerProfile = () => {
     );
   };
 
-  // Update the Upload Video CV section in the sidebar
   const UploadVideoSection = () => (
     <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
       <div className="flex items-center gap-2 mb-4">
@@ -1829,7 +1827,7 @@ const SeekerProfile = () => {
                       </div>
 
                       {/* Percentage Badge */}
-                      <div className="absolute -top-3 -right-3 w-12 h-12 bg-[#4eb956] rounded-full flex items-center justify-center shadow-md">
+                      <div className="absolute top-1 right-0 w-8 h-8 bg-[#4eb956] rounded-full flex items-center justify-center shadow-md">
                         <span className="text-xs font-bold text-white">
                           65%
                         </span>

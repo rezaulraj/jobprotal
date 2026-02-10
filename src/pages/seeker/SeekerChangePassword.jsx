@@ -66,7 +66,6 @@ const SeekerChangePassword = () => {
     setErrorMessage("");
     setSuccessMessage("");
 
-    // Validation
     if (
       !formData.oldPassword ||
       !formData.newPassword ||
@@ -95,7 +94,6 @@ const SeekerChangePassword = () => {
       return;
     }
 
-    // Simulate API call
     setTimeout(() => {
       setSuccessMessage("Password updated successfully!");
       setFormData({
@@ -142,7 +140,7 @@ const SeekerChangePassword = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Form Section */}
+          {/* Form */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -275,7 +273,6 @@ const SeekerChangePassword = () => {
                     )}
                 </div>
 
-                {/* Error and Success Messages */}
                 {errorMessage && (
                   <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg flex items-center gap-3">
                     <FiAlertCircle />

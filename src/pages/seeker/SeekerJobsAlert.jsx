@@ -166,9 +166,9 @@ const SeekerJobsAlert = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header with Breadcrumb */}
+      {/* Header */}
       <header className="bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-2">
           <div className="py-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <FiHome size={16} />
@@ -182,8 +182,8 @@ const SeekerJobsAlert = () => {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Stats and Create Button */}
+      <main className="container mx-auto px-2">
+        {/* Stats */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
             <p className="text-gray-600">
@@ -212,7 +212,7 @@ const SeekerJobsAlert = () => {
           </button>
         </div>
 
-        {/* Alerts Grid */}
+        {/* Alerts */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
           {alerts.map((alert) => (
             <div
@@ -445,7 +445,7 @@ const SeekerJobsAlert = () => {
             {/* Modal Form */}
             <div className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Alert Name */}
+
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Alert Name *
@@ -464,7 +464,6 @@ const SeekerJobsAlert = () => {
                   />
                 </div>
 
-                {/* Keywords */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Keywords *
@@ -483,7 +482,6 @@ const SeekerJobsAlert = () => {
                   />
                 </div>
 
-                {/* Keyword Type */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
                     Keyword is *
@@ -516,7 +514,6 @@ const SeekerJobsAlert = () => {
                   </div>
                 </div>
 
-                {/* Career Level */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Career Level *
@@ -536,8 +533,6 @@ const SeekerJobsAlert = () => {
                     ))}
                   </select>
                 </div>
-
-                {/* Experience */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Your Experience *
@@ -557,8 +552,6 @@ const SeekerJobsAlert = () => {
                     ))}
                   </select>
                 </div>
-
-                {/* Salary */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Your Expected Salary (BDT) *
@@ -579,7 +572,6 @@ const SeekerJobsAlert = () => {
                   </select>
                 </div>
 
-                {/* City */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     City *
@@ -600,7 +592,6 @@ const SeekerJobsAlert = () => {
                   </select>
                 </div>
 
-                {/* Form Actions */}
                 <div className="sticky bottom-0 bg-white pt-6 border-t border-gray-200 flex justify-end gap-3">
                   <button
                     type="button"
