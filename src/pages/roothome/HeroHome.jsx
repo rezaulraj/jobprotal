@@ -55,7 +55,7 @@ const HeroHome = () => {
           job.employeeStatus.toLowerCase().includes("internship")) ||
         (job.description &&
           job.description.toLowerCase().includes("internship")) ||
-        (job.jobType && job.jobType.toLowerCase().includes("internship"))
+        (job.jobType && job.jobType.toLowerCase().includes("internship")),
     ).length;
   };
 
@@ -67,7 +67,7 @@ const HeroHome = () => {
         (job.employeeStatus &&
           job.employeeStatus.toLowerCase().includes("contract")) ||
         (job.jobType && job.jobType.toLowerCase().includes("contractual")) ||
-        (job.jobType && job.jobType.toLowerCase().includes("contract"))
+        (job.jobType && job.jobType.toLowerCase().includes("contract")),
     ).length;
   };
 
@@ -80,7 +80,7 @@ const HeroHome = () => {
           job.employeeStatus.toLowerCase().includes("part-time")) ||
         (job.description &&
           job.description.toLowerCase().includes("part time")) ||
-        (job.jobType && job.jobType.toLowerCase().includes("part time"))
+        (job.jobType && job.jobType.toLowerCase().includes("part time")),
     ).length;
   };
 
@@ -93,7 +93,8 @@ const HeroHome = () => {
         (job.title && job.title.toLowerCase().includes("overseas")) ||
         (job.location && job.location.toLowerCase().includes("overseas")) ||
         (job.title && job.title.toLowerCase().includes("migration")) ||
-        (job.description && job.description.toLowerCase().includes("migration"))
+        (job.description &&
+          job.description.toLowerCase().includes("migration")),
     ).length;
   };
 
@@ -105,7 +106,7 @@ const HeroHome = () => {
         (job.description && job.description.toLowerCase().includes("remote")) ||
         (job.description &&
           job.description.toLowerCase().includes("work from home")) ||
-        (job.description && job.description.toLowerCase().includes("wfh"))
+        (job.description && job.description.toLowerCase().includes("wfh")),
     ).length;
   };
 
@@ -145,7 +146,6 @@ const HeroHome = () => {
       return sum + vacancy;
     }, 0);
 
-    // Calculate unique companies
     const uniqueCompanies = [
       ...new Set(jobData.map((job) => job.company).filter(Boolean)),
     ].length;
@@ -172,7 +172,6 @@ const HeroHome = () => {
       },
     ]);
 
-    // Calculate quick links with actual counts
     const calculatedQuickLinks = [
       {
         label: "All jobs",
@@ -229,7 +228,6 @@ const HeroHome = () => {
     setQuickLinks(calculatedQuickLinks);
   }, []);
 
-  // Get unique locations from job data
   const getUniqueLocations = () => {
     const locations = new Set();
     jobData.forEach((job) => {
@@ -283,7 +281,6 @@ const HeroHome = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
 
-    // Build search parameters
     const params = new URLSearchParams();
 
     if (searchQuery.jobTitleSkillsCompany) {
@@ -298,7 +295,6 @@ const HeroHome = () => {
       params.append("minSalary", searchQuery.minSalary);
     }
 
-    // Navigate to jobs page with search parameters
     const queryString = params.toString();
     navigate(`/jobs${queryString ? `?${queryString}` : ""}`);
 
@@ -375,9 +371,8 @@ const HeroHome = () => {
     setShowSalaryDropdown(false);
   };
 
-  // Filter cities based on search
   const filteredCities = bangladeshCities.filter((city) =>
-    city.toLowerCase().includes(searchQuery.location.toLowerCase())
+    city.toLowerCase().includes(searchQuery.location.toLowerCase()),
   );
 
   useEffect(() => {
@@ -490,7 +485,7 @@ const HeroHome = () => {
                                 onChange={(e) =>
                                   handleInputChange(
                                     "jobTitleSkillsCompany",
-                                    e.target.value
+                                    e.target.value,
                                   )
                                 }
                                 className="w-full h-12 sm:h-14 pl-10 pr-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-[#4EB956] focus:ring-2 focus:ring-[#4EB956]/20 transition-all duration-300 text-gray-800 placeholder-gray-500"
@@ -515,7 +510,7 @@ const HeroHome = () => {
                                           {suggestion}
                                         </span>
                                       </button>
-                                    )
+                                    ),
                                   )}
                                 </div>
                               )}
@@ -582,7 +577,8 @@ const HeroHome = () => {
                                 <span className="text-gray-800 text-sm block truncate">
                                   {searchQuery.minSalary
                                     ? salaryRanges.find(
-                                        (s) => s.value === searchQuery.minSalary
+                                        (s) =>
+                                          s.value === searchQuery.minSalary,
                                       )?.label
                                     : "Min Salary"}
                                 </span>
@@ -681,7 +677,6 @@ const HeroHome = () => {
                         to={link.path}
                         onClick={(e) => {
                           e.preventDefault();
-                          // Pass filter parameters to the jobs page
                           navigate(link.path);
                         }}
                         className="group flex items-center justify-between py-2 px-2 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-0 cursor-pointer"

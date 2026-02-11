@@ -8,7 +8,6 @@ import {
   FaBriefcase,
   FaTimes,
   FaEye,
-  FaGlobeAsia,
   FaIndustry,
   FaBuilding,
 } from "react-icons/fa";
@@ -131,7 +130,6 @@ const SeekerShortlisted = () => {
     },
   ]);
 
-  // Filter jobs based on search query
   const filteredJobs = shortlistedJobs.filter((job) => {
     if (!job.isActive) return false;
 
@@ -186,7 +184,6 @@ const SeekerShortlisted = () => {
               </p>
             </div>
 
-            {/* Search */}
             <div className="w-full md:w-auto">
               <div className="relative md:w-80">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -211,7 +208,6 @@ const SeekerShortlisted = () => {
             </div>
           </div>
 
-          {/* Stats Dashboard */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-white rounded-xl p-4 shadow-sm">
               <div className="flex items-center justify-between">
@@ -269,9 +265,7 @@ const SeekerShortlisted = () => {
           </div>
         </div>
 
-        {/* Shortlisted Jobs List */}
         <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-8">
-    
           <div className="divide-y divide-gray-100">
             {filteredJobs.length > 0 ? (
               filteredJobs.map((job) => {
@@ -285,11 +279,10 @@ const SeekerShortlisted = () => {
                     className="p-6 hover:bg-gray-50 transition-colors"
                   >
                     <div className="flex flex-col lg:flex-row gap-6">
-                      {/* Job Info */}
                       <div className="flex-1">
                         <div className="flex items-start gap-4">
                           <div
-                            className={`${job.companyLogo} p-3 rounded-lg flex-shrink-0`}
+                            className={`${job.companyLogo} p-3 rounded-lg shrink-0`}
                           >
                             <FaBriefcase className="text-gray-700 text-lg" />
                           </div>

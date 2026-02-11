@@ -1784,7 +1784,6 @@ const SeekerProfile = () => {
                         />
                       </svg>
 
-                      {/* Profile Image */}
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden border-4 border-white shadow">
                           {profile.profileImage ? (

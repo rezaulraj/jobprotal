@@ -313,7 +313,7 @@ const RootHeader = () => {
       {
         name: "Importers/ Distributors/Exporters",
         vacancyCount: calculateVacancyCount(
-          "Importers/ Distributors/Exporters"
+          "Importers/ Distributors/Exporters",
         ),
         jobCount: calculateJobCount("Importers/ Distributors/Exporters"),
         icon: <FaShippingFast />,
@@ -605,10 +605,10 @@ const RootHeader = () => {
                     item.label === "Browse Job"
                       ? dropdownRef
                       : item.isLogin
-                      ? loginDropdownRef
-                      : item.isSignup
-                      ? signupDropdownRef
-                      : null
+                        ? loginDropdownRef
+                        : item.isSignup
+                          ? signupDropdownRef
+                          : null
                   }
                 >
                   {item.subNav ? (
@@ -876,7 +876,7 @@ const RootHeader = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 lg:hidden">
           <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl">
@@ -946,7 +946,7 @@ const RootHeader = () => {
                           <button
                             onClick={() =>
                               setActiveNav(
-                                activeNav === item.label ? null : item.label
+                                activeNav === item.label ? null : item.label,
                               )
                             }
                             className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200 cursor-pointer"
@@ -1031,7 +1031,7 @@ const RootHeader = () => {
                           <button
                             onClick={() =>
                               setActiveNav(
-                                activeNav === item.label ? null : item.label
+                                activeNav === item.label ? null : item.label,
                               )
                             }
                             className="flex items-center justify-between w-full py-3 text-gray-700 hover:text-[#4EB956] transition-colors duration-200 cursor-pointer"

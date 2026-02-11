@@ -166,7 +166,6 @@ const SeekerJobsAlert = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-2">
           <div className="py-4">
@@ -220,7 +219,6 @@ const SeekerJobsAlert = () => {
               className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
             >
               <div className="p-6">
-                {/* Alert Header */}
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
@@ -268,11 +266,10 @@ const SeekerJobsAlert = () => {
                   </div>
                 </div>
 
-                {/* Alert Details */}
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <FiSearch
-                      className="text-gray-400 mt-1 flex-shrink-0"
+                      className="text-gray-400 mt-1 shrink-0"
                       size={16}
                     />
                     <div>
@@ -284,7 +281,7 @@ const SeekerJobsAlert = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-start gap-3">
                       <FiBriefcase
-                        className="text-gray-400 mt-1 flex-shrink-0"
+                        className="text-gray-400 mt-1 shrink-0"
                         size={16}
                       />
                       <div>
@@ -295,7 +292,7 @@ const SeekerJobsAlert = () => {
 
                     <div className="flex items-start gap-3">
                       <FiTarget
-                        className="text-gray-400 mt-1 flex-shrink-0"
+                        className="text-gray-400 mt-1 shrink-0"
                         size={16}
                       />
                       <div>
@@ -306,7 +303,7 @@ const SeekerJobsAlert = () => {
 
                     <div className="flex items-start gap-3">
                       <FiDollarSign
-                        className="text-gray-400 mt-1 flex-shrink-0"
+                        className="text-gray-400 mt-1 shrink-0"
                         size={16}
                       />
                       <div>
@@ -317,7 +314,7 @@ const SeekerJobsAlert = () => {
 
                     <div className="flex items-start gap-3">
                       <FiMapPin
-                        className="text-gray-400 mt-1 flex-shrink-0"
+                        className="text-gray-400 mt-1 shrink-0"
                         size={16}
                       />
                       <div>
@@ -328,7 +325,6 @@ const SeekerJobsAlert = () => {
                   </div>
                 </div>
 
-                {/* Alert Footer */}
                 <div className="mt-6 pt-6 border-t border-gray-100 flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -375,7 +371,7 @@ const SeekerJobsAlert = () => {
         {/* Tips Section */}
         <div className="bg-gradient-to-r from-[#1e2558] to-[#4eb956] rounded-2xl p-8 text-white">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center shrink-0">
               <FiAlertCircle size={24} />
             </div>
             <div>
@@ -384,32 +380,32 @@ const SeekerJobsAlert = () => {
               </h3>
               <ul className="space-y-2 text-sm text-white/90">
                 <li className="flex items-start gap-2">
-                  <FiCheck className="mt-1 flex-shrink-0" />
+                  <FiCheck className="mt-1 shrink-0" />
                   <span>
                     Use specific keywords related to your skills and desired
                     role
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <FiCheck className="mt-1 flex-shrink-0" />
+                  <FiCheck className="mt-1 shrink-0" />
                   <span>
                     Set realistic salary expectations based on your experience
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <FiCheck className="mt-1 flex-shrink-0" />
+                  <FiCheck className="mt-1 shrink-0" />
                   <span>
                     Choose multiple cities or "Remote" for more opportunities
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <FiCheck className="mt-1 flex-shrink-0" />
+                  <FiCheck className="mt-1 shrink-0" />
                   <span>
                     Pause alerts when you're not actively job searching
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <FiCheck className="mt-1 flex-shrink-0" />
+                  <FiCheck className="mt-1 shrink-0" />
                   <span>
                     Regularly update your alerts as your career goals evolve
                   </span>
@@ -424,7 +420,6 @@ const SeekerJobsAlert = () => {
       {showCreateAlert && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
-            {/* Modal Header */}
             <div className="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -445,7 +440,6 @@ const SeekerJobsAlert = () => {
             {/* Modal Form */}
             <div className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
-
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Alert Name *

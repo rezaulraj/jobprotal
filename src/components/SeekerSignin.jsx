@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  FaUser,
   FaGoogle,
   FaEnvelope,
   FaLock,
@@ -19,11 +18,6 @@ const SeekerSignin = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const colors = {
-    primary: "#1e2558",
-    secondary: "#4eb956",
-  };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -35,24 +29,19 @@ const SeekerSignin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // Simulate API call
     setTimeout(() => {
       console.log("Login data:", formData);
       setIsLoading(false);
-      // Handle successful login
     }, 1500);
   };
 
   const handleGoogleAuth = () => {
     console.log("Google authentication initiated");
-    // Implement Google OAuth
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 p-4">
       <div className="w-full max-w-md">
-        {/* Header */}
         <div className="text-center mb-2">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
             Welcome Back, Job Seeker!
@@ -62,9 +51,7 @@ const SeekerSignin = () => {
           </p>
         </div>
 
-        {/* Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
-          {/* Google Auth Button */}
           <button
             onClick={handleGoogleAuth}
             className="w-full flex items-center justify-center space-x-3 p-4 border-2 border-gray-200 rounded-xl hover:border-[#4285f4] hover:shadow-lg transition-all duration-300 mb-6 group"

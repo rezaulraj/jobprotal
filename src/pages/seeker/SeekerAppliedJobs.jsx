@@ -91,7 +91,6 @@ const SeekerAppliedJobs = () => {
     },
   ]);
 
-  // Filter jobs
   const filteredJobs = appliedJobs.filter((job) => {
     const matchesSearch =
       !searchQuery ||

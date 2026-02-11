@@ -52,7 +52,6 @@ const JobCategory = () => {
   const [showAllCategories, setShowAllCategories] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if mobile on mount and resize
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -64,7 +63,6 @@ const JobCategory = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Calculate total vacancies for a category
   const calculateVacancyCount = (categoryName) => {
     const categoryMapping = {
       "Accounting/Finance": "Accounting/Finance",
@@ -102,7 +100,6 @@ const JobCategory = () => {
     return totalVacancies;
   };
 
-  // Calculate total jobs for a category
   const calculateJobCount = (categoryName) => {
     const categoryMapping = {
       "Accounting/Finance": "Accounting/Finance",
@@ -136,7 +133,7 @@ const JobCategory = () => {
     return jobData.filter((job) => job.category === mappedCategory).length;
   };
 
-  // Calculate function counts from subcategories
+  // Calculate function
   const calculateFunctionCount = () => {
     const functionMap = {};
 

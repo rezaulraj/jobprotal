@@ -208,7 +208,7 @@ const SeekerDashboard = () => {
                 <span className="text-gray-500 text-sm font-medium">
                   {stat.label}
                 </span>
-                <div className="text-[#4eb956]">{stat.icon}</div>
+                <div className="text-secondary">{stat.icon}</div>
               </div>
               <div className="flex items-end justify-between">
                 <div className="text-2xl font-bold text-gray-900">
@@ -233,7 +233,7 @@ const SeekerDashboard = () => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-r from-[#1e2558] via-[#4eb956] to-[#1e2558]"></div>
+                  <div className="w-full h-full bg-gradient-to-r from-primary via-secondary to-primary"></div>
                 )}
                 <label className="absolute top-2 right-2 bg-white text-gray-700 px-2 py-1 rounded-lg cursor-pointer transition-all hover:bg-gray-50 flex items-center space-x-1 shadow-sm text-xs">
                   <FiUpload size={12} />
@@ -251,7 +251,7 @@ const SeekerDashboard = () => {
                 <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between">
                   <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4">
                     <div className="relative">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-4 border-white shadow-md bg-gradient-to-r from-[#1e2558] to-[#4eb956] overflow-hidden">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-4 border-white shadow-md bg-linear-to-r from-[#1e2558] to-[#4eb956] overflow-hidden">
                         {profileImage ? (
                           <img
                             src={profileImage}
@@ -305,7 +305,7 @@ const SeekerDashboard = () => {
                     </div>
                     <div className="w-full sm:w-48 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-[#4eb956] to-[#3da845]"
+                        className="h-full bg-linear-to-r from-secondary to-[#3da845]"
                         style={{ width: `${profileCompletion}%` }}
                       ></div>
                     </div>
@@ -323,7 +323,7 @@ const SeekerDashboard = () => {
                   <button className="px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
                     Weekly
                   </button>
-                  <button className="px-3 py-1.5 text-sm bg-[#4eb956] text-white rounded-lg hover:bg-[#3da845]">
+                  <button className="px-3 py-1.5 text-sm bg-secondary text-white rounded-lg hover:bg-[#3da845]">
                     Monthly
                   </button>
                 </div>
@@ -451,7 +451,7 @@ const SeekerDashboard = () => {
                 <h2 className="text-lg font-bold text-gray-900">
                   Recent Applications
                 </h2>
-                <button className="text-sm text-[#4eb956] font-medium hover:text-[#3da845]">
+                <button className="text-sm text-secondary font-medium hover:text-[#3da845]">
                   View all →
                 </button>
               </div>
@@ -460,14 +460,14 @@ const SeekerDashboard = () => {
                 {recentApplications.map((application, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-[#4eb956] hover:bg-gray-50 transition-colors group"
+                    className="flex items-center justify-between p-3 rounded-lg border border-gray-100 hover:border-secondary hover:bg-gray-50 transition-colors group"
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-[#4eb956] to-[#3da845] flex items-center justify-center text-white font-bold">
+                      <div className="w-10 h-10 rounded-lg bg-linear-to-r from-secondary to-[#3da845] flex items-center justify-center text-white font-bold">
                         {application.company.charAt(0)}
                       </div>
                       <div>
-                        <h3 className="text-sm font-semibold text-gray-900 group-hover:text-[#1e2558]">
+                        <h3 className="text-sm font-semibold text-gray-900 group-hover:text-primary">
                           {application.position}
                         </h3>
                         <div className="flex items-center space-x-3 mt-1">
@@ -506,7 +506,7 @@ const SeekerDashboard = () => {
           </div>
 
           <div className="lg:w-4/12 w-full space-y-4">
-            <div className="bg-gradient-to-br from-[#1e2558] to-[#4eb956] rounded-xl p-4 text-white">
+            <div className="bg-linear-to-br from-[#1e2558] to-[#4eb956] rounded-xl p-4 text-white">
               <div className="flex items-start space-x-3">
                 <div className="bg-white text-secondary bg-opacity-20 p-2 rounded-lg">
                   <FiTarget size={18} />

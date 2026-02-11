@@ -405,6 +405,11 @@ const SeekerHeader = () => {
       ],
     },
     {
+      label: "Free CV Review",
+      path: "",
+      icon: <FaFileAlt className="text-xs" />,
+    },
+    {
       label: "Community",
       icon: <FaUsers className="text-xs" />,
       path: "",
@@ -488,7 +493,6 @@ const SeekerHeader = () => {
 
   const handleLogout = () => {
     console.log("Logging out...");
-    // Add your logout logic here
   };
 
   const ProfileDropdown = () => (
@@ -606,7 +610,7 @@ const SeekerHeader = () => {
               </Link>
             </div>
 
-            {/* Center Navigation - Desktop */}
+            {/* Center Navigation */}
             <div className="hidden lg:flex items-center justify-center space-x-8">
               {navItems.map((item, index) => (
                 <div
@@ -729,7 +733,6 @@ const SeekerHeader = () => {
                                 </div>
                               </>
                             ) : (
-                              // Features dropdown
                               <div
                                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
                                 onClick={(e) => e.stopPropagation()}
@@ -783,7 +786,7 @@ const SeekerHeader = () => {
               ))}
             </div>
 
-            {/* Right Side - Language & Profile */}
+            {/* Right Side */}
             <div className="flex items-center space-x-4">
               {/* Language Selector */}
               <div className="hidden md:block relative group">
@@ -807,7 +810,7 @@ const SeekerHeader = () => {
                   <FaChevronDown className="text-[8px]" />
                 </button>
 
-                <div className="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-lg border border-gray-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute right-0 mt-0 w-36 bg-white rounded-lg shadow-lg border border-gray-100 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   {languages.map((lang, index) => (
                     <button
                       key={index}
@@ -864,7 +867,7 @@ const SeekerHeader = () => {
                 {activeNav === "Profile" && <ProfileDropdown />}
               </div>
 
-              {/* Mobile Menu Button */}
+              {/* Mobile */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="lg:hidden cursor-pointer text-gray-600 hover:text-[#4EB956] transition-colors duration-200"
@@ -1024,7 +1027,7 @@ const SeekerHeader = () => {
                 </div>
               </div>
 
-              {/* Profile Menu */}
+              {/* Profile */}
               <div className="p-4 border-t border-gray-100">
                 <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
                   Account Settings

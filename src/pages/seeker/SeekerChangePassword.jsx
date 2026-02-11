@@ -125,10 +125,10 @@ const SeekerChangePassword = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#4eb956] to-[#3da844] rounded-full mb-4 shadow-lg">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-r from-secondary to-[#3da844] rounded-full mb-4 shadow-lg">
             <FiShield className="text-white text-2xl" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -158,7 +158,7 @@ const SeekerChangePassword = () => {
                       name="oldPassword"
                       value={formData.oldPassword}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4eb956] focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
                       placeholder="Enter your old password"
                     />
                     <button
@@ -189,7 +189,7 @@ const SeekerChangePassword = () => {
                       name="newPassword"
                       value={formData.newPassword}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4eb956] focus:border-transparent transition-all"
+                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
                       placeholder="Enter your new password"
                     />
                     <button
@@ -226,7 +226,7 @@ const SeekerChangePassword = () => {
                   )}
                 </div>
 
-                {/* Confirm New Password */}
+                {/* Confirm */}
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700">
                     Confirm New Password
@@ -240,7 +240,7 @@ const SeekerChangePassword = () => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
-                      className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4eb956] focus:border-transparent transition-all ${
+                      className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all ${
                         formData.confirmPassword &&
                         formData.newPassword !== formData.confirmPassword
                           ? "border-red-300"
@@ -287,14 +287,13 @@ const SeekerChangePassword = () => {
                   </div>
                 )}
 
-                {/* Submit Button */}
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all ${
                     isSubmitting
                       ? "bg-gray-300 cursor-not-allowed"
-                      : "bg-gradient-to-r from-[#4eb956] to-[#3da844] hover:from-[#3da844] hover:to-[#4eb956] transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
+                      : "bg-linear-to-r from-secondary to-[#3da844] hover:from-[#3da844] hover:to-secondary transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
                   }`}
                 >
                   {isSubmitting ? (
@@ -342,7 +341,7 @@ const SeekerChangePassword = () => {
               </div>
 
               <div className="space-y-6">
-                {/* Password Requirements */}
+                {/* Password */}
                 <div className="space-y-3">
                   <h4 className="font-semibold text-gray-800">
                     Password Requirements:
@@ -352,7 +351,7 @@ const SeekerChangePassword = () => {
                       className={`flex items-start gap-3 ${passwordStrength.length ? "text-green-600" : "text-gray-600"}`}
                     >
                       <div
-                        className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                        className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
                           passwordStrength.length
                             ? "bg-green-100"
                             : "bg-gray-100"
@@ -370,7 +369,7 @@ const SeekerChangePassword = () => {
                       className={`flex items-start gap-3 ${passwordStrength.alphabet ? "text-green-600" : "text-gray-600"}`}
                     >
                       <div
-                        className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                        className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
                           passwordStrength.alphabet
                             ? "bg-green-100"
                             : "bg-gray-100"
@@ -388,7 +387,7 @@ const SeekerChangePassword = () => {
                       className={`flex items-start gap-3 ${passwordStrength.number ? "text-green-600" : "text-gray-600"}`}
                     >
                       <div
-                        className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                        className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
                           passwordStrength.number
                             ? "bg-green-100"
                             : "bg-gray-100"
@@ -412,7 +411,7 @@ const SeekerChangePassword = () => {
                   </h4>
                   <ul className="space-y-3 text-sm text-gray-600">
                     <li className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-xs font-semibold text-purple-600">
                           !
                         </span>
@@ -422,7 +421,7 @@ const SeekerChangePassword = () => {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-xs font-semibold text-purple-600">
                           !
                         </span>
@@ -432,7 +431,7 @@ const SeekerChangePassword = () => {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-xs font-semibold text-purple-600">
                           !
                         </span>
@@ -443,7 +442,7 @@ const SeekerChangePassword = () => {
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-5 h-5 bg-purple-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                         <span className="text-xs font-semibold text-purple-600">
                           !
                         </span>
@@ -454,8 +453,6 @@ const SeekerChangePassword = () => {
                     </li>
                   </ul>
                 </div>
-
-                {/* Strength Meter Legend */}
                 <div className="space-y-3 pt-6 border-t border-gray-100">
                   <h4 className="font-semibold text-gray-800">
                     Password Strength:

@@ -92,7 +92,6 @@ const SeekerCVUpload = () => {
     setIsUploading(true);
     setUploadProgress(0);
 
-    // Simulate upload progress
     const interval = setInterval(() => {
       setUploadProgress((prev) => {
         if (prev >= 100) {
@@ -199,7 +198,7 @@ const SeekerCVUpload = () => {
                 </h2>
                 <button
                   onClick={() => setShowUploadModal(true)}
-                  className="bg-[#4eb956] hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-200"
+                  className="bg-secondary hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg flex items-center gap-2 transition-colors duration-200"
                 >
                   <FaUpload className="text-white" />
                   Upload CV
@@ -353,7 +352,7 @@ const SeekerCVUpload = () => {
               <div className="space-y-6">
                 <div className="bg-green-50 p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-3 h-3 rounded-full bg-green-500 flex-shrink-0"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500 shrink-0"></div>
                     <h3 className="font-medium text-gray-800">Default CV</h3>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -365,7 +364,7 @@ const SeekerCVUpload = () => {
 
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-3 h-3 rounded-full bg-purple-500 flex-shrink-0"></div>
+                    <div className="w-3 h-3 rounded-full bg-purple-500 shrink-0"></div>
                     <h3 className="font-medium text-gray-800">Private CV</h3>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -376,7 +375,7 @@ const SeekerCVUpload = () => {
 
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-3 h-3 rounded-full bg-blue-500 flex-shrink-0"></div>
+                    <div className="w-3 h-3 rounded-full bg-blue-500 shrink-0"></div>
                     <h3 className="font-medium text-gray-800">Multiple CVs</h3>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -388,7 +387,7 @@ const SeekerCVUpload = () => {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-3 h-3 rounded-full bg-gray-500 flex-shrink-0"></div>
+                    <div className="w-3 h-3 rounded-full bg-gray-500 shrink-0"></div>
                     <h3 className="font-medium text-gray-800">Profile CV</h3>
                   </div>
                   <p className="text-sm text-gray-600">
@@ -403,15 +402,15 @@ const SeekerCVUpload = () => {
                 <h3 className="font-medium text-gray-800 mb-3">Quick Tips:</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Keep your default CV updated regularly</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Use private CVs for job-specific applications</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheck className="text-green-500 mt-0.5 flex-shrink-0" />
+                    <FaCheck className="text-green-500 mt-0.5 shrink-0" />
                     <span>Download and backup your CVs periodically</span>
                   </li>
                 </ul>
