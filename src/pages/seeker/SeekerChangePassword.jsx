@@ -483,7 +483,6 @@ const SeekerChangePassword = () => {
           </div>
         </div>
 
-        {/* Security Note */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500">
             <FiShield className="inline mr-2" />

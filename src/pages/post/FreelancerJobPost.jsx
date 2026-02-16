@@ -47,20 +47,20 @@ const FreelancerJobPost = () => {
 
   // Job form state
   const [jobData, setJobData] = useState({
-    // Step 1: Project Details
+    // Project Details
     projectTitle: "",
     projectType: "",
     projectCategory: "",
     projectDescription: "",
     projectDuration: "",
 
-    // Step 2: Skills & Requirements
+    // Skills & Requirements
     requiredSkills: [],
     experienceLevel: "",
     languageRequirements: [],
     toolsRequired: [],
 
-    // Step 3: Budget & Timeline
+    // Budget & Timeline
     budgetType: "fixed",
     budget: {
       min: "",
@@ -73,7 +73,7 @@ const FreelancerJobPost = () => {
       estimatedHours: "",
     },
 
-    // Step 4: Client Preferences
+    // Client Preferences
     clientLocation: {
       preferredLocation: "",
       timezone: "",
@@ -81,12 +81,12 @@ const FreelancerJobPost = () => {
     communicationPreferences: [],
     meetingFrequency: "",
 
-    // Step 5: Submission Details
+    // Submission Details
     submissionRequirements: "",
     attachments: [],
     applicationDeadline: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
 
-    // Step 6: Review & Post
+    // Review & Post
     visibility: "public",
     tags: [],
   });
@@ -103,7 +103,7 @@ const FreelancerJobPost = () => {
     return () => setMounted(false);
   }, []);
 
-  // Freelance categories with icons
+  // Freelance categories
   const projectCategories = [
     {
       id: "web-dev",
@@ -341,7 +341,7 @@ const FreelancerJobPost = () => {
     setJobData((prev) => ({
       ...prev,
       languageRequirements: prev.languageRequirements.filter(
-        (l) => l !== language
+        (l) => l !== language,
       ),
     }));
   }, []);
@@ -395,7 +395,7 @@ const FreelancerJobPost = () => {
         if (type === "tag") addTag();
       }
     },
-    [addSkill, addLanguage, addTool, addTag]
+    [addSkill, addLanguage, addTool, addTag],
   );
 
   // Navigation
@@ -465,7 +465,7 @@ const FreelancerJobPost = () => {
         setIsSubmitted(true);
       }, 2000);
     },
-    [jobData]
+    [jobData],
   );
 
   // Progress percentage
@@ -481,7 +481,6 @@ const FreelancerJobPost = () => {
     "Review & Post",
   ];
 
-  // Reset form
   const resetForm = useCallback(() => {
     setCurrentStep(1);
     setJobData({
@@ -518,7 +517,6 @@ const FreelancerJobPost = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 p-4 md:p-6">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-8">
           <motion.div
             initial={{ y: -20, opacity: 0 }}
@@ -568,8 +566,8 @@ const FreelancerJobPost = () => {
                     index + 1 < currentStep
                       ? "bg-purple-500 text-white"
                       : index + 1 === currentStep
-                      ? "bg-gradient-to-br from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-200"
-                      : "bg-gray-200"
+                        ? "bg-gradient-to-br from-purple-600 to-pink-500 text-white shadow-lg shadow-purple-200"
+                        : "bg-gray-200"
                   }`}
                 >
                   {index + 1 < currentStep ? (
@@ -639,7 +637,7 @@ const FreelancerJobPost = () => {
                         <p className="font-medium">
                           {
                             projectCategories.find(
-                              (c) => c.id === jobData.projectCategory
+                              (c) => c.id === jobData.projectCategory,
                             )?.label
                           }
                         </p>
@@ -676,7 +674,6 @@ const FreelancerJobPost = () => {
                 </div>
               </motion.div>
             ) : (
-              // Form Steps
               <motion.div
                 key={`step-${currentStep}`}
                 initial={{ x: 100, opacity: 0 }}
@@ -695,7 +692,7 @@ const FreelancerJobPost = () => {
                         }
                   }
                 >
-                  {/* Step 1: Project Details */}
+                  {/* Project Details */}
                   {currentStep === 1 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -815,7 +812,7 @@ const FreelancerJobPost = () => {
                     </div>
                   )}
 
-                  {/* Step 2: Skills & Requirements */}
+                  {/* Skills & Requirements */}
                   {currentStep === 2 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -957,7 +954,7 @@ const FreelancerJobPost = () => {
                                       <FaTrash className="text-sm" />
                                     </button>
                                   </div>
-                                )
+                                ),
                               )}
                             </div>
                           </div>
@@ -1008,7 +1005,7 @@ const FreelancerJobPost = () => {
                     </div>
                   )}
 
-                  {/* Step 3: Budget & Timeline */}
+                  {/* Budget & Timeline */}
                   {currentStep === 3 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -1176,7 +1173,7 @@ const FreelancerJobPost = () => {
                     </div>
                   )}
 
-                  {/* Step 4: Client Preferences */}
+                  {/* Client Preferences */}
                   {currentStep === 4 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -1255,7 +1252,7 @@ const FreelancerJobPost = () => {
                                 }}
                                 className={`flex flex-col items-center justify-center p-4 rounded-xl border-2 transition-all duration-200 ${
                                   jobData.communicationPreferences.includes(
-                                    pref.value
+                                    pref.value,
                                   )
                                     ? "border-purple-500 bg-gradient-to-br from-purple-50 to-pink-50"
                                     : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"
@@ -1302,7 +1299,7 @@ const FreelancerJobPost = () => {
                     </div>
                   )}
 
-                  {/* Step 5: Submission Details */}
+                  {/* Submission Details */}
                   {currentStep === 5 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -1427,7 +1424,7 @@ const FreelancerJobPost = () => {
                     </div>
                   )}
 
-                  {/* Step 6: Review & Post */}
+                  {/* Review & Post */}
                   {currentStep === 6 && (
                     <div className="space-y-8">
                       <div className="flex items-center space-x-3 mb-6">
@@ -1548,14 +1545,14 @@ const FreelancerJobPost = () => {
                                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                                     {
                                       projectCategories.find(
-                                        (c) => c.id === jobData.projectCategory
+                                        (c) => c.id === jobData.projectCategory,
                                       )?.icon
                                     }
                                   </div>
                                   <p className="font-medium">
                                     {
                                       projectCategories.find(
-                                        (c) => c.id === jobData.projectCategory
+                                        (c) => c.id === jobData.projectCategory,
                                       )?.label
                                     }
                                   </p>

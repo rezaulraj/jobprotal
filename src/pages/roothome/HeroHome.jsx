@@ -23,6 +23,7 @@ const HeroHome = () => {
     location: "",
     minSalary: "",
   });
+
   const [showLocationSuggestions, setShowLocationSuggestions] = useState(false);
   const [showSalaryDropdown, setShowSalaryDropdown] = useState(false);
   const [searchSuggestions, setSearchSuggestions] = useState([]);
@@ -112,7 +113,6 @@ const HeroHome = () => {
 
   const calculateFresherCount = () => {
     return jobData.filter((job) => {
-      // Check if experience is [0, x] where x <= 1
       if (Array.isArray(job.experience)) {
         return job.experience[0] === 0 && job.experience[1] <= 1;
       }
@@ -150,7 +150,6 @@ const HeroHome = () => {
       ...new Set(jobData.map((job) => job.company).filter(Boolean)),
     ].length;
 
-    // Update job stats
     setJobStats([
       {
         label: "Vacancy Open",
@@ -492,7 +491,6 @@ const HeroHome = () => {
                                 autoFocus
                               />
 
-                              {/* Search Suggestions */}
                               {searchSuggestions.length > 0 && (
                                 <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto animate-fadeIn">
                                   {searchSuggestions.map(

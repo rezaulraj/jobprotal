@@ -82,7 +82,7 @@ const SingleJobDescription = () => {
     return "Negotiable";
   };
 
-  // Calculate days ago (for demo purposes)
+  // Calculate days ago 
   const getPostedDate = (jobId) => {
     const days = (jobId % 30) + 1;
     return `${days} days ago`;
@@ -95,10 +95,9 @@ const SingleJobDescription = () => {
     return `${years} years`;
   };
 
-  // Handle save job
   const handleSaveJob = () => {
     setIsSaved(!isSaved);
-    // In real app, save to localStorage or API
+
     const savedJobs = JSON.parse(localStorage.getItem("savedJobs") || "[]");
     if (!isSaved) {
       savedJobs.push(job.id);
@@ -111,12 +110,12 @@ const SingleJobDescription = () => {
     localStorage.setItem("savedJobs", JSON.stringify(savedJobs));
   };
 
-  // Handle apply
+
   const handleApply = () => {
     navigate(`/apply/${id}`);
   };
 
-  // Handle share
+
   const handleShare = async () => {
     try {
       if (navigator.share) {
@@ -165,7 +164,7 @@ const SingleJobDescription = () => {
 
   return (
     <div className="min-h-screen font-ubuntu" style={{ backgroundColor: colors.bgLight }}>
-      {/* Header */}
+
       <div
         className="sticky top-0 z-40 bg-white shadow-sm border-b"
         style={{ borderColor: colors.border }}

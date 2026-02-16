@@ -83,7 +83,6 @@ const SeekerProfile = () => {
   };
 
   // Personal Info Popup
-  // Update the Personal Info Popup to include all fields
   const PersonalInfoPopup = () => {
     const [formData, setFormData] = useState({
       name: "",
@@ -301,7 +300,7 @@ const SeekerProfile = () => {
             </select>
           </div>
 
-          {/* ADDED: Nationality Field */}
+          {/*  Nationality Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Nationality *
@@ -322,7 +321,7 @@ const SeekerProfile = () => {
             </select>
           </div>
 
-          {/* ADDED: Country Field */}
+          {/*  Country Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Country *
@@ -343,7 +342,7 @@ const SeekerProfile = () => {
             </select>
           </div>
 
-          {/* ADDED: City Field */}
+          {/*  City Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               City *
@@ -359,7 +358,7 @@ const SeekerProfile = () => {
             />
           </div>
 
-          {/* ADDED: Mobile Field */}
+          {/*  Mobile Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Mobile *
@@ -378,7 +377,7 @@ const SeekerProfile = () => {
             />
           </div>
 
-          {/* ADDED: Career Level Field */}
+          {/*  Career Level Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Career Level *
@@ -399,7 +398,7 @@ const SeekerProfile = () => {
             </select>
           </div>
 
-          {/* ADDED: Experience Field */}
+          {/*  Experience Field */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Total Experience *
@@ -1479,7 +1478,7 @@ const SeekerProfile = () => {
     );
   };
 
-  // Upload Video CV Popup
+  // Video CV Popup
   const UploadVideoPopup = () => {
     const [videoData, setVideoData] = useState({
       title: "",
@@ -1853,7 +1852,7 @@ const SeekerProfile = () => {
                       <div className="flex items-center gap-3">
                         <FiMail
                           size={18}
-                          className="text-gray-500 flex-shrink-0"
+                          className="text-gray-500 shrink-0"
                         />
                         <span className="text-gray-700">
                           {profile.personalInfo?.email || "rezaul@gmail.com"}

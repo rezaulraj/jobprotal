@@ -406,7 +406,7 @@ const SeekerHeader = () => {
     },
     {
       label: "Free CV Review",
-      path: "",
+      path: "cv-review",
       icon: <FaFileAlt className="text-xs" />,
     },
     {

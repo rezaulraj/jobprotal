@@ -26,7 +26,8 @@ import {
 // import ApplyPopUps from "./ApplyPopUps";
 
 const FreelanceJobDescription = () => {
-  const { jobId } = useParams(); // Get job ID from URL
+  // Get job ID from URL
+  const { jobId } = useParams();
   const navigate = useNavigate();
   const [selectedJob, setSelectedJob] = useState(null);
   const [savedJobs, setSavedJobs] = useState([]);
@@ -38,7 +39,6 @@ const FreelanceJobDescription = () => {
   //   setSelectedJobForApply(job);
   //   setShowApplyPopup(true);
   // };
-
 
   // Parse job ID from URL
   useEffect(() => {
@@ -101,7 +101,7 @@ const FreelanceJobDescription = () => {
     setSavedJobs((prev) =>
       prev.includes(jobId)
         ? prev.filter((id) => id !== jobId)
-        : [...prev, jobId]
+        : [...prev, jobId],
     );
   };
 
@@ -115,7 +115,7 @@ const FreelanceJobDescription = () => {
     .filter(
       (job) =>
         job.id !== selectedJob?.id &&
-        job.skills?.some((skill) => selectedJob?.skills?.includes(skill))
+        job.skills?.some((skill) => selectedJob?.skills?.includes(skill)),
     )
     .slice(0, 3);
 
@@ -133,7 +133,6 @@ const FreelanceJobDescription = () => {
   const handleJobNavigation = (job) => {
     const url = getJobUrl(job);
     navigate(url);
-    // Scroll to top
     window.scrollTo(0, 0);
   };
 
@@ -260,7 +259,7 @@ const FreelanceJobDescription = () => {
                         <div className="text-2xl font-bold text-gray-900">
                           {calculateEarnings(
                             selectedJob.rate,
-                            selectedJob.duration
+                            selectedJob.duration,
                           )}
                         </div>
                       </div>
@@ -524,8 +523,8 @@ const FreelanceJobDescription = () => {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
                   <span className="text-sm text-gray-600">
-                    Highlight relevant experience in your cover letter
-                0  </span>
+                    Highlight relevant experience in your cover letter 0{" "}
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />

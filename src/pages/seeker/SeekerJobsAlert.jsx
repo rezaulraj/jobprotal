@@ -182,7 +182,6 @@ const SeekerJobsAlert = () => {
       </header>
 
       <main className="container mx-auto px-2">
-        {/* Stats */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div>
             <p className="text-gray-600">
@@ -416,7 +415,6 @@ const SeekerJobsAlert = () => {
         </div>
       </main>
 
-      {/* Create Job Alert Modal */}
       {showCreateAlert && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
@@ -437,7 +435,6 @@ const SeekerJobsAlert = () => {
               </button>
             </div>
 
-            {/* Modal Form */}
             <div className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>

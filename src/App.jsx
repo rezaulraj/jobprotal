@@ -29,6 +29,7 @@ import InterviewTips from "./pages/seeker/features/InterviewTips";
 import SkillDevelopment from "./pages/seeker/features/SkillDevelopment";
 import SeekerSaveJobs from "./pages/seeker/SeekerSaveJobs";
 import SeekerJobsAlert from "./pages/seeker/SeekerJobsAlert";
+import FreeCVReview from "./pages/cvreview/FreeCVReview";
 function App() {
   const isAuthenticated = true;
   return (
@@ -74,6 +75,7 @@ function App() {
               element={<FreelanceJobDescription />}
             />
             <Route path="companys" element={<Company />} />
+            <Route path="cv-review" element={<FreeCVReview />} />
 
             {/* Seeker routes */}
             <Route path="seeker">
