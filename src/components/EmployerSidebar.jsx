@@ -139,7 +139,7 @@ const EmployerSidebar = ({
         className={`flex items-center h-20 px-4 border-b border-gray-100 ${isCollapsed ? "justify-center" : "justify-between"}`}
       >
         {!isCollapsed && (
-          <span className="text-lg font-bold bg-linear-to-r from-[#1E2558] to-[#4EB956] bg-clip-text text-transparent">
+          <span className="text-xl font-bold bg-linear-to-r from-[#1E2558] to-[#4EB956] bg-clip-text text-transparent">
             Employer Panel
           </span>
         )}

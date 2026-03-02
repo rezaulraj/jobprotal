@@ -32,6 +32,9 @@ import SeekerJobsAlert from "./pages/seeker/SeekerJobsAlert";
 import FreeCVReview from "./pages/cvreview/FreeCVReview";
 import EmployerLayout from "./layout/EmployerLayout";
 import EmployerDashboard from "./pages/employer/EmployerDashboard";
+import CompanyProfile from "./pages/employer/CompanyProfile";
+import PostedJobs from "./pages/employer/PostedJobs";
+import Applications from "./pages/employer/Applications";
 function App() {
   const isAuthenticated = true;
   return (
@@ -129,6 +132,9 @@ function App() {
           <Route path="/employer" element={<EmployerLayout />}>
             <Route index element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<EmployerDashboard />} />
+            <Route path="company" element={<CompanyProfile />} />
+            <Route path="jobs" element={<PostedJobs />} />
+            <Route path="applications" element={<Applications />} />
           </Route>
         </Route>
 

@@ -115,9 +115,9 @@ const EmployerHeader = ({ sidebarOpen, setSidebarOpen, sidebarCollapsed }) => {
             className="flex items-center space-x-2"
           >
             <img src={logo} alt="Logo" className="h-8 w-auto md:h-10" />
-            <span className="hidden sm:inline text-lg md:text-xl font-bold bg-linear-to-r from-[#1E2558] to-[#4EB956] bg-clip-text text-transparent">
+            {/* <span className="hidden sm:inline text-lg md:text-xl font-bold bg-linear-to-r from-[#1E2558] to-[#4EB956] bg-clip-text text-transparent">
               Employer
-            </span>
+            </span> */}
           </Link>
         </div>
 
