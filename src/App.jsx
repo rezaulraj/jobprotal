@@ -30,6 +30,8 @@ import SkillDevelopment from "./pages/seeker/features/SkillDevelopment";
 import SeekerSaveJobs from "./pages/seeker/SeekerSaveJobs";
 import SeekerJobsAlert from "./pages/seeker/SeekerJobsAlert";
 import FreeCVReview from "./pages/cvreview/FreeCVReview";
+import EmployerLayout from "./layout/EmployerLayout";
+import EmployerDashboard from "./pages/employer/EmployerDashboard";
 function App() {
   const isAuthenticated = true;
   return (
@@ -119,6 +121,14 @@ function App() {
             />
 
             <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Route>
+
+        {/* Employer Protected Routes */}
+        <Route element={<AuthGuard userType="employer" />}>
+          <Route path="/employer" element={<EmployerLayout />}>
+            <Route index element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<EmployerDashboard />} />
           </Route>
         </Route>
 
