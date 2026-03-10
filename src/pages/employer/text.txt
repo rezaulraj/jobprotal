@@ -1,0 +1,44 @@
+in react i don't know this
+1. React higher order compoent and higher order funcation why used then how to used it.
+2. do you know about the access token and refach token and how it implement in your code which thing you need to know.
+3. what are the hooks and we bulid custom hook why we use the custom hooks
+4. how to manage the grobal state
+5. what the effect in useContext in full site when we used it
+6. when we used useContext and when we used redux
+7. how to pass data form child to parant in react js
+8. do you know the authgurd in react
+9. do you know the props dilling in react js
+10. in useeffect how many event are call or 
+11. what are the different detween the useLayouEffect and useEffect 
+12. what are the megor issew in react js 
+13. do you now interseptor in react js
+14. do you know react life cycle
+15. what are the diffect between the useCallback and useMamu 
+16. what are the useRef and why we used it
+17. what are lazy loading and suspanse 
+18. what are the useState and useReducer why and when we used them
+19. do you know react quary if yes then when we used them how we use them
+20. how many way call api in react js
+21. what are the differ axios and fetch and what are the beneific eatch other do any other method are know to call api
+22. do you know the react hook form and we used them
+23. do you know transtack 
+24. do you know thoughling and debuancing
+25. what are clouser in js and why we used it.
+26. waht are hosting in js why it important
+27. in js how many data type are thier
+28. what are the truety and falsy value in js
+29. what are the var, let, and const and when used them 
+30. in js are the premative and non premative data type
+31. what are authencation and authorazion
+32. in js why used preventDefault
+33. what are the event loop
+34. what are the differ between the sysconize and acyconize in js
+35. what the Promises and who it work
+36. in js what are the higher order funcation.
+38. in js what are curring
+39. what are the keywork yield
+40. do you spreed oprator how differ rest oprator
+41. what are the filter method do
+42. what are the differ between the complier and interprator
+43. do you know this method
+44. do you map method

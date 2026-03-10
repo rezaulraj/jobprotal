@@ -1,6 +1,5 @@
 // pages/employer/CompanyProfile.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   FaBuilding,
   FaMapMarkerAlt,
@@ -12,7 +11,6 @@ import {
   FaPhone,
   FaEnvelope,
   FaUsers,
-  FaCalendarAlt,
   FaPencilAlt,
   FaCamera,
   FaSave,
@@ -101,7 +99,6 @@ const CompanyProfile = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header with Edit Toggle */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">

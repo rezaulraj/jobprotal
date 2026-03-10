@@ -13,18 +13,14 @@ import {
   FaPause,
   FaPlay,
   FaChartLine,
-  FaFilter,
   FaSearch,
-  FaSort,
   FaCalendarAlt,
   FaUsers,
   FaCheckCircle,
   FaTimesCircle,
   FaHourglassHalf,
-  FaBan,
   FaShare,
   FaEllipsisV,
-  FaChevronDown,
 } from "react-icons/fa";
 
 const PostedJobs = () => {

@@ -5,12 +5,7 @@ import {
   FaBriefcase,
   FaFileAlt,
   FaEye,
-  FaStar,
   FaUsers,
-  FaClock,
-  FaCheckCircle,
-  FaTimesCircle,
-  FaChartLine,
 } from "react-icons/fa";
 
 const EmployerDashboard = () => {

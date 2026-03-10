@@ -1,6 +1,5 @@
 // pages/employer/Applications.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   FaUser,
   FaFileAlt,
@@ -20,13 +19,8 @@ import {
   FaSearch,
   FaDownload,
   FaShare,
-  FaComment,
   FaUserCheck,
-  FaUserTimes,
-  FaUserClock,
   FaVideo,
-  FaAward,
-  FaChevronDown,
   FaEllipsisV,
   FaTag,
   FaPercent,
