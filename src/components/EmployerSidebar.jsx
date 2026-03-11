@@ -89,11 +89,11 @@ const EmployerSidebar = ({
           icon: <FaChartBar />,
           path: "/employer/account-overview",
         },
-        {
-          label: "Settings",
-          icon: <FaCog />,
-          path: "/employer/settings",
-        },
+        // {
+        //   label: "Settings",
+        //   icon: <FaCog />,
+        //   path: "/employer/settings",
+        // },
       ],
     },
     {

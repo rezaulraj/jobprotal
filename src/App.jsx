@@ -37,6 +37,7 @@ import PostedJobs from "./pages/employer/PostedJobs";
 import Applications from "./pages/employer/Applications";
 import EmployerProfile from "./pages/employer/EmployerProfile";
 import EmployerChangePassword from "./pages/employer/EmployerChagePassword";
+import AccountOverview from "./pages/employer/AccountOverview";
 function App() {
   const isAuthenticated = true;
   return (
@@ -138,6 +139,7 @@ function App() {
             <Route path="jobs" element={<PostedJobs />} />
             <Route path="applications" element={<Applications />} />
             <Route path="profile" element={<EmployerProfile />} />
+            <Route path="account-overview" element={<AccountOverview />} />
             <Route
               path="change-password"
               element={<EmployerChangePassword />}
