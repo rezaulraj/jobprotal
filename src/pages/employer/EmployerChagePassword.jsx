@@ -159,7 +159,6 @@ const EmployerChangePassword = () => {
       </div>
 
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-        {/* Security Badge */}
         <div className="bg-gradient-to-r from-[#1E2558]/5 to-[#4EB956]/5 p-4 border-b border-gray-100">
           <div className="flex items-center text-sm">
             <FaShieldAlt className="text-[#4EB956] mr-2" />
@@ -170,7 +169,6 @@ const EmployerChangePassword = () => {
           </div>
         </div>
 
-        {/* Success Message */}
         {success && (
           <div className="m-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <div className="flex items-center">
@@ -189,7 +187,6 @@ const EmployerChangePassword = () => {
         )}
 
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
-          {/* Current Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Current Password
@@ -223,7 +220,6 @@ const EmployerChangePassword = () => {
             )}
           </div>
 
-          {/* New Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               New Password
@@ -250,7 +246,6 @@ const EmployerChangePassword = () => {
               </button>
             </div>
 
-            {/* Password Strength Meter */}
             {formData.newPassword && (
               <div className="mt-3 space-y-2">
                 <div className="flex items-center justify-between">
@@ -280,7 +275,6 @@ const EmployerChangePassword = () => {
                   ></div>
                 </div>
 
-                {/* Password Requirements */}
                 <div className="grid grid-cols-2 gap-2 mt-3">
                   <div
                     className={`flex items-center text-xs ${passwordStrength.length ? "text-green-600" : "text-gray-400"}`}
@@ -344,7 +338,6 @@ const EmployerChangePassword = () => {
             )}
           </div>
 
-          {/* Confirm Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Confirm New Password
@@ -377,7 +370,6 @@ const EmployerChangePassword = () => {
               </p>
             )}
 
-            {/* Password Match Indicator */}
             {formData.confirmPassword && formData.newPassword && (
               <div className="mt-2">
                 {formData.newPassword === formData.confirmPassword ? (
@@ -395,7 +387,6 @@ const EmployerChangePassword = () => {
             )}
           </div>
 
-          {/* Action Buttons */}
           <div className="flex gap-3 pt-4">
             <button
               type="submit"

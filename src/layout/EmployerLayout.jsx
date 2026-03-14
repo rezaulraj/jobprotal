@@ -65,7 +65,7 @@ const EmployerLayout = () => {
         } ${isMobile ? "ml-0" : ""}`}
       >
         <div className="p-4 md:p-6 lg:p-8">
-          <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto">
             {/* Breadcrumb or Page Title can go here */}
             <Outlet />
           </div>

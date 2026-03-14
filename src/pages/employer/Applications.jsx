@@ -38,7 +38,6 @@ const Applications = () => {
   const [selectedRows, setSelectedRows] = useState([]);
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  // Current job information
   const currentJob = {
     id: "JOB-001",
     title: "Senior React Developer",
@@ -59,7 +58,7 @@ const Applications = () => {
       id: 1,
       name: "Sarah Johnson",
       avatar: "SJ",
-      jobTitle: "Senior React Developer", // Added job title field
+      jobTitle: "Senior React Developer",
       currentCompany: "TechCorp Inc.",
       currentPosition: "Frontend Developer",
       location: "San Francisco, CA",
@@ -319,12 +318,10 @@ const Applications = () => {
 
   const handleBulkAction = (action) => {
     console.log(`Bulk ${action} for rows:`, selectedRows);
-    // Implement bulk actions here
   };
 
   return (
     <div className="space-y-6">
-      {/* Back to Jobs Link */}
       <div className="flex items-center text-sm">
         <button className="flex items-center text-gray-500 hover:text-[#4EB956] transition-all">
           <FaArrowLeft className="mr-2" size={12} />
@@ -332,7 +329,6 @@ const Applications = () => {
         </button>
       </div>
 
-      {/* Job Title Header */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div className="flex items-start space-x-4">
@@ -380,7 +376,6 @@ const Applications = () => {
           </div>
         </div>
 
-        {/* Application Stats */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mt-6 pt-6 border-t border-gray-100">
           <div className="text-center">
             <p className="text-2xl font-bold text-gray-800">
@@ -421,7 +416,6 @@ const Applications = () => {
         </div>
       </div>
 
-      {/* Header with Actions */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-gray-600 text-sm">
@@ -440,7 +434,6 @@ const Applications = () => {
         </div>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
           <div className="flex items-center justify-between">
@@ -502,7 +495,6 @@ const Applications = () => {
         </div>
       </div>
 
-      {/* Tabs */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-1 flex flex-wrap gap-1">
         {tabs.map((tab) => (
           <button
@@ -525,7 +517,6 @@ const Applications = () => {
         ))}
       </div>
 
-      {/* Search and Filters */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 relative">
@@ -563,7 +554,6 @@ const Applications = () => {
         </div>
       </div>
 
-      {/* Bulk Actions */}
       {selectedRows.length > 0 && (
         <div className="bg-blue-50 rounded-lg p-4 flex items-center justify-between">
           <span className="text-sm text-blue-700">
@@ -612,9 +602,9 @@ const Applications = () => {
                 <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Candidate
                 </th>
-                <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                {/* <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Contact
-                </th>
+                </th> */}
                 <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Current Position
                 </th>
@@ -627,9 +617,9 @@ const Applications = () => {
                 <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Match
                 </th>
-                <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                {/* <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Status
-                </th>
+                </th> */}
                 <th className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Actions
                 </th>
@@ -651,9 +641,9 @@ const Applications = () => {
                   </td>
                   <td className="p-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1E2558] to-[#4EB956] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                      {/* <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1E2558] to-[#4EB956] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                         {app.avatar}
-                      </div>
+                      </div> */}
                       <div>
                         <p className="font-medium text-gray-800">{app.name}</p>
                         <div className="flex items-center mt-1">
@@ -672,7 +662,7 @@ const Applications = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="p-4">
+                  {/* <td className="p-4">
                     <div className="space-y-1">
                       <div className="flex items-center text-xs text-gray-600">
                         <FaEnvelope className="mr-2 text-gray-400" size={10} />
@@ -693,7 +683,7 @@ const Applications = () => {
                         </a>
                       </div>
                     </div>
-                  </td>
+                  </td> */}
                   <td className="p-4">
                     <div>
                       <p className="font-medium text-gray-800 text-sm">
@@ -712,7 +702,7 @@ const Applications = () => {
                   <td className="p-4 relative">
                     <div className="flex items-center">
                       <div className="flex flex-wrap gap-1 max-w-[200px]">
-                        {app.skills.slice(0, 3).map((skill, index) => (
+                        {app.skills.slice(0, 1).map((skill, index) => (
                           <span
                             key={index}
                             className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs"
@@ -720,13 +710,13 @@ const Applications = () => {
                             {skill}
                           </span>
                         ))}
-                        {app.skills.length > 3 && (
+                        {app.skills.length > 1 && (
                           <span
                             className="px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs cursor-help relative"
                             onMouseEnter={() => setHoveredSkill(app.id)}
                             onMouseLeave={() => setHoveredSkill(null)}
                           >
-                            +{app.skills.length - 3}
+                            +{app.skills.length - 1}
                             {hoveredSkill === app.id && (
                               <div className="absolute z-10 bottom-full left-0 mb-2 w-48 p-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg">
                                 <div className="font-medium mb-1">
@@ -753,10 +743,10 @@ const Applications = () => {
                     <span
                       className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${getMatchColor(app.matchPercentage)}`}
                     >
-                      {app.matchPercentage}% Match
+                      {app.matchPercentage}%
                     </span>
                   </td>
-                  <td className="p-4">
+                  {/* <td className="p-4">
                     <span
                       className={`inline-flex items-center px-2 py-1 rounded-full text-xs ${getStatusBadge(app.status).bg} ${getStatusBadge(app.status).text}`}
                     >
@@ -765,7 +755,7 @@ const Applications = () => {
                         {getStatusBadge(app.status).label}
                       </span>
                     </span>
-                  </td>
+                  </td> */}
                   <td className="p-4">
                     <div className="flex items-center gap-2">
                       <button
