@@ -1,4 +1,4 @@
-// pages/employer/EmployerProfile.jsx
+
 import React, { useState } from "react";
 import {
   FaUserTie,
@@ -14,7 +14,6 @@ import {
 const EmployerProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
 
-  // Mock data based on schema
   const [employerData, setEmployerData] = useState({
     employerProfileId: "EMP-2024-001",
     userId: "user_123456789",
@@ -35,7 +34,6 @@ const EmployerProfile = () => {
 
   return (
     <div className="max-w-4xl mx-auto">
-      {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800">Employer Profile</h1>
         <div className="flex gap-2">
@@ -68,14 +66,10 @@ const EmployerProfile = () => {
         </div>
       </div>
 
-      {/* Main Profile Card */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-        {/* Cover */}
         <div className="h-24 bg-gradient-to-r from-[#1E2558] to-[#4EB956]"></div>
 
-        {/* Profile Content */}
         <div className="px-6 pb-6">
-          {/* Profile Image */}
           <div className="flex justify-center -mt-12 mb-4">
             <div className="relative">
               <div className="w-24 h-24 rounded-full border-4 border-white shadow-lg">
@@ -99,9 +93,7 @@ const EmployerProfile = () => {
             </div>
           </div>
 
-          {/* Profile Info */}
           <div className="space-y-4">
-            {/* Employer Profile ID */}
             <div className="flex items-center justify-center gap-2 text-sm">
               <FaIdCard className="text-gray-400" />
               <span className="text-gray-500">Profile ID:</span>
@@ -114,12 +106,10 @@ const EmployerProfile = () => {
               </span>
             </div>
 
-            {/* User ID */}
             <div className="text-center text-xs text-gray-400">
               User ID: {employerData.userId}
             </div>
 
-            {/* Name Employer */}
             <div className="text-center">
               {isEditing ? (
                 <input
@@ -137,7 +127,6 @@ const EmployerProfile = () => {
               )}
             </div>
 
-            {/* Designation */}
             <div className="text-center">
               {isEditing ? (
                 <input
@@ -156,7 +145,6 @@ const EmployerProfile = () => {
               )}
             </div>
 
-            {/* Office Phone */}
             <div className="text-center">
               {isEditing ? (
                 <input
@@ -176,7 +164,6 @@ const EmployerProfile = () => {
             </div>
           </div>
 
-          {/* Display Info */}
           {!isEditing && (
             <div className="mt-6 p-4 bg-gray-50 rounded-lg">
               <h3 className="font-medium text-gray-700 mb-2">

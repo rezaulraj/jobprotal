@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 
 const EmployerDashboard = () => {
-  // Mock data
   const stats = [
     {
       label: "Active Jobs",
@@ -97,7 +96,7 @@ const EmployerDashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* Welcome Section */}
+
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -118,7 +117,6 @@ const EmployerDashboard = () => {
         </div>
       </div>
 
-      {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
           <div
@@ -144,9 +142,7 @@ const EmployerDashboard = () => {
         ))}
       </div>
 
-      {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Applications Chart */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h3 className="font-semibold text-gray-800 mb-4">
             Applications Overview
@@ -156,7 +152,6 @@ const EmployerDashboard = () => {
           </div>
         </div>
 
-        {/* Recent Activity */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <h3 className="font-semibold text-gray-800 mb-4">
             Recent Applications
@@ -198,7 +193,6 @@ const EmployerDashboard = () => {
         </div>
       </div>
 
-      {/* Active Jobs Table */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-gray-800">Active Job Postings</h3>

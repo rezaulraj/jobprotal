@@ -28,7 +28,6 @@ const PostedJobs = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("newest");
 
-  // Mock posted jobs data
   const postedJobs = [
     {
       id: 1,
@@ -237,7 +236,6 @@ const PostedJobs = () => {
     return true;
   });
 
-  // Sort jobs
   const sortedJobs = [...filteredJobs].sort((a, b) => {
     switch (sortBy) {
       case "newest":
@@ -253,7 +251,6 @@ const PostedJobs = () => {
     }
   });
 
-  // Summary stats
   const totalViews = postedJobs.reduce((sum, job) => sum + job.views, 0);
   const totalApplications = postedJobs.reduce(
     (sum, job) => sum + job.applications,
@@ -263,7 +260,6 @@ const PostedJobs = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -284,7 +280,6 @@ const PostedJobs = () => {
         </div>
       </div>
 
-      {/* Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
           <div className="flex items-center justify-between">
@@ -336,10 +331,8 @@ const PostedJobs = () => {
         </div>
       </div>
 
-      {/* Filters and Search */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
         <div className="flex flex-col lg:flex-row lg:items-center gap-4">
-          {/* Filter Tabs */}
           <div className="flex flex-wrap gap-2">
             {filterOptions.map((option) => (
               <button
@@ -363,7 +356,6 @@ const PostedJobs = () => {
             ))}
           </div>
 
-          {/* Search and Sort */}
           <div className="flex-1 flex flex-col sm:flex-row gap-3">
             <div className="flex-1 relative">
               <FaSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
@@ -389,7 +381,6 @@ const PostedJobs = () => {
         </div>
       </div>
 
-      {/* Jobs Table */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
@@ -536,8 +527,6 @@ const PostedJobs = () => {
                           <button className="p-2 hover:bg-gray-100 rounded-lg transition-all">
                             <FaEllipsisV size={14} className="text-gray-400" />
                           </button>
-
-                          {/* Dropdown Menu */}
                           <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 hidden group-hover:block z-10">
                             <div className="py-1">
                               {job.status === "published" ? (
@@ -580,7 +569,6 @@ const PostedJobs = () => {
           </table>
         </div>
 
-        {/* Empty State */}
         {sortedJobs.length === 0 && (
           <div className="text-center py-12">
             <div className="w-20 h-20 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-4">
@@ -602,7 +590,6 @@ const PostedJobs = () => {
           </div>
         )}
 
-        {/* Pagination */}
         {sortedJobs.length > 0 && (
           <div className="flex items-center justify-between p-4 border-t border-gray-100">
             <p className="text-sm text-gray-500">
@@ -631,7 +618,6 @@ const PostedJobs = () => {
         )}
       </div>
 
-      {/* Quick Tips */}
       <div className="bg-gradient-to-r from-[#1E2558]/5 to-[#4EB956]/5 rounded-xl p-6">
         <h3 className="font-semibold text-gray-800 mb-3">
           Quick Tips for Better Results

@@ -148,7 +148,6 @@ const EmployerChangePassword = () => {
 
   return (
     <div className="max-w-2xl mx-auto">
-      {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800 flex items-center">
           <FaLock className="mr-3 text-[#4EB956]" />
@@ -159,7 +158,6 @@ const EmployerChangePassword = () => {
         </p>
       </div>
 
-      {/* Main Card */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         {/* Security Badge */}
         <div className="bg-gradient-to-r from-[#1E2558]/5 to-[#4EB956]/5 p-4 border-b border-gray-100">
@@ -424,7 +422,6 @@ const EmployerChangePassword = () => {
         </form>
       </div>
 
-      {/* Password Tips */}
       <div className="mt-6 p-4 bg-blue-50 rounded-lg">
         <h3 className="font-medium text-gray-800 mb-2 flex items-center">
           <FaKey className="mr-2 text-[#4EB956]" size={14} />

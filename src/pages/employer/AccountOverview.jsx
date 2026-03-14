@@ -1,4 +1,3 @@
-// pages/employer/AccountOverview.jsx
 import { Link } from "react-router-dom";
 import {
   FaUserTie,
@@ -18,23 +17,18 @@ import {
 } from "react-icons/fa";
 
 const AccountOverview = () => {
-  // Account data
   const accountData = {
-    // Basic Info
     accountId: "ACC-2024-001",
     userId: "user_123456789",
     employerProfileId: "EMP-2024-001",
     email: "john.anderson@techcorp.com",
     emailVerified: true,
     phoneVerified: true,
-
-    // Personal Info
     nameEmployer: "John Anderson",
     designation: "Senior HR Manager",
     officePhone: "+1 (555) 123-4567",
     alternateEmail: "john.personal@email.com",
 
-    // Company Info
     companyName: "TechCorp Solutions",
     companyId: "COMP-2024-001",
     companySize: "100-250",
@@ -42,19 +36,16 @@ const AccountOverview = () => {
     companyWebsite: "www.techcorp.com",
     companyLocation: "San Francisco, CA",
 
-    // Account Status
     accountStatus: "active",
     accountType: "premium",
     verificationLevel: "tier_3",
     twoFactorEnabled: true,
 
-    // Dates
     joinDate: "2022-03-15T10:30:00",
     lastLogin: "2024-03-15T09:45:00",
     lastPasswordChange: "2024-02-01T14:20:00",
     subscriptionExpiry: "2024-12-31T23:59:59",
 
-    // Usage Statistics
     stats: {
       jobsPosted: 24,
       activeJobs: 5,
@@ -67,7 +58,6 @@ const AccountOverview = () => {
       avgResponseTime: "2.4 hours",
     },
 
-    // Subscription Details
     subscription: {
       plan: "Premium Annual",
       price: "$999/year",
@@ -83,7 +73,6 @@ const AccountOverview = () => {
       ],
     },
 
-    // Security Settings
     security: {
       lastLoginIP: "192.168.1.1",
       lastLoginDevice: "Chrome on Windows",
@@ -110,7 +99,6 @@ const AccountOverview = () => {
       ],
     },
 
-    // Notification Settings
     notifications: {
       email: {
         newApplications: true,
@@ -131,7 +119,6 @@ const AccountOverview = () => {
       },
     },
 
-    // Billing History
     billingHistory: [
       {
         id: "INV-001",
@@ -215,7 +202,6 @@ const AccountOverview = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -243,7 +229,6 @@ const AccountOverview = () => {
         </div>
       </div>
 
-      {/* Account Status Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
           <div className="flex items-start justify-between">
@@ -297,11 +282,8 @@ const AccountOverview = () => {
         </div>
       </div>
 
-      {/* Main Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left Column - Account Details */}
         <div className="lg:col-span-2 space-y-6">
-          {/* Account Information Card */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="p-6 border-b border-gray-100">
               <h2 className="font-semibold text-gray-800 flex items-center">
@@ -421,9 +403,7 @@ const AccountOverview = () => {
           </div>
         </div>
 
-        {/* Right Column - Account Management */}
         <div className="space-y-6">
-          {/* Billing History */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="p-6 border-b border-gray-100">
               <h2 className="font-semibold text-gray-800 flex items-center">

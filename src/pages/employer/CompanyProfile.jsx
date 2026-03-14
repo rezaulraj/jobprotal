@@ -23,7 +23,6 @@ const CompanyProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
 
-  // Mock company data
   const [companyData, setCompanyData] = useState({
     logo: null,
     coverImage: null,
@@ -138,7 +137,6 @@ const CompanyProfile = () => {
         </div>
       </div>
 
-      {/* Cover Image Section */}
       <div className="relative bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
         <div className="h-48 bg-linear-to-r from-[#1E2558] to-[#4EB956] relative">
           {companyData.coverImage && (
@@ -212,7 +210,6 @@ const CompanyProfile = () => {
         </div>
       </div>
 
-      {/* Tabs Navigation */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-1 flex space-x-1">
         {tabs.map((tab) => (
           <button
@@ -230,7 +227,6 @@ const CompanyProfile = () => {
         ))}
       </div>
 
-      {/* Tab Content */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         {/* Overview Tab */}
         {activeTab === "overview" && (
@@ -544,7 +540,6 @@ const CompanyProfile = () => {
         )}
       </div>
 
-      {/* Preview Card */}
       <div className="bg-gradient-to-r from-[#1E2558] to-[#4EB956] rounded-xl p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
